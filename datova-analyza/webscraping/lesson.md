@@ -100,8 +100,6 @@ US/docs/Web/HTML/Element).
 
 ## Cvičení
 
-1
-
 ### Porozumění HTML
 
 Cílem tohoto cvičení je pokusit se vyznat ve zdrojovém kódu jednoduché webové
@@ -251,8 +249,6 @@ disku. Pokud chcete vidět celý stažený zdrojový kód stránky jako text, na
 
 ## Cvičení
 
-2
-
 ### Scraping DHMO
 
 Napište program, který bude pracovat se stránkou o DHMO na adrese
@@ -261,8 +257,6 @@ Napište program, který bude pracovat se stránkou o DHMO na adrese
   1. Nechť program vypíše na výstup nadpisy všech sekcí (značka `h2`).
   2. Nechť program vypíše na výstup cesty všech odkazů na stránce (značka `a`, atribut `href`). 
   3. Nechť program vypíše na výstup cesty ke všem obrázkům na stránce (značka `img`, atribut `src`.
-
-3
 
 ### Scraping Kodim.cz
 
@@ -301,8 +295,6 @@ chceme takovou stránku scrapovat, musíme použít takovýto kód.
     
 
 ## Domácí úložky ‒ povinné
-
-4
 
 ### Káva na Mall.cz
 

@@ -358,8 +358,6 @@ hezky naformátovanou.
 
 ## Cvičení
 
-1
-
 ### Česká jména
 
 Stáhněte si soubor [jmena100.csv](/download/python-data/jmena100.csv), který
@@ -641,8 +639,6 @@ Pokud však nechceme názvy sloupců jako čísla, je třeba názvy dodat.
 
 ## Cvičení
 
-2
-
 ### Česká jména podruhé
 
 Budeme pokračovat s daty o českých jménech z předchozího cvičení. Minule jsme
@@ -653,8 +649,6 @@ tak, aby Pandas vyrobil index číselný. Proveďte následující dotazy
   2. Vypište pouze jména z těch řádků, kde četnost je mezi 80 000 a 100 000. 
   3. Vypište jména a četnost pro jména se slovanským nebo hebrejským původem. Kolik takových jmen je?
   4. Vypište všechna jména, která mají svátek prvních 7 dní v únoru.
-
-3
 
 ### Původ jmen
 

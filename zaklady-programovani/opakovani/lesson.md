@@ -4,8 +4,6 @@ Následující příklad v sobě zahrnuje většinu věcí, kterou jsme se do te
 kurzu naučili. Můžete jej vyzkoušet a zjistit, jak na tom jste se svými
 programátorskými schopnostmi a co jste si z kurzu zapamatovali.
 
-1
-
 ### Prváci
 
 Na Fakultu hybridních přírodních umění nastupují nově přijatí studenti.

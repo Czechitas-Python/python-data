@@ -61,8 +61,6 @@ jednotlivé hodnoty, bude náš program vypadat například takto:
 
 ## Cvičení
 
-1
-
 ### Výplata přesněji
 
 Zatím jsme výplatu počítali za předpokladu, že každý měsíc odpracujeme stejný
@@ -72,8 +70,6 @@ odpracovaných hodin za každý měsíc za poslední rok.
 
   1. Otevřete tento soubor ve svém programu a načtěte hodnoty na řádcích do seznamu `vykaz`. Vytiskněte tento seznam na konzoli funkcí `print()` abyste si ověřili, že jste soubor načetli správně.
   2. Nechte uživatele zadat na příkazovém řádku hodinovou mzdu. Spočítejte a na výstup vytiskněte celkovou výplatu za celý rok a průměrnou výplatu na jeden měsíc.
-
-2
 
 ### Počet slov
 
@@ -86,8 +82,6 @@ věděli, zda bylo zadání formálně splněno. Nechte se vést následujícím
   2. Každý řádek převeďte na seznam slov. Slovem se rozumí vše, co je odděleno mezerou nebo novým řádkem. 
   3. Vypište na výstup seznam hodnot udávající počty slov na každém řádku. 
   4. Vypište na výstup celkový počet všech slov v souboru. 
-
-3
 
 ### Půjčovna
 
@@ -148,8 +142,6 @@ Upravíme tedy zápis do souboru v našem předchozím programu takto:
 
 ## Cvičení
 
-4
-
 ### Dny v měsíci
 
 Napište program, který bude mít přímo v kódu zapsaný počet dní v jednotlivých
@@ -163,8 +155,6 @@ měsících takto:
   2. Upravte váš program tak, aby zároveň s počtem dnů vypisoval i název měsíce. Oddělte v souboru název měsíce a počet dnů pomocí tabulátoru.
   3. Upravte váš program tak, aby jako první řádek výsledného souboru obsahoval nadpisy pro jednotlivé sloupce, tedy `měsíc` a `počet dní`.
 
-5
-
 ### Rozepsaná výplata
 
 Modifikujte program pro počítání výplaty z předchozí sekce tak, aby
@@ -173,8 +163,6 @@ nevypisoval průměrnou výplatu za rok, nýbrž aby vypsal konkrétní vyplacen
 
   1. Nejprve tyto informace vypište na výstup pomocí funkce `print()`.
   2. Poté program upravte tak, aby vypsal tyto výsledky do souboru.
-
-6
 
 ### Hody kostkou
 
@@ -316,8 +304,6 @@ textové soubory jako UTF-8. Svět pak bude zase o kousek lepším místem.
 
 ## Domácí úložky ‒ povinné
 
-7
-
 ### Pasažéři
 
 **Obtížnost: To dáš**
@@ -330,8 +316,6 @@ udávají počet pasažérů směrem tam a směrem zpět.
 
   1. Napište program, který pro první den vypíše, kolik pasažérů jelo celkem směrem tam a kolik směrem zpět. 
   2. Nechť váš program vypisuje součty pasažérů ze celý týden, tedy kolik lidí za celý týden jelo směrem tam a kolik směrem zpět. 
-
-8
 
 ### Přeznámkování
 
@@ -350,8 +334,6 @@ známkách z čísel na písmena. Nechte se vést následujícím postupem.
 
 ## Domácí úložky ‒ nepovinné
 
-9
-
 ### Karty 2
 
 **Obtížnost: Zapni hlavu**
@@ -363,8 +345,6 @@ nějaká karta v seznamu opakovat.
 
   1. Vymyslete, jak budete vylosovanou kartu v seznamu reprezentovat. Vypište pak tento seznam na výstup.
   2. Dále k tomuto seznamu vypište součet hodnot všech vylosovaných karet. Položme hodnotu karet J, Q a K rovnu deseti a eso rovnu jedné.
-
-10
 
 ### Karty 3
 

@@ -129,8 +129,6 @@ seznam všech koučů na druhém konání kurzu, napsali bychom
 
 ## Cvičení
 
-1
-
 ### Kurz
 
 Založte si program v Pythonu a zkopírujte si do něj datovou strukturu kurzu
@@ -140,8 +138,6 @@ Založte si program v Pythonu a zkopírujte si do něj datovou strukturu kurzu
   2. Vypište na výstup jméno posledního kouče na prvním konání kurzu.
   3. Vypište na výstup celkový počet konání kurzu.
   4. Vypište na výstup všechna místa, na kterých se kurz konal. Použijte chroustání seznamů.
-
-2
 
 ### Knihovna
 
@@ -157,8 +153,6 @@ Hurá, pokud jste dorazili až sem, máte hotovo. Nalepte si lísteček a pokud
 chcete, můžete pokračovat bonusovými příklady.
 
 ## Bonusy
-
-3
 
 ### Recepty
 
@@ -331,8 +325,6 @@ převedeme na Python slovníky právě s využítím výše zmiňované funkce `
 
 ## Cvičení
 
-4
-
 ### Seznam lidí
 
 Jak už jsme si ověřili v lekci, datové API na adrese
@@ -343,8 +335,6 @@ slovníky. Proveďte následující úkoly.
   1. Zjistěte kolik lidí celkem seznam obsahuje.
   2. Zjistěte jaké všechny informace máme o jednotlivých osobách.
   3. Zjistěte, kolik je v souboru mužů a žen.
-
-5
 
 ### Svátky
 

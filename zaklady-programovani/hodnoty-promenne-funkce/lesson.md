@@ -134,8 +134,6 @@ výpočtu aktualizovat, musíme jej spustit znova.
 
 ## Cvičení
 
-1
-
 ### Výplata
 
   1. Spočítejte svůj měsíční příjem víte-li, že pracujete 7 hodin denně se mzdou 450 Kč na hodinu. Řekněme, že měsíc má 21 pracovních dní.
@@ -148,8 +146,6 @@ Hurá, pokud jste dorazili až sem, máte hotovo. Nalepte si lísteček a pokud
 chcete, můžete pokračovat bonusovými příklady.
 
 ## Bonusy
-
-2
 
 ### Králičí farma
 
@@ -295,8 +291,6 @@ Pro práci se seznamy se nám může hodit několik funkcí:
 
 ## Cvičení
 
-3
-
 ### Pohyby na účtu
 
 Mějme seznam pohybů na nějakém bankovním účtu:
@@ -310,8 +304,6 @@ Mějme seznam pohybů na nějakém bankovním účtu:
   3. Vypište kolik je všech pohybů dohromady 
   4. Pomocí volání vhodných funkcí vypište nejvyšší a nejnižší pohyb. 
   5. Spočítejte celkový přírustek na účtu za dané období. Pozor, že přírůstek může vyjít i záporný. 
-
-4
 
 ### Známky z písemek
 
@@ -385,16 +377,12 @@ Povinné v tomto případě znamená, že budu na další hodině přepokládat,
 tyto úkoly alespoň zkusili, ne že se budu na vás zle mračit, když je neuděláte
 :-)
 
-5
-
 ### Úroky
 
 **Obtížnost: To dáš**
 
 Fíha banka a.s. nabízí na svých stránkách spořící účet s úrokem 2,4 %. Když si
 na takový účet uložíte 1 000 000 kč, kolik peněz nastřádáte za 10 let?
-
-6
 
 ### Délka filmu
 
@@ -406,8 +394,6 @@ filmu raději věděli v hodinách a minutách. Použijte operátory celočísel
 dělení a dělení se zbytkem, abyste spočetli, kolik hodin a minut trvá film
 _Pán prstenů: Dvě věže._
 
-7
-
 ### Průměrné teploty
 
 **Obtížnost: To dáš**
@@ -415,8 +401,9 @@ _Pán prstenů: Dvě věže._
 Následující tabulka obsahuje průměrné roční teploty v České republice za roky
 2001 až 2010 (zdroj: Český hydrometeorologický ústav).
 
-rok | teplota °C | 2001 | 7.8  
+rok | teplota °C
 ---|---  
+2001 | 7.8  
 2002 | 8.7  
 2003 | 8.2  
 2004 | 7.8  
@@ -443,8 +430,6 @@ Pro obě tyto reprezentace vyřešte následující úkoly
   6. Vytvořte tabulku obsahující jen řádky 5, 6, 7, 8. 
   7. Použitím proměnné sloupce vypište seznam teplot setřízený vzestupně podle velikosti. Šlo by to i pomocí proměnné radky, ale to ještě neumíme. 
 
-8
-
 ### Průměr
 
 **Obtížnost: To dáš**
@@ -457,8 +442,6 @@ seznamu. Otestujte jej na seznamech různých délek.
 
 Konzumujte, pokud si chcete dál procvičovat Python.
 
-9
-
 ### Nový koberec
 
 **Obtížnost: To dáš**
@@ -467,16 +450,12 @@ Do místnosti tvaru čtverce o rozloze 30 m2 potřebujeme koupit nový koberec.
 Jakou délku má mít strana koberce? Vejde se nám srolovaný do dodávky s
 nákladovým prostorem dlouhým 5 m?
 
-10
-
 ### Rozpětí
 
 **Obtížnost: To dáš**
 
 Postupujte obdobně jako v úložce **Průměr** , ale tentokrát sestavte výraz pro
 výpočet _rozpětí_ , tedy rozdílu mezi minimální a maximální hodnotou.
-
-11
 
 ### Vlastní minimum a maximum
 
@@ -488,8 +467,6 @@ byste vytvořit výraz, který zjistí minimální resp. maximální hodnotu v s
 s? Můžete v tomto vzorečku použít cokoliv, co jsme probrali na lekci kromě
 samotných funkcí `min()` a `max()`.
 
-12
-
 ### Střed seznamu
 
 **Obtížnost: Zavařovačka**
@@ -498,8 +475,6 @@ Sestavte výraz, který vrátí číslo nacházející se přesně uprostřed v 
 seznamu s. U seznamů liché délky je střed jasně definovaný, ovšem u seznamů
 sudé délky nám padne mezi dvě čísla. V takovém případě vyberte jako střed
 číslo blíž ke konci seznamu.
-
-13
 
 ### Střed seznamu podruhé
 

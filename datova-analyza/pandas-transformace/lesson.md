@@ -76,8 +76,6 @@ obdrží seznam a vrátí součet všech kladných čísel z tohoto seznamu.
 
 ## Cvičení
 
-1
-
 ### Obsah elipsy
 
 Tentokrát chceme spočítat plochu pozemku ve tvaru elipsy jako na obrázku.
@@ -89,13 +87,9 @@ Z matematiky víme, že známe-li šířku a výšku elipsy, její obsah je polo
 spočítá plochu pozemku dle zadané šířky a výšky. Číslo pí najdete v modulu
 `math` jako `math.pi`.
 
-2
-
 ### Větší ze dvou čísel
 
 Napište funkci jménem `max2`, který vrátí větší ze dvou zadaných čísel.
-
-3
 
 ### Geometrický průměr
 
@@ -105,8 +99,6 @@ všechny hodnoty navzájem vynásobí a z výsledného součinu se spočítá _n
 odmocnina.
 
 ## Bonusy
-
-4
 
 ### Větší ze tří čísel
 

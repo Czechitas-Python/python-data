@@ -281,8 +281,6 @@ možná tuší, že abychom získali DataFrame, musíme psát
 
 ## Cvičení
 
-1
-
 ### Studenti
 
 Stáhněte si datové sety, se kterými budeme pracovat v tomto cvičení:

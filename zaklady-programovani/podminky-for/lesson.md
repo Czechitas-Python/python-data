@@ -70,15 +70,11 @@ se spouští, pokud výraz v podmínce vrátí `False`. Můžeme pak například
 
 ## Cvičení
 
-1
-
 ### Dělení
 
 Napište program `deleni.py`, který na příkazové řádce obdrží dvě celá čísla a
 vypíše jejich podíl zaokrouhlený na tři desetinná čísla. Pokud je druhé číslo
 0, program vypíše hlášku, že nulou dělit nelze.
-
-2
 
 ### Kontrola souboru
 
@@ -97,14 +93,10 @@ chcete, můžete pokračovat bonusovými příklady.
 
 ## Bonusy
 
-3
-
 ### Maximum ze dvou čísel
 
 Napište program `max2.py`, který dostane na vstupu dvě celá čísla a vrátí
 větší z nich. Vyhněte se použití funkce `max()`.
-
-4
 
 ### Maximum ze tří čísel
 
@@ -176,8 +168,6 @@ zajímavých věcí.
 
 ## Cvičení
 
-5
-
 ### Hrátky s cykly
 
 Napište program, který dostane na příkazové řádce seznam celých čísel a
@@ -186,8 +176,6 @@ Napište program, který dostane na příkazové řádce seznam celých čísel 
   2. vypíše každé číslo spolu s jeho opačnou hodnotu (obrácené znaménko),
   3. vypíše pouze čísla větší než 0,
   4. čísla větší než 0 vypíše tak jak jsou, čísla menší než nula vypíše s obráceným znaménkem.
-
-6
 
 ### Poznávačky
 
@@ -276,8 +264,6 @@ zbytek větví se přeskočí a Python se na ně ani nepodívá.
 
 ## Úložky na doma ‒ povinné
 
-7
-
 ### Heslo
 
 **Obtížnost: Pohodička**
@@ -286,8 +272,6 @@ Napište program `login.py`, který na příkazovém řádku obdrží uživatels
 a heslo. Program bude mít v sobě uloženo správné heslo a pokud jej uživatel
 zadá, program vypíše něco ve smyslu "přístup povolen". Zadá-li uživatel špatné
 heslo, program odpoví "přístup odepřen".
-
-8
 
 ### Převod na USD
 
@@ -306,8 +290,6 @@ převede 21 euro na americké dolary.
 
 Jako přídavek můžete do svého programu přidat tolik měn, kolik se vám líbí.
 
-9
-
 ### Banka
 
 **Obtížnost: To dáš**
@@ -318,8 +300,6 @@ Napište program, který z textového souboru přečte seznam zůstatků na spo�
   1. Vypište každý navýšený zůstatek na samostatný řádek.
   2. Vypište jen ty zůstatky, které nejsou záporné.
   3. Zkuste jednotlivé řádky očíslovat. Každý řádek tedy bude obsahovat číslo řádku a výsledný zůstatek.
-
-10
 
 ### Hádanky
 
@@ -344,8 +324,6 @@ program dělá.
         print(cislo)
       index +=  1
 
-11
-
 ### Vzestupný seznam
 
 **Obtížnost: Zapni hlavu**
@@ -355,8 +333,6 @@ v tomto seznamu vzestupně seřazena.
 
 ## Úložky na doma ‒ nepovinné
 
-12
-
 ### Písemky
 
 **Obtížnost: To dáš**
@@ -365,8 +341,6 @@ Napište program, který obdrží seznam známek z písemek a na výstup vypíš
 souhrn toho, kolik bylo dohromady jedniček, kolik dvojek, kolik trojek a tak
 dále.
 
-13
-
 ### Maximum
 
 **Obtížnost: Zapni hlavu**
@@ -374,16 +348,12 @@ dále.
 Zkuste napsat program, který na vstupu obdrží seznam čísel a najde mezi nimi
 nejvyšší číslo. Pozor, bez použití funkce `max()`.
 
-14
-
 ### Druhé maximum
 
 **Obtížnost: Zavařovačka**
 
 Zkuste napsat program, který na vstupu obdrží seznam čísel a najde mezi nimi
 druhé nejvyšší číslo. Opět bez použití funkce `max()`.
-
-15
 
 ### K-té maximum
 
@@ -403,8 +373,6 @@ pěkně od píky.
 Možností, jak tento úkol vyřešit, je více. Nebojte se zagooglit, nebojte se
 být kreativní.
 
-16
-
 ### Ruleta
 
 **Obtížnost: Zapni hlavu**
@@ -420,8 +388,6 @@ jsou černá a sudá červená. Nula není ani lichá ani sudá, ani černá ani
 
 Napište program, kterému uživatel zadá číslo a program odpoví jestli jde o
 číslo sudé nebo liché, černé nebo červené, nebo je to nula.
-
-17
 
 ### Přestupný rok
 

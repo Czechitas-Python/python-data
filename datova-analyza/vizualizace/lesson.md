@@ -185,8 +185,6 @@ si z našich sérií vyrobíme DataFrame.
 
 ## Cvičení
 
-1
-
 ### Házení kostkami
 
 Mějme dvě hrací kostky, kterými vždy hodíme najednou a zaznamenáme součet
@@ -200,8 +198,6 @@ dotazy:
   1. Jaká je nejčastější hodnota, která na dvou kostkách padne?
   2. Je větší šance, že padne hodnota 12 než že padne hodnota 2?
 
-2
-
 ### Call centrum
 
 V souboru [callcentrum.txt](/download/python-data/callcentrum.txt) najdete
@@ -209,8 +205,6 @@ několik tisíc záznamů pro call centrum, které udávají časy mezi jednotli
 příchozími hovory v minutách a vteřinách. Načtěte tato data do série v
 Pythonu. Časy převeďte na vteřiny a zobrazte jejich histogram a boxplot. Co
 lze z těchto dvou grafů vyčíst?
-
-3
 
 ### Hurá na hory
 

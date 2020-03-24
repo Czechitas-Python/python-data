@@ -205,14 +205,10 @@ nebo
 
 ## Cvičení
 
-1
-
 ### Převod písmen
 
 Uložte si do proměnné jmeno svoje jméno. Pomocí volání vhodných metod jej
 převeďte nejdříve na všechna pímena malá a poté na všechna písmena velká.
-
-2
 
 ### Čísla jako text
 
@@ -234,8 +230,6 @@ toto provést. Až když si nejste jistí, pokračujte podle následujících kr
   1. Uložte si hodnotu na třetí pozici v seznam do nějaké proměnné.
   2. Převeďte tuto hodnotu na číslo a přičtěte k němu 4. Výsledek uložte do nějaké jiné proměnné.
   3. Převeďte hodnotu v proměnné vysledek zpět na řetězec a uložte ji na třetí pozici v seznamu hodnoty.
-
-3
 
 ### Čísla v textu
 
@@ -261,8 +255,6 @@ Hurá, pokud jste dorazili až sem, máte hotovo. Nalepte si lísteček a pokud
 chcete, můžete pokračovat bonusovými příklady.
 
 ## Bonusy
-
-4
 
 ### Chytřejší cvičení 2
 
@@ -335,8 +327,6 @@ udělat takto:
 
 ## Cvičení
 
-5
-
 ### Seznamy čísel
 
 Mějme zadaný následující seznam
@@ -352,8 +342,6 @@ Vytvořte seznam, který obsahuje
   3. každé z čísel ze seznamu cisla umocněné na druhou, 
   4. každé z čísel ze seznamu cisla jako řetězec. 
 
-6
-
 ### Seznamy řetězců
 
 Mějme zadaný následující seznam
@@ -368,8 +356,6 @@ Vytvořte seznam, který obsahuje
   2. všechna jména napsaná velkými písmeny, 
   3. všechna jména plus písmeno `'a'` na konci (stanou se z nich tedy ženská jména), 
   4. všechna jména převedená na malá písmena s koncovkou `'@email.cz'`. 
-
-7
 
 ### Seznam teplot
 
@@ -394,8 +380,6 @@ noci.
   3. Vytvořte seznam nočních teplot. 
   4. Vytvořte seznam dvouprvkových seznamů obsahujících pouze denní a noční teplotu. 
   5. Spočítejte celkovou průměrnou teplotu za celý týden. 
-
-8
 
 ### Čtení kódu
 
@@ -527,8 +511,6 @@ Výsledek `True`, pokud je délka seznamu různá od 4.
 
 ## Domácí úkoly ‒ povinné
 
-9
-
 ### Ověřování věku
 
 **Obtížnost: Pohodička**
@@ -542,8 +524,6 @@ Následující seznam obsahuje věky uživatelů naší malé sociální sítě.
   1. Vytvořte pomocí chroustání seznamů seznam celých čísel, které udávají, kolik jednotlivým uživatelům zbývá do 18ti let. Záporná čísla budou znamenat, že uživatel už věk překročil.
   2. Vytvořte pomocí chroustání seznamů seznam pravdivostních hodnot, které udávají, který uživatel je starší 18ti let.
   3. Vytvořte pomocí chroustání seznamů seznam pravdivostních hodnot, které udávají, který uživatel má přesně 18 let.
-
-10
 
 ### Promítání
 
@@ -570,16 +550,15 @@ minutách. Výsledek tedy bude vypadat takto
     
     trvani = ['2:16', '1:45', '1:22']
 
-11
-
 ### Počty obyvatel
 
 **Obtížnost: To dáš**
 
 Mějme počty obyvatel v jednotlivých krajích ČR podle následující tabulky.
 
-Kraj| Počet obyvatel | Hlavní město Praha| 1 280 508  
+Kraj| Počet obyvatel
 ---|---  
+Hlavní město Praha| 1 280 508  
 Jihočeský kraj| 638 782  
 Jihomoravský kraj| 1 178 812  
 Karlovarský kraj| 296 749  
@@ -619,8 +598,6 @@ Tuto tabulku máme reprezentovanou jako seznam:
   2. Vytvořte seznam, který obsahuje počty obyvatel jako čísla.
   3. Do vhodně pojmenované proměnné uložte seznam, který reprezentuje výše uvedenou tabulku jako dva seznamy: seznam jmen a seznam počtů obyvatel jako čísla.
 
-12
-
 ### Volby
 
 **Obtížnost: Zapni hlavu**
@@ -628,9 +605,9 @@ Tuto tabulku máme reprezentovanou jako seznam:
 Máme pět kandidátů na post prezidenta ČR. Následující tabulka obsahuje hlasy,
 které jednotliví kandidáti získali v prvním kole prezidentských voleb.
 
-Kraj | Igor Rezek | Augustýn Doležal | Vladan Bednář | Ondřej Brotz | Radim
-Kašpar | Hlavní město Praha | 78774 | 43179 | 225111 | 144799 | 242854  
+Kraj | Igor Rezek | Augustýn Doležal | Vladan Bednář | Ondřej Brotz | Radim Kašpar
 ---|---|---|---|---|---  
+Hlavní město Praha | 78774 | 43179 | 225111 | 144799 | 242854  
 Jihočeský kraj | 91062 | 22451 | 17475 | 53391 | 46450  
 Jihomoravský kraj | 179186 | 216499 | 4493 | 156305 | 61222  
 Karlovarský kraj | 9619 | 53476 | 926 | 64737 | 34566  
@@ -682,8 +659,6 @@ zopakujete 13 krát, jednou pro každý kraj. Pokud toužíte po elegantnější
   6. Vytvořte seznam pravdivostních hodnot, který bude říkat, ve kterých krajích překročila volební účast 50 %.
 
 ## Domácí úkoly ‒ nepovinné
-
-13
 
 ### Elegantní volby
 

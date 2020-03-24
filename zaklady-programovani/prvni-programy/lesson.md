@@ -76,14 +76,10 @@ takto:
 
 ## Cvičení
 
-1
-
 ### Jméno a město
 
 Napište program, který na obrazovku vypíše vaše jméno a na nový řádek město,
 ze kterého pocházíte.
-
-2
 
 ### Výplata jako program
 
@@ -91,8 +87,6 @@ Na první lekci jsme dělali [cvičení na výpočet výplaty](../hodnoty-promen
 funkce#vyplata) pomocí proměnných. Udělejte toto cvičení znova, ale tentokrát
 jako program. Nejdříve uložte nezbytné hodnoty do proměnných, spočítejte
 výplatu a pak ji pomocí funkce `print()` vypište na obrazovku.
-
-3
 
 ### Teploty jako program
 
@@ -226,8 +220,6 @@ seznamu parametrů. Naše čísla se tedy nacházejí až od prvního indexu nah
 
 ## Cvičení
 
-4
-
 ### Čas v minutách
 
 Napište program `minuty.py`, která dělá obrácenou věc než program `cas.py` z
@@ -241,23 +233,17 @@ program nám vrátí délku tohoto času minutách. V tomto případě tedy čí
   1. Nejprve program napište tak, že si hodnoty 2 a 54 uložíte přímo natvrdo v programu do nějakých proměnných a z nich spočítáte a vytisknete výsledek.
   2. Až když váš program bude fungovat, zkuste tyto proměnné načíst z parametrů příkazové řádky. Nezapomeňte, že parametry jsou vždy řetězce a že první parametr je vždy název vašeho programu.
 
-5
-
 ### Zaokrouhlování
 
 Napište program, který dostane na vstupu desetinné číslo a na výstup napíše
 toto číslo zakrouhlené nejdříve nahoru, potom dolů a potom běžným Pythonovským
 zaokrouhlováním.
 
-6
-
 ### Doména na URL
 
 Napište program `url.py`, který jako parametr dostane název domény, například
 `kodim.cz` a na výstup vypíše URL, kterou je třeba zadat do prohlížeče pro
 přístup k webové stránce na této doméně, tedy `http://kodim.cz`.
-
-7
 
 ### Průměr versus medián
 
@@ -277,8 +263,6 @@ Hurá, pokud jste dorazili až sem, máte hotovo. Nalepte si lísteček a pokud
 chcete, můžete pokračovat bonusovými příklady.
 
 ## Bonusy
-
-8
 
 ### Klasické zaokrouhlování
 
@@ -405,8 +389,6 @@ můžeme jej převést na seznam pomocí funkce `list()`
 
 ## Domácí úložky ‒ povinné
 
-9
-
 ### Minuty
 
 **Obtížnost: To dáš**
@@ -420,8 +402,6 @@ takto:
   1. Vyfiltrujte z tohoto seznamu pouze ty časy, které se vejdou do jedné hodiny.
   2. Vyfiltrujte z tohoto seznamu pouze ty časy, které překračují jednu hodinu a to tak, že výsledkem bude seznam minut, udávajících o kolik jsme jednu hodinu překročili.
   3. Upravte program tak, aby seznam naměřených hodnot obdržel na příkazové řádce.
-
-10
 
 ### Fahrnheit vs. Celsius
 
@@ -437,8 +417,6 @@ Wikipedii](https://cs.wikipedia.org/wiki/Stupe%C5%88_Fahrenheita) jak se
 převádějí stupně Fahrenheita na stupně Celsia a napište program, který takový
 převod provede. Váš program dostane na příkazové řádce teplotu ve stupních
 Fahrenheita a vypíše její ekvivalent ve stupních Celsia.
-
-11
 
 ### Cesta k souboru
 
@@ -457,8 +435,6 @@ tedy takto
 Napište program, který dostane jako parametr cestu ve Windows stylu a převede
 ji na Unix styl.
 
-12
-
 ### Házení kostkou
 
 **Obtížnost: Zapni hlavu**
@@ -466,8 +442,6 @@ ji na Unix styl.
   1. Napište program, který při každém spustění hodí šestistěnnou kostkou ‒ tedy vypíše náhodné číslo mezi 1 až 6.
   2. Upravte program tak, aby jako parametr dostal počet stěn kostky. Bude tedy umět házet třeba sedmistěnnou nebo devítistěnnou kostkou podle toho, jaké číslo dostane na vstupu.
   3. Předejte programu další parametr, který bude udávat kolik hodů má program provést. Program pak na výstup vytiskne seznam tolika hodů, kolik jste zadali na vstupu. Cílem je tedy vymyslet, jak vyrobit seznam náhodných čísel. Jistě se nám k tomu bude hodit chroustání seznamů.
-
-13
 
 ### Karty 1
 
@@ -483,8 +457,6 @@ Výstup programu může vypadat například takto:
 
 ## Domácí úložky ‒ nepovinné
 
-14
-
 ### Jak proměnit hada na velblouda
 
 **Obtížnost: To dáš**
@@ -496,8 +468,6 @@ Příklad:
 
     $ python3 had-velbloud.py had_honi_velblouda
     hadHoniVelblouda
-
-15
 
 ### Jak proměnit velblouda na hada
 
