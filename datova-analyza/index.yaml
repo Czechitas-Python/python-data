@@ -1,0 +1,18 @@
+title: Datová analýza
+link: datova-analyza
+lessons:
+  - title: Web scraping
+    link: webscraping
+    brief: Naučíte se jak ve vašich Python programech vytáhnout data z webových stránek.
+  - title: Pandas: základní dotazy
+    link: pandas-dotazy
+    brief: Představíme si Python modul pro práci s daty jménem Pandas a ukážeme si jak se v něm provedou základní dotazy nad tabulkami.
+  - title: Pandas: agregace
+    link: pandas-agregace
+    brief: Ukážeme si jak v Pandasu spojovat více tabulek dohromady, třídit tabulky a pracovat s hodnotami ve sloupcích.
+  - title: Pandas: transformace
+    link: pandas-transformace
+    brief: Naučíme se, jak v Pythonu psát vlastní funkce a ukážeme si, jak pomocí nich transformovat data uvnitř tabulek.
+  - title: Vizualizace dat
+    link: vizualizace
+    brief: Naučíme se pracovat s novým modulem pro Python, který umí zobrazovat různé druhy grafů.
