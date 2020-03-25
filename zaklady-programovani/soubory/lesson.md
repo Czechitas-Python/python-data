@@ -1,5 +1,3 @@
-# Soubory: čtení a zápis
-
 V minulé lekci jsme se bavili o tom, jak dostat do našeho programu data pomocí
 parametrů příkazové řádky. Takový způsob ale brzy narazí na své limity
 především proto, že na příkazovou řádku se nám vejde jen pár hodnot. Proto

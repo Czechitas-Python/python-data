@@ -1,5 +1,3 @@
-# Slovníky, JSON
-
 V našich programech budeme často potřebovat pracovat s různě strukturovanými
 daty, která obsahují mnoho druhů hodnot. Představme si například, že
 zpracováváme seznam absolventů nějakého kurzu. Každý absolvent má svoje jméno,

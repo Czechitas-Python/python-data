@@ -1,5 +1,3 @@
-# Opakování
-
 Následující příklad v sobě zahrnuje většinu věcí, kterou jsme se do teď v
 kurzu naučili. Můžete jej vyzkoušet a zjistit, jak na tom jste se svými
 programátorskými schopnostmi a co jste si z kurzu zapamatovali.

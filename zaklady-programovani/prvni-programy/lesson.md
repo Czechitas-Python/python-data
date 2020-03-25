@@ -1,5 +1,3 @@
-# První programy
-
 Konzole jazyka Python už nám pomalu přestává stačit na větší a komplikovanější
 problémy. Potřebovali bychom místo jednoho příkazu spustit příkazů více po
 sobě a také být schopni si takovou sekvenci příkazů uložit, abychom ji mohli
