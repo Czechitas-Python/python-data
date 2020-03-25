@@ -6,7 +6,7 @@ Pokud pracujete pod Windows, Python konzoli spustíte tak, že do termínálu
 napíšete příkaz
 
 ```shell
-$ python
+$ py
 ```
 
 Pokud pracujete na Macu nebo Linuxu, správný příkaz je
@@ -133,16 +133,13 @@ Funkci si můžeme představit například jako topinkovač. Topinkovač pro ná
 
 Zatím jsme byli schopní do jedné proměnné uložit pouze jednu hodnotu. Pro práci s daty ale budeme potřebovat pracovat s větším množstvím hodnot než pouze s jednou. K tomu nám poslouží takzvané <term cs="seznamy" en="lists">.
 
-Představme si, že si chci zaznamenat počet vanilkových věnečků snězených za
-posledních 7 dní. V Pythonu si můžu pro tento účel vytvořit seznam, který si
-uložím do vhodně pojmenované proměnné.
+Představme si, že si chci zaznamenat počet vanilkových věnečků snězených za posledních 7 dní. V Pythonu si můžu pro tento účel vytvořit seznam, který si uložím do vhodně pojmenované proměnné. 
 
 ```pycon
 >>> venecky = [1, 2, 4, 1, 6, 0, 1]
 ```
 
-Chceme-li přistoupit k jednotlivým hodnotám uvnitř seznamu, použijeme k tomu
-hranaté závorky.
+Chceme-li přistoupit k jednotlivým hodnotám uvnitř seznamu, použijeme k tomu hranaté závorky.
 
 ```pycon
 >>> venecky[0]
@@ -151,11 +148,9 @@ hranaté závorky.
 6
 ```
 
-**POZOR!** Programátoři jsou podivné bytosti, které vždy počítají od nuly,
-nikoliv od jedničky. Proto také první hodnota v našem seznamu má index 0.
+**POZOR!** Programátoři jsou podivné bytosti, které vždy počítají od nuly, nikoliv od jedničky. Proto také první hodnota v našem seznamu má index 0. 
 
-Snadno také můžeme některou hodnotu v seznamu změnit. Například když si
-vzpomeneme, že jsme trošku zalhali ohledně konzumace věnečků v sobotu:
+Snadno také můžeme některou hodnotu v seznamu změnit. Například když si vzpomeneme, že jsme trošku zalhali ohledně konzumace věnečků v sobotu:
 
 ```pycon
 >>> venecky[5] = 12
@@ -174,9 +169,7 @@ Z jednoho seznamu můžeme také získat menší kusy podle zadaných mezí
 
 ### Vnořené seznamy
 
-Seznam může obsahovat jakékoliv hodnoty, tedy nejen celá čísla. Nezapomeňte,
-že seznamy jsou také hodnoty, takže jeden seznam může obsahovat jiný seznam
-jako svůj prvek. Například takto:
+Seznam může obsahovat jakékoliv hodnoty, tedy nejen celá čísla. Nezapomeňte, že seznamy jsou také hodnoty, takže jeden seznam může obsahovat jiný seznam jako svůj prvek. Například takto: 
 
 ```pycon
 >>> seznam = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
@@ -196,7 +189,7 @@ Rozmyslete si, co vypíšou následující výrazy:
 Pro práci se seznamy se nám může hodit několik funkcí:
 
 `len()`
-:Vrátí délku seznamu
+: Vrátí délku seznamu
 
 `sum()`
 : Vrátí součet všech prvků v seznamu
@@ -217,22 +210,17 @@ Pro práci se seznamy se nám může hodit několik funkcí:
 
 ## Povinné čtení na doma
 
-Přečtěte si povídání o dalších vymoženostech Pythonu, které se nám nevešly do
-živé lekce. Cílem je, abyste se postupně učili rozumět textům o programování
-bez cizí pomoci.
+Přečtěte si povídání o dalších vymoženostech Pythonu, které se nám nevešly do živé lekce. Cílem je, abyste se postupně učili rozumět textům o programování bez cizí pomoci.
 
 ### Další hezké operátory
 
-Během přednášky jsme neprobrali úplně všechny aritmetické operátory, které
-můžeme v Pythonu použít. Kromě sčítání, odčítání, násobení a dělení máme ještě
-tyto:
+Během přednášky jsme neprobrali úplně všechny aritmetické operátory, které můžeme v Pythonu použít. Kromě sčítání, odčítání, násobení a dělení máme ještě tyto:
 
-- Mocnění: **`**`\*\*
+- Mocnění: **`**`**
 - Celočíselné dělení: **`//`**
 - Zbytek po dělení: **`%`**
 
-Mocnění nás zachrání od zdlouhavého opakovného násobení, tedy místo abychom
-psali
+Mocnění nás zachrání od zdlouhavého opakovného násobení, tedy místo abychom psali
 
 ```pycon
 >>> 2*2*2*2*2
@@ -246,27 +234,21 @@ můžeme prostě napsat
 32
 ```
 
-Pokud si na chvíli vybavíte kruté hodiny matematiky na střední škole, možná si
-vzpomenete, že mocnění lze použít i k zajímavějším výpočtům. Můžeme například
-spočítat druhou odmocninu.
+Pokud si na chvíli vybavíte kruté hodiny matematiky na střední škole, možná si vzpomenete, že mocnění lze použít i k zajímavějším výpočtům. Můžeme například spočítat druhou odmocninu.
 
 ```pycon
 >>> 16**0.5
 4
 ```
 
-Dalším užitečným operátorem je celočíselné dělení. Dejme tomu, že jsme si
-dopřáli dlouhou dovolenou, která trvala 33 dní, a chceme spočítat, kolik to
-bylo celých týdnů. Normální dělení nám vrátí desetinné číslo, takže místo toho
-použijeme dělení celočíselné.
+Dalším užitečným operátorem je celočíselné dělení. Dejme tomu, že jsme si dopřáli dlouhou dovolenou, která trvala 33 dní, a chceme spočítat, kolik to bylo celých týdnů. Normální dělení nám vrátí desetinné číslo, takže místo toho použijeme dělení celočíselné.
 
 ```pycon
 >>> 33 // 7
 4
 ```
 
-Všimněte si, že nám po čtyřech týdnech zbude ještě pár dní. Pokud chceme
-přesně vědět, kolik dní nám bylo po dělení sedmi, použijeme operátor <term cs="zbytek" en="division reminder">.
+Všimněte si, že nám po čtyřech týdnech zbude ještě pár dní. Pokud chceme přesně vědět, kolik dní nám bylo po dělení sedmi, použijeme operátor <term cs="zbytek" en="division reminder">.
 
 ```pycon
 >>> 33 % 7

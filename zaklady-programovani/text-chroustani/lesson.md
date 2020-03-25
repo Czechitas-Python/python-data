@@ -315,7 +315,9 @@ udělat takto:
 
 Mějme zadaný následující seznam
 
-    cisla = [1.12, 4.51, 2.64, 13.1, 0.1]
+```py
+cisla = [1.12, 4.51, 2.64, 13.1, 0.1]
+```
 
 Vytvořte seznam, který obsahuje
 
@@ -328,7 +330,9 @@ Vytvořte seznam, který obsahuje
 
 Mějme zadaný následující seznam
 
-    jmena = ['Roman', 'Jan', 'Miroslav', 'Petr', 'Gabriel']
+```py
+jmena = ['Roman', 'Jan', 'Miroslav', 'Petr', 'Gabriel']
+```
 
 Vytvořte seznam, který obsahuje
 
@@ -343,15 +347,17 @@ Mějme zadaný následující seznam naměřených teplot. Seznam obsahuje teplo
 naměřené pro každý den v týdnu ve čtyřech časech - ráno, v poledne, večer a v
 noci.
 
-    teploty = [
-      [2.1, 5.2, 6.1, -0.1],
-      [2.2, 4.8, 5.6, -1.0],
-      [3.3, 6.5, 5.9, 1.2],
-      [2.9, 5.6, 6.0, 0.0],
-      [2.0, 4.6, 5.5, -1.2],
-      [1.0, 3.2, 2.1, -2.0],
-      [0.4, 2.7, 1.3, -2.8]
-    ]
+```py
+teploty = [
+    [2.1, 5.2, 6.1, -0.1],
+    [2.2, 4.8, 5.6, -1.0],
+    [3.3, 6.5, 5.9, 1.2],
+    [2.9, 5.6, 6.0, 0.0],
+    [2.0, 4.6, 5.5, -1.2],
+    [1.0, 3.2, 2.1, -2.0],
+    [0.4, 2.7, 1.3, -2.8]
+]
+```
 
 1. Vytvořte seznam průměrných teplot pro každý den.
 2. Vytvořte seznam ranních teplot.
@@ -362,33 +368,31 @@ noci.
 ### Čtení kódu
 
 Popište vlastními slovy co následující výrazy udělají se zadaným seznamem
-seznam. Až když máte ve svojí hlavjénce jasno, tak je zkuste napsat do Python
+`seznam`. Až když máte ve svojí hlavjénce jasno, tak je zkuste napsat do Python
 konzole a ověřte, zda jste měli pravdu.
 
-    seznam = [1, 4, 9, 16, 25, 36, 49, 64]
+```py
+seznam = [1, 4, 9, 16, 25, 36, 49, 64]
+```
 
-1.                [x**0.5 for x in seznam]
+1.     [x**0.5 for x in seznam]
+1.     [x % 2 for x in seznam]
+1.     [[x // 2, x % 2] for x in seznam]
 
-2.                [x % 2 for x in seznam]
+```py
+seznam = ['12.03.2014', '10.01.2015', '06.06.1986']
+```
 
-3.                [[x // 2, x % 2] for x in seznam]
-
-
-    seznam = ['12.03.2014', '10.01.2015', '06.06.1986']
-
-1.                [int(datum[3:5]) for datum in seznam]
-
-2.                [int(datum[:2])-1 for datum in seznam]
-
-3.                [
-
-    [int(datum[:2]), int(datum[3:5]), int(datum[6:])]
-    for datum in seznam
-    ]
-
-4.                [datum.split('.') for datum in seznam]
-
-5.                ['/'.join(datum.split('.')) for datum in seznam]
+4.     [int(datum[3:5]) for datum in seznam]
+1.     [int(datum[:2])-1 for datum in seznam]
+1.
+```py
+[
+    [int(datum[:2]), int(datum[3:5]), int(datum[6:])] for datum in seznam
+]
+```
+7.     [datum.split('.') for datum in seznam]
+1.     ['/'.join(datum.split('.')) for datum in seznam]
 
 ## Čtení na doma
 
@@ -404,39 +408,47 @@ typ hodnoty...
 
 ### Pravdivostní hodnoty
 
-Datový typ _pravdivostní hodnota_ slouží k tomu, abychom mohli v našem
-programu vyjádřit, zda je něco pravda či nepravda. Proto nám pro tento typ
-stačí pouze dvě hodnoty: `True` (pravda) a `False` (nepravda). Pravdivostní
-hodnoty jsou opět hodnoty jako každé jiné. Můžeme je tady ukládat do
-proměnných
+Datový typ <term cs="pravdivostní hodnota" en="bool"> slouží k tomu, abychom
+mohli v našem programu vyjádřit, zda je něco pravda či nepravda. Proto nám
+pro tento typ stačí pouze dvě hodnoty: `True` (pravda) a `False` (nepravda).
+Pravdivostní hodnoty jsou opět hodnoty jako každé jiné. Můžeme je tady
+ukládat do proměnných
 
-    vysledek = False
+```py
+vysledek = False
+```
 
 nebo je používat v seznamech. Zkusme například vyjádřit, který den v týdnu je
 pracovní.
 
-    [True, True, True, True, True, False, False]
+```py
+[True, True, True, True, True, False, False]
+```
 
 Mnoho užitečných operátorů v Pythonu vrací právě pravdivostní hodnoty.
 Například operátor `in`, vrátí `True`, pokud se daný prvek nachází uvnitř
 seznamu nebo řetězce.
 
-    >>> 3 in [1, 2, 3]
-    True
-    >>> 4 in [1, 2, 3]
-    False
-    >>> 'r' in 'Martin'
-    True
-    >>> 'x' in 'Martin'
-    False
+```pycon
+>>> 3 in [1, 2, 3]
+True
+>>> 4 in [1, 2, 3]
+False
+>>> 'r' in 'Martin'
+True
+>>> 'x' in 'Martin'
+False
+```
 
 Existuje také obrácený operátor `not in`, který vrací `True`, pokud daný
-seznam nebo retězec prvek _neobsahuje._
+seznam nebo retězec prvek <i>neobsahuje</i>.
 
-    >>> 3 not in [1, 2, 3]
-    False
-    >>> 4 not in [1, 2, 3]
-    True
+```pycon
+>>> 3 not in [1, 2, 3]
+False
+>>> 4 not in [1, 2, 3]
+True
+```
 
 Velmi užitečné jsou také následující porovnávací operátory
 
@@ -449,23 +461,31 @@ Velmi užitečné jsou také následující porovnávací operátory
 
 Můžeme se tedy ptát například takto
 
-    >>> 4 > 3
-    True
-    >>> 4 < 3
-    False
+```pycon
+>>> 4 > 3
+True
+>>> 4 < 3
+False
+```
 
 Takovéto otázky jsou dost zbytečné, protože odpověď již známe předem. Pokud
 ovšem použijeme proměnné a funkce, můžeme se ptát na zajímavější věci.
 
-    >>> vek >= 18
+```pycon
+>>> vek >= 18
+```
 
 Výsledek bude `True` pokud proměnná věk obsahuje hodnotu větší nebo rovnu 18.
 
-    >>> jmeno == 'Martin'
+```pycon
+>>> jmeno == 'Martin'
+```
 
 Výsledek `True`, pokud proměnná jmeno obsahuje hodnotu `'Martin'`.
 
-    >>> len(seznam) != 4
+```pycon
+>>> len(seznam) != 4
+```
 
 Výsledek `True`, pokud je délka seznamu různá od 4.
 
@@ -477,7 +497,9 @@ Výsledek `True`, pokud je délka seznamu různá od 4.
 
 Následující seznam obsahuje věky uživatelů naší malé sociální sítě.
 
-    veky = [35, 12, 44, 11, 18, 21, 28, 18]
+```py
+veky = [35, 12, 44, 11, 18, 21, 28, 18]
+```
 
 1. Vytvořte pomocí chroustání seznamů seznam celých čísel, které udávají, kolik jednotlivým uživatelům zbývá do 18ti let. Záporná čísla budou znamenat, že uživatel už věk překročil.
 2. Vytvořte pomocí chroustání seznamů seznam pravdivostních hodnot, které udávají, který uživatel je starší 18ti let.
@@ -491,18 +513,22 @@ V letním kině Šmajchl mají program na každý den uložený jako dva seznamy
 První seznam obsahuje názvy filmů a druhý jejich délky v minutách, např.
 takto:
 
-    nazvy = [
-      'Někdo to rád horké, extended edition',
-      'Adéla ještě nevečeřela',
-      'Kulový blesk'
-    ]
-    delky = [136, 105, 82]
+```py
+nazvy = [
+    'Někdo to rád horké, extended edition',
+    'Adéla ještě nevečeřela',
+    'Kulový blesk'
+]
+delky = [136, 105, 82]
+```
 
 Použijte chroustání seznamů a vyrobte seznam trvani, který bude obsahovat
 délky filmů nikoliv jako čísla v minutách, ale jako řetězce v hodinách a v
 minutách. Výsledek tedy bude vypadat takto
 
-    trvani = ['2:16', '1:45', '1:22']
+```py
+trvani = ['2:16', '1:45', '1:22']
+```
 
 ### Počty obyvatel
 
@@ -529,22 +555,24 @@ Mějme počty obyvatel v jednotlivých krajích ČR podle následující tabulky
 
 Tuto tabulku máme reprezentovanou jako seznam:
 
-    kraje = [
-      ['Hlavní město Praha', '1 280 508'],
-      ['Jihočeský kraj', '638 782'],
-      ['Jihomoravský kraj', '1 178 812'],
-      ['Karlovarský kraj', '296 749'],
-      ['Kraj Vysočina', '508 952'],
-      ['Královéhradecký kraj', '550 804'],
-      ['Liberecký kraj', '440 636'],
-      ['Moravskoslezský kraj', '1 209 879'],
-      ['Olomoucký kraj', '633 925'],
-      ['Pardubický kraj', '517 087'],
-      ['Plzeňský kraj', '578 629'],
-      ['Středočeský kraj', '1 338 982'],
-      ['Ústecký kraj', '821 377'],
-      ['Zlínský kraj', '583 698']
-    ]
+```py
+kraje = [
+    ['Hlavní město Praha', '1 280 508'],
+    ['Jihočeský kraj', '638 782'],
+    ['Jihomoravský kraj', '1 178 812'],
+    ['Karlovarský kraj', '296 749'],
+    ['Kraj Vysočina', '508 952'],
+    ['Královéhradecký kraj', '550 804'],
+    ['Liberecký kraj', '440 636'],
+    ['Moravskoslezský kraj', '1 209 879'],
+    ['Olomoucký kraj', '633 925'],
+    ['Pardubický kraj', '517 087'],
+    ['Plzeňský kraj', '578 629'],
+    ['Středočeský kraj', '1 338 982'],
+    ['Ústecký kraj', '821 377'],
+    ['Zlínský kraj', '583 698']
+]
+```
 
 1. Vytvořte seznam, který obsahuje pouze názvy všech krajů, tedy první sloupeček této tabulky.
 2. Vytvořte seznam, který obsahuje počty obyvatel jako čísla.
@@ -576,22 +604,24 @@ které jednotliví kandidáti získali v prvním kole prezidentských voleb.
 
 Data máme k dispozici v následujícím formátu
 
-    hlasy = [
-      [78774, 43179, 225111, 144799, 242854],
-      [91062, 22451, 17475, 53391, 46450],
-      [179186, 216499, 4493, 156305, 61222],
-      [9619, 53476, 926, 64737, 34566],
-      [66904, 85730, 27271, 12964, 38041],
-      [118755, 1929, 30426, 25178, 31952],
-      [64467, 40993, 81181, 39392, 4335],
-      [11221, 97970, 26179, 98539, 112578],
-      [171064, 7638, 8752, 96666, 39738],
-      [74235, 101680, 18920, 45904, 1922],
-      [39309, 1505, 10531, 30458, 40228],
-      [131584, 1812, 241122, 22267, 99326],
-      [194133, 39985, 200997, 28229, 20780],
-      [66188, 51607, 15977, 177272, 17664]
-    ]
+```py
+hlasy = [
+    [78774, 43179, 225111, 144799, 242854],
+    [91062, 22451, 17475, 53391, 46450],
+    [179186, 216499, 4493, 156305, 61222],
+    [9619, 53476, 926, 64737, 34566],
+    [66904, 85730, 27271, 12964, 38041],
+    [118755, 1929, 30426, 25178, 31952],
+    [64467, 40993, 81181, 39392, 4335],
+    [11221, 97970, 26179, 98539, 112578],
+    [171064, 7638, 8752, 96666, 39738],
+    [74235, 101680, 18920, 45904, 1922],
+    [39309, 1505, 10531, 30458, 40228],
+    [131584, 1812, 241122, 22267, 99326],
+    [194133, 39985, 200997, 28229, 20780],
+    [66188, 51607, 15977, 177272, 17664]
+]
+```
 
 Zodpovězte následující otázky
 
@@ -618,11 +648,3 @@ Pokud vás trápí, že řešení varianty e) v úloze o volbách není příli�
 elegantní, zkuste sestavit Python výraz na jeden řádek, který celý bod e)
 vyřeší najednou. Bude potřeba do sebe zanořit dvě chroustání seznamů, jedno
 přes hodnoty v řádcích a druhé přes jednotlivé kraje.
-
-```
-
-```
-
-```
-
-```
