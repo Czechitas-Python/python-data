@@ -1,0 +1,300 @@
+# Pandas: agregace
+
+V předchozí lekci jsme si ukázali, jak se v Pandasu vytvoří DataFrame a jak z
+něj můžeme vybírat data pomocí různých způsobů dotazování. Nyní se posuneme o
+kus dále a ukážeme si, jak můžeme s DataFramy dělat složitější operace jako je
+filtrování chybějících hodnot, spojování a agregace.
+
+## Maturita
+
+Abychom měli nějaký praktický příklad k procvičování, použijeme fiktivní data
+z výsledků maturitních zkoušek během jednoho týdne na nějakém menším gymnáziu.
+Maturita se odehrává ve třech místnostech: U202, U203 a U302. Máme tedy tři
+tabulky dat, z každé místnosti jednu. Níže si můžete prohlédnout příklad
+tabulky z místnosti U202. Všechny tabulky jsou ke stažení zde:
+[u202.csv](/download/python-data/u202.csv), [u203.csv](/download/python-
+data/u203.csv), [u302.csv](/download/python-data/u302.csv).
+
+jméno | předmět | známka | den 
+---|---|---|---  
+Jana Zbořilová| Chemie| | pá  
+Lukáš Jurčík| Dějepis| 3| pá  
+Pavel Horák| Matematika| 2| út  
+Lukáš Jurčík| Společenské vědy| 2| pá  
+Pavel Kysilka| Biologie| 1| pá  
+Kateřina Novotná| Dějepis| 1| po  
+Marie Krejcárková| Fyzika| 2| čt  
+Vasil Lácha| Dějepis| 4| po  
+Alexey Opatrný| Matematika| 2| po  
+Petr Valenta| Dějepis| | pá  
+Miroslav Bednář| Chemie| 2| st  
+Pavel Horák| Chemie| 5| út  
+Ivana Dvořáková| Matematika| 1| st  
+Lenka Jarošová| Biologie| 4| st  
+Miroslav Bednář| Dějepis| 5| st  
+  
+## Práce s chybějícími hodnotami
+
+V praxi se poměrně často setkáme s tím, že v datovém setu některé hodnoty
+chybí. Můžeme si například všimnout, že v tabulce U202 dvěma studentům chybí
+známka. To může znamenat, že se doma hrůzou zhroutili a na maturitu ani
+nedorazili. Na takové případy je třeba být připraven.
+
+V Pandasu, ale i obecně v datové analýze, je možné se s chybějícími daty
+vypořádat různými způsoby:
+
+  1. Nahradit je za jiné výchozí hodnoty.
+  2. Odstranit všechny řádky s chybějícími daty z datového setu.
+  3. Vyčlenit je do separátního datasetu a zpracovat je zvlášť.
+
+Načtěme si naši první tabulku jako DataFrame.
+
+    
+    
+    >>> import pandas
+    >>> u202 = pandas.read_csv('u202.csv', encoding='utf-8')
+
+Pokud Pandas narazí na prázdnou buňku, vloží místo ní do tabulky speciální
+hodnotu `NaN` (z anglického _Not a Number_ ). Jakmile tyto speciální hodnoty v
+našem DataFrame objevíme, můžeme použít několik různých metod.
+
+Série obsahují metodu `isnull`, která vrátí pravdivostní sérii s hodnotou
+`True` všude tam, kde v původní sérii chybí hodnota. Metoda `notnull` pracuje
+přesně opačně. Vrátí pravdivostní sérii s hodnotami `True` všude tam, kde v
+původní sérii hodnota nechybí.
+
+    
+    
+    >>> u202['známka'].isnull()
+    0      True
+    1     False
+    2     False
+    3     False
+    4     False
+    5     False
+    6     False
+    7     False
+    8     False
+    9      True
+    10    False
+    11    False
+    12    False
+    13    False
+    14    False
+    Name: známka, dtype: bool
+
+Tyto metody můžeme využít například k tomu, abychom získali všechna data, kde
+chybí hodnota ve sloupečku _známka_.
+
+    
+    
+    >>> u202[u202['známka'].isnull()]
+                jméno  předmět  známka den
+    0  Jana Zbořilová   Chemie     NaN  pá
+    9    Petr Valenta  Dějepis     NaN  pá
+
+Další užitečné metody na práci s chybějícími hodnotami najdeme na DataFrame.
+
+  1. `dropna()` \- vrátí datový set očištěn od chybějících dat
+  2. `dropna(ax`is=1) - odstraní všechny sloupce, které obsahují chybějící data
+  3. `fillna(x)` \- nahradí všechna chybějící data a hodnoty hodnotou x
+
+## Spojení dat
+
+Nyní bychom chtěli všechny tři naše tabulky spojit do jedné. Nejdříve si
+každou z nich načteme do samostatného DataFrame s tím, že vyhodíme studenty,
+kteří na maturitu nedorazili..
+
+    
+    
+    >>> u202 = pandas.read_csv('u202.csv', encoding='utf-8').dropna()
+    >>> u203 = pandas.read_csv('u203.csv', encoding='utf-8').dropna()
+    >>> u302 = pandas.read_csv('u302.csv', encoding='utf-8').dropna()
+
+Pokud chceme tyto tři DataFrame spojit do jednoho, můžeme použít funkci
+`concat`
+
+    
+    
+    >>> maturita = pandas.concat([u202, u203, u302])
+
+Pozor ale na to, že v takto vzniklém DataFrame se nám rozbije index, protože
+se prostě spojí za sebe indexy jednotlivých tabulek. Pokud chceme, aby Pandas
+při spojování index přepočítal, musíme napsat
+
+    
+    
+    >>> maturita = pandas.concat([u202, u203, u302], ignore_index=True)
+
+To už je lepší. Stále nám však zůstává jeden problém. Po spojení tabulek do
+jedné už nevíme, kdo maturoval v jaké místnosti. Tuto informaci si proto
+doplníme do původních tří tabulek jako nový sloupeček. Až poté tabulky spojíme
+do jedné.
+
+    
+    
+    >>> u202['místnost'] = 'u202'
+    >>> u203['místnost'] = 'u203'
+    >>> u302['místnost'] = 'u302'
+    >>> maturita = pandas.concat([u202, u203, u302], ignore_index=True)
+
+Takto už nám vznikla pěkná vyčištěná tabulka. Uložme si ji do CSV, ať ji
+nemusíme vyrábět pořád znova. Nebudeme ukládat index, protože ten si vždycky
+necháme vyrobit automaticky.
+
+    
+    
+    >>> maturita.to_csv('maturita.csv', index=False)
+
+Výslednou tabulku si můžete stáhnout jako soubor
+[maturita.csv](/download/python-data/maturita.csv).
+
+## Joinování dat
+
+Už jsme si ukázali, jak v Pandase spojovat tabulky za sebe, což v SQL odpovídá
+příkazu UNION. Pandas však umí DataFrame také mergovat, což odpovídá SQL
+příkazu JOIN. Abychom si tento postup mohli předvést, nečteme si tabulku,
+která uvádí, kdo v který den předsedal maturitní zkoušecí komisi.
+
+den | datum | jméno  
+---|---|---  
+po | 20.5.2019 | Marie Zuzaňáková  
+út | 21.5.2019 | Marie Zuzaňáková  
+st | 22.5.2019 | Petr Ortinský  
+čt | 23.5.2019 | Petr Ortinský  
+pá | 24.5.2019 | Alena Pniáčková  
+  
+Data si můžete stáhnout jako soubor [predsedajici.csv](/download/python-
+data/predsedajici.csv). Načtěme si jej jako DataFrame.
+
+    
+    
+    >>> preds = pandas.read_csv('predsedajici.csv', encoding='utf-8')
+
+Join tabulek se v Pandase dělá pomocí funkce `merge`. Nejprve ji otestujme
+pouze na datech z prvni mistnosti.
+
+    
+    
+    >>> test = pandas.merge(u202, preds)
+
+Takto na poprvé se však s úspěchem nesetkáme, neboť výsledkem příkazu bude
+prázdný DataFrame. Důvod je ten, že metoda `merge` dělá ve výchozím nastavení
+INNER JOIN podle všech sloupečků, které mají stejná jména. Naše dvě tabulky se
+tedy spojí podle sloupečků _jméno_ a _den_. Tyto dva sloupečky ale nemají pro
+žádný řádek v obou tabulkách stejnou hodnotu, takže nám ve výsledku žádný
+řádek nezbude.
+
+Můžeme být neoblomná a zaexperimentovat s OUTER JOIN
+
+    
+    
+    >>> test = pandas.merge(u202, preds, how='outer')
+
+Takto nám ale ve výsledku vznikne ohromné množství nedefinovaných hodnot. Co
+doopravdy potřebujeme je joinovat pouze podle sloupečku _den_ , což zařídíme
+takto
+
+    
+    
+    >>> test = pandas.merge(u202, preds, on=['den'])
+    >>> test.head()
+             jméno_x           předmět  známka den mistnost      datum           jméno_y
+    0   Lukáš Jurčík           Dějepis     3.0  pá     u202  24.5.2019   Alena Pniáčková
+    1   Lukáš Jurčík  Společenské vědy     2.0  pá     u202  24.5.2019   Alena Pniáčková
+    2  Pavel Kysilka          Biologie     1.0  pá     u202  24.5.2019   Alena Pniáčková
+    3    Pavel Horák        Matematika     2.0  út     u202  21.5.2019  Marie Zuzaňáková
+    4    Pavel Horák            Chemie     5.0  út     u202  21.5.2019  Marie Zuzaňáková
+
+Potíž je v tom, že se teď oba sloupečky _jméno_ automaticky přejmenovaly, aby
+neměly v tabulce stejný název. Zde můžeme použít metodu `rename`, abychom
+sloupečky přejmenovali na něco smysluplného.
+
+    
+    
+    test = test.rename(columns={'jméno_x': 'jméno', 'jméno_y': 'předs'})
+
+Nyní už tabulka vypadá hezky. Proveďme tedy totéž pro celý náš maturitní
+dataset a opět si jej uložme do souboru, ať jej máme vždy po ruce.
+
+    
+    
+    >>> maturita2 = pandas.merge(maturita, preds, on=['den'])
+    >>> maturita2 = maturita2.rename(columns={'jméno_x': 'jméno', 'jméno_y': 'předs'})
+    >>> maturita2.to_csv('maturita2.csv', index=False)
+
+Výslednou tabulku si opět můžete stáhnout jako soubor
+[maturita2.csv](/download/python-data/maturita2.csv).
+
+## Grupování
+
+Z databází známe kromě UNION a JOIN také operaci GROUP BY. V Pandase ji
+provedeme tak, že pomocí metody _groupby_ vyrobíme z DataFrame speciální
+objekt `DataFrameGroupBy`. Dejme tomu, že chceme grupovat podle sloupečku
+_místnost_.
+
+    
+    
+    >>> maturita2.groupby('místnost')
+    &ltpandas.core.groupby.generic.DataFrameGroupBy; object at 0x7f96153a1cf8>
+
+Na tomto speciálním objektu pak můžeme používat různé agregační funkce.
+Nejjednodušší je funkce `count`
+
+    
+    
+    >>> maturita2.groupby('místnost').count()
+              jméno  předmět  známka  den  datum  předs
+    místnost                                           
+    u202         13       13      13   13     13     13
+    u203         13       13      13   13     13     13
+    u302         12       12      12   12     12     12
+
+Další užitečné agregační funkce jsou například
+
+  * `sum` \- součet hodnot
+  * `max` \- maximální hodnota
+  * `min` \- minimální hodnota
+  * `first` \- první hodnota
+  * `last` \- poslední hodnota
+  * `mean` \- průměr z hodnot
+  * `median` \- medián z hodnot
+  * `var` \- rozptyl hodnot
+  * `std` \- standardní odchylka hodnot
+  * `all` \- `True`, pokud jsou všechny hodnoty `True`
+  * `any` \- `True`, pokud je alespoň jedna z hodnot `True`
+
+Nemusíme samozřejmě grupovat přes všechny sloupečky. Vybereme si pouze ty,
+které nás zajímají. Zkusme například spočítat průměrnou známku z jednotlivých
+předmětů.
+
+    
+    
+    >>> maturita2.groupby('předmět')['známka'].mean()
+
+Všimněte si, že takto obdržíme sérii, nikoliv DataFrame. Pozornější z vás
+možná tuší, že abychom získali DataFrame, musíme psát
+
+    
+    
+    >>> maturita2.groupby('předmět')[['známka']].mean()
+
+## Cvičení
+
+### Studenti
+
+Stáhněte si datové sety, se kterými budeme pracovat v tomto cvičení:
+[jmena100.csv](/download/python-data/jmena100.csv),
+[studenti1.csv](/download/python-data/studenti1.csv),
+[studenti2.csv](/download/python-data/studenti2.csv). První set už známe z
+minulé lekce. Druhé dva sety obsahují seznam studentů na nějaké menší IT
+fakultě. Proveďte následující úkoly a zodpovězte předložené otázky.
+
+  1. Načtěte dva datové sety studentů do oddělených pandas DataFrame a pomocí funkce `concat` je spojte do jednoho setu.
+  2. Pokud studentovi chybí ročník, znamená to, že již nestuduje. Pokud mu chybí číslo skupiny, znamená to, že jde o dálkového studenta. Kolik studentů v datovém setu již nestuduje a kolik jsou dálkoví studenti?
+  3. Vyčistěte data od studentů, kteří nestudují nebo studují jen dálkově. Nadále budeme pracovat pouze s prezenčními studenty.
+  4. Zjistěte, kolik prezenčních studentů je v každém z oborů.
+  5. Zjistěte průměrný prospěch studentů v každém oboru.
+  6. Načtěte datový set s křestními jmény. Proveďte join s tabulkou studentů tak, abychom věděli pohlaví jednotlivých studentů.
+  7. Zjistěte, zda na naší fakultě studují IT spíše ženy nebo spíše muži.
+
