@@ -1,5 +1,3 @@
-# Web scraping
-
 Mnoho webových stránek na internetu obsahuje velmi zajímavá a užitečná data.
 Takových dat můžu být velký objem a mohou být rozházená po různých stránkách
 pod mnoha odkazy a není v našich silách je ručně ze stránek vykopírovat.

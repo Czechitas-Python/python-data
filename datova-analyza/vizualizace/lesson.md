@@ -1,5 +1,3 @@
-# Vizualizace dat
-
 V této lekci si ukážeme, jak zobrazovat různé druhy grafů pomocí modulu
 `matplotlib`. Také si představíme Jupyter notebook, díky kterému budeme
 schopni vytvářet hezké reporty z našich datových analýz.

@@ -1,5 +1,3 @@
-# Pandas: transformace
-
 Ještě než se pustíme do poslední lekce Pandasu, čeká nás představení jednoho
 velmi důležitého konceptu z jazyka Python, který posune naše programování
 zcela na novou úroveň. Naučíme se totiž psát vlastní funkce.

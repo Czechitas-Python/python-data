@@ -1,5 +1,3 @@
-# Pandas: základní dotazy
-
 Do této chvíle jsme se v tomto kurzu učili spíše základy programování než
 čistokrevnou datovou analýzu. Bylo potřeba, abychom si nejdříve zažili pojmy z
 programování jako jsou proměnné, funkce, podmínky, cykly, seznamy, slovníky a

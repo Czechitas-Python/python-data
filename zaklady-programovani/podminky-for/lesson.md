@@ -1,5 +1,3 @@
-# Podmínky a cyklus FOR
-
 Zatím všechny naše programy vypadaly jako sekvence příkazů vykonávané jeden za
 druhým. Pro komplikovanější programy ale budeme potřebovat umožnit, aby se
 některé části programu vykonaly jen za určitých _podmínek_ , nebo se

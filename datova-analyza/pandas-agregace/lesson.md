@@ -1,5 +1,3 @@
-# Pandas: agregace
-
 V předchozí lekci jsme si ukázali, jak se v Pandasu vytvoří DataFrame a jak z
 něj můžeme vybírat data pomocí různých způsobů dotazování. Nyní se posuneme o
 kus dále a ukážeme si, jak můžeme s DataFramy dělat složitější operace jako je
