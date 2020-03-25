@@ -13,7 +13,7 @@ lessons:
   - title: První programy
     link: prvni-programy
     brief: Místo psaní příkazů do konzole se naučíme psát opravdové programy. Taky si ukážeme, jak číst data z příkazové řádky.
-  - title: Soubory: čtení a zápis
+  - title: "Soubory: čtení a zápis"
     link: soubory
     brief: Naučíme se jak číst a zapisovat data do souborů na disku a tím v naších programech zpracovávat větší objemy dat.
   - title: Podmínky a cyklus FOR
