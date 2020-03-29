@@ -127,13 +127,13 @@ Tomuto zápisu se říká <term cs="volání funkce" en="function call">. Když 
 
 Funkci si můžeme představit například jako topinkovač. Topinkovač pro nás dělá nějakou užitečnou činnost, kterou chceme často opakovat (opéká topinky). Má svoje jméno (topinkovač). Do topinkovače dáme cheba (argument) a spustíme je (zavoláme). Topinkovač chvíli pracuje a pak nám vrátí výsledek - topinky. Důležité je, že nemusíme řešit jak to topinkovač vlastné dělá, že dokáže opéct chleba. Důležité pro nás je, že to umí a že jej můžeme kdykoliv použít.
 
-![Toaster](/czechitas/python-data/assets/zaklady-programovani/hodnoty-promenne-funkce/toaster.jpg){.fig .fig-50}
+![Toaster](assets/toaster.jpg){.fig .fig-50}
 
 ## Seznamy
 
 Zatím jsme byli schopní do jedné proměnné uložit pouze jednu hodnotu. Pro práci s daty ale budeme potřebovat pracovat s větším množstvím hodnot než pouze s jednou. K tomu nám poslouží takzvané <term cs="seznamy" en="lists">.
 
-Představme si, že si chci zaznamenat počet vanilkových věnečků snězených za posledních 7 dní. V Pythonu si můžu pro tento účel vytvořit seznam, který si uložím do vhodně pojmenované proměnné. 
+Představme si, že si chci zaznamenat počet vanilkových věnečků snězených za posledních 7 dní. V Pythonu si můžu pro tento účel vytvořit seznam, který si uložím do vhodně pojmenované proměnné.
 
 ```pycon
 >>> venecky = [1, 2, 4, 1, 6, 0, 1]
@@ -148,7 +148,7 @@ Chceme-li přistoupit k jednotlivým hodnotám uvnitř seznamu, použijeme k tom
 6
 ```
 
-**POZOR!** Programátoři jsou podivné bytosti, které vždy počítají od nuly, nikoliv od jedničky. Proto také první hodnota v našem seznamu má index 0. 
+**POZOR!** Programátoři jsou podivné bytosti, které vždy počítají od nuly, nikoliv od jedničky. Proto také první hodnota v našem seznamu má index 0.
 
 Snadno také můžeme některou hodnotu v seznamu změnit. Například když si vzpomeneme, že jsme trošku zalhali ohledně konzumace věnečků v sobotu:
 
@@ -169,7 +169,7 @@ Z jednoho seznamu můžeme také získat menší kusy podle zadaných mezí
 
 ### Vnořené seznamy
 
-Seznam může obsahovat jakékoliv hodnoty, tedy nejen celá čísla. Nezapomeňte, že seznamy jsou také hodnoty, takže jeden seznam může obsahovat jiný seznam jako svůj prvek. Například takto: 
+Seznam může obsahovat jakékoliv hodnoty, tedy nejen celá čísla. Nezapomeňte, že seznamy jsou také hodnoty, takže jeden seznam může obsahovat jiný seznam jako svůj prvek. Například takto:
 
 ```pycon
 >>> seznam = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
@@ -216,7 +216,7 @@ Přečtěte si povídání o dalších vymoženostech Pythonu, které se nám ne
 
 Během přednášky jsme neprobrali úplně všechny aritmetické operátory, které můžeme v Pythonu použít. Kromě sčítání, odčítání, násobení a dělení máme ještě tyto:
 
-- Mocnění: **`**`**
+- Mocnění: **`**`\*\*
 - Celočíselné dělení: **`//`**
 - Zbytek po dělení: **`%`**
 

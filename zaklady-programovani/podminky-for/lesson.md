@@ -434,7 +434,7 @@ jsou červená a sudá jsou černá. Pro zbytek platí obrácené pravidlo, tedy
 jsou černá a sudá červená. Nula není ani lichá ani sudá, ani černá ani
 červená.
 
-![](/czechitas/python-data/assets/zaklady-programovani/podminky-for/roulette.png)
+![](assets/roulette.png)
 
 Napište program, kterému uživatel zadá číslo a program odpoví jestli jde o
 číslo sudé nebo liché, černé nebo červené, nebo je to nula.
