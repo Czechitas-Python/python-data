@@ -9,21 +9,22 @@ dnes přejdeme k druhému způsobu předávání dat do našeho programu a tím 
 V praxi často máme data uložena v nějakém souboru na disku v nějakém textovém
 formátu. Ukážeme si, jak takový soubor v Pythonu otevřít a data z něj přečíst.
 
-Pro naše první experimenty si stáhněte soubor [mereni.txt](/download/python-
-data/mereni.txt). Ten obsahuje naměřené teploty během týdne, které jsme už
-několikrát v našich programech používali.
+Pro naše první experimenty si stáhněte soubor
+[mereni.txt](/czechitas/python-data/assets/zaklady-programovani/soubory/mereni.txt). Ten obsahuje
+naměřené teploty během týdne, které jsme už několikrát v našich programech
+používali.
 
 Pokud chceme otevřít tento soubor v nějakém našem programu, nejjednodušší je
 zkopírovat jej do téže složky, ve které máme program uložený. Potom v programu
 použijeme funkci `open()`, která slouží k otevírání souborů. Náš kód pak může
 vypadat například takto:
 
-    
-    
-    vstup = open('mereni.txt', encoding='utf-8')
-    radky = [radek for radek in vstup]
-    vstup.close()
-    print(radky)
+```py
+vstup = open('mereni.txt', encoding='utf-8')
+radky = [radek for radek in vstup]
+vstup.close()
+print(radky)
+```
 
 Jakmile soubor otevřeme voláním funkce `open()`, proměnná vstup bude obsahovat
 jednotlivé řádky našeho souboru seřazené jeden za druhým. Není to přímo Python
@@ -35,9 +36,9 @@ jím byla.
 Jakmile jsme se souborem hotovi, musíme ho vždy zavřít voláním metody
 `close()`. Výstup z našeho programu pak bude vypadat takto:
 
-    
-    
-    ['po\t17.3\n', 'út\t16.8\n', 'st\t15.1\n', 'čt\t13.2\n', 'pá\t14.0\n', 'so\t13.9\n', 'ne\t15.8\n']
+```py
+['po\t17.3\n', 'út\t16.8\n', 'st\t15.1\n', 'čt\t13.2\n', 'pá\t14.0\n', 'so\t13.9\n', 'ne\t15.8\n']
+```
 
 Výstupem je skutečně seznam řetězců, které ale obsahují znaky zpětných
 lomítek. Tato zpětná lomítka slouží k vyjádření speciálních znaků, které by
@@ -49,13 +50,13 @@ Vidíme tedy, že každý náš řádek končí znakem nového řádku a hodnoty
 jsou odděleny tabulátorem. Pokud bychom chtěli načtené řádky rozdělit na
 jednotlivé hodnoty, bude náš program vypadat například takto:
 
-    
-    
-    vstup = open('mereni.txt', encoding='utf-8')
-    radky = [radek.split('\t') for radek in vstup]
-    vstup.close()
-    radky = [[radek[0], float(radek[1])] for radek in radky]
-    print(radky)
+```py
+vstup = open('mereni.txt', encoding='utf-8')
+radky = [radek.split('\t') for radek in vstup]
+vstup.close()
+radky = [[radek[0], float(radek[1])] for radek in radky]
+print(radky)
+```
 
 ## Cvičení
 
@@ -66,32 +67,32 @@ počet hodin, což není příliš realistické. Vytvořte proto textový soubor
 `vykaz.txt`, který bude obsahovat 12 řádků a na každém řádku počet
 odpracovaných hodin za každý měsíc za poslední rok.
 
-  1. Otevřete tento soubor ve svém programu a načtěte hodnoty na řádcích do seznamu `vykaz`. Vytiskněte tento seznam na konzoli funkcí `print()` abyste si ověřili, že jste soubor načetli správně.
-  2. Nechte uživatele zadat na příkazovém řádku hodinovou mzdu. Spočítejte a na výstup vytiskněte celkovou výplatu za celý rok a průměrnou výplatu na jeden měsíc.
+1. Otevřete tento soubor ve svém programu a načtěte hodnoty na řádcích do seznamu `vykaz`. Vytiskněte tento seznam na konzoli funkcí `print()` abyste si ověřili, že jste soubor načetli správně.
+2. Nechte uživatele zadat na příkazovém řádku hodinovou mzdu. Spočítejte a na výstup vytiskněte celkovou výplatu za celý rok a průměrnou výplatu na jeden měsíc.
 
 ### Počet slov
 
-Stáhněte si odevzdanou [slohovou práci](/download/python-data/praha.txt).
+Stáhněte si odevzdanou [slohovou práci](/czechitas/pyhton-data/assets/zaklady-programovani/soubory/praha.txt).
 Zadání bylo sepsat text o nejméně 150ti slovech pojednávající o našem hlavním
 městě. Napište program, který spočítá počet slov v tomto textu, abychom
 věděli, zda bylo zadání formálně splněno. Nechte se vést následujícím návodem.
 
-  1. Nechte váš program otevřít soubor a načíst jednotlivé řádky do seznamu. 
-  2. Každý řádek převeďte na seznam slov. Slovem se rozumí vše, co je odděleno mezerou nebo novým řádkem. 
-  3. Vypište na výstup seznam hodnot udávající počty slov na každém řádku. 
-  4. Vypište na výstup celkový počet všech slov v souboru. 
+1. Nechte váš program otevřít soubor a načíst jednotlivé řádky do seznamu.
+2. Každý řádek převeďte na seznam slov. Slovem se rozumí vše, co je odděleno mezerou nebo novým řádkem.
+3. Vypište na výstup seznam hodnot udávající počty slov na každém řádku.
+4. Vypište na výstup celkový počet všech slov v souboru.
 
 ### Půjčovna
 
 Půjčovna aut má v každém kraji ČR jedno auto s danou SPZ. Ke konci roku chce
 zjistit, kolik všechna auta najezdila dohromady kilometrů. V souboru
-[auta.txt](/download/python-data/auta.txt) je pro každou SPZ zaznamenáno kolik
+[auta.txt](/czechitas/pyhton-data/assets/zaklady-programovani/soubory/auta.txt) je pro každou SPZ zaznamenáno kolik
 dané auto ujelo kilometrů za daný rok. Hodnoty jsou v tisících kilometrů.
 Bohužel se v jednotlivých krajích blbě zkoordinovali a někdo používal
 desetinnou čárku, někdo zase tečku.
 
-  1. Napište program, který na výstup vypíše součet všech ujetých kilometrů. Jistě se vám bude hodit metoda řetězců jménem `replace()`.
-  2. Upravte váš program tak, aby jméno souboru k otevření dostal na příkazové řádce, abychom mohli takto zpracovávat výkazy z různých souborů, aniž bychom museli upravovat samotný kód programu.
+1. Napište program, který na výstup vypíše součet všech ujetých kilometrů. Jistě se vám bude hodit metoda řetězců jménem `replace()`.
+2. Upravte váš program tak, aby jméno souboru k otevření dostal na příkazové řádce, abychom mohli takto zpracovávat výkazy z různých souborů, aniž bychom museli upravovat samotný kód programu.
 
 ## Zápis do souboru
 
@@ -108,13 +109,12 @@ vyzkoušet na příkladu.
 Dejme tomu, že máme seznam uživatelů, které chceme zapsat do souboru
 `uzivatele.txt`.
 
-    
-    
-    jmena = ['Roman', 'Jana', 'Radek', 'Petra', 'Vlasta']
-    soubor = open('uzivatele.txt', 'w', encoding='utf-8')
-    [soubor.write(jmeno) for jmeno in jmena]
-    soubor.close()
-    
+```py
+jmena = ['Roman', 'Jana', 'Radek', 'Petra', 'Vlasta']
+soubor = open('uzivatele.txt', 'w', encoding='utf-8')
+[soubor.write(jmeno) for jmeno in jmena]
+soubor.close()
+```
 
 Všimněte si druhého parametru `'w'` při volání funkce `open()`. Díky němu se
 nám soubor otevře pro zápis. Pokud soubor na disku ještě neexistuje, funkce
@@ -125,18 +125,17 @@ zapisujeme do prázdného souboru.
 Pokud však otevřete soubor, který vytvořil náš předchozí program, uvidíte
 následující výsledek
 
-    
-    
-    RomanJanaRadekPetraVlasta
+```
+RomanJanaRadekPetraVlasta
+```
 
 Je to proto, že metoda `write()` narozdíl od funcke `print()` nedělá
 automatické odřádkování. Konce řádků tedy do souboru musíme zapsat my.
 Upravíme tedy zápis do souboru v našem předchozím programu takto:
 
-    
-    
+```py
     [soubor.write(jmeno + '\n') for jmeno in jmena]
-    
+```
 
 ## Cvičení
 
@@ -145,13 +144,13 @@ Upravíme tedy zápis do souboru v našem předchozím programu takto:
 Napište program, který bude mít přímo v kódu zapsaný počet dní v jednotlivých
 měsících takto:
 
-    
-    
-    pocty_dni = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+```py
+pocty_dni = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+```
 
-  1. Nechte váš program vypsat tento seznam do souboru s názvem `kalendar.txt`, každé číslo na jeden řádek.
-  2. Upravte váš program tak, aby zároveň s počtem dnů vypisoval i název měsíce. Oddělte v souboru název měsíce a počet dnů pomocí tabulátoru.
-  3. Upravte váš program tak, aby jako první řádek výsledného souboru obsahoval nadpisy pro jednotlivé sloupce, tedy `měsíc` a `počet dní`.
+1. Nechte váš program vypsat tento seznam do souboru s názvem `kalendar.txt`, každé číslo na jeden řádek.
+2. Upravte váš program tak, aby zároveň s počtem dnů vypisoval i název měsíce. Oddělte v souboru název měsíce a počet dnů pomocí tabulátoru.
+3. Upravte váš program tak, aby jako první řádek výsledného souboru obsahoval nadpisy pro jednotlivé sloupce, tedy `měsíc` a `počet dní`.
 
 ### Rozepsaná výplata
 
@@ -159,17 +158,17 @@ Modifikujte program pro počítání výplaty z předchozí sekce tak, aby
 nevypisoval průměrnou výplatu za rok, nýbrž aby vypsal konkrétní vyplacenou
 částku pro každý měsíc zvlášť.
 
-  1. Nejprve tyto informace vypište na výstup pomocí funkce `print()`.
-  2. Poté program upravte tak, aby vypsal tyto výsledky do souboru.
+1. Nejprve tyto informace vypište na výstup pomocí funkce `print()`.
+2. Poté program upravte tak, aby vypsal tyto výsledky do souboru.
 
 ### Hody kostkou
 
 Napište program, který vytvoří seznam deseti náhodných hodů dvanáctistěnnou
 kostkou.
 
-  1. Nejdříve tento seznam vytiskněte na konzoli pomocí funkce `print()`.
-  2. Upravte váš program tak, aby náhodné hody kostkou vypsal do souboru s názvem `hody.txt` na jeden řádek oddělené čárkou a mezerou.
-  3. Upravte váš program tak, aby počet hodů dostal jako parametr na příkazové řádce. Zkuste použitím vašeho programu vyrobit 100, 1000 a 10 000 hodů.
+1. Nejdříve tento seznam vytiskněte na konzoli pomocí funkce `print()`.
+2. Upravte váš program tak, aby náhodné hody kostkou vypsal do souboru s názvem `hody.txt` na jeden řádek oddělené čárkou a mezerou.
+3. Upravte váš program tak, aby počet hodů dostal jako parametr na příkazové řádce. Zkuste použitím vašeho programu vyrobit 100, 1000 a 10 000 hodů.
 
 ## Čtení na doma
 
@@ -206,17 +205,18 @@ funguje oběma směry.
 
 Výše uvedený postup funguje pouze pro malé tabulky, protože se vám asi nebude
 chtít ručně kopírovat tabulku o 100 000 řádcích. Pro výměnu tabulkových dat v
-textové podobě se ustálil všeobecně používaný formát zvaný CSV z anglického
-_Comma Separated Values_. Jak název napovídá, v tomto formátu nejsou hodnoty
-odděleny tabulátory, nýbrž čárkami. Google Sheets umí tento formát exportovat,
-nemusíme tedy nic kopírovat. Stačí v menu vybrat _Soubor_ -> _Stáhnout jako_
--> _Hodnoty oddělené čárkami_. Tím se vám aktuální list stáhne jako textový
-soubor, který pak můžete normálně otevřít v Python programu. Všimněte si, že
-takto můžeme dokonce stáhnout i hodnoty oddělené tabulátory (formát TSV).
+textové podobě se ustálil všeobecně používaný formát zvaný _CSV_ z anglického
+<i>Comma Separated Values</i>. Jak název napovídá, v tomto formátu nejsou
+hodnoty odděleny tabulátory, nýbrž čárkami. Google Sheets umí tento formát
+exportovat, nemusíme tedy nic kopírovat. Stačí v menu vybrat <i>Soubor</i> ->
+<i>Stáhnout jako</i> -> <i>Hodnoty oddělené čárkami</i>. Tím se vám aktuální
+list stáhne jako textový soubor, který pak můžete normálně otevřít v Python
+programu. Všimněte si, že takto můžeme dokonce stáhnout i hodnoty oddělené
+tabulátory (formát <i>TSV</i>).
 
 Pokud chceme provést obrácený postup, tedy nahrát CSV data do tabulky Google,
-je třeba jít v menu na _Soubor_ -> _Importovat_ -> _Nahrát_ , a poté na vašem
-počítači vybrat kýžený soubor CSV.
+je třeba jít v menu na <i>Soubor</i> -> <i>Importovat</i> -> <i>Nahrát</i> , a
+poté na vašem počítači vybrat kýžený soubor CSV.
 
 ## Nepovinné čtení - kódování textu
 
@@ -225,14 +225,14 @@ V lekci jsme při otvírání souborů používali mysteriózní argument
 soubor používá. Ale co je to kurňa kódování textu?
 
 Kódování textu souvisí s tím, jak si počítač data ukládá do paměti. Nyní slovo
-_data_ používáme v širším kontextu, tedy nejen pro tabulky hodnot, ale také
-pro všechny ostatní textové soubory, audio, video, programy, prostě úplně
+<i>data</i> používáme v širším kontextu, tedy nejen pro tabulky hodnot, ale
+také pro všechny ostatní textové soubory, audio, video, programy, prostě úplně
 cokoliv, co můžete uložit na váš harddisk. Fungování paměti počítače je sice
 velmi technická věc, ale nám bude stačit, že pamět se skládá z dále
 nedělitelných buněk, jakýchsi chlívečků, do kterých si počítač může uložit co
-chce. Technicky se těmto buňkám říká _bajty_. Potíž je v tom, že jeden bajt
-(anglicky byte) je velmi malý kousek paměti a navíc se do něj dá uložit pouze
-číslo, nic jiného. Navíc toto číslo může být pouze z rozmezí 0 až 255.
+chce. Technicky se těmto buňkám říká <i>bajty</i>. Potíž je v tom, že jeden
+bajt (anglicky byte) je velmi malý kousek paměti a navíc se do něj dá uložit
+pouze číslo, nic jiného. Navíc toto číslo může být pouze z rozmezí 0 až 255.
 
 Pokud tedy chceme do paměti uložit kus textu, počítač si každé písmenko musí
 interně převést na číslo, a to pak uložit do jedné buňky. Velké písmeno A má
@@ -266,7 +266,7 @@ dnešnímu dni obsahuje 137 374 znaků včetně čínštiny, cyrilice, smajlík�
 různých piktogramů, každý znak se svým unikátním číslem. Díky tomu, že tato
 webová stránka používá Unicode znakovou sadu, může obsahovat písmenko 'ř',
 které má číslo 345, znak letadla '✈', který má číslo 9992, nebo znak z
-hlaholice 'Ⰶ' zvaný _živěte_ s číslem 11270.
+hlaholice 'Ⰶ' zvaný <i>živěte</i> s číslem 11270.
 
 Teď ovšem pozor. Unicode ještě není kódování textu, nýbrž pouze znaková sada,
 tedy jenom seznam znaků a jim přiřazených čísel. Protože kódy pro většinu
@@ -308,12 +308,13 @@ textové soubory jako UTF-8. Svět pak bude zase o kousek lepším místem.
 
 Autobus mezi Zdebudevsí a Kozoprdy jezdí čtyřikrát denně každý všední den v
 týdnu. Za poslední týden jsme naměřili počty pasažérů pro každou jízdu tam i
-zpět. Data jsou uložená v souboru [pasazeri.txt](/download/python-
-data/pasazeri.txt). Jízda vždy obsahuje dvě čísla oddělená čárkou, která
-udávají počet pasažérů směrem tam a směrem zpět.
+zpět. Data jsou uložená v souboru
+[pasazeri.txt](/czechitas/pyhton-data/assets/zaklady-programovani/soubory/pasazeri.txt). Jízda vždy
+obsahuje dvě čísla oddělená čárkou, která udávají počet pasažérů směrem tam a
+směrem zpět.
 
-  1. Napište program, který pro první den vypíše, kolik pasažérů jelo celkem směrem tam a kolik směrem zpět. 
-  2. Nechť váš program vypisuje součty pasažérů ze celý týden, tedy kolik lidí za celý týden jelo směrem tam a kolik směrem zpět. 
+1. Napište program, který pro první den vypíše, kolik pasažérů jelo celkem směrem tam a kolik směrem zpět. 
+2. Nechť váš program vypisuje součty pasažérů ze celý týden, tedy kolik lidí za celý týden jelo směrem tam a kolik směrem zpět. 
 
 ### Přeznámkování
 
@@ -324,11 +325,11 @@ systém z číselných známek 1 až 5 na hodnocení písmeny A až F. Bohužel 
 odehrála jaksi uprostřed semestru, takže je potřeba změnit aktuální výkazy o
 známkách z čísel na písmena. Nechte se vést následujícím postupem.
 
-  1. Otevřete si [dokument](https://docs.google.com/spreadsheets/d/1mm2iZ2TWosQ4Yv4cahgMQrMsicneTrkrcdVP3Nz1PQY/edit?usp=sharing) s jedním výkazem známek.
-  2. Zkopírujte si tuto tabulku do textového souboru. 
-  3. Napište program, který tuto tabulku načte ze souboru a změní všechny známky tak, že 1 bude A, 2 bude B, 3 bude C, 4 bude D a 5 bude F.
-  4. Vypište váš výsledek do nějakého souboru tak, aby se z něj dal zase zkopírovat do tabulky Google.
-  5. Vytvořte novou Google tabulku, která vypadá stejně jako ta výše avšak s převedenými známkami.
+1. Otevřete si [dokument](https://docs.google.com/spreadsheets/d/1mm2iZ2TWosQ4Yv4cahgMQrMsicneTrkrcdVP3Nz1PQY/edit?usp=sharing) s jedním výkazem známek.
+2. Zkopírujte si tuto tabulku do textového souboru.
+3. Napište program, který tuto tabulku načte ze souboru a změní všechny známky tak, že 1 bude A, 2 bude B, 3 bude C, 4 bude D a 5 bude F.
+4. Vypište váš výsledek do nějakého souboru tak, aby se z něj dal zase zkopírovat do tabulky Google.
+5. Vytvořte novou Google tabulku, která vypadá stejně jako ta výše avšak s převedenými známkami.
 
 ## Domácí úložky ‒ nepovinné
 
@@ -341,8 +342,8 @@ v úložce Karty 1 z minulé lekce. Můžeme si představovat, že rozdáváme k
 například v pokru. Zatím pro jednoduchost nebudeme řešit, že se nám může
 nějaká karta v seznamu opakovat.
 
-  1. Vymyslete, jak budete vylosovanou kartu v seznamu reprezentovat. Vypište pak tento seznam na výstup.
-  2. Dále k tomuto seznamu vypište součet hodnot všech vylosovaných karet. Položme hodnotu karet J, Q a K rovnu deseti a eso rovnu jedné.
+1. Vymyslete, jak budete vylosovanou kartu v seznamu reprezentovat. Vypište pak tento seznam na výstup.
+2. Dále k tomuto seznamu vypište součet hodnot všech vylosovaných karet. Položme hodnotu karet J, Q a K rovnu deseti a eso rovnu jedné.
 
 ### Karty 3
 
@@ -352,20 +353,21 @@ Zkusme vyřešit problém losování karet tak, aby se nám nemohlo stát, že n
 nějaká karta padne vícekrát, když by správně v balíčku měla být od každé karty
 pouze jedna.
 
-Ze souboru [karty.txt](/download/python-data/karty.txt) si načtěte do seznamu
-kompletní balíček karet. Zadání je stejné jako v předchozí úložce, tedy
-vylosovat 4 karty z balíčku a vypsat je jako seznam spolu se součtem hodnot.
+Ze souboru [karty.txt](/czechitas/pyhton-data/assets/zaklady-programovani/soubory/karty.txt) si
+načtěte do seznamu kompletní balíček karet. Zadání je stejné jako v předchozí
+úložce, tedy vylosovat 4 karty z balíčku a vypsat je jako seznam spolu se
+součtem hodnot.
 
 Existuje vícero možných postupů, které vedou ke stejnému výsledku. Zde už
 můžete trochu zagooglit. Ve většině postupů se vám bude hodit příkaz, který
 umí odstranit prvek seznamu na zadaném indexu:.
 
-    
-    
-    >>> x = [1, 2, 3]
-    >>> del x[0]
-    >>> x
-    [2, 3]
+```pycon
+>>> x = [1, 2, 3]
+>>> del x[0]
+>>> x
+[2, 3]
+```
 
 Také se vám může hodit funkce `shuffle()` z modulu `random`, která umí náhodně
 zamíchat seznam.
