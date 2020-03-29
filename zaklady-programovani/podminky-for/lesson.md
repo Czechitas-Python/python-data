@@ -25,7 +25,7 @@ hody = [int(hod) for hod in soubor]
 soubor.close()
 
 if len(hody) < 1000:
-    print('Nespolehlivý výsledek kvůli nedostatku dat.')
+  print('Nespolehlivý výsledek kvůli nedostatku dat.')
 
 print(statistics.mean(hody))
 ```
@@ -35,8 +35,8 @@ podmínky přidat další příkaz, který program ihned ukončí
 
 ```py
 if len(hody) < 1000:
-    print('Nespolehlivý výsledek kvůli nedostatku dat.')
-    exit()
+  print('Nespolehlivý výsledek kvůli nedostatku dat.')
+  exit()
 ```
 
 ## Bloky
@@ -66,10 +66,10 @@ se spouští, pokud výraz v podmínce vrátí `False`. Můžeme pak například
 
 ```py
 if len(hody) < 1000:
-    print('Nespolehlivý výsledek kvůli nedostatku dat.')
-    exit()
+  print('Nespolehlivý výsledek kvůli nedostatku dat.')
+  exit()
 else:
-    print('Výsledek je dostatečně spolehlivý.')
+  print('Výsledek je dostatečně spolehlivý.')
 ```
 
 ## Cvičení
@@ -133,7 +133,7 @@ seznamů skutečný FOR cyklus:
 ```py
 jmena = ['petr', 'pavel', 'jitka', 'jana']
 for jmeno in jmena:
-    print(len(jmeno))
+  print(len(jmeno))
 ```
 
 Všimněte si, že cyklus FOR je v základu dost podobný chroustání seznamů. I
@@ -144,8 +144,8 @@ v případě podmínek můžeme cyklu FOR předat celý blok příkazů najednou
 ```py
 jmena = ['petr', 'pavel', 'jitka', 'jana']
 for jmeno in jmena:
-    mail = jmeno + '@gmail.com'
-    print(mail)
+  mail = jmeno + '@gmail.com'
+  print(mail)
 ```
 
 Dokonce se můžeme opravdu odvázat a vložit do bloku v cyklu FOR i podmínku.
@@ -153,11 +153,11 @@ Dokonce se můžeme opravdu odvázat a vložit do bloku v cyklu FOR i podmínku.
 ```py
 jmena = ['petr', 'pavel', 'jitka', '', 'jana']
 for jmeno in jmena:
-    if len(jmeno) < 1:
-        mail = 'neplatný email'
-    else:
-        mail = jmeno + '@gmail.cz'
-    print(mail)
+  if len(jmeno) < 1:
+    mail = 'neplatný email'
+  else:
+    mail = jmeno + '@gmail.cz'
+  print(mail)
 ```
 
 Tímto jsme vlastně vysvětlili to hlavní a zásadní, co o cyklu FOR zatím
@@ -173,7 +173,7 @@ Ukažme si například, jak se pomocí cyklu spočítá součet všech čísel v
 ```py
 soucet = 0
 for cislo in cisla:
-    soucet = soucet + cislo
+  soucet = soucet + cislo
 ```
 
 Ne, že bychom zrovna takovýto kus kódu nutně potřebovali, když můžeme použít
@@ -196,19 +196,21 @@ Napište program, který dostane na příkazové řádce seznam celých čísel 
 Popište vlídným, ale přesným slovem, co dělají následující cykly:
 
 1.
+
 ```py
 for x in cisla:
-    if x % 2 == 0:
-        print(x)
+  if x % 2 == 0:
+    print(x)
 ```
 
 2.
+
 ```py
 for jmeno in jmena:
-    if jmeno[0] == 'p':
-        print('pako')
-    else:
-        print(jmeno)
+  if jmeno[0] == 'p':
+    print('pako')
+  else:
+    print(jmeno)
 ```
 
 ## Čtení na doma
@@ -256,7 +258,7 @@ než 90 bodů, napíšu podmínku s jednou větví.
 
 ```py
 if bodu > 90:
-    print('Dobrá práce')
+  print('Dobrá práce')
 ```
 
 Pokud chci něco provést v případě, že podmínka nebyla splněna, použiju
@@ -264,9 +266,9 @@ podmínku s dvěma větvemi.
 
 ```py
 if bodu > 90:
-    print('Dobrá práce')
+  print('Dobrá práce')
 else:
-    print('Špatná práce')
+  print('Špatná práce')
 ```
 
 Co kdybych ale například chtěl rozdělit známky podle počtů bodů? Tedy za více
@@ -275,17 +277,17 @@ podmínku s více větvemi.
 
 ```py
 if bodu >= 90:
-    print('A')
+  print('A')
 elif bodu >= 80:
-    print('B')
+  print('B')
 elif bodu >= 70:
-    print('C')
+  print('C')
 elif bodu >= 60:
-    print('D')
+  print('D')
 elif bodu >= 50:
-    print('E')
+  print('E')
 else:
-    print('F')
+  print('F')
 ```
 
 Zde je dobré vědět, jakým způsobem Python takovou podmínku vyhodnocuje.
@@ -314,13 +316,13 @@ heslo, program odpoví "přístup odepřen".
 Napište program `usd.py`, který bude umět převádět měnu na americké dolary.
 Když program zavoláte takto
 
-```
+```shell
 $ python3 usd.py czk 550
 ```
 
 převede 550 českých korun na americké dolary. Pokud jej zavoláte takto
 
-```
+```shell
 $ python3 usd.py eur 21
 ```
 
@@ -348,24 +350,26 @@ jeho výstup. Zkuste co nejvýstižněji (jednou dvěma větami) zformulovat, co
 program dělá.
 
 1.
+
 ```py
 cisla = [3, 5, 8, 0, 4, 2, 0, 7, 6, 2, 0, 5]
 sum = 0
 for cislo in cisla:
-    sum = sum + cislo
-    if cislo == 0:
-        print(sum)
-        sum = 0
+  sum = sum + cislo
+  if cislo == 0:
+    print(sum)
+    sum = 0
 ```
 
 2.
+
 ```py
 cisla = [3, 5, 8, 0, 4, 2, 0, 7, 6, 2, 0, 5]
 index = 0
 for cislo in cisla:
-    if index % 2 == 0:
-        print(cislo)
-    index +=  1
+  if index % 2 == 0:
+    print(cislo)
+  index +=  1
 ```
 
 ### Vzestupný seznam
@@ -407,7 +411,7 @@ Napište program, který dostane na příkazové řádce posloupnost čísel. Pr
 číslo udává, kolikáté největší číslo chceme ve zbytku zadaných čísel najít.
 Můžeme tak chtít třeba páté největší číslo z 6, 1, 3, 8, 4, 7, 2
 
-```
+```shell
 $ python3 kmax.py 5 6 1 3 8 4 7 2
 3
 ```

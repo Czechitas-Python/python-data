@@ -1,40 +1,32 @@
-Konzole jazyka Python už nám pomalu přestává stačit na větší a komplikovanější
-problémy. Potřebovali bychom místo jednoho příkazu spustit příkazů více po
-sobě a také být schopni si takovou sekvenci příkazů uložit, abychom ji mohli
-spouštět vícekrát pro různá data. Začneme tedy psát první _programy_.
+Konzole jazyka Python už nám pomalu přestává stačit na větší a komplikovanější problémy. Potřebovali bychom místo jednoho příkazu spustit příkazů více po sobě a také být schopni si takovou sekvenci příkazů uložit, abychom ji mohli spouštět vícekrát pro různá data. Začneme tedy psát první _programy_.
 
 ## Programy
 
-Mějme následující zadání. Spočítejte průměrnou denní teplotu naměřenou za daný
-týden podle následující tabulky a najděte den, ve který byla teplota nejblíže
-průměru.
+Mějme následující zadání. Spočítejte průměrnou denní teplotu naměřenou za daný týden podle následující tabulky a najděte den, ve který byla teplota nejblíže průměru.
 
 ```py
 mereni = [
-    ['po', 17.3],
-    ['út', 16.8],
-    ['st', 15.1],
-    ['čt', 13.2],
-    ['pá', 14.0],
-    ['so', 13.9],
-    ['ne', 15.8]
+  ['po', 17.3],
+  ['út', 16.8],
+  ['st', 15.1],
+  ['čt', 13.2],
+  ['pá', 14.0],
+  ['so', 13.9],
+  ['ne', 15.8]
 ]
 ```
 
-Abychom se dostali k výsledku, budeme s touto tabulkou potřebovat provést
-několik operací a místo toho, abychom je zadávali do Python konzole jednu po
-druhé, napíšeme si příkazy jednoduše za sebe do obyčejného textového souboru s
-příponou `.py`. Pojmenujme jej například `teplota.py`.
+Abychom se dostali k výsledku, budeme s touto tabulkou potřebovat provést několik operací a místo toho, abychom je zadávali do Python konzole jednu po druhé, napíšeme si příkazy jednoduše za sebe do obyčejného textového souboru s příponou `.py`. Pojmenujme jej například `teplota.py`.
 
 ```py
 mereni = [
-    ['po', 17.3],
-    ['út', 16.8],
-    ['st', 15.1],
-    ['čt', 13.2],
-    ['pá', 14.0],
-    ['so', 13.9],
-    ['ne', 15.8]
+  ['po', 17.3],
+  ['út', 16.8],
+  ['st', 15.1],
+  ['čt', 13.2],
+  ['pá', 14.0],
+  ['so', 13.9],
+  ['ne', 15.8]
 ]
 teploty = [radek[1] for radek in mereni]
 prumer = sum(teploty)/len(teploty)
@@ -43,46 +35,38 @@ min_rozdil = min(rozdily)
 index = rozdily.index(min_rozdil)
 ```
 
-Pokud chceme takovýto program spustit, musíme nejdříve náš terminál nasměrovat
-na složku, ve které máme uložen náš soubor `teploty.py`. Poté napíšeme do
-terminálu, **pozor, nikoliv do Python konzole** , následující příkaz.
+Pokud chceme takovýto program spustit, musíme nejdříve náš terminál nasměrovat na složku, ve které máme uložen náš soubor `teploty.py`. Poté napíšeme do terminálu, **pozor, nikoliv do Python konzole** , následující příkaz.
 
-```
+```shell
 $ python3 teploty.py
 ```
 
 Pozor, že na systému Windows příkaz vypadá takto:
 
-```
+```shell
 $ py teploty.py
 ```
 
-Náš program se sice spustí, ale nevypíše žádný výsledek. To je proto, že když
-spouštíme programy, Python žádné vysledky sám od sebe nevypisuje. Musíme to
-provést sami pomocí funkce `print()`. Na konec našeho programu tedy přidáme
-řádek
+Náš program se sice spustí, ale nevypíše žádný výsledek. To je proto, že když spouštíme programy, Python žádné vysledky sám od sebe nevypisuje. Musíme to provést sami pomocí funkce `print()`. Na konec našeho programu tedy přidáme řádek
 
 ```py
 print(index)
 ```
 
-Pokud náš program spustíme znovu, vypíše nám index, na kterém se nachází den s
-teplotou nejblíže k průměru.
+Pokud náš program spustíme znovu, vypíše nám index, na kterém se nachází den s teplotou nejblíže k průměru.
 
-Možná bychom ale chtěli, aby program místo indexu vypsal spíše název dne v
-týdnu. To zařídíme tak, že poslední řádek změníme na
+Možná bychom ale chtěli, aby program místo indexu vypsal spíše název dne v týdnu. To zařídíme tak, že poslední řádek změníme na
 
 ```py
 print(mereni[index][0])
 ```
 
-Ještě hezčí bude, pokud uživateli sdělíme výsledek nějak přívětivě, například
-takto:
+Ještě hezčí bude, pokud uživateli sdělíme výsledek nějak přívětivě, například takto:
 
 ```py
 print(
-    'Den s teplotou nejblíž průměru je ' +
-    str(mereni[index][0])
+  'Den s teplotou nejblíž průměru je ' +
+  str(mereni[index][0])
 )
 ```
 
@@ -90,59 +74,40 @@ print(
 
 ### Jméno a město
 
-Napište program, který na obrazovku vypíše vaše jméno a na nový řádek město,
-ze kterého pocházíte.
+Napište program, který na obrazovku vypíše vaše jméno a na nový řádek město, ze kterého pocházíte.
 
 ### Výplata jako program
 
-Na první lekci jsme dělali [cvičení na výpočet výplaty](../hodnoty-promenne-funkce#exrc-vyplata)
-pomocí proměnných. Udělejte toto cvičení znova, ale tentokrát jako program.
-Nejdříve uložte nezbytné hodnoty do proměnných, spočítejte výplatu a pak ji
-pomocí funkce `print()` vypište na obrazovku.
+Na první lekci jsme dělali [cvičení na výpočet výplaty](../hodnoty-promenne-funkce#exrc-vyplata) pomocí proměnných. Udělejte toto cvičení znova, ale tentokrát jako program. Nejdříve uložte nezbytné hodnoty do proměnných, spočítejte výplatu a pak ji pomocí funkce `print()` vypište na obrazovku.
 
 ### Teploty jako program
 
-Minulý týden jsme dělali [cvičení na zpracování teplot](../text-chroustani#seznam-teplot).
-Udělejte toto cvičení znovu, tentokrát jako program, který všechny požadované
-informace vypíše hezky přehledně na obrazovku.
+Minulý týden jsme dělali [cvičení na zpracování teplot](../text-chroustani#seznam-teplot). Udělejte toto cvičení znovu, tentokrát jako program, který všechny požadované informace vypíše hezky přehledně na obrazovku.
 
 Hotovo!
 
-Hurá, pokud jste dorazili až sem, máte hotovo. Nalepte si lísteček a pokud
-chcete, můžete pokračovat bonusovými příklady.
+Hurá, pokud jste dorazili až sem, máte hotovo. Nalepte si lísteček a pokud chcete, můžete pokračovat bonusovými příklady.
 
 ## Moduly
 
-Doposud jsme v našich programech měli k dispozici pouze několik základních
-funkcí. Zatím jsme viděli tyto
+Doposud jsme v našich programech měli k dispozici pouze několik základních funkcí. Zatím jsme viděli tyto
 
-`abs()`, `round()`, `len()`, `sum()`, `min()`, `max()`, `sorted()`, `int()`,
-`float()`, `str()`, `print()`.
+`abs`, `round`, `len`, `sum`, `min`, `max`, `sorted`, `int`,
+`float`, `str`, `print`.
 
-Později si ukážeme, že jich ještě několik přibude, ale o moc víc jich už k
-dispozici není. S takto omezeným množstvím funkcí bychom si dlouho
-nevystačili. Python naštěstí nabízí mnoho takzvaných _modulů_ , které obsahují
-spousty dalších užitečných funkcí.
+Později si ukážeme, že jich ještě několik přibude, ale o moc víc jich už k dispozici není. S takto omezeným množstvím funkcí bychom si dlouho nevystačili. Python naštěstí nabízí mnoho takzvaných _modulů_ , které obsahují spousty dalších užitečných funkcí.
 
-Moduly jsou v podstatě balíčky funkcí zaměřených na nějaké konkrétní téma,
-například statistika, zpracování textu, práce se soubory na disku apod. Pokud
-chceme používat funkce z nějakého modulu, musíme jej nejdřív takzvaně
-_importovat_.
+Moduly jsou v podstatě balíčky funkcí zaměřených na nějaké konkrétní téma, například statistika, zpracování textu, práce se soubory na disku apod. Pokud chceme používat funkce z nějakého modulu, musíme jej nejdřív takzvaně _importovat_.
 
-Prvním velmi užitečným balíčkem funkcí je modul `math`. Importujeme jej
-příkazem
+Prvním velmi užitečným balíčkem funkcí je modul `math`. Importujeme jej příkazem
 
 ```py
 import math
 ```
 
-který napíšeme na začátek našeho programu. Pokud pracujeme v Python konzoli,
-napíšeme tento příkaz prostě na konzoli a dokud ji nezavřeme, můžeme modul
-používat.
+který napíšeme na začátek našeho programu. Pokud pracujeme v Python konzoli, napíšeme tento příkaz prostě na konzoli a dokud ji nezavřeme, můžeme modul používat.
 
-Kromě mnoha jiných obsahuje modul `math` funkce `ceil()` a `floor()`, které
-zaokrouhlují buď vždy jen dolů nebo jen nahoru. Abychom je mohli zavolat,
-musíme použít tečkovou notaci.
+Kromě mnoha jiných obsahuje modul `math` funkce `ceil()` a `floor()`, které zaokrouhlují buď vždy jen dolů nebo jen nahoru. Abychom je mohli zavolat, musíme použít tečkovou notaci.
 
 ```pycon
 >>> math.ceil(3.1)
@@ -151,9 +116,7 @@ musíme použít tečkovou notaci.
 3
 ```
 
-Mnozí z vás už si stěžovali, že Python neobsahuje funkci, která počítá průměr.
-Nyní takovou funkci můžeme získat, pokud importujeme modul `statistics`. Tento
-modul obsahuje mimo jiné funkci `mean()`, která počítá vytoužený průměr.
+Mnozí z vás už si stěžovali, že Python neobsahuje funkci, která počítá průměr. Nyní takovou funkci můžeme získat, pokud importujeme modul `statistics`. Tento modul obsahuje mimo jiné funkci `mean()`, která počítá vytoužený průměr.
 
 ```pycon
 >>> import statistics
@@ -161,29 +124,13 @@ modul obsahuje mimo jiné funkci `mean()`, která počítá vytoužený průměr
 3.5
 ```
 
-Poslední avšak velmi důležitý modul, jenž si v tuto chvíli představíme, je
-modul `sys`. Ten obsahuje funkce, které umožňují Pythonu komunikovat s
-operačním systémem, ve kterém je spuštěný. Nás z tohoto modulu bude zajímat
-především proměnná (ano, moduly mohou obsahovat kromě funkcí také proměnné) s
-názvem `argv` Ta nám umožní přistupovat k takzvaným _parametrům příkazové
-řádky_.
+Poslední avšak velmi důležitý modul, jenž si v tuto chvíli představíme, je modul `sys`. Ten obsahuje funkce, které umožňují Pythonu komunikovat s operačním systémem, ve kterém je spuštěný. Nás z tohoto modulu bude zajímat především proměnná (ano, moduly mohou obsahovat kromě funkcí také proměnné) s názvem `argv` Ta nám umožní přistupovat k takzvaným _parametrům příkazové řádky_.
 
 ## Parametry příkazové řádky
 
-Všechny programy, které jsme zatím společně vytvořili, obsahovaly všechna
-nezbytná data jaksi natvrdo přímo uvnitř kódu programu. Možná vás napadne, že
-například program, který má naměřené teploty z minulého týdne zadrátované
-přímo uvnitř kódu, nám je jen pramálo k užitku. Nemůžeme mu předat nově
-naměřené teploty jinak, než upravit jeho zdrojový kód. Do skutečně užitečného
-programu musíme být schopni dostat data jaksi z venku. K tomu máme vícero
-možností ‒ například nahrát data ze souboru na disku, což se naučíme v příští
-lekci, můžeme je stáhnout z internetu (také se časem naučíme), ale také je
-můžeme programu předat přímo na příkazové řádce, když jej spouštíme.
+Všechny programy, které jsme zatím společně vytvořili, obsahovaly všechna nezbytná data jaksi natvrdo přímo uvnitř kódu programu. Možná vás napadne, že například program, který má naměřené teploty z minulého týdne zadrátované přímo uvnitř kódu, nám je jen pramálo k užitku. Nemůžeme mu předat nově naměřené teploty jinak, než upravit jeho zdrojový kód. Do skutečně užitečného programu musíme být schopni dostat data jaksi z venku. K tomu máme vícero možností ‒ například nahrát data ze souboru na disku, což se naučíme v příští lekci, můžeme je stáhnout z internetu (také se časem naučíme), ale také je můžeme programu předat přímo na příkazové řádce, když jej spouštíme.
 
-Představme si například program, kterému bychom chtěli předat počet minut a on
-by nám vypsal v hezkém formátu kolik to dohromady dělá hodin a zbylých minut.
-Pojmenujme náš program například `cas.py`. Pokud chceme zjistit, jaký čas
-představuje 325 minut, zavoláme náš program takto:
+Představme si například program, kterému bychom chtěli předat počet minut a on by nám vypsal v hezkém formátu kolik to dohromady dělá hodin a zbylých minut. Pojmenujme náš program například `cas.py`. Pokud chceme zjistit, jaký čas představuje 325 minut, zavoláme náš program takto:
 
 ```pycon
 $ python3 cas.py 325
@@ -236,7 +183,7 @@ print('Součet zadaných čísel: ' + str(sum(cisla)))
 
 Program poté můžeme volat třeba takto:
 
-```
+```shell
 $ python3 soucet.py 57 41 37 22 12
 Součet zadaných čísel: 169
 ```
@@ -253,14 +200,14 @@ Napište program `minuty.py`, která dělá obrácenou věc než program `cas.py
 textu výše. Když mu na příkazové řádce předáme dva parametry ‒ počet hodin a
 počet minut ‒ například takto
 
-```
+```shell
 $ python3 minuty.py 2 54
 ```
 
 program nám vrátí délku tohoto času minutách. V tomto případě tedy číslo 174.
 
 1. Nejprve program napište tak, že si hodnoty 2 a 54 uložíte přímo natvrdo v programu do nějakých proměnných a z nich spočítáte a vytisknete výsledek.
-2. Až když váš program bude fungovat, zkuste tyto proměnné načíst z parametrů příkazové řádky. Nezapomeňte, že parametry jsou vždy řetězce a že první parametr je vždy název vašeho programu.
+1. Až když váš program bude fungovat, zkuste tyto proměnné načíst z parametrů příkazové řádky. Nezapomeňte, že parametry jsou vždy řetězce a že první parametr je vždy název vašeho programu.
 
 ### Zaokrouhlování
 
@@ -282,7 +229,7 @@ použitím funkcí `statistics.mean()` a `statistics.median()` vypíše na výst
 průměr a medián zadaných hodnot. Hodnoty program obdrží na příkazovém řádku.
 Příklad použití:
 
-```
+```shell
 $ python3 prumer-median.py 2 1 8 3 4 11 7 1512
 Průměr: 193.5
 Medián: 5.5
@@ -496,8 +443,8 @@ ji na Unix styl.
 **Obtížnost: Zapni hlavu**
 
 1. Napište program, který při každém spustění hodí šestistěnnou kostkou ‒ tedy vypíše náhodné číslo mezi 1 až 6.
-2. Upravte program tak, aby jako parametr dostal počet stěn kostky. Bude tedy umět házet třeba sedmistěnnou nebo devítistěnnou kostkou podle toho, jaké číslo dostane na vstupu.
-3. Předejte programu další parametr, který bude udávat kolik hodů má program provést. Program pak na výstup vytiskne seznam tolika hodů, kolik jste zadali na vstupu. Cílem je tedy vymyslet, jak vyrobit seznam náhodných čísel. Jistě se nám k tomu bude hodit chroustání seznamů.
+1. Upravte program tak, aby jako parametr dostal počet stěn kostky. Bude tedy umět házet třeba sedmistěnnou nebo devítistěnnou kostkou podle toho, jaké číslo dostane na vstupu.
+1. Předejte programu další parametr, který bude udávat kolik hodů má program provést. Program pak na výstup vytiskne seznam tolika hodů, kolik jste zadali na vstupu. Cílem je tedy vymyslet, jak vyrobit seznam náhodných čísel. Jistě se nám k tomu bude hodit chroustání seznamů.
 
 ### Karty 1
 
@@ -524,7 +471,7 @@ notaci a vrátí tentýž název zapsaný ve velbloudí notaci.
 
 Příklad:
 
-```
+```shell
 $ python3 had-velbloud.py had_honi_velblouda
 hadHoniVelblouda
 ```
@@ -538,7 +485,7 @@ notaci a vrátí tentýž název zapsaný v hadí notaci.
 
 Příklad:
 
-```
+```shell
 $ python3 velbloud-had.py velbloudHoniHada
 velbloud_honi_hada
 ```
@@ -560,4 +507,3 @@ Vyzkoušejte například následující příkaz
 ```
 
 Úlohu lze však vyřešit i bez `enumerate()`!
-

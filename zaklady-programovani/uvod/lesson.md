@@ -60,7 +60,7 @@ Nejprve ověřme, že instalace nástrojů proběhla v pořádku. Ať už jste n
 Pokud jste na Windows, napište do okna, které se objeví toto:
 
 ```shell
-$ py
+$ python
 ```
 
 a stiskněte enter. Pokud jste na Macu nebo Linuxu, je třeba napsat
@@ -83,7 +83,7 @@ a stiskněte enter. Otevře se okno s editorem. Do jeho pravé časti vložte n�
 
 ```json
 {
-  "editor.tabSize": 4,
+  "editor.tabSize": 2,
   "editor.detectIndentation": false,
   "editor.renderWhitespace": "boundary",
   "editor.insertSpaces": true,
