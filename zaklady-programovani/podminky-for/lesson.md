@@ -17,23 +17,27 @@ tří hodů kostkou těžko určíme, jestli je nebo není fér. Dejme tomu, že
 spolehlivý výsledek požadujeme alespoň tisíc hodů kostkou. Pokud je hodů málo,
 můžeme uživateli oznámit, že výsledek není spolehlivý.
 
-    import statistics
-    
-    soubor = open('hody.txt')
-    hody = [int(hod) for hod in soubor]
-    soubor.close()
-    
-    if len(hody) < 1000:
-      print('Nespolehlivý výsledek kvůli nedostatku dat.')
-    
-    print(statistics.mean(hody))
+```py
+import statistics
+
+soubor = open('hody.txt')
+hody = [int(hod) for hod in soubor]
+soubor.close()
+
+if len(hody) < 1000:
+    print('Nespolehlivý výsledek kvůli nedostatku dat.')
+
+print(statistics.mean(hody))
+```
 
 Pokud bychom při nedostatku dat vůbec nechtěli vypisovat výsledek, můžeme do
 podmínky přidat další příkaz, který program ihned ukončí
 
-    if len(hody) < 1000:
-      print('Nespolehlivý výsledek kvůli nedostatku dat.')
-      exit()
+```py
+if len(hody) < 1000:
+    print('Nespolehlivý výsledek kvůli nedostatku dat.')
+    exit()
+```
 
 ## Bloky
 
@@ -60,11 +64,13 @@ Podmínky mohou být mnohem zajímavější a komplexnější, než jak jsme vid
 chvíli. Například mohou mít jak pozitivní tak negativní větev. Negativní větev
 se spouští, pokud výraz v podmínce vrátí `False`. Můžeme pak například psát:
 
-    if len(hody) < 1000:
-      print('Nespolehlivý výsledek kvůli nedostatku dat.')
-      exit()
-    else:
-      print('Výsledek je dostatečně spolehlivý.')
+```py
+if len(hody) < 1000:
+    print('Nespolehlivý výsledek kvůli nedostatku dat.')
+    exit()
+else:
+    print('Výsledek je dostatečně spolehlivý.')
+```
 
 ## Cvičení
 
@@ -81,8 +87,8 @@ souboru. Pokud soubor končí příponou `.csv`, program vypíše název tohoto
 souboru na obrazovku. Pokud má soubor jinou příponu, programu zahlásí, že daný
 soubor neumí zpracovat.
 
-V tomto příkladu se vám může hodit metoda řetězců s názvem `endswith` ([viz
-dokumentace](https://docs.python.org/3/library/stdtypes.html#str.endswith)).
+V tomto příkladu se vám může hodit metoda řetězců s názvem `endswith`
+([viz dokumentace](https://docs.python.org/3/library/stdtypes.html#str.endswith)).
 
 Hotovo!
 
@@ -110,8 +116,10 @@ ukážeme, jak nějakou část kódu opakovat vícekrát po sobě.
 Cyklus FOR jste vlastně už ve zjednodušené formě viděli při chroustání
 seznamů. Vezměme si například takovýto program:
 
-    jmena = ['petr', 'pavel', 'jitka', 'jana']
-    delky = [len(jmeno) for jmeno in jmena]
+```py
+jmena = ['petr', 'pavel', 'jitka', 'jana']
+delky = [len(jmeno) for jmeno in jmena]
+```
 
 Se svými zkušenostmi jste jistě schopni popsat, co přesně takový program dělá.
 Jednoduše chroustání projde jednotlivé prvky seznamu jmena a vyrobí nový
@@ -122,29 +130,35 @@ bychom vyrábět žádný nový seznam? Mohli bychom třeba chtít jen vypsat d�
 jmen pod sebe na obrazovku. V takovém případě použijeme místo chroustání
 seznamů skutečný FOR cyklus:
 
-    jmena = ['petr', 'pavel', 'jitka', 'jana']
-    for jmeno in jmena:
-      print(len(jmeno))
+```py
+jmena = ['petr', 'pavel', 'jitka', 'jana']
+for jmeno in jmena:
+    print(len(jmeno))
+```
 
 Všimněte si, že cyklus FOR je v základu dost podobný chroustání seznamů. I
 tady říkáme, že se má něco provést pro každý prvek seznamu. Jen teď máme
 podstatně větší volnost v tom, co s jednotlivými prvky provedeme. Podobně jako
 v případě podmínek můžeme cyklu FOR předat celý blok příkazů najednou:
 
-    jmena = ['petr', 'pavel', 'jitka', 'jana']
-    for jmeno in jmena:
-      mail = jmeno + '@gmail.com'	
-      print(mail)
+```py
+jmena = ['petr', 'pavel', 'jitka', 'jana']
+for jmeno in jmena:
+    mail = jmeno + '@gmail.com'
+    print(mail)
+```
 
 Dokonce se můžeme opravdu odvázat a vložit do bloku v cyklu FOR i podmínku.
 
-    jmena = ['petr', 'pavel', 'jitka', '', 'jana']
-    for jmeno in jmena:
-      if len(jmeno) < 1:
+```py
+jmena = ['petr', 'pavel', 'jitka', '', 'jana']
+for jmeno in jmena:
+    if len(jmeno) < 1:
         mail = 'neplatný email'
-      else:
+    else:
         mail = jmeno + '@gmail.cz'
-      print(mail)
+    print(mail)
+```
 
 Tímto jsme vlastně vysvětlili to hlavní a zásadní, co o cyklu FOR zatím
 potřebujeme vědět. Možná se to na první pohled nezdá, ale přidáním cyklu do
@@ -156,9 +170,11 @@ závity.
 
 Ukažme si například, jak se pomocí cyklu spočítá součet všech čísel v seznamu.
 
-    soucet = 0
-    for cislo in cisla:
-      soucet = soucet + cislo
+```py
+soucet = 0
+for cislo in cisla:
+    soucet = soucet + cislo
+```
 
 Ne, že bychom zrovna takovýto kus kódu nutně potřebovali, když můžeme použít
 funkci `sum()`. Tento příklad ale ukazuje, že s cykly můžeme dělat spoustu
@@ -170,24 +186,30 @@ zajímavých věcí.
 
 Napište program, který dostane na příkazové řádce seznam celých čísel a
 
-  1. vypíše všechna tato čísla pod sebe, každé na nový řádek,
-  2. vypíše každé číslo spolu s jeho opačnou hodnotu (obrácené znaménko),
-  3. vypíše pouze čísla větší než 0,
-  4. čísla větší než 0 vypíše tak jak jsou, čísla menší než nula vypíše s obráceným znaménkem.
+1. vypíše všechna tato čísla pod sebe, každé na nový řádek,
+2. vypíše každé číslo spolu s jeho opačnou hodnotu (obrácené znaménko),
+3. vypíše pouze čísla větší než 0,
+4. čísla větší než 0 vypíše tak jak jsou, čísla menší než nula vypíše s obráceným znaménkem.
 
 ### Poznávačky
 
 Popište vlídným, ale přesným slovem, co dělají následující cykly:
 
-  1.     for x in cisla:
-      if x % 2 == 0:
+1.
+```py
+for x in cisla:
+    if x % 2 == 0:
         print(x)
+```
 
-  2.     for jmeno in jmena:
-      if jmeno[0] == 'p':
+2.
+```py
+for jmeno in jmena:
+    if jmeno[0] == 'p':
         print('pako')
-      else:
+    else:
         print(jmeno)
+```
 
 ## Čtení na doma
 
@@ -195,28 +217,36 @@ Ještě než se přesuneme k hlavnímu tématu, ukážeme si, jak dělat hezčí
 funkcí z modulů. Do této chvíle, pokud jsme chtěli použít například funkci
 `mean` z modulu `statistics`, psali jsme něco jako.
 
-    import statistics
-    prumer = statistics.mean(data)
+```py
+import statistics
+prumer = statistics.mean(data)
+```
 
 Pokud funkce z tohoto modulu používáme v našem programu často, budeme název
 `statistics` psát tolikrát, až se upíšeme k smrti. Abychom byli při psaní kódu
 efektivnější, přejmenujeme si během importu název modulu na něco kratšího,
 například takto
 
-    import statistics as stat
-    prumer = stat.mean(data)
+```py
+import statistics as stat
+prumer = stat.mean(data)
+```
 
 Může se nám také stát, že z nějakého modulu potřebujeme jen některé funkce,
 například funkce `randint()` a `uniform()` z modulu `random`. V takovém
 případě můžeme funkce importovat takto
 
-    from random import randint, uniform
+```py
+from random import randint, uniform
+```
 
 Takto importované funkce pak můžeme používat **bez tečkové notace**
 
-    from random import randint, uniform
-    hod_kostkou = randint(1, 6)
-    hod_desetinnou_kostkou = uniform(1, 6)
+```py
+from random import randint, uniform
+hod_kostkou = randint(1, 6)
+hod_desetinnou_kostkou = uniform(1, 6)
+```
 
 ### Podmínky s více větvemi
 
@@ -224,33 +254,39 @@ V této lekci jsme si zatím představili pouze podmínky s jednou nebo dvěma
 větvemi. Když chci něco provést jen v případě, že jsem z písemky dostal více
 než 90 bodů, napíšu podmínku s jednou větví.
 
-    if bodu > 90:
-      print('Dobrá práce')
+```py
+if bodu > 90:
+    print('Dobrá práce')
+```
 
 Pokud chci něco provést v případě, že podmínka nebyla splněna, použiju
 podmínku s dvěma větvemi.
 
-    if bodu > 90:
-      print('Dobrá práce')
-    else:
-      print('Špatná práce')
+```py
+if bodu > 90:
+    print('Dobrá práce')
+else:
+    print('Špatná práce')
+```
 
 Co kdybych ale například chtěl rozdělit známky podle počtů bodů? Tedy za více
 než 90 by bylo A, za 80 až 90 B a tak dále. V takovém případě bych mohl použít
 podmínku s více větvemi.
 
-    if bodu >= 90:
-      print('A')
-    elif bodu >= 80:
-      print('B')
-    elif bodu >= 70:
-      print('C')
-    elif bodu >= 60:
-      print('D')
-    elif bodu >= 50:
-      print('E')
-    else:
-      print('F')
+```py
+if bodu >= 90:
+    print('A')
+elif bodu >= 80:
+    print('B')
+elif bodu >= 70:
+    print('C')
+elif bodu >= 60:
+    print('D')
+elif bodu >= 50:
+    print('E')
+else:
+    print('F')
+```
 
 Zde je dobré vědět, jakým způsobem Python takovou podmínku vyhodnocuje.
 Nejdřív se podívá, jestli je splněna první větev. Pokud ano, vykoná příslušný
@@ -278,11 +314,15 @@ heslo, program odpoví "přístup odepřen".
 Napište program `usd.py`, který bude umět převádět měnu na americké dolary.
 Když program zavoláte takto
 
-    $ python3 usd.py czk 550
+```
+$ python3 usd.py czk 550
+```
 
 převede 550 českých korun na americké dolary. Pokud jej zavoláte takto
 
-    $ python3 usd.py eur 21
+```
+$ python3 usd.py eur 21
+```
 
 převede 21 euro na americké dolary.
 
@@ -295,9 +335,9 @@ Jako přídavek můžete do svého programu přidat tolik měn, kolik se vám l�
 Napište program, který z textového souboru přečte seznam zůstatků na spořících
 účtech a vypíše tyto zůstatky navýšené o 2.5% úrok.
 
-  1. Vypište každý navýšený zůstatek na samostatný řádek.
-  2. Vypište jen ty zůstatky, které nejsou záporné.
-  3. Zkuste jednotlivé řádky očíslovat. Každý řádek tedy bude obsahovat číslo řádku a výsledný zůstatek.
+1. Vypište každý navýšený zůstatek na samostatný řádek.
+2. Vypište jen ty zůstatky, které nejsou záporné.
+3. Zkuste jednotlivé řádky očíslovat. Každý řádek tedy bude obsahovat číslo řádku a výsledný zůstatek.
 
 ### Hádanky
 
@@ -307,20 +347,26 @@ Projděte si následující program a zkuste předpovědět co nejpřesněji, ja
 jeho výstup. Zkuste co nejvýstižněji (jednou dvěma větami) zformulovat, co
 program dělá.
 
-  1.     cisla = [3, 5, 8, 0, 4, 2, 0, 7, 6, 2, 0, 5]
-    sum = 0
-    for cislo in cisla:
-      sum = sum + cislo
-      if cislo == 0:
+1.
+```py
+cisla = [3, 5, 8, 0, 4, 2, 0, 7, 6, 2, 0, 5]
+sum = 0
+for cislo in cisla:
+    sum = sum + cislo
+    if cislo == 0:
         print(sum)
         sum = 0
+```
 
-  2.     cisla = [3, 5, 8, 0, 4, 2, 0, 7, 6, 2, 0, 5]
-    index = 0
-    for cislo in cisla:
-      if index % 2 == 0:
+2.
+```py
+cisla = [3, 5, 8, 0, 4, 2, 0, 7, 6, 2, 0, 5]
+index = 0
+for cislo in cisla:
+    if index % 2 == 0:
         print(cislo)
-      index +=  1
+    index +=  1
+```
 
 ### Vzestupný seznam
 
@@ -361,8 +407,10 @@ Napište program, který dostane na příkazové řádce posloupnost čísel. Pr
 číslo udává, kolikáté největší číslo chceme ve zbytku zadaných čísel najít.
 Můžeme tak chtít třeba páté největší číslo z 6, 1, 3, 8, 4, 7, 2
 
-    $ python3 kmax.py 5 6 1 3 8 4 7 2
-    3
+```
+$ python3 kmax.py 5 6 1 3 8 4 7 2
+3
+```
 
 Pokud je nějaké číslo v seznamu dvakrát, bere se jako dvě různá maxima.
 Nepoužívejte žádné Python funkce typu `sorted` nebo `max`. Napište všechno
