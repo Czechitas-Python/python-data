@@ -16,7 +16,7 @@ Můžeme si například představit program, který se zabývá výměrou pozemk
 často se nám stává, že chceme spočítat plochu pozemku tvaru trojúhelníka jako
 na tomto obrázku.
 
-![Pozemek](/czechitas/python-data/assets/datova-analyza/pandas-transformace/triangle-area.png)
+![Pozemek](assets/triangle-area.png)
 
 Na vzoreček pro výpočet plochy trojúhelníka si vzpomeneme ze základní školy.
 
@@ -78,7 +78,7 @@ obdrží seznam a vrátí součet všech kladných čísel z tohoto seznamu.
 
 Tentokrát chceme spočítat plochu pozemku ve tvaru elipsy jako na obrázku.
 
-![Elipsa](/czechitas/python-data/assets/datova-analyza/pandas-transformace/elipse.png)
+![Elipsa](assets/elipse.png)
 
 Z matematiky víme, že známe-li šířku a výšku elipsy, její obsah je polovina
 šířky krát polovina výšky krát číslo pí. Napište funkci `elipseArea`, která

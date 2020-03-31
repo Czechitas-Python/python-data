@@ -61,7 +61,7 @@ stránku zobrazil prohlížeč.
     </html>
     
 
-![Ukázka HTML](/czechitas/python-data/assets/datova-analyza/webscraping/ukazka-html.png)
+![Ukázka HTML](assets/ukazka-html.png)
 
 Vytvořte si na svém počítači složku `ukazka-html` a otevřete ji ve Visual
 Studiu. Vytvořte v této složce soubor `ukazka.html` a zkopírujte do něj výše
@@ -73,14 +73,14 @@ V naší první webové stránce jsme viděli takzvané _HTML značky_. Značky 
 do špičatých závorek a většina značek má otevírací a zavírací část. Například
 značka `em` pro zvýraznění textu vypadá takto
 
-![HTML značka](/czechitas/python-data/assets/datova-analyza/webscraping/html-znacka.png)
+![HTML značka](assets/html-znacka.png)
 
 Značky mohou mít takzvané atributy, které dále specifikují, co značka bude
 přesně zobrazovat. Například značka `ol` představuje seznam položek a má
 atribut zvaný `type`, který určuje, jestli se číslování položek děje pomocí
 písmen nebo čísel.
 
-![HTML atribut](/czechitas/python-data/assets/datova-analyza/webscraping/html-atribut.png)
+![HTML atribut](assets/html-atribut.png)
 
 Zajímavá a téměř nejpoužívanější je značka `div`, která sama o sobě nemá žádný
 vizuální význam. Slouží totiž k členění stránky na menší části. Všimněte si,

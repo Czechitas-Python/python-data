@@ -51,7 +51,7 @@ Nyní vyzkoušíme zobrazit přírůstky jako graf. Stačí napsat
     >>> ucet.plot()
     >>> plt.show()
 
-![Graf pohybů](/czechitas/python-data/assets/datova-analyza/vizualizace/prirustky.png)
+![Graf pohybů](assets/prirustky.png)
 
 Užitečnější by mohlo být zobrazit například graf zůstatků
 
@@ -60,7 +60,7 @@ Užitečnější by mohlo být zobrazit například graf zůstatků
     >>> ucet.cumsum().plot()
     >>> plt.show()
 
-![Graf zůstatků](/czechitas/python-data/assets/datova-analyza/vizualizace/zustatky.png)
+![Graf zůstatků](assets/zustatky.png)
 
 Nyní si s grafem můžeme vyhrát podle chuti a nastavit jeho vzezření přesně
 tak, jak potřebujeme. Metoda `plot` na sériích obsahuje nepřeberné možnosti
@@ -72,7 +72,7 @@ ve žluté barvě.
     >>> ucet.plot(kind='bar', color='yellow', grid=True)
     >>> plt.show()
 
-![Sloupcový graf zůstatků](/czechitas/python-data/assets/datova-analyza/vizualizace/sloupce.png)
+![Sloupcový graf zůstatků](assets/sloupce.png)
 
 Protože možností a parametrů je opravdu hodně, vyplatí se číst [oficiální
 dokumentaci](https://pandas.pydata.org/pandas-
@@ -127,7 +127,7 @@ Pomocí histogramu zobrazíme četnosti jednotlivých hodnot.
     >>> muzi.hist()  
     >>> plt.show()
 
-![Histogram výšek](/czechitas/python-data/assets/datova-analyza/vizualizace/vysky-muzi.png)
+![Histogram výšek](assets/vysky-muzi.png)
 
 Histogram si pro přehlednost můžeme rozdělit do přihrádek (anglicky _bins_ )
 po pěti centimetrech
@@ -139,7 +139,7 @@ po pěti centimetrech
     ])  
     >>> plt.show()
 
-![Histogram výšek s přihrádkami](/czechitas/python-data/assets/datova-analyza/vizualizace/vysky-muzi-bins.png)
+![Histogram výšek s přihrádkami](assets/vysky-muzi-bins.png)
 
 ## Krabicový graf
 
@@ -151,7 +151,7 @@ si jej vyzkoušet na výškách mužů.
     >>> muzi.plot(kind='box', whis='range')
     >>> plt.show()
 
-![Krabicový graf muži](/czechitas/python-data/assets/datova-analyza/vizualizace/vysky-muzi-box.png)
+![Krabicový graf muži](assets/vysky-muzi-box.png)
 
 Krabicové grafy jsou užitečné předveším pro porovnání dvou různých měření.
 Přidejme si druhou datovou sadu představující naměřené výšky žen
@@ -179,7 +179,7 @@ si z našich sérií vyrobíme DataFrame.
     >>> vysky.plot(kind='box', whis='range')
     >>> plt.show()
 
-![Krabicový graf muži vs ženy](/czechitas/python-data/assets/datova-analyza/vizualizace/vysky-muzi-zeny-box.png)
+![Krabicový graf muži vs ženy](assets/vysky-muzi-zeny-box.png)
 
 ## Cvičení
 

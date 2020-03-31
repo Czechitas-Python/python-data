@@ -165,7 +165,7 @@ Abychom dokázali s naší tabulkou manipulovat, potřebujeme dobře rozumět to
 jak vlastně Pandas DataFrame funguje. Pomůže nám k tomu následující obrázek,
 který ukazuje, jak náš DataFrame vypadá poté, co jsme jej načetli z CSV.
 
-![Pandas DataFrame](/czechitas/python-data/assets/datova-analyza/pandas-dotazy/dataframe.svg)
+![Pandas DataFrame](assets/dataframe.svg)
 
 Do začátku je nejdůležitější si uvědomit, že Pandas pracuje nejen se jmény
 sloupců, ale také se **jmény řádků**. Jménům řádků se v Pandasu říká _index_.
