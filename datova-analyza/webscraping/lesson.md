@@ -6,7 +6,7 @@ Web scraping je technika pomocí které můžeme strojově číst obsah webovýc
 
 ### HTML značky (tagy)
 
-V následující ukázce vidíte kód webové stránky zároveň s tím jak by takovou stránku zobrazil prohlížeč.
+V následující ukázce vidíte HTML kód celé webové stránky tak, jak by si ji stáhl prohlížeč odněkud ze server.
 
 ```html
 <html>
@@ -42,17 +42,19 @@ V následující ukázce vidíte kód webové stránky zároveň s tím jak by t
 </html>
 ```
 
-![Ukázka HTML](assets/ukazka-html.png)
+Stránka se poté v prohlížeči zobrazí nějak takto. Zatím nevypadá příliš vábně, protože není nastylovaná. Styly nás však v této lekci nezajímají, protože pro webscraping nejsou důležité.
+
+![Ukázka HTML](assets/ukazka-html.png){.fig .fig-80}
 
 Vytvořte si na svém počítači složku `ukazka-html` a otevřete ji ve Visual Studiu. Vytvořte v této složce soubor `ukazka.html` a zkopírujte do něj výše uvedený kód a uložte. Poté tento soubor najděte v průzkumníku a dvojklikem by se vám měl otevřít ve vašem oblíbeném prohlížeči. Můžete tak zkontrolovat, že prohlížeč vaši stránku skutečně zobrazí tak, jak je uvedeno na obrázku výše.
 
-V naší první webové stránce jsme viděli takzvané <term cs="HTML značky" en="HTML elements">. Značky se píší do špičatých závorek a většina značek má otevírací a zavírací část. Například značka `em` pro zvýraznění textu vypadá takto
+V naší první webové stránce jsme viděli takzvané <term cs="HTML značky" en="HTML tags">. Značky se píší do špičatých závorek a většina značek má otevírací a zavírací část. Například značka `em` pro zvýraznění textu vypadá takto
 
-![HTML značka](assets/html-znacka.png)
+![HTML značka](assets/html-znacka.png){.fig .fig-60}
 
 Značky mohou mít takzvané atributy, které dále specifikují, co značka bude přesně zobrazovat. Například značka `ol` představuje seznam položek a má atribut zvaný `type`, který určuje, jestli se číslování položek děje pomocí písmen nebo čísel.
 
-![HTML atribut](assets/html-atribut.png)
+![HTML atribut](assets/html-atribut.png){.fig .fig-60}
 
 Zajímavá a téměř nejpoužívanější je značka `div`, která sama o sobě nemá žádný vizuální význam. Slouží totiž k členění stránky na menší části. Všimněte si, že naší ukázkové stránka značku `div` také používá. Navíc u ní najdeme atribut `class`. Ten se běžně používá k stylování stránky a často podle něj můžeme při webscrapingu odlišit důležité části stránky.
 
@@ -136,7 +138,7 @@ Vyhledávací řetězce v metodě `find()` mohou být složitější, než jak j
 Můžeme vyhledávat podle více značek najednou. Například najít všechny nadpisy první i druhé úrovně.
 
 ```py
-    html.find('h1, h2')
+html.find('h1, h2')
 ```
 
 Můžeme vyhledávat podle atributů. Například najít všechny seznamy, kde atribut `type` je roven `a`.
@@ -227,4 +229,3 @@ Vaším úkolem v tomto cvičení je napsat program, který stáhne všechny nab
 ## Čtení na doma
 
 Webscraping je velmi široká oblast a těžko se člověk do jejích tajů dostane během jedné lekce. Obzvláště u komplikovanějších stránek je často nutné zkoušet různé techniky a přístupy, umět si poradit v různých situacích, nenechat se snadno odradit ošklivě napsaným HTML kódem a vůbec být mazaný jako liška.
-
