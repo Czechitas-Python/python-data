@@ -193,55 +193,17 @@ nebo
 'dokumenty/dapraha/python/priklady'
 ```
 
-## Cvičení
+@exercises ## Cvičení - řetězce, metody [
 
-### Převod písmen
+- prevod-pismen
+- cisla-jako-text
+- cisla-v-textu
+  ]@
 
-Uložte si do proměnné jmeno svoje jméno. Pomocí volání vhodných metod jej
-převeďte nejdříve na všechna pímena malá a poté na všechna písmena velká.
+@exercises bonuses [
 
-### Čísla jako text
-
-Mějme seznam desetinných čísel zadaných jako text
-
-    hodnoty = ['12', '1', '7', '-11']
-
-Potřebujeme k třetímu číslu v seznamu přičíst 4, aby vysledek vypadal takto:
-
-    hodnoty = ['12', '1', '11', '-11']
-
-Před tím, než se podíváte na následující kroky, sami si rozmyslete postup, jak
-toto provést. Až když si nejste jistí, pokračujte podle následujících kroků.
-
-1. Uložte si hodnotu na třetí pozici v seznam do nějaké proměnné.
-2. Převeďte tuto hodnotu na číslo a přičtěte k němu 4. Výsledek uložte do nějaké jiné proměnné.
-3. Převeďte hodnotu v proměnné vysledek zpět na řetězec a uložte ji na třetí pozici v seznamu hodnoty.
-
-### Čísla v textu
-
-Máme obdobné zadání jako v předchozím cvičení, avšak tentokrát máme čísla
-zadána nikoliv v seznamu ale v řetězci oddělená mezerou:
-
-    hodnoty = '12.1 1.68 7.45 -11.51'
-
-K poslednímu číslu v seznamu chceme přičíst 0.25 tak, aby výsledek vypadal
-takto
-
-    hodnoty = '12.1 1.68 7.45 -11.26'
-
-Určitě se vám budou hodit metody `split()` a `join()`.
-
-Hotovo!
-
-Hurá, pokud jste dorazili až sem, máte hotovo. Nalepte si lísteček a pokud
-chcete, můžete pokračovat bonusovými příklady.
-
-## Bonusy
-
-### Chytřejší cvičení 2
-
-Zkuste vymyslet, jak udělat zápis příkazů z cvičení 2 co nejúspornější. Dá se
-dojít až k tomu, že celé řešení bude na jeden řádek v Python konzoli.
+- chytrejsi-cisla-jako-text
+  ]@
 
 ## Chroustání seznamů
 
@@ -375,24 +337,26 @@ konzole a ověřte, zda jste měli pravdu.
 seznam = [1, 4, 9, 16, 25, 36, 49, 64]
 ```
 
-1.     [x**0.5 for x in seznam]
-1.     [x % 2 for x in seznam]
-1.     [[x // 2, x % 2] for x in seznam]
+1.             [x**0.5 for x in seznam]
+1.             [x % 2 for x in seznam]
+1.             [[x // 2, x % 2] for x in seznam]
 
 ```py
 seznam = ['12.03.2014', '10.01.2015', '06.06.1986']
 ```
 
-4.     [int(datum[3:5]) for datum in seznam]
-1.     [int(datum[:2])-1 for datum in seznam]
+4.             [int(datum[3:5]) for datum in seznam]
+1.             [int(datum[:2])-1 for datum in seznam]
 1.
+
 ```py
 [
     [int(datum[:2]), int(datum[3:5]), int(datum[6:])] for datum in seznam
 ]
 ```
-7.     [datum.split('.') for datum in seznam]
-1.     ['/'.join(datum.split('.')) for datum in seznam]
+
+7.             [datum.split('.') for datum in seznam]
+1.             ['/'.join(datum.split('.')) for datum in seznam]
 
 ## Čtení na doma
 
