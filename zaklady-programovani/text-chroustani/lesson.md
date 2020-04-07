@@ -271,94 +271,15 @@ udělat takto:
 [1, 3, 4, 1, 1, 1]
 ```
 
-## Cvičení
+@exercises ## Cvičení - chroustání seznamů [
 
-### Seznamy čísel
+- seznamy-cisel
+- seznamy-retezcu
+- seznam-teplot
+- cteni-kodu
+  ]@
 
-Mějme zadaný následující seznam
-
-```py
-cisla = [1.12, 4.51, 2.64, 13.1, 0.1]
-```
-
-Vytvořte seznam, který obsahuje
-
-1. každé z čísel ze seznamu cisla vynásobené dvěma,
-2. každé z čísel ze seznamu cisla s opačným znaménkem,
-3. každé z čísel ze seznamu cisla umocněné na druhou,
-4. každé z čísel ze seznamu cisla jako řetězec.
-
-### Seznamy řetězců
-
-Mějme zadaný následující seznam
-
-```py
-jmena = ['Roman', 'Jan', 'Miroslav', 'Petr', 'Gabriel']
-```
-
-Vytvořte seznam, který obsahuje
-
-1. počty písmen ve všech jménech,
-2. všechna jména napsaná velkými písmeny,
-3. všechna jména plus písmeno `'a'` na konci (stanou se z nich tedy ženská jména),
-4. všechna jména převedená na malá písmena s koncovkou `'@email.cz'`.
-
-### Seznam teplot
-
-Mějme zadaný následující seznam naměřených teplot. Seznam obsahuje teploty
-naměřené pro každý den v týdnu ve čtyřech časech - ráno, v poledne, večer a v
-noci.
-
-```py
-teploty = [
-    [2.1, 5.2, 6.1, -0.1],
-    [2.2, 4.8, 5.6, -1.0],
-    [3.3, 6.5, 5.9, 1.2],
-    [2.9, 5.6, 6.0, 0.0],
-    [2.0, 4.6, 5.5, -1.2],
-    [1.0, 3.2, 2.1, -2.0],
-    [0.4, 2.7, 1.3, -2.8]
-]
-```
-
-1. Vytvořte seznam průměrných teplot pro každý den.
-2. Vytvořte seznam ranních teplot.
-3. Vytvořte seznam nočních teplot.
-4. Vytvořte seznam dvouprvkových seznamů obsahujících pouze denní a noční teplotu.
-5. Spočítejte celkovou průměrnou teplotu za celý týden.
-
-### Čtení kódu
-
-Popište vlastními slovy co následující výrazy udělají se zadaným seznamem
-`seznam`. Až když máte ve svojí hlavjénce jasno, tak je zkuste napsat do Python
-konzole a ověřte, zda jste měli pravdu.
-
-```py
-seznam = [1, 4, 9, 16, 25, 36, 49, 64]
-```
-
-1.             [x**0.5 for x in seznam]
-1.             [x % 2 for x in seznam]
-1.             [[x // 2, x % 2] for x in seznam]
-
-```py
-seznam = ['12.03.2014', '10.01.2015', '06.06.1986']
-```
-
-4.             [int(datum[3:5]) for datum in seznam]
-1.             [int(datum[:2])-1 for datum in seznam]
-1.
-
-```py
-[
-    [int(datum[:2]), int(datum[3:5]), int(datum[6:])] for datum in seznam
-]
-```
-
-7.             [datum.split('.') for datum in seznam]
-1.             ['/'.join(datum.split('.')) for datum in seznam]
-
-## Čtení na doma
+## Povinné čtení na doma
 
 Prozatím jsme na svých poutích po krajině Pythonu potkali následující hodnoty:
 
