@@ -6,7 +6,7 @@ Během našeho výletu Pythonem jste již potkali mnoho funkcí. Pomocí funkce 
 
 Můžeme si například představit program, který se zabývá výměrou pozemků a často se nám stává, že chceme spočítat plochu pozemku tvaru trojúhelníka jako na tomto obrázku.
 
-![Pozemek](assets/triangle-area.png)
+![Pozemek](assets/triangle-area.png){.fig .fig-80}
 
 Na vzoreček pro výpočet plochy trojúhelníka si vzpomeneme ze základní školy.
 
@@ -302,4 +302,3 @@ týden
 2    1.4
 Name: váha, dtype: float64
 ```
-

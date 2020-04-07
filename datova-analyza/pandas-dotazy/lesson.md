@@ -4,24 +4,24 @@ Do této chvíle jsme se v tomto kurzu učili spíše základy programování ne
 
 Pojem datová analýza je poměrně široký a nemusí být úplně jasné, jak jej definovat. Pod datovou analýzou se skrývá několik rolí a činností, a ne vždy jsou tyto prováděny jednou osobou. Patří sem například
 
-* analýza dat,
-* čištění dat,
-* transformace dat,
-* vizualizace dat,
-* návrh datové architektury,
-* strojové učení,
-* datové modelování,
-* práce s velkými daty (big data),
-* a další...
+- analýza dat,
+- čištění dat,
+- transformace dat,
+- vizualizace dat,
+- návrh datové architektury,
+- strojové učení,
+- datové modelování,
+- práce s velkými daty (big data),
+- a další...
 
 Užitečné je také vědět, proč jsme si pro práci s daty vybrali právě jazyk Python. Python není rozhodně jediný jazyk užitečný v tomto směru. Existuje také jazyk R, který se na rozdíl od Pythonu zaměřuje čistě na práci s daty. Proto se v R některé úkoly při datové analýze řeší snáze, než v Pythonu. Na druhou stranu jazyk Python je proti R obecnější, má širší použití co se týče programování a proto se v něm naopak mnoho programátorských problémů řeší snáze než v R. Výběr toho pravého jazyka je tedy na zvážení pro každý jednotlivý projekt a zvažuje se
 
-* use case, na kterém pracujeme,
-* data, s jakými pracujeme,
-* tým, ve kterém pracujeme,
-* technologie vybrané firmy / projektu a jejich možnosti,
-* dodatečné knihovny / moduly vybraného jazyka,
-* objem dat, s jakými pracujeme.
+- use case, na kterém pracujeme,
+- data, s jakými pracujeme,
+- tým, ve kterém pracujeme,
+- technologie vybrané firmy / projektu a jejich možnosti,
+- dodatečné knihovny / moduly vybraného jazyka,
+- objem dat, s jakými pracujeme.
 
 Python nám umožňuje pracovat s velkými datovými sadami, vizualizovat data pomocí různých modulů, podporuje mnoho modulů pro strojové učení a tak dále.
 
@@ -36,13 +36,13 @@ Při práci s Pandasem se tedy nebudeme učit nové programovací techniky v Pyt
 Pandas je externí balíček, který musíme nejdříve nainstalovat, podobně jako jsme to dělali minulou lekci s balíčkem `requests`. Napíšeme tedy na příkazovou řádku
 
 ```shell
-pip3 install pandas
+$ pip3 install pandas
 ```
 
 Jako vždy, pokud jsme na Windows, píšeme pouze
 
 ```shell
-pip install pandas
+$ pip install pandas
 ```
 
 Pandas je relativně veliký balíček, který obsahuje mnoho modulů, takže instalace bude nějakou chvíli trvat.
@@ -124,7 +124,7 @@ Index(['kraj', 'obyvatel', 'linky', 'vymera'], dtype='object')
 
 Abychom dokázali s naší tabulkou manipulovat, potřebujeme dobře rozumět tomu, jak vlastně Pandas DataFrame funguje. Pomůže nám k tomu následující obrázek, který ukazuje, jak náš DataFrame vypadá poté, co jsme jej načetli z CSV.
 
-![Pandas DataFrame](assets/dataframe.svg)
+![Pandas DataFrame](assets/dataframe.svg){.fig .fig-100}
 
 Do začátku je nejdůležitější si uvědomit, že Pandas pracuje nejen se jmény sloupců, ale také se **jmény řádků**. Jménům řádků se v Pandasu říká _index_. Již při načtení našeho DataFrame z CSV jsme zvolili, že řádky se budou jmenovat podle názvů měst (použili jsme parametr `index_col`). Zvolili jsme tedy sloupec `mesto` jako náš index. Díky tomu máme jednoznačné názvy sloupců i řádků a můžeme tak vytvářet různé dotazy na data z tabulky.
 
@@ -288,12 +288,12 @@ Stáhněte si soubor [jmena100.csv](assets/jmena100.csv), který obsahuje tabulk
 
 Datový soubor obsahuje následující sloupečky
 
-* **jméno** \- křestní jméno
-* **četnost** \- počet obyvatel ČR mající toto jméno
-* **věk** \- průměrný věk nositelů jména
-* **pohlaví** \- zda je jméno mužské či ženské
-* **svátek** \- datum, kdy má dané jméno svátek
-* **původ** \- původ jména
+- **jméno** \- křestní jméno
+- **četnost** \- počet obyvatel ČR mající toto jméno
+- **věk** \- průměrný věk nositelů jména
+- **pohlaví** \- zda je jméno mužské či ženské
+- **svátek** \- datum, kdy má dané jméno svátek
+- **původ** \- původ jména
 
 Vyřešte následující úkoly.
 
@@ -753,4 +753,3 @@ praha  PHA  1 294 513     24   496.0
 ```
 
 Tímto výčet metod na sériích rozhodně nekončí. Pokud vás zajímá, jaké všechny metody lze na sériích použít, můžete nahlédnout do [oficiální dokumentace pandasu](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.html).
-
