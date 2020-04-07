@@ -55,7 +55,7 @@ Pokud je verze Pythonu na prvním řádku alespoň 3.5, jste připravení.
 
 Nejprve ověřme, že instalace nástrojů proběhla v pořádku. Ať už jste na jakémkoliv operačním systému, spusťte vaše nově nainstalované Visual Studio Code a z horní lišty vyberte <i>Terminal</i> → <i>New Terminal</i> (viz obrázek).
 
-![VS Code Terminal](assets/vscode-term.png){.fig}
+![VS Code Terminal](assets/vscode-term.png){.fig .fig-100}
 
 Pokud jste na Windows, napište do okna, které se objeví toto:
 

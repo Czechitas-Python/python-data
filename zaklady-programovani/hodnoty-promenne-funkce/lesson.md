@@ -216,7 +216,7 @@ Přečtěte si povídání o dalších vymoženostech Pythonu, které se nám ne
 
 Během přednášky jsme neprobrali úplně všechny aritmetické operátory, které můžeme v Pythonu použít. Kromě sčítání, odčítání, násobení a dělení máme ještě tyto:
 
-- Mocnění: **`**`\*\*
+- Mocnění: **`**`**
 - Celočíselné dělení: **`//`**
 - Zbytek po dělení: **`%`**
 
