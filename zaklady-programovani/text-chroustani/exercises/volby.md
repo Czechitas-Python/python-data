@@ -51,6 +51,6 @@ Zodpovězte následující otázky
 1. Vytvořte tabulku, která ukazuje který kandidát vyhrál v kterém kraji.
 1. Vytvořte tabulku podobnou té z tohoto cvičení, která místo čísel bude obsahovat jaké procento celkového počtu hlasů získal každý kandidát v daném kraji.
 
-**Nápověda:** postupuje tak, že použijete na každý řádek tabulky zvlášť chroustání seznamů. Tabulku můžete sestavit tak, že tento postup ručně zopakujete 13 krát, jednou pro každý kraj. Pokud toužíte po elegantnějším řešení, vyčkejte na nepovinné úložky.
+   **Nápověda:** postupuje tak, že použijete na každý řádek tabulky zvlášť chroustání seznamů. Tabulku můžete sestavit tak, že tento postup ručně zopakujete 13 krát, jednou pro každý kraj. Pokud toužíte po elegantnějším řešení, vyčkejte na nepovinné úložky.
 
 1. Vytvořte seznam pravdivostních hodnot, který bude říkat, ve kterých krajích překročila volební účast 50 %.
