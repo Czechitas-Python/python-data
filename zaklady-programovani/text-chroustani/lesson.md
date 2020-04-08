@@ -374,7 +374,7 @@ Výsledek `True`, pokud proměnná jmeno obsahuje hodnotu `'Martin'`.
 
 Výsledek `True`, pokud je délka seznamu různá od 4.
 
-@exercises ## Domácí úkoly - povinné [
+@exercises ## Doporučené úložky na doma [
 
 - overovani-veku
 - promitani
@@ -382,10 +382,7 @@ Výsledek `True`, pokud je délka seznamu různá od 4.
 - volby
   ]@
 
-@exercises ## Domácí úkoly - nepovinné [
+@exercises ## Volitelné úložky na doma [
 
 - elegantni-volby
   ]@
-
-
-

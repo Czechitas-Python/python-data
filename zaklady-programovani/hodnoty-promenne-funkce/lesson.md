@@ -216,6 +216,7 @@ Přečtěte si povídání o dalších vymoženostech Pythonu, které se nám ne
 
 Během přednášky jsme neprobrali úplně všechny aritmetické operátory, které můžeme v Pythonu použít. Kromě sčítání, odčítání, násobení a dělení máme ještě tyto:
 
+<!-- prettier-ignore -->
 - Mocnění: **`**`**
 - Celočíselné dělení: **`//`**
 - Zbytek po dělení: **`%`**
@@ -255,7 +256,7 @@ Všimněte si, že nám po čtyřech týdnech zbude ještě pár dní. Pokud chc
 5
 ```
 
-@exercises ## Domácí úložky - povinné [
+@exercises ## Doporučené úložky na doma [
 
 - uroky
 - delka-filmu
@@ -263,7 +264,7 @@ Všimněte si, že nám po čtyřech týdnech zbude ještě pár dní. Pokud chc
 - prumer
   ]@
 
-@exercises ## Domácí úložky - nepovinné [
+@exercises ## Volitelné úložky na doma [
 
 - novy-koberec
 - rozpeti
