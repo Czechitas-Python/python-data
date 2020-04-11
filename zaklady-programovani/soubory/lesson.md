@@ -37,9 +37,9 @@ print(radky)
 
 @exercises ## Cvičení [
 
-- vyplata-presneji.md
-- pocet-slov.md
-- pujcovna.md
+- vyplata-presneji
+- pocet-slov
+- pujcovna
   ]@
 
 ## Zápis do souboru
@@ -75,9 +75,9 @@ Upravíme tedy zápis do souboru v našem předchozím programu takto:
 
 @exercises ## Cvičení [
 
-- dny-v-mesici.md
-- rezepsana-vyplata.md
-- hody-kostkou.md
+- dny-v-mesici
+- rezepsana-vyplata
+- hody-kostkou
   ]@
 
 ## Čtení na doma
@@ -124,12 +124,12 @@ Občas programátorům nezbude, než mlátit hlavou do stolu a křičet PROČ? A
 
 @exercises ## Doporučené úložky na doma [
 
-- pasazeri.md
-- preznamkovani.md
+- pasazeri
+- preznamkovani
   ]@
 
 @exercises ## Volitelné úložky na doma [
 
-- karty-2.md
-- karty-3.md
+- karty-2
+- karty-3
   ]@

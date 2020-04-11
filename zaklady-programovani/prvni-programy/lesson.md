@@ -129,8 +129,7 @@ Představme si například program, kterému bychom chtěli předat počet minut
 $ python3 cas.py 325
 ```
 
-Číslo 325 v tomto příkazu je právě to, čemu říkáme _parametr_. Teď už jen
-zbývá se k tomuto číslu nějak dostat zevnitř našeho programu.
+Číslo 325 v tomto příkazu je právě to, čemu říkáme _parametr_. Teď už jen zbývá se k tomuto číslu nějak dostat zevnitř našeho programu.
 
 ```py
 import sys
@@ -140,33 +139,17 @@ minut = celkem % 60
 print(str(hodin) + ':' + str(minut))
 ```
 
-To nejdůležitější se děje na druhém řádku, kde používáme hodnotu
-`sys.argv[1]`. Proměnná `sys.argv` totiž obsahuje seznam všech parametrů,
-které náš program dostal na příkazovém řádku. Zajímavé je, že tento seznam
-jako první položku obsahuje samotný název programu. Tedy, pokud bychom si
-nechali proměnnou `sys.argv` vytisknout na obrazovku, byl by její obsah po
-spuštění našeho programu
+To nejdůležitější se děje na druhém řádku, kde používáme hodnotu `sys.argv[1]`. Proměnná `sys.argv` totiž obsahuje seznam všech parametrů, které náš program dostal na příkazovém řádku. Zajímavé je, že tento seznam jako první položku obsahuje samotný název programu. Tedy, pokud bychom si nechali proměnnou `sys.argv` vytisknout na obrazovku, byl by její obsah po spuštění našeho programu
 
 ```
 ['cas.py', '325']
 ```
 
-Tedy na prvním místě je název programu a na druhém je náš parametr, který jsme
-prve zadali na příkazové řádce. Všimněte si ovšem, že náš parametr je řetězec.
-Python totiž všechny parametry na příkazové řádce bere jako řetězce, nehledě
-na to, jestli jsou to čísla nebo cokoliv jiného. My chceme ale v našem
-programu čas jako číslo, neboť s ním chceme provádět různá matematická
-cvičení. Proto musíme náš parametr převést na číslo pomocí již známé funkce
-`int()`, což právě provádíme na druhém řádku našeho programu.
+Tedy na prvním místě je název programu a na druhém je náš parametr, který jsme prve zadali na příkazové řádce. Všimněte si ovšem, že náš parametr je řetězec. Python totiž všechny parametry na příkazové řádce bere jako řetězce, nehledě na to, jestli jsou to čísla nebo cokoliv jiného. My chceme ale v našem programu čas jako číslo, neboť s ním chceme provádět různá matematická cvičení. Proto musíme náš parametr převést na číslo pomocí již známé funkce `int()`, což právě provádíme na druhém řádku našeho programu.
 
 ### Nač se držet při zemi
 
-Zatím jsme na příkazové řádce předali pouze jeden parametr. Nebuďme ale
-troškaři. Na příkazové řádce si můžeme dovolit předávat zajímavější věci,
-například celý seznam hodnot. Můžeme kupříkladu napsat program, který spočítá
-součet všech zadaných hodnot. Pozor ovšem na to, že hodnoty na příkazové řádce
-jsou vždy řetězce, takže pokud je to potřeba, musíme si je sami převést na
-čísla.
+Zatím jsme na příkazové řádce předali pouze jeden parametr. Nebuďme ale troškaři. Na příkazové řádce si můžeme dovolit předávat zajímavější věci, například celý seznam hodnot. Můžeme kupříkladu napsat program, který spočítá součet všech zadaných hodnot. Pozor ovšem na to, že hodnoty na příkazové řádce jsou vždy řetězce, takže pokud je to potřeba, musíme si je sami převést na čísla.
 
 ```py
 import sys
@@ -181,9 +164,7 @@ $ python3 soucet.py 57 41 37 22 12
 Součet zadaných čísel: 169
 ```
 
-Všimněte si, že na druhém řádku našeho programu používáme `sys.argv[1:]`. Je
-to proto, abychom se zbavili názvu programu, který vždy zabírá první prvek
-seznamu parametrů. Naše čísla se tedy nacházejí až od prvního indexu nahoru.
+Všimněte si, že na druhém řádku našeho programu používáme `sys.argv[1:]`. Je to proto, abychom se zbavili názvu programu, který vždy zabírá první prvek seznamu parametrů. Naše čísla se tedy nacházejí až od prvního indexu nahoru.
 
 @exercises ## Cvičení [
 
@@ -195,8 +176,7 @@ seznamu parametrů. Naše čísla se tedy nacházejí až od prvního indexu nah
 
 Hotovo!
 
-Hurá, pokud jste dorazili až sem, máte hotovo. Nalepte si lísteček a pokud
-chcete, můžete pokračovat bonusovými příklady.
+Hurá, pokud jste dorazili až sem, máte hotovo. Nalepte si lísteček a pokud chcete, můžete pokračovat bonusovými příklady.
 
 @exercises bonuses [
 - klasicke-zaokrouhlovani
@@ -204,16 +184,11 @@ chcete, můžete pokračovat bonusovými příklady.
 
 ## Čtení na doma
 
-Opět je zde pro vás malá samovzdělávací lekce. Nejdříve se podíváme na to, jak
-můžeme do chroustání seznamů zapojit podmínky, ukážeme si, jak se generují
-náhodná čísla a potom si představíme další zajímavou hodnotu.
+Opět je zde pro vás malá samovzdělávací lekce. Nejdříve se podíváme na to, jak můžeme do chroustání seznamů zapojit podmínky, ukážeme si, jak se generují náhodná čísla a potom si představíme další zajímavou hodnotu.
 
 ### Podmínky
 
-Podmínky slouží k tomu, abychom nějaký kus kódu mohli vykonat jen v případě,
-že je splněna nějaká podmínka. Nejjednodušší použití podmínek najdeme při
-zpracování seznamů. Mějme například seznam uběhnutých kilometrů a chceme z něj
-jen nenulové hodnoty.
+Podmínky slouží k tomu, abychom nějaký kus kódu mohli vykonat jen v případě, že je splněna nějaká podmínka. Nejjednodušší použití podmínek najdeme při zpracování seznamů. Mějme například seznam uběhnutých kilometrů a chceme z něj jen nenulové hodnoty.
 
 ```pycon
 >>> ubehnuto = [12, 0, 4, 5, 0, 6]
@@ -221,8 +196,7 @@ jen nenulové hodnoty.
 [12, 4, 5, 6]
 ```
 
-Nebo bychom mohli z následujícího seznamu měst chtít pouze názvy těch měst,
-která mají nad 50 000 obyvatel.
+Nebo bychom mohli z následujícího seznamu měst chtít pouze názvy těch měst, která mají nad 50 000 obyvatel.
 
 ```pycon
 >>> mesta = [['Zlín', 76010], ['Jičín', 16792], ['Aš', 13093]]
@@ -232,12 +206,9 @@ která mají nad 50 000 obyvatel.
 
 ### Náhodná čísla
 
-Jeden z velmi zajímavých a užitečných modulů v Pythonu, který jsme na hodině
-nezmínili, je modul zvaný `random`. Slouží ke generování náhodných čísel a
-jiných náhodných věcí. Podíváme se na funkce `randint()` a `uniform().`
+Jeden z velmi zajímavých a užitečných modulů v Pythonu, který jsme na hodině nezmínili, je modul zvaný `random`. Slouží ke generování náhodných čísel a jiných náhodných věcí. Podíváme se na funkce `randint()` a `uniform().`
 
-Funkce `randint(a, b)` generuje náhodná celá čísla ze zadaného intervalu.
-Můžeme tak simulovat například hody šestistěnnou hrací kostkou:
+Funkce `randint(a, b)` generuje náhodná celá čísla ze zadaného intervalu. Můžeme tak simulovat například hody šestistěnnou hrací kostkou:
 
 ```pycon
 >>> import random
@@ -249,8 +220,7 @@ Můžeme tak simulovat například hody šestistěnnou hrací kostkou:
 1
 ```
 
-Funkce `uniform(a, b)` funguje podobně jako `randint()`, generuje však náhodná
-<i>desetinná</i> čísla ze zadaného intervalu.
+Funkce `uniform(a, b)` funguje podobně jako `randint()`, generuje však náhodná <i>desetinná</i> čísla ze zadaného intervalu.
 
 ```pycon
 >>> random.uniform(1, 6)
@@ -261,34 +231,25 @@ Funkce `uniform(a, b)` funguje podobně jako `randint()`, generuje však náhodn
 4.435795489936791
 ```
 
-Tyto funkce se nám mohou hodit pro generování náhodných dat nebo pro psaní
-různých her a hříček.
+Tyto funkce se nám mohou hodit pro generování náhodných dat nebo pro psaní různých her a hříček.
 
 ### Rozsahy
 
 Za posledních pár lekcí už jsme se naučili používat pěknou řádku typů hodnot:
 
-- celá čísla,
-- desetinná čísla,
-- řetězce,
-- pravdivostní hodnoty,
-- seznamy.
+- celá čísla
+- desetinná čísla
+- řetězce
+- pravdivostní hodnoty
+- seznamy
 
-Nyní nám přibude jedna navíc, která se jmenuje <term cs="rozsah" en="range">.
-Rozsahy slouží k tomu, abychom v Pythonu uměli říct, že chceme všechna čísla z
-nějakého rozmezí hodnot. Pokud bychom například chtěli všechna čísla mezi 1 a
-10, mohli bychom vyrobit seznam
+Nyní nám přibude jedna navíc, která se jmenuje <term cs="rozsah" en="range">. Rozsahy slouží k tomu, abychom v Pythonu uměli říct, že chceme všechna čísla z nějakého rozmezí hodnot. Pokud bychom například chtěli všechna čísla mezi 1 a 10, mohli bychom vyrobit seznam
 
 ```py
 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 ```
 
-To vypadá přímočaře a jednoduše. Ovšem to pouze do chvíle, kdy po vás budu
-chtít seznam od 1 do 10 000. Pokud byste chtěli takový seznam vyrobit, upíšete
-se k smrti. Navíc si Python bude muset všechna tato čísla v takovém seznamu
-pamatovat a to je trochu zbytečné. Když víme, že v seznamu jsou opravdu
-všechna čísla v zadaném rozmezí, stačí si pamatovat jen krajní hodnoty, tedy 1
-a 10 000. A přesně k tomu slouží hodnota typu rozsah.
+To vypadá přímočaře a jednoduše. Ovšem to pouze do chvíle, kdy po vás budu chtít seznam od 1 do 10 000. Pokud byste chtěli takový seznam vyrobit, upíšete se k smrti. Navíc si Python bude muset všechna tato čísla v takovém seznamu pamatovat a to je trochu zbytečné. Když víme, že v seznamu jsou opravdu všechna čísla v zadaném rozmezí, stačí si pamatovat jen krajní hodnoty, tedy 1 a 10 000. A přesně k tomu slouží hodnota typu rozsah.
 
 Chceme-li všechna čísla od 1 do 10, napíšeme prostě
 
@@ -296,8 +257,7 @@ Chceme-li všechna čísla od 1 do 10, napíšeme prostě
 range(1, 11)
 ```
 
-Pozor na to, že funkce `range()` chápe druhý parametr jako **vyjma** , nikoliv
-včetně.
+Pozor na to, že funkce `range()` chápe druhý parametr jako **vyjma** , nikoliv včetně.
 
 Pojďme vyzkoušet, co se stane, když takovýto výraz napíšeme do Python konzole
 
@@ -306,29 +266,20 @@ Pojďme vyzkoušet, co se stane, když takovýto výraz napíšeme do Python kon
 range(1, 11)
 ```
 
-Python nám prostě odpověděl totéž, co jsme napsali, úplně stejně jako
-kdybychom napsali prostě číslo 50 nebo řetězec `'ahoj'`. Rozsah je prostě
-hodnota, ve které si Python pamatuje dolní a horní mez a to je všechno.
-Výhodou rozsahů však je, že je můžeme používat všude tam, kde bychom normálně
-použili seznam. Pokud nás například zajímá součet hodnot od 1 do 20, můžeme
-prostě napsat
+Python nám prostě odpověděl totéž, co jsme napsali, úplně stejně jako kdybychom napsali prostě číslo 50 nebo řetězec `'ahoj'`. Rozsah je prostě hodnota, ve které si Python pamatuje dolní a horní mez a to je všechno. Výhodou rozsahů však je, že je můžeme používat všude tam, kde bychom normálně použili seznam. Pokud nás například zajímá součet hodnot od 1 do 20, můžeme prostě napsat
 
 ```pycon
 >>> sum(range(1, 21))
 210
 ```
 
-Všimněte si, že jsme takto spočítali součet aniž bychom museli vypisovat
-všechny hodnoty mezi 1 a 20. Náš nejsilnější kanón je teď samozřejmě
-chroustání seznamů a ano, i tam můžeme s výhodou použít rozsahy. Pokud bychom
-například chtěli všechny násobky trojky mezi 1 a 100, stačí napsat
+Všimněte si, že jsme takto spočítali součet aniž bychom museli vypisovat všechny hodnoty mezi 1 a 20. Náš nejsilnější kanón je teď samozřejmě chroustání seznamů a ano, i tam můžeme s výhodou použít rozsahy. Pokud bychom například chtěli všechny násobky trojky mezi 1 a 100, stačí napsat
 
 ```pycon
 >>> [x for x in range(1, 101) if x % 3 == 0]
 ```
 
-Pokud bychom mermomocí chtěli opravdu všechny hodnoty z rozsahu jako seznam,
-můžeme jej převést na seznam pomocí funkce `list()`
+Pokud bychom mermomocí chtěli opravdu všechny hodnoty z rozsahu jako seznam, můžeme jej převést na seznam pomocí funkce `list()`
 
 ```pycon
 >>> list(range(1, 10))

@@ -49,8 +49,8 @@ else:
 
 @exercises ## Cvičení [
 
-- deleni.md
-- kontrola-souboru.md
+- deleni
+- kontrola-souboru
   ]@
 
 Hotovo!
@@ -59,8 +59,8 @@ Hurá, pokud jste dorazili až sem, máte hotovo. Nalepte si lísteček a pokud 
 
 @exercises bonuses [
 
-- maximum-ze-dvou-cisel.md
-- maximum-ze-tri-cisel.md
+- maximum-ze-dvou-cisel
+- maximum-ze-tri-cisel
   ]@
 
 ## Cyklus FOR
@@ -119,8 +119,8 @@ Ne, že bychom zrovna takovýto kus kódu nutně potřebovali, když můžeme po
 
 @exercises ## Cvičení [
 
-- hratky-s-cykly.md
-- poznavacky.md
+- hratky-s-cykly
+- poznavacky
   ]@
 
 ## Čtení na doma
@@ -192,20 +192,20 @@ Zde je dobré vědět, jakým způsobem Python takovou podmínku vyhodnocuje. Ne
 
 @exercises ## Doporučené úložky na doma [
 
-- heslo.md
-- prevod-na-usd.md
-- banka.md
-- hadanky.md
-- vzestupny-seznam.md
+- heslo
+- prevod-na-usd
+- banka
+- hadanky
+- vzestupny-seznam
   ]@
 
 @exercises ## Volitelné úložky na doma [
 
-- pisemky.md
-- maximum.md
-- druhe-maximum.md
-- k-te-maximum.md
-- ruleta.md
-- prestupny-rok.md
+- pisemky
+- maximum
+- druhe-maximum
+- k-te-maximum
+- ruleta
+- prestupny-rok
   ]@
 
