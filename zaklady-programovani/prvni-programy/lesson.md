@@ -70,19 +70,12 @@ print(
 )
 ```
 
-## Cvičení
+@exercises ## Cvičení [
 
-### Jméno a město
-
-Napište program, který na obrazovku vypíše vaše jméno a na nový řádek město, ze kterého pocházíte.
-
-### Výplata jako program
-
-Na první lekci jsme dělali [cvičení na výpočet výplaty](../hodnoty-promenne-funkce#exrc-vyplata) pomocí proměnných. Udělejte toto cvičení znova, ale tentokrát jako program. Nejdříve uložte nezbytné hodnoty do proměnných, spočítejte výplatu a pak ji pomocí funkce `print()` vypište na obrazovku.
-
-### Teploty jako program
-
-Minulý týden jsme dělali [cvičení na zpracování teplot](../text-chroustani#seznam-teplot). Udělejte toto cvičení znovu, tentokrát jako program, který všechny požadované informace vypíše hezky přehledně na obrazovku.
+- jmeno-a-mesto
+- vyplata-jako-program
+- teploty-jako-program
+  ]@
 
 Hotovo!
 
@@ -192,48 +185,13 @@ Všimněte si, že na druhém řádku našeho programu používáme `sys.argv[1:
 to proto, abychom se zbavili názvu programu, který vždy zabírá první prvek
 seznamu parametrů. Naše čísla se tedy nacházejí až od prvního indexu nahoru.
 
-## Cvičení
+@exercises ## Cvičení [
 
-### Čas v minutách
-
-Napište program `minuty.py`, která dělá obrácenou věc než program `cas.py` z
-textu výše. Když mu na příkazové řádce předáme dva parametry ‒ počet hodin a
-počet minut ‒ například takto
-
-```shell
-$ python3 minuty.py 2 54
-```
-
-program nám vrátí délku tohoto času minutách. V tomto případě tedy číslo 174.
-
-1. Nejprve program napište tak, že si hodnoty 2 a 54 uložíte přímo natvrdo v programu do nějakých proměnných a z nich spočítáte a vytisknete výsledek.
-1. Až když váš program bude fungovat, zkuste tyto proměnné načíst z parametrů příkazové řádky. Nezapomeňte, že parametry jsou vždy řetězce a že první parametr je vždy název vašeho programu.
-
-### Zaokrouhlování
-
-Napište program, který dostane na vstupu desetinné číslo a na výstup napíše
-toto číslo zakrouhlené nejdříve nahoru, potom dolů a potom běžným Pythonovským
-zaokrouhlováním.
-
-### Doména na URL
-
-Napište program `url.py`, který jako parametr dostane název domény, například
-`kodim.cz` a na výstup vypíše URL, kterou je třeba zadat do prohlížeče pro
-přístup k webové stránce na této doméně, tedy `http://kodim.cz`.
-
-### Průměr versus medián
-
-Často se hovoří o tom, že průměr není pro některé veličiny (například platy)
-vypovídající hodnota a lepší je dívat se na medián. Napište program, který s
-použitím funkcí `statistics.mean()` a `statistics.median()` vypíše na výstup
-průměr a medián zadaných hodnot. Hodnoty program obdrží na příkazovém řádku.
-Příklad použití:
-
-```shell
-$ python3 prumer-median.py 2 1 8 3 4 11 7 1512
-Průměr: 193.5
-Medián: 5.5
-```
+- cas-v-minutach
+- zaokrouhlovani
+- domena-a-url
+- prumer-versus-median
+  ]@
 
 Hotovo!
 
@@ -241,16 +199,9 @@ Hurá, pokud jste dorazili až sem, máte hotovo. Nalepte si lísteček a pokud
 chcete, můžete pokračovat bonusovými příklady.
 
 ## Bonusy
-
-### Klasické zaokrouhlování
-
-Překvapivě Python neobsahuje žádnou funkci, která by dělala klasické
-zaokrouhlování, tedy takové, na které jsme všichni zvyklí ze školy. S něčím
-takovým se nemůžeme spokojit.
-
-Napište program, který dostane na vstupu číslo a zaokrouhlí jej klasickým
-zaokrouhlováním. Zkuste vymyslet jak to udělat co nejúsporněji s použitím
-zaokrouhlovacích funkcí, které už znáte.
+@exercises bonuses [
+- klasicke-zaokrouhlovani
+  ]@
 
 ## Čtení na doma
 
@@ -385,125 +336,17 @@ můžeme jej převést na seznam pomocí funkce `list()`
 [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
 
-## Domácí úložky ‒ povinné
+@exercises ## Doporučené úložky na doma [
 
-### Minuty
+- minuty
+- fahrnheit-vs-celsius
+- cesta-k-souboru
+- hazeni-kostkou
+- karty-1
+  ]@
 
-**Obtížnost: To dáš**
+@exercises ## Volitelné úložky na doma [
 
-Vytvořte program `casy.py`, který bude zpracovávat seznam naměřených časů v
-minutách. Nejprve přímo do programu zadrátujte konkrétní hodnoty například
-takto:
-
-```py
-casy = [12, 25, 64, 27, 15, 66, 128, 44]
-```
-
-1. Vyfiltrujte z tohoto seznamu pouze ty časy, které se vejdou do jedné hodiny.
-2. Vyfiltrujte z tohoto seznamu pouze ty časy, které překračují jednu hodinu a to tak, že výsledkem bude seznam minut, udávajících o kolik jsme jednu hodinu překročili.
-3. Upravte program tak, aby seznam naměřených hodnot obdržel na příkazové řádce.
-
-### Fahrnheit vs. Celsius
-
-**Obtížnost: To dáš**
-
-Pokud pečete podle anglických receptů, často se po váš požaduje rozehřát
-troubu na uvedenou teplotu. Pokud si ovšem neuvědomíte, že Američané používají
-pro měření teploty stupně Fahrenheita namísto Celsia, bude vás na konci pečení
-čekat nemilé překvapení.
-
-Nastudujte si na [České Wikipedii](https://cs.wikipedia.org/wiki/Stupe%C5%88_Fahrenheita)
-jak se převádějí stupně Fahrenheita na stupně Celsia a napište program, který
-takový převod provede. Váš program dostane na příkazové řádce teplotu ve
-stupních Fahrenheita a vypíše její ekvivalent ve stupních Celsia.
-
-### Cesta k souboru
-
-**Obtížnost: To dáš**
-
-Ve Windows se cesty k souborům zapisují pomocí zpětných lomítek, tedy
-například takto
-
-```
-cesta\do\rise\smazenych\krevet
-```
-
-Na Unixu (Macu nebo Linux) se naopak cesty píší pomocí dopředných lomítek,
-tedy takto
-
-```
-cesta/do/rise/smazenych/krevet
-```
-
-Napište program, který dostane jako parametr cestu ve Windows stylu a převede
-ji na Unix styl.
-
-### Házení kostkou
-
-**Obtížnost: Zapni hlavu**
-
-1. Napište program, který při každém spustění hodí šestistěnnou kostkou ‒ tedy vypíše náhodné číslo mezi 1 až 6.
-1. Upravte program tak, aby jako parametr dostal počet stěn kostky. Bude tedy umět házet třeba sedmistěnnou nebo devítistěnnou kostkou podle toho, jaké číslo dostane na vstupu.
-1. Předejte programu další parametr, který bude udávat kolik hodů má program provést. Program pak na výstup vytiskne seznam tolika hodů, kolik jste zadali na vstupu. Cílem je tedy vymyslet, jak vyrobit seznam náhodných čísel. Jistě se nám k tomu bude hodit chroustání seznamů.
-
-### Karty 1
-
-**Obtížnost: Zapni hlavu**
-
-Napište program, který vylosuje náhodnou hrací kartu z klasické whistové sady
-obsahující 52 karet, rozdělených do čtyř barev (kříže, srdce, piky, káry), s
-hodnotami 2, 3, 4, 5, 6, 7, 8, 9, 10, J (kluk), Q (dáma), K (král), A (eso).
-
-Výstup programu může vypadat například takto:
-
-```
-Karta: kluk kříže
-```
-
-## Domácí úložky ‒ nepovinné
-
-### Jak proměnit hada na velblouda
-
-**Obtížnost: To dáš**
-
-Napište program, který dostane na příkazovém řádku název proměnné v hadí
-notaci a vrátí tentýž název zapsaný ve velbloudí notaci.
-
-Příklad:
-
-```shell
-$ python3 had-velbloud.py had_honi_velblouda
-hadHoniVelblouda
-```
-
-### Jak proměnit velblouda na hada
-
-**Obtížnost: Smrt v přímém přenosu**
-
-Napište program, který dostane na příkazovém řádku název proměnné ve velbloudí
-notaci a vrátí tentýž název zapsaný v hadí notaci.
-
-Příklad:
-
-```shell
-$ python3 velbloud-had.py velbloudHoniHada
-velbloud_honi_hada
-```
-
-Ano, tohle už není procházka růžovým sadem a jde o úložku spíše pro
-fajnšmekry, Python gurmány a lidi s neutišitelnou touhou nenechat žádný
-příklad nevyřešený. Vězte, že skutečně existuje řešení, které používá výhradně
-probrané techniky. Vyplatí se mrknout na to, jaké všechny metody nabízí Python
-řetězce, jinak ale není potřeba žádné googlení, jen se nesmíte bát věci, které
-už tak dobře znáte, opravdu použít, a nemít je ve své programátorské dílně jen
-vystavené za sklem.
-
-Některé pasáže programu si lze mírně ulehčit použítím funkce `enumerate()`,
-která vám při chroustání seznamů vrací nejen prvek seznamu, ale i jeho index.
-Vyzkoušejte například následující příkaz
-
-```py
-[[i, jmeno] for i, jmeno in enumerate(['petr', 'jana', 'vlasta', 'onyx'])]
-```
-
-Úlohu lze však vyřešit i bez `enumerate()`!
+- hada-na-velblouda
+- velblouda-na-hada
+  ]@
