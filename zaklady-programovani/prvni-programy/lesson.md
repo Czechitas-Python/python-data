@@ -198,7 +198,6 @@ Hotovo!
 Hurá, pokud jste dorazili až sem, máte hotovo. Nalepte si lísteček a pokud
 chcete, můžete pokračovat bonusovými příklady.
 
-## Bonusy
 @exercises bonuses [
 - klasicke-zaokrouhlovani
   ]@
