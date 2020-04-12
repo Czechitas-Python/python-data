@@ -35,7 +35,7 @@ radky = [[radek[0], float(radek[1])] for radek in radky]
 print(radky)
 ```
 
-@exercises ## Cvičení [
+@exercises ## Cvičení - čtení ze souborů [
 
 - vyplata-presneji
 - pocet-slov
@@ -73,14 +73,14 @@ Upravíme tedy zápis do souboru v našem předchozím programu takto:
 [soubor.write(jmeno + '\n') for jmeno in jmena]
 ```
 
-@exercises ## Cvičení [
+@exercises ## Cvičení - zápis do souborů [
 
 - dny-v-mesici
 - rezepsana-vyplata
 - hody-kostkou
   ]@
 
-## Čtení na doma
+## Povinné čtení na doma
 
 Na lekci jsme si ukazovali, jak číst a zapisovat data z/do textových souborů. Co ale jiné formáty, jako například Excel?
 
