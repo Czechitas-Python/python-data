@@ -103,15 +103,11 @@ Všimněte si, jak slovník představující jeden kurz, obsahuje pod klíčem `
 kurz['konani'][1]['koucove']
 ```
 
-@exercises ## Cvičení [
+@exercises ## Cvičení - slovníky [
 
 - kurz
 - knihovna
   ]@
-
-Hotovo!
-
-Hurá, pokud jste dorazili až sem, máte hotovo. Nalepte si lísteček a pokud chcete, můžete pokračovat bonusovými příklady.
 
 @exercises bonuses [
 
@@ -222,13 +218,13 @@ data = json.loads(response.text)
 print(data)
 ```
 
-@exercises ## Cvičení [
+@exercises ## Cvičení - API a JSON [
 
 - seznam-lidi
 - svatky
   ]@
 
-## Čtení na doma
+## Povinné čtení na doma
 
 Touto lekcí končí úvodní části kurzu o programování v Pythonu. Před tím, než se vrhneme do další části, si ukážeme poslední třešničku na dortu, která může občas hodně ulehčit práci.
 
