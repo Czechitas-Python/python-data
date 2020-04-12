@@ -47,15 +47,11 @@ else:
   print('Výsledek je dostatečně spolehlivý.')
 ```
 
-@exercises ## Cvičení [
+@exercises ## Cvičení - podmínky [
 
 - deleni
 - kontrola-souboru
   ]@
-
-Hotovo!
-
-Hurá, pokud jste dorazili až sem, máte hotovo. Nalepte si lísteček a pokud chcete, můžete pokračovat bonusovými příklady.
 
 @exercises bonuses [
 
@@ -117,13 +113,13 @@ for cislo in cisla:
 
 Ne, že bychom zrovna takovýto kus kódu nutně potřebovali, když můžeme použít funkci `sum()`. Tento příklad ale ukazuje, že s cykly můžeme dělat spoustu zajímavých věcí.
 
-@exercises ## Cvičení [
+@exercises ## Cvičení - cyklus FOR[
 
 - hratky-s-cykly
 - poznavacky
   ]@
 
-## Čtení na doma
+## Povinné čtení na doma
 
 Ještě než se přesuneme k hlavnímu tématu, ukážeme si, jak dělat hezčí import funkcí z modulů. Do této chvíle, pokud jsme chtěli použít například funkci `mean` z modulu `statistics`, psali jsme něco jako.
 
@@ -208,4 +204,3 @@ Zde je dobré vědět, jakým způsobem Python takovou podmínku vyhodnocuje. Ne
 - ruleta
 - prestupny-rok
   ]@
-
