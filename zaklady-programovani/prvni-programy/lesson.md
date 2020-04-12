@@ -70,19 +70,12 @@ print(
 )
 ```
 
-## Cvičení
+@exercises ## Cvičení [
 
-### Jméno a město
-
-Napište program, který na obrazovku vypíše vaše jméno a na nový řádek město, ze kterého pocházíte.
-
-### Výplata jako program
-
-Na první lekci jsme dělali [cvičení na výpočet výplaty](../hodnoty-promenne-funkce#exrc-vyplata) pomocí proměnných. Udělejte toto cvičení znova, ale tentokrát jako program. Nejdříve uložte nezbytné hodnoty do proměnných, spočítejte výplatu a pak ji pomocí funkce `print()` vypište na obrazovku.
-
-### Teploty jako program
-
-Minulý týden jsme dělali [cvičení na zpracování teplot](../text-chroustani#seznam-teplot). Udělejte toto cvičení znovu, tentokrát jako program, který všechny požadované informace vypíše hezky přehledně na obrazovku.
+- jmeno-a-mesto
+- vyplata-jako-program
+- teploty-jako-program
+  ]@
 
 Hotovo!
 
@@ -136,8 +129,7 @@ Představme si například program, kterému bychom chtěli předat počet minut
 $ python3 cas.py 325
 ```
 
-Číslo 325 v tomto příkazu je právě to, čemu říkáme _parametr_. Teď už jen
-zbývá se k tomuto číslu nějak dostat zevnitř našeho programu.
+Číslo 325 v tomto příkazu je právě to, čemu říkáme _parametr_. Teď už jen zbývá se k tomuto číslu nějak dostat zevnitř našeho programu.
 
 ```py
 import sys
@@ -147,33 +139,17 @@ minut = celkem % 60
 print(str(hodin) + ':' + str(minut))
 ```
 
-To nejdůležitější se děje na druhém řádku, kde používáme hodnotu
-`sys.argv[1]`. Proměnná `sys.argv` totiž obsahuje seznam všech parametrů,
-které náš program dostal na příkazovém řádku. Zajímavé je, že tento seznam
-jako první položku obsahuje samotný název programu. Tedy, pokud bychom si
-nechali proměnnou `sys.argv` vytisknout na obrazovku, byl by její obsah po
-spuštění našeho programu
+To nejdůležitější se děje na druhém řádku, kde používáme hodnotu `sys.argv[1]`. Proměnná `sys.argv` totiž obsahuje seznam všech parametrů, které náš program dostal na příkazovém řádku. Zajímavé je, že tento seznam jako první položku obsahuje samotný název programu. Tedy, pokud bychom si nechali proměnnou `sys.argv` vytisknout na obrazovku, byl by její obsah po spuštění našeho programu
 
 ```
 ['cas.py', '325']
 ```
 
-Tedy na prvním místě je název programu a na druhém je náš parametr, který jsme
-prve zadali na příkazové řádce. Všimněte si ovšem, že náš parametr je řetězec.
-Python totiž všechny parametry na příkazové řádce bere jako řetězce, nehledě
-na to, jestli jsou to čísla nebo cokoliv jiného. My chceme ale v našem
-programu čas jako číslo, neboť s ním chceme provádět různá matematická
-cvičení. Proto musíme náš parametr převést na číslo pomocí již známé funkce
-`int()`, což právě provádíme na druhém řádku našeho programu.
+Tedy na prvním místě je název programu a na druhém je náš parametr, který jsme prve zadali na příkazové řádce. Všimněte si ovšem, že náš parametr je řetězec. Python totiž všechny parametry na příkazové řádce bere jako řetězce, nehledě na to, jestli jsou to čísla nebo cokoliv jiného. My chceme ale v našem programu čas jako číslo, neboť s ním chceme provádět různá matematická cvičení. Proto musíme náš parametr převést na číslo pomocí již známé funkce `int()`, což právě provádíme na druhém řádku našeho programu.
 
 ### Nač se držet při zemi
 
-Zatím jsme na příkazové řádce předali pouze jeden parametr. Nebuďme ale
-troškaři. Na příkazové řádce si můžeme dovolit předávat zajímavější věci,
-například celý seznam hodnot. Můžeme kupříkladu napsat program, který spočítá
-součet všech zadaných hodnot. Pozor ovšem na to, že hodnoty na příkazové řádce
-jsou vždy řetězce, takže pokud je to potřeba, musíme si je sami převést na
-čísla.
+Zatím jsme na příkazové řádce předali pouze jeden parametr. Nebuďme ale troškaři. Na příkazové řádce si můžeme dovolit předávat zajímavější věci, například celý seznam hodnot. Můžeme kupříkladu napsat program, který spočítá součet všech zadaných hodnot. Pozor ovšem na to, že hodnoty na příkazové řádce jsou vždy řetězce, takže pokud je to potřeba, musíme si je sami převést na čísla.
 
 ```py
 import sys
@@ -188,82 +164,31 @@ $ python3 soucet.py 57 41 37 22 12
 Součet zadaných čísel: 169
 ```
 
-Všimněte si, že na druhém řádku našeho programu používáme `sys.argv[1:]`. Je
-to proto, abychom se zbavili názvu programu, který vždy zabírá první prvek
-seznamu parametrů. Naše čísla se tedy nacházejí až od prvního indexu nahoru.
+Všimněte si, že na druhém řádku našeho programu používáme `sys.argv[1:]`. Je to proto, abychom se zbavili názvu programu, který vždy zabírá první prvek seznamu parametrů. Naše čísla se tedy nacházejí až od prvního indexu nahoru.
 
-## Cvičení
+@exercises ## Cvičení [
 
-### Čas v minutách
-
-Napište program `minuty.py`, která dělá obrácenou věc než program `cas.py` z
-textu výše. Když mu na příkazové řádce předáme dva parametry ‒ počet hodin a
-počet minut ‒ například takto
-
-```shell
-$ python3 minuty.py 2 54
-```
-
-program nám vrátí délku tohoto času minutách. V tomto případě tedy číslo 174.
-
-1. Nejprve program napište tak, že si hodnoty 2 a 54 uložíte přímo natvrdo v programu do nějakých proměnných a z nich spočítáte a vytisknete výsledek.
-1. Až když váš program bude fungovat, zkuste tyto proměnné načíst z parametrů příkazové řádky. Nezapomeňte, že parametry jsou vždy řetězce a že první parametr je vždy název vašeho programu.
-
-### Zaokrouhlování
-
-Napište program, který dostane na vstupu desetinné číslo a na výstup napíše
-toto číslo zakrouhlené nejdříve nahoru, potom dolů a potom běžným Pythonovským
-zaokrouhlováním.
-
-### Doména na URL
-
-Napište program `url.py`, který jako parametr dostane název domény, například
-`kodim.cz` a na výstup vypíše URL, kterou je třeba zadat do prohlížeče pro
-přístup k webové stránce na této doméně, tedy `http://kodim.cz`.
-
-### Průměr versus medián
-
-Často se hovoří o tom, že průměr není pro některé veličiny (například platy)
-vypovídající hodnota a lepší je dívat se na medián. Napište program, který s
-použitím funkcí `statistics.mean()` a `statistics.median()` vypíše na výstup
-průměr a medián zadaných hodnot. Hodnoty program obdrží na příkazovém řádku.
-Příklad použití:
-
-```shell
-$ python3 prumer-median.py 2 1 8 3 4 11 7 1512
-Průměr: 193.5
-Medián: 5.5
-```
+- cas-v-minutach
+- zaokrouhlovani
+- domena-a-url
+- prumer-versus-median
+  ]@
 
 Hotovo!
 
-Hurá, pokud jste dorazili až sem, máte hotovo. Nalepte si lísteček a pokud
-chcete, můžete pokračovat bonusovými příklady.
+Hurá, pokud jste dorazili až sem, máte hotovo. Nalepte si lísteček a pokud chcete, můžete pokračovat bonusovými příklady.
 
-## Bonusy
-
-### Klasické zaokrouhlování
-
-Překvapivě Python neobsahuje žádnou funkci, která by dělala klasické
-zaokrouhlování, tedy takové, na které jsme všichni zvyklí ze školy. S něčím
-takovým se nemůžeme spokojit.
-
-Napište program, který dostane na vstupu číslo a zaokrouhlí jej klasickým
-zaokrouhlováním. Zkuste vymyslet jak to udělat co nejúsporněji s použitím
-zaokrouhlovacích funkcí, které už znáte.
+@exercises bonuses [
+- klasicke-zaokrouhlovani
+  ]@
 
 ## Čtení na doma
 
-Opět je zde pro vás malá samovzdělávací lekce. Nejdříve se podíváme na to, jak
-můžeme do chroustání seznamů zapojit podmínky, ukážeme si, jak se generují
-náhodná čísla a potom si představíme další zajímavou hodnotu.
+Opět je zde pro vás malá samovzdělávací lekce. Nejdříve se podíváme na to, jak můžeme do chroustání seznamů zapojit podmínky, ukážeme si, jak se generují náhodná čísla a potom si představíme další zajímavou hodnotu.
 
 ### Podmínky
 
-Podmínky slouží k tomu, abychom nějaký kus kódu mohli vykonat jen v případě,
-že je splněna nějaká podmínka. Nejjednodušší použití podmínek najdeme při
-zpracování seznamů. Mějme například seznam uběhnutých kilometrů a chceme z něj
-jen nenulové hodnoty.
+Podmínky slouží k tomu, abychom nějaký kus kódu mohli vykonat jen v případě, že je splněna nějaká podmínka. Nejjednodušší použití podmínek najdeme při zpracování seznamů. Mějme například seznam uběhnutých kilometrů a chceme z něj jen nenulové hodnoty.
 
 ```pycon
 >>> ubehnuto = [12, 0, 4, 5, 0, 6]
@@ -271,8 +196,7 @@ jen nenulové hodnoty.
 [12, 4, 5, 6]
 ```
 
-Nebo bychom mohli z následujícího seznamu měst chtít pouze názvy těch měst,
-která mají nad 50 000 obyvatel.
+Nebo bychom mohli z následujícího seznamu měst chtít pouze názvy těch měst, která mají nad 50 000 obyvatel.
 
 ```pycon
 >>> mesta = [['Zlín', 76010], ['Jičín', 16792], ['Aš', 13093]]
@@ -282,12 +206,9 @@ která mají nad 50 000 obyvatel.
 
 ### Náhodná čísla
 
-Jeden z velmi zajímavých a užitečných modulů v Pythonu, který jsme na hodině
-nezmínili, je modul zvaný `random`. Slouží ke generování náhodných čísel a
-jiných náhodných věcí. Podíváme se na funkce `randint()` a `uniform().`
+Jeden z velmi zajímavých a užitečných modulů v Pythonu, který jsme na hodině nezmínili, je modul zvaný `random`. Slouží ke generování náhodných čísel a jiných náhodných věcí. Podíváme se na funkce `randint()` a `uniform().`
 
-Funkce `randint(a, b)` generuje náhodná celá čísla ze zadaného intervalu.
-Můžeme tak simulovat například hody šestistěnnou hrací kostkou:
+Funkce `randint(a, b)` generuje náhodná celá čísla ze zadaného intervalu. Můžeme tak simulovat například hody šestistěnnou hrací kostkou:
 
 ```pycon
 >>> import random
@@ -299,8 +220,7 @@ Můžeme tak simulovat například hody šestistěnnou hrací kostkou:
 1
 ```
 
-Funkce `uniform(a, b)` funguje podobně jako `randint()`, generuje však náhodná
-<i>desetinná</i> čísla ze zadaného intervalu.
+Funkce `uniform(a, b)` funguje podobně jako `randint()`, generuje však náhodná <i>desetinná</i> čísla ze zadaného intervalu.
 
 ```pycon
 >>> random.uniform(1, 6)
@@ -311,34 +231,25 @@ Funkce `uniform(a, b)` funguje podobně jako `randint()`, generuje však náhodn
 4.435795489936791
 ```
 
-Tyto funkce se nám mohou hodit pro generování náhodných dat nebo pro psaní
-různých her a hříček.
+Tyto funkce se nám mohou hodit pro generování náhodných dat nebo pro psaní různých her a hříček.
 
 ### Rozsahy
 
 Za posledních pár lekcí už jsme se naučili používat pěknou řádku typů hodnot:
 
-- celá čísla,
-- desetinná čísla,
-- řetězce,
-- pravdivostní hodnoty,
-- seznamy.
+- celá čísla
+- desetinná čísla
+- řetězce
+- pravdivostní hodnoty
+- seznamy
 
-Nyní nám přibude jedna navíc, která se jmenuje <term cs="rozsah" en="range">.
-Rozsahy slouží k tomu, abychom v Pythonu uměli říct, že chceme všechna čísla z
-nějakého rozmezí hodnot. Pokud bychom například chtěli všechna čísla mezi 1 a
-10, mohli bychom vyrobit seznam
+Nyní nám přibude jedna navíc, která se jmenuje <term cs="rozsah" en="range">. Rozsahy slouží k tomu, abychom v Pythonu uměli říct, že chceme všechna čísla z nějakého rozmezí hodnot. Pokud bychom například chtěli všechna čísla mezi 1 a 10, mohli bychom vyrobit seznam
 
 ```py
 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 ```
 
-To vypadá přímočaře a jednoduše. Ovšem to pouze do chvíle, kdy po vás budu
-chtít seznam od 1 do 10 000. Pokud byste chtěli takový seznam vyrobit, upíšete
-se k smrti. Navíc si Python bude muset všechna tato čísla v takovém seznamu
-pamatovat a to je trochu zbytečné. Když víme, že v seznamu jsou opravdu
-všechna čísla v zadaném rozmezí, stačí si pamatovat jen krajní hodnoty, tedy 1
-a 10 000. A přesně k tomu slouží hodnota typu rozsah.
+To vypadá přímočaře a jednoduše. Ovšem to pouze do chvíle, kdy po vás budu chtít seznam od 1 do 10 000. Pokud byste chtěli takový seznam vyrobit, upíšete se k smrti. Navíc si Python bude muset všechna tato čísla v takovém seznamu pamatovat a to je trochu zbytečné. Když víme, že v seznamu jsou opravdu všechna čísla v zadaném rozmezí, stačí si pamatovat jen krajní hodnoty, tedy 1 a 10 000. A přesně k tomu slouží hodnota typu rozsah.
 
 Chceme-li všechna čísla od 1 do 10, napíšeme prostě
 
@@ -346,8 +257,7 @@ Chceme-li všechna čísla od 1 do 10, napíšeme prostě
 range(1, 11)
 ```
 
-Pozor na to, že funkce `range()` chápe druhý parametr jako **vyjma** , nikoliv
-včetně.
+Pozor na to, že funkce `range()` chápe druhý parametr jako **vyjma** , nikoliv včetně.
 
 Pojďme vyzkoušet, co se stane, když takovýto výraz napíšeme do Python konzole
 
@@ -356,154 +266,37 @@ Pojďme vyzkoušet, co se stane, když takovýto výraz napíšeme do Python kon
 range(1, 11)
 ```
 
-Python nám prostě odpověděl totéž, co jsme napsali, úplně stejně jako
-kdybychom napsali prostě číslo 50 nebo řetězec `'ahoj'`. Rozsah je prostě
-hodnota, ve které si Python pamatuje dolní a horní mez a to je všechno.
-Výhodou rozsahů však je, že je můžeme používat všude tam, kde bychom normálně
-použili seznam. Pokud nás například zajímá součet hodnot od 1 do 20, můžeme
-prostě napsat
+Python nám prostě odpověděl totéž, co jsme napsali, úplně stejně jako kdybychom napsali prostě číslo 50 nebo řetězec `'ahoj'`. Rozsah je prostě hodnota, ve které si Python pamatuje dolní a horní mez a to je všechno. Výhodou rozsahů však je, že je můžeme používat všude tam, kde bychom normálně použili seznam. Pokud nás například zajímá součet hodnot od 1 do 20, můžeme prostě napsat
 
 ```pycon
 >>> sum(range(1, 21))
 210
 ```
 
-Všimněte si, že jsme takto spočítali součet aniž bychom museli vypisovat
-všechny hodnoty mezi 1 a 20. Náš nejsilnější kanón je teď samozřejmě
-chroustání seznamů a ano, i tam můžeme s výhodou použít rozsahy. Pokud bychom
-například chtěli všechny násobky trojky mezi 1 a 100, stačí napsat
+Všimněte si, že jsme takto spočítali součet aniž bychom museli vypisovat všechny hodnoty mezi 1 a 20. Náš nejsilnější kanón je teď samozřejmě chroustání seznamů a ano, i tam můžeme s výhodou použít rozsahy. Pokud bychom například chtěli všechny násobky trojky mezi 1 a 100, stačí napsat
 
 ```pycon
 >>> [x for x in range(1, 101) if x % 3 == 0]
 ```
 
-Pokud bychom mermomocí chtěli opravdu všechny hodnoty z rozsahu jako seznam,
-můžeme jej převést na seznam pomocí funkce `list()`
+Pokud bychom mermomocí chtěli opravdu všechny hodnoty z rozsahu jako seznam, můžeme jej převést na seznam pomocí funkce `list()`
 
 ```pycon
 >>> list(range(1, 10))
 [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
 
-## Domácí úložky ‒ povinné
+@exercises ## Doporučené úložky na doma [
 
-### Minuty
+- minuty
+- fahrnheit-vs-celsius
+- cesta-k-souboru
+- hazeni-kostkou
+- karty-1
+  ]@
 
-**Obtížnost: To dáš**
+@exercises ## Volitelné úložky na doma [
 
-Vytvořte program `casy.py`, který bude zpracovávat seznam naměřených časů v
-minutách. Nejprve přímo do programu zadrátujte konkrétní hodnoty například
-takto:
-
-```py
-casy = [12, 25, 64, 27, 15, 66, 128, 44]
-```
-
-1. Vyfiltrujte z tohoto seznamu pouze ty časy, které se vejdou do jedné hodiny.
-2. Vyfiltrujte z tohoto seznamu pouze ty časy, které překračují jednu hodinu a to tak, že výsledkem bude seznam minut, udávajících o kolik jsme jednu hodinu překročili.
-3. Upravte program tak, aby seznam naměřených hodnot obdržel na příkazové řádce.
-
-### Fahrnheit vs. Celsius
-
-**Obtížnost: To dáš**
-
-Pokud pečete podle anglických receptů, často se po váš požaduje rozehřát
-troubu na uvedenou teplotu. Pokud si ovšem neuvědomíte, že Američané používají
-pro měření teploty stupně Fahrenheita namísto Celsia, bude vás na konci pečení
-čekat nemilé překvapení.
-
-Nastudujte si na [České Wikipedii](https://cs.wikipedia.org/wiki/Stupe%C5%88_Fahrenheita)
-jak se převádějí stupně Fahrenheita na stupně Celsia a napište program, který
-takový převod provede. Váš program dostane na příkazové řádce teplotu ve
-stupních Fahrenheita a vypíše její ekvivalent ve stupních Celsia.
-
-### Cesta k souboru
-
-**Obtížnost: To dáš**
-
-Ve Windows se cesty k souborům zapisují pomocí zpětných lomítek, tedy
-například takto
-
-```
-cesta\do\rise\smazenych\krevet
-```
-
-Na Unixu (Macu nebo Linux) se naopak cesty píší pomocí dopředných lomítek,
-tedy takto
-
-```
-cesta/do/rise/smazenych/krevet
-```
-
-Napište program, který dostane jako parametr cestu ve Windows stylu a převede
-ji na Unix styl.
-
-### Házení kostkou
-
-**Obtížnost: Zapni hlavu**
-
-1. Napište program, který při každém spustění hodí šestistěnnou kostkou ‒ tedy vypíše náhodné číslo mezi 1 až 6.
-1. Upravte program tak, aby jako parametr dostal počet stěn kostky. Bude tedy umět házet třeba sedmistěnnou nebo devítistěnnou kostkou podle toho, jaké číslo dostane na vstupu.
-1. Předejte programu další parametr, který bude udávat kolik hodů má program provést. Program pak na výstup vytiskne seznam tolika hodů, kolik jste zadali na vstupu. Cílem je tedy vymyslet, jak vyrobit seznam náhodných čísel. Jistě se nám k tomu bude hodit chroustání seznamů.
-
-### Karty 1
-
-**Obtížnost: Zapni hlavu**
-
-Napište program, který vylosuje náhodnou hrací kartu z klasické whistové sady
-obsahující 52 karet, rozdělených do čtyř barev (kříže, srdce, piky, káry), s
-hodnotami 2, 3, 4, 5, 6, 7, 8, 9, 10, J (kluk), Q (dáma), K (král), A (eso).
-
-Výstup programu může vypadat například takto:
-
-```
-Karta: kluk kříže
-```
-
-## Domácí úložky ‒ nepovinné
-
-### Jak proměnit hada na velblouda
-
-**Obtížnost: To dáš**
-
-Napište program, který dostane na příkazovém řádku název proměnné v hadí
-notaci a vrátí tentýž název zapsaný ve velbloudí notaci.
-
-Příklad:
-
-```shell
-$ python3 had-velbloud.py had_honi_velblouda
-hadHoniVelblouda
-```
-
-### Jak proměnit velblouda na hada
-
-**Obtížnost: Smrt v přímém přenosu**
-
-Napište program, který dostane na příkazovém řádku název proměnné ve velbloudí
-notaci a vrátí tentýž název zapsaný v hadí notaci.
-
-Příklad:
-
-```shell
-$ python3 velbloud-had.py velbloudHoniHada
-velbloud_honi_hada
-```
-
-Ano, tohle už není procházka růžovým sadem a jde o úložku spíše pro
-fajnšmekry, Python gurmány a lidi s neutišitelnou touhou nenechat žádný
-příklad nevyřešený. Vězte, že skutečně existuje řešení, které používá výhradně
-probrané techniky. Vyplatí se mrknout na to, jaké všechny metody nabízí Python
-řetězce, jinak ale není potřeba žádné googlení, jen se nesmíte bát věci, které
-už tak dobře znáte, opravdu použít, a nemít je ve své programátorské dílně jen
-vystavené za sklem.
-
-Některé pasáže programu si lze mírně ulehčit použítím funkce `enumerate()`,
-která vám při chroustání seznamů vrací nejen prvek seznamu, ale i jeho index.
-Vyzkoušejte například následující příkaz
-
-```py
-[[i, jmeno] for i, jmeno in enumerate(['petr', 'jana', 'vlasta', 'onyx'])]
-```
-
-Úlohu lze však vyřešit i bez `enumerate()`!
+- hada-na-velblouda
+- velblouda-na-hada
+  ]@

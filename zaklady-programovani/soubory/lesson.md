@@ -35,30 +35,12 @@ radky = [[radek[0], float(radek[1])] for radek in radky]
 print(radky)
 ```
 
-## Cvičení
+@exercises ## Cvičení [
 
-### Výplata přesněji
-
-Zatím jsme výplatu počítali za předpokladu, že každý měsíc odpracujeme stejný počet hodin, což není příliš realistické. Vytvořte proto textový soubor `vykaz.txt`, který bude obsahovat 12 řádků a na každém řádku počet odpracovaných hodin za každý měsíc za poslední rok.
-
-1. Otevřete tento soubor ve svém programu a načtěte hodnoty na řádcích do seznamu `vykaz`. Vytiskněte tento seznam na konzoli funkcí `print()` abyste si ověřili, že jste soubor načetli správně.
-1. Nechte uživatele zadat na příkazovém řádku hodinovou mzdu. Spočítejte a na výstup vytiskněte celkovou výplatu za celý rok a průměrnou výplatu na jeden měsíc.
-
-### Počet slov
-
-Stáhněte si odevzdanou [slohovou práci](assets/praha.txt). Zadání bylo sepsat text o nejméně 150ti slovech pojednávající o našem hlavním městě. Napište program, který spočítá počet slov v tomto textu, abychom věděli, zda bylo zadání formálně splněno. Nechte se vést následujícím návodem.
-
-1. Nechte váš program otevřít soubor a načíst jednotlivé řádky do seznamu.
-1. Každý řádek převeďte na seznam slov. Slovem se rozumí vše, co je odděleno mezerou nebo novým řádkem.
-1. Vypište na výstup seznam hodnot udávající počty slov na každém řádku.
-1. Vypište na výstup celkový počet všech slov v souboru.
-
-### Půjčovna
-
-Půjčovna aut má v každém kraji ČR jedno auto s danou SPZ. Ke konci roku chce zjistit, kolik všechna auta najezdila dohromady kilometrů. V souboru [auta.txt](assets/auta.txt) je pro každou SPZ zaznamenáno kolik dané auto ujelo kilometrů za daný rok. Hodnoty jsou v tisících kilometrů. Bohužel se v jednotlivých krajích blbě zkoordinovali a někdo používal desetinnou čárku, někdo zase tečku.
-
-1. Napište program, který na výstup vypíše součet všech ujetých kilometrů. Jistě se vám bude hodit metoda řetězců jménem `replace()`.
-1. Upravte váš program tak, aby jméno souboru k otevření dostal na příkazové řádce, abychom mohli takto zpracovávat výkazy z různých souborů, aniž bychom museli upravovat samotný kód programu.
+- vyplata-presneji
+- pocet-slov
+- pujcovna
+  ]@
 
 ## Zápis do souboru
 
@@ -91,34 +73,12 @@ Upravíme tedy zápis do souboru v našem předchozím programu takto:
 [soubor.write(jmeno + '\n') for jmeno in jmena]
 ```
 
-## Cvičení
+@exercises ## Cvičení [
 
-### Dny v měsíci
-
-Napište program, který bude mít přímo v kódu zapsaný počet dní v jednotlivých měsících takto:
-
-```py
-pocty_dni = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-```
-
-1. Nechte váš program vypsat tento seznam do souboru s názvem `kalendar.txt`, každé číslo na jeden řádek.
-1. Upravte váš program tak, aby zároveň s počtem dnů vypisoval i název měsíce. Oddělte v souboru název měsíce a počet dnů pomocí tabulátoru.
-1. Upravte váš program tak, aby jako první řádek výsledného souboru obsahoval nadpisy pro jednotlivé sloupce, tedy `měsíc` a `počet dní`.
-
-### Rozepsaná výplata
-
-Modifikujte program pro počítání výplaty z předchozí sekce tak, aby nevypisoval průměrnou výplatu za rok, nýbrž aby vypsal konkrétní vyplacenou částku pro každý měsíc zvlášť.
-
-1. Nejprve tyto informace vypište na výstup pomocí funkce `print()`.
-1. Poté program upravte tak, aby vypsal tyto výsledky do souboru.
-
-### Hody kostkou
-
-Napište program, který vytvoří seznam deseti náhodných hodů dvanáctistěnnou kostkou.
-
-1. Nejdříve tento seznam vytiskněte na konzoli pomocí funkce `print()`.
-1. Upravte váš program tak, aby náhodné hody kostkou vypsal do souboru s názvem `hody.txt` na jeden řádek oddělené čárkou a mezerou.
-1. Upravte váš program tak, aby počet hodů dostal jako parametr na příkazové řádce. Zkuste použitím vašeho programu vyrobit 100, 1000 a 10 000 hodů.
+- dny-v-mesici
+- rezepsana-vyplata
+- hody-kostkou
+  ]@
 
 ## Čtení na doma
 
@@ -162,55 +122,14 @@ Teď už bychom si naivně mohli myslet, že je ve všem pořádek, ale to by by
 
 Občas programátorům nezbude, než mlátit hlavou do stolu a křičet PROČ? Ale tak je to občas i v životě. Takže nezapomeňte naučit svoje děti, aby vždy ukládaly textové soubory jako UTF-8. Svět pak bude zase o kousek lepším místem.
 
-## Domácí úložky ‒ povinné
+@exercises ## Doporučené úložky na doma [
 
-### Pasažéři
+- pasazeri
+- preznamkovani
+  ]@
 
-**Obtížnost: To dáš**
+@exercises ## Volitelné úložky na doma [
 
-Autobus mezi Zdebudevsí a Kozoprdy jezdí čtyřikrát denně každý všední den v týdnu. Za poslední týden jsme naměřili počty pasažérů pro každou jízdu tam i zpět. Data jsou uložená v souboru [pasazeri.txt](assets/pasazeri.txt). Jízda vždy obsahuje dvě čísla oddělená čárkou, která udávají počet pasažérů směrem tam a směrem zpět.
-
-1. Napište program, který pro první den vypíše, kolik pasažérů jelo celkem směrem tam a kolik směrem zpět.
-1. Nechť váš program vypisuje součty pasažérů ze celý týden, tedy kolik lidí za celý týden jelo směrem tam a kolik směrem zpět.
-
-### Přeznámkování
-
-**Obtížnost: Zapni hlavu**
-
-Univerzita pro celoživotní vzdělávání se rozhodla změnit svůj známkovací systém z číselných známek 1 až 5 na hodnocení písmeny A až F. Bohužel změna se odehrála jaksi uprostřed semestru, takže je potřeba změnit aktuální výkazy o známkách z čísel na písmena. Nechte se vést následujícím postupem.
-
-1. Otevřete si [dokument](https://docs.google.com/spreadsheets/d/1mm2iZ2TWosQ4Yv4cahgMQrMsicneTrkrcdVP3Nz1PQY/edit?usp=sharing) s jedním výkazem známek.
-1. Zkopírujte si tuto tabulku do textového souboru.
-1. Napište program, který tuto tabulku načte ze souboru a změní všechny známky tak, že 1 bude A, 2 bude B, 3 bude C, 4 bude D a 5 bude F.
-1. Vypište váš výsledek do nějakého souboru tak, aby se z něj dal zase zkopírovat do tabulky Google.
-1. Vytvořte novou Google tabulku, která vypadá stejně jako ta výše avšak s převedenými známkami.
-
-## Domácí úložky ‒ nepovinné
-
-### Karty 2
-
-**Obtížnost: Zapni hlavu**
-
-Napište program, který vylosuje seznam 4 náhodných hracích karet podobně jako v úložce Karty 1 z minulé lekce. Můžeme si představovat, že rozdáváme karty například v pokru. Zatím pro jednoduchost nebudeme řešit, že se nám může nějaká karta v seznamu opakovat.
-
-1. Vymyslete, jak budete vylosovanou kartu v seznamu reprezentovat. Vypište pak tento seznam na výstup.
-1. Dále k tomuto seznamu vypište součet hodnot všech vylosovaných karet. Položme hodnotu karet J, Q a K rovnu deseti a eso rovnu jedné.
-
-### Karty 3
-
-**Obtížnost: Zapni hlavu**
-
-Zkusme vyřešit problém losování karet tak, aby se nám nemohlo stát, že nám nějaká karta padne vícekrát, když by správně v balíčku měla být od každé karty pouze jedna.
-
-Ze souboru [karty.txt](assets/karty.txt) si načtěte do seznamu kompletní balíček karet. Zadání je stejné jako v předchozí úložce, tedy vylosovat 4 karty z balíčku a vypsat je jako seznam spolu se součtem hodnot.
-
-Existuje vícero možných postupů, které vedou ke stejnému výsledku. Zde už můžete trochu zagooglit. Ve většině postupů se vám bude hodit příkaz, který umí odstranit prvek seznamu na zadaném indexu:.
-
-```pycon
->>> x = [1, 2, 3]
->>> del x[0]
->>> x
-[2, 3]
-```
-
-Také se vám může hodit funkce `shuffle()` z modulu `random`, která umí náhodně zamíchat seznam.
+- karty-2
+- karty-3
+  ]@

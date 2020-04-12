@@ -103,52 +103,20 @@ Všimněte si, jak slovník představující jeden kurz, obsahuje pod klíčem `
 kurz['konani'][1]['koucove']
 ```
 
-## Cvičení
+@exercises ## Cvičení [
 
-### Kurz
-
-Založte si program v Pythonu a zkopírujte si do něj datovou strukturu kurzu
-Úvod do programování z lekce výše.
-
-1. Vypište na výstup počet účastnic na posledním konání kurzu.
-1. Vypište na výstup jméno posledního kouče na prvním konání kurzu.
-1. Vypište na výstup celkový počet konání kurzu.
-1. Vypište na výstup všechna místa, na kterých se kurz konal. Použijte chroustání seznamů.
-
-### Knihovna
-
-Uvažte, jak byste pomocí slovníku reprezentovali údaje o knize v knihovně. Jaké klíče a hodnoty ve slovníku budou? Zcela jistě bude každá kniha obsahovat například název. Chtěli bychom také, aby kniha umožňovala mít vícero autorů a vícero vydání. Ve vašem programu vytvořte proměnnou, který bude obsahovat jednu knihu s vámi vymyšlenou strukturou.
+- kurz
+- knihovna
+  ]@
 
 Hotovo!
 
 Hurá, pokud jste dorazili až sem, máte hotovo. Nalepte si lísteček a pokud chcete, můžete pokračovat bonusovými příklady.
 
-## Bonusy
+@exercises bonuses [
 
-### Recepty
-
-Prohlédněte na následujicí reprezentaci receptu:
-
-```py
-{
-  'nazev': 'Batáty se šalvějí a pancettou',
-  'narocnost': 'stredni',
-  'doba': 30,
-  'ingredience': [
-    ['batát', '1', '15 kč'],
-    ['olivový olej', '2 lžíce', '2 kč'],
-    ['pancetta', '4-6 plátků', '21 kč'],
-    ['přepuštěné máslo', '2 lžíce', '5 kč'],
-    ['mletý černý pepř', '1/2 lžičky', '0.5 kč'],
-    ['sůl', '1/2 lžičky', '0.1 kč'],
-    ['muškátový oříšek', 'špetka', '1 kč'],
-    ['česnek', '2 stroužky', '1 kč'],
-    ['šalvějové lístky', '20-25', '12 kč']
-  ]
-}
-```
-
-Uložte si tuto strukturu do proměnné recept na začátek nového programu. Vypište pomocí funkce `print` kolik bude celé jídlo stát korun zaokrouhlené na celé koruny nahoru.
+- recepty
+  ]@
 
 ## Formát JSON
 
@@ -254,22 +222,11 @@ data = json.loads(response.text)
 print(data)
 ```
 
-## Cvičení
+@exercises ## Cvičení [
 
-### Seznam lidí
-
-Jak už jsme si ověřili v lekci, datové API na adrese `http://api.kodim.cz/python-data/people` obsahuje seznam lidí. Napište program, který tento seznam z API stáhne a převede z formátu JSON na Python slovníky. Proveďte následující úkoly.
-
-1. Zjistěte kolik lidí celkem seznam obsahuje.
-1. Zjistěte jaké všechny informace máme o jednotlivých osobách.
-1. Zjistěte, kolik je v souboru mužů a žen.
-
-### Svátky
-
-Na adrese `http://svatky.adresa.info/json` najdete API, které vám odpoví, kdo má dneska svátek.
-
-1. Využijte toto API k tomu, abyste napsali program, který po spuštění vypíše na obrazovku kdo má dneska svátek.
-1. Pokud použijete adresu `http://svatky.adresa.info/json?date=DDMM`, kde místo DDMM doplníte datum, dostanete jméno, které má svátek v zadaný den. Formát DDMM znamená že 6. ledna bude zapsáno jako 0601, 12. září jako 1209 apod. Napište program, který dostane na příkazové řádce číslo dne a číslo měsíce a vypíše na výstup kdo má v daný den svátek. Použijte váš program abyste zjistili, kdo má svátek 29. února.
+- seznam-lidi
+- svatky
+  ]@
 
 ## Čtení na doma
 
