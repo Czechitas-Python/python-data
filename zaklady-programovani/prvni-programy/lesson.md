@@ -70,16 +70,12 @@ print(
 )
 ```
 
-@exercises ## Cvičení [
+@exercises ## Cvičení - programy [
 
 - jmeno-a-mesto
 - vyplata-jako-program
 - teploty-jako-program
   ]@
-
-Hotovo!
-
-Hurá, pokud jste dorazili až sem, máte hotovo. Nalepte si lísteček a pokud chcete, můžete pokračovat bonusovými příklady.
 
 ## Moduly
 
@@ -166,7 +162,7 @@ Součet zadaných čísel: 169
 
 Všimněte si, že na druhém řádku našeho programu používáme `sys.argv[1:]`. Je to proto, abychom se zbavili názvu programu, který vždy zabírá první prvek seznamu parametrů. Naše čísla se tedy nacházejí až od prvního indexu nahoru.
 
-@exercises ## Cvičení [
+@exercises ## Cvičení - moduly, parametry řádky [
 
 - cas-v-minutach
 - zaokrouhlovani
@@ -174,15 +170,12 @@ Všimněte si, že na druhém řádku našeho programu používáme `sys.argv[1:
 - prumer-versus-median
   ]@
 
-Hotovo!
-
-Hurá, pokud jste dorazili až sem, máte hotovo. Nalepte si lísteček a pokud chcete, můžete pokračovat bonusovými příklady.
-
 @exercises bonuses [
+
 - klasicke-zaokrouhlovani
   ]@
 
-## Čtení na doma
+## Povinné čtení na doma
 
 Opět je zde pro vás malá samovzdělávací lekce. Nejdříve se podíváme na to, jak můžeme do chroustání seznamů zapojit podmínky, ukážeme si, jak se generují náhodná čísla a potom si představíme další zajímavou hodnotu.
 
