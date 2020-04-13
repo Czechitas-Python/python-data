@@ -46,29 +46,17 @@ def sumPositive(nums):
   return result
 ```
 
-## Cvičení
+@exercises ## Cvičení [
 
-### Obsah elipsy
+- obsah-elipsy
+- vetsi-ze-dvou-cisel
+- geometricky-prumer
+  ]@
 
-Tentokrát chceme spočítat plochu pozemku ve tvaru elipsy jako na obrázku.
+@exercises bonuses [
 
-![Elipsa](assets/elipse.png)
-
-Z matematiky víme, že známe-li šířku a výšku elipsy, její obsah je polovina šířky krát polovina výšky krát číslo pí. Napište funkci `elipseArea`, která spočítá plochu pozemku dle zadané šířky a výšky. Číslo pí najdete v modulu `math` jako `math.pi`.
-
-### Větší ze dvou čísel
-
-Napište funkci jménem `max2`, který vrátí větší ze dvou zadaných čísel.
-
-### Geometrický průměr
-
-Napište funkci jménem `gmean`, která spočítá takzvaný geometrický průměr ze zadaného seznamu čísel. Geometrický průměr <i>n</i> čísel se spočítá tak, že se všechny hodnoty navzájem vynásobí a z výsledného součinu se spočítá <i>n</i>-tá odmocnina.
-
-## Bonusy
-
-### Větší ze tří čísel
-
-Napište funkci jménem `max3`, který vrátí největší ze tří zadaných čísel.
+- vetsi-ze-tri-cisel
+  ]@
 
 ## Transformace dat v Pandasu
 

@@ -62,26 +62,10 @@ Všech HTML značek je kolem stovky a mnoho z nich má spoustu možných atribut
 
 Pokud by vás zajímalo, co vše je v HTML možné, přehled všech používaných značek [najdete zde (anglicky)](https://developer.mozilla.org/en-US/docs/Web/HTML/Element).
 
-## Cvičení
+@exercises ## Cvičení [
 
-### Porozumění HTML
-
-Cílem tohoto cvičení je pokusit se vyznat ve zdrojovém kódu jednoduché webové stránky a získat tak povědomí o tom jak funguje jazyk HTML. Postupujte dle následujících kroků.
-
-1. Stáhněte si následující [ZIP soubor](assets/dhmo.zip), který rozbalte někam na váš počítač. V rozbalené složce `dhmo` rozkliněte soubor `index.html`. V prohlížeči by se vám měla otevřít jednoduchá webová stránka pojednávající o škodlivosti jedné velmi zajímavé chemikálie. Stránka nevypadá příliš vábně, protože není napojena na žádné CSS styly, a vidíme tedy jen čistý obsah.
-1. Složku `dhmo` si otevřete ve Visual Studiu a podívejte se na obsah souboru `index.html`. Uvidíte spoustu HTML značek. Některé z nich znáte, některé jste v životě neviděli. Nenechte se vylekat tím, že některým částem tohoto souboru vůbec nerozumíte. Zkuste v souboru najít nějaký kousek textu, který vidíte na vaší otevřené webové stránce a tím se trochu zorientovat.
-1. V úvodním odstavci stránky jsou tři překlepy. Opravte je přímo v souboru `index.html`. Nezapomeňte jej uložit. Obnovte stránku ve vašem prohlížeči (zkratka Ctrl+R nebo CMD+R) a měli byste vidět změny, které jste provedli.
-1. Najděte v souboru `index.html` část, která obsahuje výčet faktů o DHMO. Tyto seznamy jsou číslované, což naznačuje HTML značka `<ol>`. Změňte u obou seznamů tuto značku na `<ul>`, což znamená nečíslovaný seznam. Nezapomeňte změnit i uzavírací značku seznamu (ta s lomítkem). Otevírací a uzavírací značky musí vždy souhlasit!
-1. Najděte poblíž začátku souboru `index.html` značku `<img>`, která do stránky vkládá úvodní obrázek. Atribut `src` udává cestu k souboru s obrázkem. Všimněte si, že blízko ke konci souboru těsně před seznamem odkazů je ještě jedna značka `<img>`, které ale atribut `src` chybí a proto na stránce žádný obrázek nevidíme. Nastavte atribut `src` na hodnotu `img/dhmo-ban.png` a podívejte se, jak se stránka změnila.
-1. Podobně jako náš obrázek, poslední odkaz v seznamu odkazů nemá atribut `href`, což způsobuje, že se odkaz na stránce nezobrazuje jako odkaz. Atribut `href` říká, na kterou adresu má odkaz vést. Nastavte proto v posledním odkazu hodnotu atributu `href` na `http://www.snopes.com/science/dhmo.asp`.
-1. Téměř na začátku souboru `index.html` najdete značku `<title>`. Ta udává název stránky, který se zobrazuje v záložce prohlížeče. Změňte tento název prostě na "DHMO šíří hrůzu".
-1. Pokud chcete vidět, jak by tato stránka vypadala nastylovaná, vložte na nový řádek před značkou `<title>` tento kód
-
-```html
-<link rel="stylesheet" href="style.css" />
-```
-
-Uložte soubor, obnovte stránku v prohlížeči a kochejte se.
+- porozumeni-html
+  ]@
 
 ## Web scraping v Pythonu
 
@@ -185,21 +169,11 @@ Dále můžeme postupovat úplně stejně jako když jsme zpracovávali stránky
 print(stranka.html.html)
 ```
 
-## Cvičení
+@exercises ## Cvičení - scraping [
 
-### Scraping DHMO
-
-Napište program, který bude pracovat se stránkou o DHMO na adrese <http://scrape.kodim.cz/dhmo/index>.
-
-1. Nechť program vypíše na výstup nadpisy všech sekcí (značka `h2`).
-1. Nechť program vypíše na výstup cesty všech odkazů na stránce (značka `a`, atribut `href`).
-1. Nechť program vypíše na výstup cesty ke všem obrázkům na stránce (značka `img`, atribut `src`).
-
-### Scraping Kodim.cz
-
-Jistě vás nepřekvapí, že stránky, které právě čtete, se dají také snadno scrapovat.
-
-Napište program, který vypíše na výstup všechny povinné a nepovinné domácí úložky z lekce [První programy](/czechitas/python-data/zaklady-programovani/prvni-programy) spolu s jejich obtížností.
+- scraping-dhmo
+- scraping-kodim.cz
+  ]@
 
 ## Web scraping vs JavaScript
 
@@ -216,15 +190,10 @@ stranka = session.get('https://react-shopping-cart-67954.firebaseapp.com/')
 stranka.html.render(sleep=5)
 ```
 
-## Domácí úložky ‒ povinné
+@exercises ## Doporučené úložky na doma [
 
-### Káva na Mall.cz
-
-**Obtížnost: To dáš**
-
-Jedna ze stránek, která má pěknou strukturu pro scrapování, je například [Mall.cz](https://www.mall.cz). Můžete si zde v bezpečí potrénovat své scrapovací schopnosti dříve, než budete zkoušet vytáhnout data z nějaké webovky, která je napsaná trošku víc prasácky.
-
-Vaším úkolem v tomto cvičení je napsat program, který stáhne všechny nabízené instantní kávy ze stránky [www.mall.cz/instantni-kava](https://www.mall.cz/instantni-kava). Výstupem vašeho programu bude CSV soubor, který bude obsahovat tři sloupečky: název produktu, cena a zda je produkt skladem.
+- kava-na-mall.cz
+  ]@
 
 ## Čtení na doma
 

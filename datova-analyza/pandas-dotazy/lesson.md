@@ -280,29 +280,10 @@ Užitečná je také metoda `to_html`, která zapíše DataFrame jako webovou st
 
 a otevřít soubor `data.html` v prohlížeči. Takto si můžete tabulku prohlédnout hezky naformátovanou.
 
-## Cvičení
+@exercises ## Cvičení [
 
-### Česká jména
-
-Stáhněte si soubor [jmena100.csv](assets/jmena100.csv), který obsahuje tabulku 100 nejpoužívanějších českých křestních jmen seřazených od nejpoužívanějšího k nejméně používanému. Otevřete Python konzoli a pomocí Pandasu načtěte tuto tabulku jako DataFrame. Jako index zvolte sloupec s názvem 'jméno'.
-
-Datový soubor obsahuje následující sloupečky
-
-- **jméno** \- křestní jméno
-- **četnost** \- počet obyvatel ČR mající toto jméno
-- **věk** \- průměrný věk nositelů jména
-- **pohlaví** \- zda je jméno mužské či ženské
-- **svátek** \- datum, kdy má dané jméno svátek
-- **původ** \- původ jména
-
-Vyřešte následující úkoly.
-
-1. Vypište na konzoli informace o jménu Martin.
-1. Vypište na konzoli informace pro jména Martin, Zuzana a Josef.
-1. Vypište na konzoli informace o všech nejčastějších jménech až po Martina.
-1. Vypište pouze průměrné věky osob mající jména mezi Martinem a Terezou.
-1. Vypište průměrný věk a původ pro všechna jména od Libora dolů.
-1. Vypište sloupečky mezi věkem a původem pro všechna jména v tabulce.
+- ceska-jmena
+  ]@
 
 ## Index
 
@@ -512,25 +493,11 @@ Můžeme však postupovat i obráceně a vyrobit DataFrame ze seznamu seznamů. 
 >>> mesta2 = pandas.DataFrame(data, columns=['mesto', 'kraj', 'obyvatel', 'linky', 'vymera'])
 ```
 
-## Cvičení
+@exercises ## Cvičení [
 
-### Česká jména podruhé
-
-Budeme pokračovat s daty o českých jménech z předchozího cvičení. Minule jsme používali sloupeček se jmény jako index. Tentokrát načtěte soubor se jmény tak, aby Pandas vyrobil index číselný. Proveďte následující dotazy
-
-1. Vypište všechny řádky se jmény, jejichž nositelé mají průměrný věk vyšší než 60.
-1. Vypište pouze jména z těch řádků, kde četnost je mezi 80 000 a 100 000.
-1. Vypište jména a četnost pro jména se slovanským nebo hebrejským původem. Kolik takových jmen je?
-1. Vypište všechna jména, která mají svátek prvních 7 dní v únoru.
-
-### Původ jmen
-
-Napište program, který
-
-1. Načte naše data o českých jménech.
-1. Vytvoří z něj DataFrame, který obsahuje jména a četnosti jmen, která nejsou ani hebrejského, ani aramejského ani slovanského původu.
-1. Převede tento DataFrame na obyčejné Python seznamy. Pomocí chroustání seznamů spočítá součet všech četností těchto jmen.
-1. Na výstup vypíše, jaké procentuální zastoupení mají tato jména v celé ČR. Podle odhadů OSN má k osmému květnu 2019 Česká Republika 10 629 798 obyvatel.
+- ceska-jmena-podruhe
+- puvod-jmen
+  ]@
 
 ## Čtení na doma
 
