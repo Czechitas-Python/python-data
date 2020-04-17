@@ -6,7 +6,7 @@ Pokud pracujete pod Windows, Python konzoli spustíte tak, že do termínálu
 napíšete příkaz
 
 ```shell
-$ python
+$ py
 ```
 
 Pokud pracujete na Macu nebo Linuxu, správný příkaz je

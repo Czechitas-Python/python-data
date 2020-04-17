@@ -75,10 +75,10 @@ Abychom mohli s obsahem webových stránek pracovat přímo v Pythonu, potřebuj
 pip3 install requests-html
 ```
 
-Opět pozor, že na Windows je tento příkaz bez čísla 3.
+Popř. na Windows
 
 ```shell
-pip install requests-html
+py -m pip install requests-html
 ```
 
 Abychom mohli v našem programu scrapovat, musíme nejdřív webovou stránku otevřít. Vzhledem k tomu, že obsah textového souboru už do proměnné načíst umíme, stačí tedy jen použít náš nový modul, aby si tento obsah přečetl a umožnil v něm vyhledávat.

@@ -39,10 +39,10 @@ Pandas je externí balíček, který musíme nejdříve nainstalovat, podobně j
 $ pip3 install pandas
 ```
 
-Jako vždy, pokud jsme na Windows, píšeme pouze
+Jako vždy, pokud jsme na Windows, píšeme
 
 ```shell
-$ pip install pandas
+$ py -m pip install pandas
 ```
 
 Pandas je relativně veliký balíček, který obsahuje mnoho modulů, takže instalace bude nějakou chvíli trvat.

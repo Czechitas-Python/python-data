@@ -60,7 +60,7 @@ Nejprve ověřme, že instalace nástrojů proběhla v pořádku. Ať už jste n
 Pokud jste na Windows, napište do okna, které se objeví toto:
 
 ```shell
-$ python
+$ py
 ```
 
 a stiskněte enter. Pokud jste na Macu nebo Linuxu, je třeba napsat
