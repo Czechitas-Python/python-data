@@ -68,6 +68,7 @@ a stiskněte enter. Pokud jste na Macu nebo Linuxu, je třeba napsat
 ```shell
 $ python3
 ```
+**POZOR!** Symbol dolaru na začátku příkazu se do terminálu nepíše. Slouží pouze k tomu, abychom odlišili, že příkaz se píše do terminálu a ne někam jinam.
 
 Pokud je vše v pořádku, měly by se po pár krypticky vypadajících výpisech ukázat tři zobáčky `>>>` a kurzor. To znamená, že Python je připraven na vaše první příkazy.
 

@@ -2,8 +2,7 @@ V této kapitole si představíme úplné základy programování v Pythonu. Je�
 
 Abychom si mohli s Pythonem povídat, musíme spustit takzvanou _Python konzoli_. To je prostředí, ve kterém můžeme s Pythonem komunikovat a posílat mu příkazy.
 
-Pokud pracujete pod Windows, Python konzoli spustíte tak, že do termínálu
-napíšete příkaz
+Pokud pracujete pod Windows, Python konzoli spustíte tak, že do termínálu napíšete příkaz
 
 ```shell
 $ py
@@ -15,19 +14,13 @@ Pokud pracujete na Macu nebo Linuxu, správný příkaz je
 $ python3
 ```
 
-**POZOR!** Symbol dolaru na začátku příkazu se do terminálu napíše. Slouží pouze k tomu, abychom odlišili, že příkaz se píše do terminálu a ne někam
-jinam.
-
-**POZOR!** Pokud v Linuxu nebo na Macu spustíte příkaz jako ve Windows, pravděpodobně se vám spustí jiná verze Pythonu, se kterou vám následující lekce nebudou fungovat.
-
 ## Hodnoty
 
 <term cs="Hodnoty" en="Values"> představují všechny možné druhy dat, se kterými můžou naše programy pracovat. Hodnoty se dle způsobu použití dělí do různých kategorií zvaných <term cs="datové typy" en="data types">. Datových typů existuje velké množství. V tuto chvíli si představíme ty nejzákladnější - celá čísla a desetinná čísla.
 
 ### Celá čísla
 
-Nejjednodušší datový typ jsou <term cs="celá čísla" en="integers">. Pod tento typ patří hodnoty jako 12, 1321500, -5, 0 a podobně. Pokud do Python konzole napíšete hodnotu, Python vám ji vypíše zpátky, což
-znamená, že vám rozumí 🙂.
+Nejjednodušší datový typ jsou <term cs="celá čísla" en="integers">. Pod tento typ patří hodnoty jako 12, 1321500, -5, 0 a podobně. Pokud do Python konzole napíšete hodnotu, Python vám ji vypíše zpátky, což znamená, že vám rozumí 🙂.
 
 ```pycon
 >>> 127
