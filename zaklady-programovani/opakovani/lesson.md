@@ -18,7 +18,7 @@ $ pip3 install unidecode
 Popřípadě na Windows:
 
 ```
-$ py -m pip install requests
+$ py -m pip install unidecode
 ```
 
 Pozor, že na Macu je potřeba použít `pip3`. Tento modul obsahuje funkci `unidecode` (náhodou se jmenuje stejně jako modul samotný). Pokud tuto funkci zavoláte s řetězcem s diakritikou, vrátím vám řetězec bez diakritiky. Využijte tuto funkci ke splnění tohoto úkolu.
