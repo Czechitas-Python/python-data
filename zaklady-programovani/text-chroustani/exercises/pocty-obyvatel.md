@@ -44,5 +44,5 @@ kraje = [
 ```
 
 1. Vytvořte seznam, který obsahuje pouze názvy všech krajů, tedy první sloupeček této tabulky.
-2. Vytvořte seznam, který obsahuje počty obyvatel jako čísla.
-3. Do vhodně pojmenované proměnné uložte seznam, který reprezentuje výše uvedenou tabulku jako dva seznamy: seznam jmen a seznam počtů obyvatel jako čísla.
+1. Vytvořte seznam, který obsahuje počty obyvatel jako čísla. Pro zbavení se mezer v číslech se vám jistě bude hodit metoda řetězců jménem `replace()`.
+1. Do vhodně pojmenované proměnné uložte seznam, který reprezentuje výše uvedenou tabulku jako dva seznamy: seznam jmen a seznam počtů obyvatel jako čísla.
