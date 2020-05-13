@@ -120,7 +120,7 @@ Histogram si pro přehlednost můžeme rozdělit do <term cs="přihrádek" en="b
 Krabicový graf graficky znázorňuje medián a kvartily naměřených hodnot. Můžeme si jej vyzkoušet na výškách mužů.
 
 ```pycon
->>> muzi.plot(kind='box', whis='range')
+>>> muzi.plot(kind='box', whis=[0, 100])
 >>> plt.show()
 ```
 
@@ -146,7 +146,7 @@ Nyní chceme zobrazit krabicový graf porovnávající výšky obou pohlaví. K 
 ```pycon
 >>> vysky = muzi.to_frame(name='muži')
 >>> vysky['ženy'] = zeny
->>> vysky.plot(kind='box', whis='range')
+>>> vysky.plot(kind='box', whis=[0, 100])
 >>> plt.show()
 ```
 
