@@ -120,6 +120,15 @@ Tomuto zápisu se říká <term cs="volání funkce" en="function call">. Když 
 
 Funkci si můžeme představit například jako topinkovač. Topinkovač pro nás dělá nějakou užitečnou činnost, kterou chceme často opakovat (opéká topinky). Má svoje jméno (topinkovač). Do topinkovače dáme cheba (argument) a spustíme je (zavoláme). Topinkovač chvíli pracuje a pak nám vrátí výsledek - topinky. Důležité je, že nemusíme řešit jak to topinkovač vlastné dělá, že dokáže opéct chleba. Důležité pro nás je, že to umí a že jej můžeme kdykoliv použít.
 
+Všimněte si, že funkce [round()](https://docs.python.org/3/library/functions.html#round) zaokrouhluje jinak, než jsme možná zvyklí. Funkce `round()` zaokrouhluje sudá čísla dolu.
+
+```pycon
+>>> round(1.5)
+2
+>>> round(2.5)
+2
+```
+
 ![Toaster](assets/toaster.jpg){.fig .fig-50}
 
 ## Seznamy
@@ -149,7 +158,7 @@ Snadno také můžeme některou hodnotu v seznamu změnit. Například když si 
 >>> venecky[5] = 12
 ```
 
-Z jednoho seznamu můžeme také získat menší kusy podle zadaných mezí
+Z jednoho seznamu můžeme také získat menší kusy podle zadaných mezí. 
 
 ```pycon
 >>> venecky[2:5]
@@ -158,6 +167,18 @@ Z jednoho seznamu můžeme také získat menší kusy podle zadaných mezí
 [1, 2, 4]
 >>> venecky[3:]
 [1, 6, 12, 1]
+```
+
+Meze mohou být i číslo větší (menší) než je počet prvků v seznamu - bere se tim tedy rozmezí s poslednimy (prvnímy) prvky v seznamu. Pokud je tedy nase horní mez větší jak poslední index prvku, je horní mez nahrazená počtem prvků, to stejné platí pro dolní mez.
+
+Aby toho nebylo málo, k prvkům v seznamu se můžeme dostat i odzadu a to za pomoci záporných indexů.
+```pycon
+>>> venecky[-1]
+1
+>>> venecky[-3]
+6
+>>> venecky[-4:-2]
+[1, 6]
 ```
 
 ### Vnořené seznamy
