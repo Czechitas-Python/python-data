@@ -53,7 +53,7 @@ Náš program se sice spustí, ale nevypíše žádný výsledek. To je proto, �
 print(index)
 ```
 
-Pokud náš program spustíme znovu, vypíše nám index, na kterém se nachází den s teplotou nejblíže k průměru. Nezapomeňte také po připsání `print()` náš kód znovu uložit. Často se vám bude stávat, že uděláte změnu v kódu, ale neuložíte kód a budete spouštět kód starý. 
+Pokud náš program spustíme znovu, vypíše nám index, na kterém se nachází den s teplotou nejblíže k průměru. Nezapomeňte také po připsání `print()` náš kód znovu uložit. Často se vám bude stávat, že uděláte změnu v kódu, ale neuložíte kód a budete spouštět kód starý. Případně vám může pomoci funkce `Autosave` ve VS code, která se pustí pomocí `File -> Autosave` a kód ukláda automaticky.
 
 Možná bychom ale chtěli, aby program místo indexu vypsal spíše název dne v týdnu. To zařídíme tak, že poslední řádek změníme na
 
