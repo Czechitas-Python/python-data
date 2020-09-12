@@ -2,7 +2,7 @@ V předchozí kapitole jsme si představili tři důležité typy hodnot: celá 
 desetinná čísla a seznamy. Dnes přidáme další důležitý typ hodnot, abychom v
 Pythonu mohli pracovat nejen s čísly, ale i s texty.
 
-## Řetězce
+## Řetězce ([String](https://docs.python.org/3/library/string.html))
 
 Pokud chceme v Pythonu zadat nějak kousek textu, použijeme takzvaný <term cs="řetězec" en="string">.
 Řetězce se v Pythonu uzavírají do jednoduchých nebo dvojitých uvozovek.
@@ -205,7 +205,7 @@ nebo
 - chytrejsi-cisla-jako-text
   ]@
 
-## Chroustání seznamů
+## Chroustání seznamů ([List Comprehensions](https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions))
 
 Často se může stát, že potřebujeme nějakým způsobem zpracovat všechny hodnoty
 v nějakém seznamu a vyrobit tak seznam nový.
