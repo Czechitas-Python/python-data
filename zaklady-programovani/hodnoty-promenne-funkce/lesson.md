@@ -169,9 +169,9 @@ Z jednoho seznamu můžeme také získat menší kusy podle zadaných mezí.
 [1, 6, 12, 1]
 ```
 
-Meze mohou být i číslo větší (menší) než je počet prvků v seznamu - bere se tim tedy rozmezí s poslednimy (prvnímy) prvky v seznamu. Pokud je tedy nase horní mez větší jak poslední index prvku, je horní mez nahrazená počtem prvků, to stejné platí pro dolní mez.
+Meze mohou být i číslo větší (menší) než je počet prvků v seznamu - bere se tim tedy rozmezí s poslednimi (prvními) prvky v seznamu. Pokud je tedy nase horní mez větší než poslední index prvku, je horní mez nahrazená počtem prvků, to stejné platí pro dolní mez.
 
-Aby toho nebylo málo, k prvkům v seznamu se můžeme dostat i odzadu a to za pomoci záporných indexů.
+Aby toho nebylo málo, k prvkům v seznamu se můžeme dostat i odzadu, a to za pomoci záporných indexů.
 ```pycon
 >>> venecky[-1]
 1
