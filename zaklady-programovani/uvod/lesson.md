@@ -91,7 +91,9 @@ a stiskněte enter. Otevře se okno s editorem. Do jeho pravé časti vložte n�
   "editor.wordWrap": "on",
   "files.eol": "\n",
   "editor.minimap.enabled": false,
-  "editor.fontSize": 16
+  "editor.fontSize": 16,
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000
 }
 ```
 
