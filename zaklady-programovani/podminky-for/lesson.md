@@ -47,17 +47,15 @@ else:
   print('Výsledek je dostatečně spolehlivý.')
 ```
 
-@exercises ## Cvičení - podmínky [
-
+[[[ excs Cvičení: Podmínky
 - deleni
 - kontrola-souboru
-  ]@
+]]]
 
-@exercises bonuses [
-
+[[[ excs Bonusy
 - maximum-ze-dvou-cisel
 - maximum-ze-tri-cisel
-  ]@
+]]]
 
 ## Cyklus FOR
 
@@ -113,11 +111,10 @@ for cislo in cisla:
 
 Ne, že bychom zrovna takovýto kus kódu nutně potřebovali, když můžeme použít funkci `sum()`. Tento příklad ale ukazuje, že s cykly můžeme dělat spoustu zajímavých věcí.
 
-@exercises ## Cvičení - cyklus FOR[
-
+[[[ excs Cvičení: Cyklus FOR
 - hratky-s-cykly
 - poznavacky
-  ]@
+]]]
 
 ## Povinné čtení na doma
 
@@ -186,21 +183,19 @@ else:
 
 Zde je dobré vědět, jakým způsobem Python takovou podmínku vyhodnocuje. Nejdřív se podívá, jestli je splněna první větev. Pokud ano, vykoná příslušný blok kódu a **zbytek větví přeskočí**. Pokud první větev není splněna, zkouší, jestli je splněna druhá. Pokud ano, vykoná příslušný blok a opět zbytek přeskočí. Takto pokračuje dokud nevyčerpá všechny větve nebo nenarazí na `else`. Důležité je tedy zapamatovat si, že pokud výraz v nějaké větvi uspěje, zbytek větví se přeskočí a Python se na ně ani nepodívá.
 
-@exercises ## Doporučené úložky na doma [
-
+[[[ excs Doporučené úložky na doma
 - heslo
 - prevod-na-usd
 - banka
 - hadanky
 - vzestupny-seznam
-  ]@
+]]]
 
-@exercises ## Volitelné úložky na doma [
-
+[[[ excs Volitelné úložky na doma
 - pisemky
 - maximum
 - druhe-maximum
 - k-te-maximum
 - ruleta
 - prestupny-rok
-  ]@
+]]]

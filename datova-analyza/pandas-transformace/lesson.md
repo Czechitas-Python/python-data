@@ -46,17 +46,15 @@ def sumPositive(nums):
   return result
 ```
 
-@exercises ## Cvičení [
-
+[[[ excs Cvičení
 - obsah-elipsy
 - vetsi-ze-dvou-cisel
 - geometricky-prumer
-  ]@
+]]]
 
-@exercises bonuses [
-
+[[[ excs Bonusy
 - vetsi-ze-tri-cisel
-  ]@
+]]]
 
 ## Transformace dat v Pandasu
 

@@ -70,12 +70,11 @@ print(
 )
 ```
 
-@exercises ## Cvičení - programy [
-
+[[[ excs Cvičení: Programy
 - jmeno-a-mesto
 - vyplata-jako-program
 - teploty-jako-program
-  ]@
+]]]
 
 ## Moduly
 
@@ -162,18 +161,16 @@ Součet zadaných čísel: 169
 
 Všimněte si, že na druhém řádku našeho programu používáme `sys.argv[1:]`. Je to proto, abychom se zbavili názvu programu, který vždy zabírá první prvek seznamu parametrů. Naše čísla se tedy nacházejí až od prvního indexu nahoru.
 
-@exercises ## Cvičení - moduly, parametry řádky [
-
+[[[ excs Cvičení: Moduly, parametry řádky
 - cas-v-minutach
 - zaokrouhlovani
 - domena-a-url
 - prumer-versus-median
-  ]@
+]]]
 
-@exercises bonuses [
-
+[[[ excs Bonusy
 - klasicke-zaokrouhlovani
-  ]@
+]]]
 
 ## Povinné čtení na doma
 
@@ -279,17 +276,15 @@ Pokud bychom mermomocí chtěli opravdu všechny hodnoty z rozsahu jako seznam, 
 [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
 
-@exercises ## Doporučené úložky na doma [
-
+[[[ excs Doporučené úložky na doma
 - minuty
 - fahrnheit-vs-celsius
 - cesta-k-souboru
 - hazeni-kostkou
 - karty-1
-  ]@
+]]]
 
-@exercises ## Volitelné úložky na doma [
-
+[[[ excs Volitelné úložky na doma
 - hada-na-velblouda
 - velblouda-na-hada
-  ]@
+]]]

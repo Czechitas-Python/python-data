@@ -280,10 +280,9 @@ Užitečná je také metoda `to_html`, která zapíše DataFrame jako webovou st
 
 a otevřít soubor `data.html` v prohlížeči. Takto si můžete tabulku prohlédnout hezky naformátovanou.
 
-@exercises ## Cvičení [
-
+[[[ excs Cvičení
 - ceska-jmena
-  ]@
+]]]
 
 ## Index
 
@@ -493,11 +492,10 @@ Můžeme však postupovat i obráceně a vyrobit DataFrame ze seznamu seznamů. 
 >>> mesta2 = pandas.DataFrame(data, columns=['mesto', 'kraj', 'obyvatel', 'linky', 'vymera'])
 ```
 
-@exercises ## Cvičení [
-
+[[[ excs Cvičení
 - ceska-jmena-podruhe
 - puvod-jmen
-  ]@
+]]]
 
 ## Čtení na doma
 

@@ -35,12 +35,11 @@ radky = [[radek[0], float(radek[1])] for radek in radky]
 print(radky)
 ```
 
-@exercises ## Cvičení - čtení ze souborů [
-
+[[[ excs Cvičení: Čtení ze souborů
 - vyplata-presneji
 - pocet-slov
 - pujcovna
-  ]@
+]]]
 
 ## Zápis do souboru
 
@@ -73,12 +72,11 @@ Upravíme tedy zápis do souboru v našem předchozím programu takto:
 [soubor.write(jmeno + '\n') for jmeno in jmena]
 ```
 
-@exercises ## Cvičení - zápis do souborů [
-
+[[[ excs Cvičení: Zápis do souborů
 - dny-v-mesici
 - rezepsana-vyplata
 - hody-kostkou
-  ]@
+]]]
 
 ## Povinné čtení na doma
 
@@ -122,14 +120,12 @@ Teď už bychom si naivně mohli myslet, že je ve všem pořádek, ale to by by
 
 Občas programátorům nezbude, než mlátit hlavou do stolu a křičet PROČ? Ale tak je to občas i v životě. Takže nezapomeňte naučit svoje děti, aby vždy ukládaly textové soubory jako UTF-8. Svět pak bude zase o kousek lepším místem.
 
-@exercises ## Doporučené úložky na doma [
-
+[[[ excs Doporučené úložky na doma
 - pasazeri
 - preznamkovani
-  ]@
+]]]
 
-@exercises ## Volitelné úložky na doma [
-
+[[[ excs Volitelné úložky na doma
 - karty-2
 - karty-3
-  ]@
+]]]

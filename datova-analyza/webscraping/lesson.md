@@ -62,10 +62,9 @@ Všech HTML značek je kolem stovky a mnoho z nich má spoustu možných atribut
 
 Pokud by vás zajímalo, co vše je v HTML možné, přehled všech používaných značek [najdete zde (anglicky)](https://developer.mozilla.org/en-US/docs/Web/HTML/Element).
 
-@exercises ## Cvičení [
-
+[[[ excs Cvičení
 - porozumeni-html
-  ]@
+]]]
 
 ## Web scraping v Pythonu
 
@@ -169,11 +168,10 @@ Dále můžeme postupovat úplně stejně jako když jsme zpracovávali stránky
 print(stranka.html.html)
 ```
 
-@exercises ## Cvičení - scraping [
-
+[[[ excs Cvičení: Scraping
 - scraping-dhmo
 - scraping-kodim.cz
-  ]@
+]]]
 
 ## Web scraping vs JavaScript
 
@@ -190,10 +188,9 @@ stranka = session.get('https://react-shopping-cart-67954.firebaseapp.com/')
 stranka.html.render(sleep=5)
 ```
 
-@exercises ## Doporučené úložky na doma [
-
+[[[ excs Doporučené úložky na doma
 - kava-na-mall.cz
-  ]@
+]]]
 
 ## Čtení na doma
 

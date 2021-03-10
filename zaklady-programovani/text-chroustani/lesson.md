@@ -193,17 +193,15 @@ nebo
 'dokumenty/dapraha/python/priklady'
 ```
 
-@exercises ## Cvičení - řetězce, metody [
-
+[[[ excs Cvičení: Řetězce, metody
 - prevod-pismen
 - cisla-jako-text
 - cisla-v-textu
-  ]@
+]]]
 
-@exercises bonuses [
-
+[[[ excs Bonusy
 - chytrejsi-cisla-jako-text
-  ]@
+]]]
 
 ## Chroustání seznamů
 
@@ -271,13 +269,12 @@ udělat takto:
 [1, 3, 4, 1, 1, 1]
 ```
 
-@exercises ## Cvičení - chroustání seznamů [
-
+[[[ excs Cvičení: Chroustání seznamů
 - seznamy-cisel
 - seznamy-retezcu
 - seznam-teplot
 - cteni-kodu
-  ]@
+]]]
 
 ## Povinné čtení na doma
 
@@ -374,15 +371,13 @@ Výsledek `True`, pokud proměnná jmeno obsahuje hodnotu `'Martin'`.
 
 Výsledek `True`, pokud je délka seznamu různá od 4.
 
-@exercises ## Doporučené úložky na doma [
-
+[[[ excs Doporučené úložky na doma
 - overovani-veku
 - promitani
 - pocty-obyvatel
 - volby
-  ]@
+]]]
 
-@exercises ## Volitelné úložky na doma [
-
+[[[ excs Volitelné úložky na doma
 - elegantni-volby
-  ]@
+]]]

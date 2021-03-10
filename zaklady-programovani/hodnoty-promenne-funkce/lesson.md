@@ -93,15 +93,13 @@ v proměnné <var>vyplata</var> bude nadále uložena hodnota 2800. Pokud chceme
 >>> vyplata = 8 * sazba
 ```
 
-@exercises ## Cvičení - hodnoty, proměnné [
-
+[[[ excs Cvičení: Hodnoty, proměnné
 - vyplata
-  ]@
+]]]
 
-@exercises bonuses [
-
+[[[ excs Bonusy
 - kralici-farma
-  ]@
+]]]
 
 ## Funkce
 
@@ -196,10 +194,9 @@ Pro práci se seznamy se nám může hodit několik funkcí:
 `sorted()`
 : Vrátí setříděný seznam
 
-@exercises ## Cvičení - seznamy [
-
+[[[ excs Cvičení: Seznamy
 - pohyby-na-uctu
-  ]@
+]]]
 
 ## Povinné čtení na doma
 
@@ -249,19 +246,17 @@ Všimněte si, že nám po čtyřech týdnech zbude ještě pár dní. Pokud chc
 5
 ```
 
-@exercises ## Doporučené úložky na doma [
-
+[[[ excs Doporučené úložky na doma
 - uroky
 - delka-filmu
 - prumerne-teploty
 - prumer
-  ]@
+]]]
 
-@exercises ## Volitelné úložky na doma [
-
+[[[ excs Volitelné úložky na doma
 - novy-koberec
 - rozpeti
 - vlastni-min-max
 - stred-seznamu
 - stred-seznamu-2
-  ]@
+]]]
