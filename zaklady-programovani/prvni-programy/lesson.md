@@ -279,7 +279,7 @@ Pokud bychom mermomocí chtěli opravdu všechny hodnoty z rozsahu jako seznam, 
 [[[ excs Doporučené úložky na doma
 - minuty
 - fahrnheit-vs-celsius
-- cesta-k-souboru
+- uprava-retezce
 - hazeni-kostkou
 - karty-1
 ]]]
