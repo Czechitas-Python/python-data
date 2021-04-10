@@ -29,4 +29,4 @@ Pro obě tyto reprezentace vyřešte následující úkoly
 1. Vytvořte tabulku bez prvních dvou řádků.
 1. Vytvořte tabulku pouze z prvních dvou řádků.
 1. Vytvořte tabulku obsahující jen řádky 5, 6, 7, 8.
-1. Použitím proměnné <i>sloupce</i> vypište seznam teplot setřízený vzestupně podle velikosti. Šlo by to i pomocí proměnné <var>radky</var>, ale to ještě neumíme.
+1. Použitím proměnné <i>sloupce</i> vypište seznam teplot seřazený vzestupně podle velikosti. Šlo by to i pomocí proměnné <var>radky</var>, ale to ještě neumíme.

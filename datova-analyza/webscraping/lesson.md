@@ -12,12 +12,12 @@ V následující ukázce vidíte HTML kód celé webové stránky tak, jak by si
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Ukazka</title>
+  <title>Ukázka</title>
 </head>
 <body>
-  <h1>Nadpis prvni urovně</h1>
+  <h1>Nadpis první úrovně</h1>
   <p>
-    Text nějakeho odstavce, který obsahuje
+    Text nějakého odstavce, který obsahuje
     <em>zvýrazněný text</em> a také <strong>
     důležitý text.</strong>
   </p>
@@ -33,9 +33,9 @@ V následující ukázce vidíte HTML kód celé webové stránky tak, jak by si
     </p>
 
     <ol type="a">
-      <li>Prvni položka seznamu</li>
-      <li>Druha položka seznamu</li>
-      <li>Třeti položka seznamu</li>
+      <li>První položka seznamu</li>
+      <li>Druhá položka seznamu</li>
+      <li>Třetí položka seznamu</li>
     </ol>
   </div>
 </body>
@@ -68,7 +68,7 @@ Pokud by vás zajímalo, co vše je v HTML možné, přehled všech používaný
 
 ## Web scraping v Pythonu
 
-Abychom mohli s obsahem webových stránek pracovat přímo v Pythonu, potřebujeme nainstalovat modul, který umí číst HTML značky a pomocí těchto značek v HTML souborech vyhledávat. Takových modulů pro jazyk Pythoh existuje vícero. My použijeme balíček zvaný `requests-html`, který je určený přímo pro web scraping. Nainstalovat jej můžeme příkazem
+Abychom mohli s obsahem webových stránek pracovat přímo v Pythonu, potřebujeme nainstalovat modul, který umí číst HTML značky a pomocí těchto značek v HTML souborech vyhledávat. Takových modulů pro jazyk Python existuje vícero. My použijeme balíček zvaný `requests-html`, který je určený přímo pro web scraping. Nainstalovat jej můžeme příkazem
 
 ```shell
 pip3 install requests-html

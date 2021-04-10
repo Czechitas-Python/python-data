@@ -6,17 +6,17 @@ Každý počítač potřebuje takzvaný operační systém, například Windows 
 
 Hned takto z kraje se nám ovšem věci začínají malinko komplikovat tím, že neexistuje pouze jeden operační systém, který by všichni svorně používali. Máme minimálně tři různé možnosti, Windows, Mac OS a Linux. Běžní lidé na ulici používají Windows, hipstři a hipsterky v kavárnách používají Mac OS a vousatí geekové v kostkovaných košilích používají různé varianty Linuxu.
 
-Nejrozšířenější je v dnešní době systém Windows od Microsoftu. Ten používá většina lidí v práci i na osobních počítačích. Mac OS je operační systém dodávaný s počítači od firmy Apple. Nejpupolárnější je v USA ale u nás se také hojně používá. Linux naopak vzešel z akademického prostředí a vyvíjejí jej lidé, kteří věří ve svobodné nakládání se softwarem. Většinou jej používají nadšenci, kteří si rádi hrají s počítači a chtějí mít věci pod kontrolou. Linux se však snaží přiblížit také běžným uživatelům a vznikají proto distribuce jako Ubuntu, Linux Mint apod. které jsou na ovládání velmi podobné Windows a Mac OS.
+Nejrozšířenější je v dnešní době systém Windows od Microsoftu. Ten používá většina lidí v práci i na osobních počítačích. Mac OS je operační systém dodávaný s počítači od firmy Apple. Nejpopulárnější je v USA ale u nás se také hojně používá. Linux naopak vzešel z akademického prostředí a vyvíjejí jej lidé, kteří věří ve svobodné nakládání se softwarem. Většinou jej používají nadšenci, kteří si rádi hrají s počítači a chtějí mít věci pod kontrolou. Linux se však snaží přiblížit také běžným uživatelům a vznikají proto distribuce jako Ubuntu, Linux Mint apod. které jsou na ovládání velmi podobné Windows a Mac OS.
 
 ## Instalace nástrojů
 
-Abychom mohli začít programovat, je potřeba na počítač nainstalovat dva programy - samotný jazyk Python a Visual Studio Code. Postup se liší podle toho, jaký máte operační systém. Intrukce pro každý systém zvlášt naleznete níže.
+Abychom mohli začít programovat, je potřeba na počítač nainstalovat dva programy - samotný jazyk Python a Visual Studio Code. Postup se liší podle toho, jaký máte operační systém. Instrukce pro každý systém zvlášť naleznete níže.
 
 ### Windows
 
 Pokud máte počítač s Windows, následujte tyto kroky:
 
-1. Ujistěte se, že máte aktulizovaný systém. To zajistíte nejjednodušeji tak, že svůj počítač restartujete. Pokud jste již dlouho neaktualizovali, při restartu se může spustit aktualizace, která může trvat relativně dlouho, v extrémním případě třeba i hodinu. Nenechte se vyděsit, obrňte se trpělivostí a vyčkejte, dokud Windows opět nenaběhnou.
+1. Ujistěte se, že máte aktualizovaný systém. To zajistíte nejjednodušeji tak, že svůj počítač restartujete. Pokud jste již dlouho neaktualizovali, při restartu se může spustit aktualizace, která může trvat relativně dlouho, v extrémním případě třeba i hodinu. Nenechte se vyděsit, obrňte se trpělivostí a vyčkejte, dokud Windows opět nenaběhnou.
 1. Jděte na stránku [Python Releases for Windows](https://www.python.org/downloads/windows/), kde klikněte na **Latest Python 3 Release** a stáhněte **Windows x86-64 executable installer**. Stažený soubor spusťte. Rozeběhne se průvodce instalací.
 1. Na úvodní obrazovce je **velmi důležité** zaškrtnout volbu **Add Python 3.x to PATH** (viz obrázek)
    ![Instalace Pythonu](assets/python-setup.png){.fig .fig-100}
@@ -63,7 +63,7 @@ Pokud jste na Windows, napište do okna, které se objeví toto:
 $ py
 ```
 
-a stiskněte enter. Pokud jste na Macu nebo Linuxu, je třeba napsat
+a stiskněte Enter. Pokud jste na Macu nebo Linuxu, je třeba napsat
 
 ```shell
 $ python3
@@ -80,7 +80,7 @@ Aby se nám ve VS Code dobře programovalo, uložíme si některá užitečná n
 Open Settings (JSON)
 ```
 
-a stiskněte enter. Otevře se okno s editorem. Do jeho pravé časti vložte následující text.
+a stiskněte Enter. Otevře se okno s editorem. Do jeho pravé části vložte následující text.
 
 ```json
 {

@@ -111,7 +111,7 @@ slouží funkce `str()`. Mějme například takového proměnné:
 >>> minut = 35
 ```
 
-Cheme-li vyrobit hezky vypadající čas ve formátu 12:35, použijeme funkci
+Chceme-li vyrobit hezky vypadající čas ve formátu 12:35, použijeme funkci
 `str()` takto:
 
 ```pycon
@@ -224,10 +224,10 @@ formátu, tedy ke každé z nich přičíst jedničku. To provedeme pomocí takz
 [1, 3, 1, 2, 2, 4]
 ```
 
-**Poznámka:** Anglický termín _list comprehension_ nemá žádný oficiální český překlad. Čeští programátoři zcela běžne používají tento anglický termín. Je to ale trochu škoda, protože většina programátorských pojmů český ekvivalent má. Proto zde trochu na truc a také pro lehké odlehčení tématu zavádíme název vlastní a uvidíme, kolik absolventek Digitální akademie bude potřeba, aby se uchytil v běžné praxi 😜.
+**Poznámka:** Anglický termín _list comprehension_ nemá žádný oficiální český překlad. Čeští programátoři zcela běžně používají tento anglický termín. Je to ale trochu škoda, protože většina programátorských pojmů český ekvivalent má. Proto zde trochu na truc a také pro lehké odlehčení tématu zavádíme název vlastní a uvidíme, kolik absolventek Digitální akademie bude potřeba, aby se uchytil v běžné praxi 😜.
 
 Seznam můžeme zchroustat jakýmkoliv výrazem. Když si například půjdeme v
-záchvatu zodpovědnosti zaběhat, abychom vyvážili špatné svědomí z jezení
+záchvatu zodpovědnosti zaběhat, abychom vyvážili špatné svědomí z jedení
 věnečků, můžeme si například takto zaznamenat uběhnuté kilometry v prvních
 pěti dnech.
 
@@ -323,7 +323,7 @@ False
 ```
 
 Existuje také obrácený operátor `not in`, který vrací `True`, pokud daný
-seznam nebo retězec prvek <i>neobsahuje</i>.
+seznam nebo řetězec prvek <i>neobsahuje</i>.
 
 ```pycon
 >>> 3 not in [1, 2, 3]

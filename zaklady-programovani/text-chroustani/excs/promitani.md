@@ -16,7 +16,7 @@ nazvy = [
 delky = [136, 105, 82]
 ```
 
-Použijte chroustání seznamů a vyrobte seznam trvani, který bude obsahovat
+Použijte chroustání seznamů a vyrobte seznam trvání, který bude obsahovat
 délky filmů nikoliv jako čísla v minutách, ale jako řetězce v hodinách a v
 minutách. Výsledek tedy bude vypadat takto
 

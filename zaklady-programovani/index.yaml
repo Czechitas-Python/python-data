@@ -9,7 +9,7 @@ lessons:
     brief: Ukážeme si jak Pythonu posílat jednoduché příkazy a uvidíme, co nám odpoví.
   - title: Práce s textem, chroustání seznamů
     link: text-chroustani
-    brief: Přídáme nový datový typ, který nám umožní pracovat s textem a naučíme se zpracovávat seznamy.
+    brief: Přidáme nový datový typ, který nám umožní pracovat s textem a naučíme se zpracovávat seznamy.
   - title: První programy
     link: prvni-programy
     brief: Místo psaní příkazů do konzole se naučíme psát opravdové programy. Taky si ukážeme, jak číst data z příkazové řádky.

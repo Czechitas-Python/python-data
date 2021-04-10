@@ -9,7 +9,7 @@ Mějme seznam desetinných čísel zadaných jako text
 hodnoty = ['12', '1', '7', '-11']
 ```
 
-Potřebujeme k třetímu číslu v seznamu přičíst 4, aby vysledek vypadal takto:
+Potřebujeme k třetímu číslu v seznamu přičíst 4, aby výsledek vypadal takto:
 
 ```py
 hodnoty = ['12', '1', '11', '-11']

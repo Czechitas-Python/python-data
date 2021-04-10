@@ -1,4 +1,4 @@
-V předchozí lekci jsme si ukázali, jak se v Pandasu vytvoří DataFrame a jak z něj můžeme vybírat data pomocí různých způsobů dotazování. Nyní se posuneme o kus dále a ukážeme si, jak můžeme s DataFramy dělat složitější operace jako je filtrování chybějících hodnot, spojování a agregace.
+V předchozí lekci jsme si ukázali, jak se v Pandas vytvoří DataFrame a jak z něj můžeme vybírat data pomocí různých způsobů dotazování. Nyní se posuneme o kus dále a ukážeme si, jak můžeme s DataFramy dělat složitější operace jako je filtrování chybějících hodnot, spojování a agregace.
 
 ## Maturita
 
@@ -26,7 +26,7 @@ Abychom měli nějaký praktický příklad k procvičování, použijeme fiktiv
 
 V praxi se poměrně často setkáme s tím, že v datovém setu některé hodnoty chybí. Můžeme si například všimnout, že v tabulce U202 dvěma studentům chybí známka. To může znamenat, že se doma hrůzou zhroutili a na maturitu ani nedorazili. Na takové případy je třeba být připraven.
 
-V Pandasu, ale i obecně v datové analýze, je možné se s chybějícími daty vypořádat různými způsoby:
+V Pandas, ale i obecně v datové analýze, je možné se s chybějícími daty vypořádat různými způsoby:
 
 1. Nahradit je za jiné výchozí hodnoty.
 1. Odstranit všechny řádky s chybějícími daty z datového setu.
@@ -119,7 +119,7 @@ Výslednou tabulku si můžete stáhnout jako soubor [maturita.csv](assets/matur
 
 ## Joinování dat
 
-Už jsme si ukázali, jak v Pandase spojovat tabulky za sebe, což v SQL odpovídá příkazu UNION. Pandas však umí DataFrame také mergovat, což odpovídá SQL příkazu JOIN. Abychom si tento postup mohli předvést, nečteme si tabulku, která uvádí, kdo v který den předsedal maturitní zkoušecí komisi.
+Už jsme si ukázali, jak v Pandas spojovat tabulky za sebe, což v SQL odpovídá příkazu UNION. Pandas však umí DataFrame také mergovat, což odpovídá SQL příkazu JOIN. Abychom si tento postup mohli předvést, nečteme si tabulku, která uvádí, kdo v který den předsedal maturitní zkoušecí komisi.
 
 | den | datum     | jméno            |
 | --- | --------- | ---------------- |
@@ -135,7 +135,7 @@ Data si můžete stáhnout jako soubor [predsedajici.csv](assets/predsedajici.cs
 >>> preds = pandas.read_csv('predsedajici.csv', encoding='utf-8')
 ```
 
-Join tabulek se v Pandase dělá pomocí funkce `merge`. Nejprve ji otestujme pouze na datech z prvni mistnosti.
+Join tabulek se v Pandas dělá pomocí funkce `merge`. Nejprve ji otestujme pouze na datech z první místnosti.
 
 ```pycon
 >>> test = pandas.merge(u202, preds)
@@ -180,7 +180,7 @@ Výslednou tabulku si opět můžete stáhnout jako soubor [maturita2.csv](asset
 
 ## Grupování
 
-Z databází známe kromě UNION a JOIN také operaci GROUP BY. V Pandase ji provedeme tak, že pomocí metody <i>groupby</i> vyrobíme z DataFrame speciální objekt `DataFrameGroupBy`. Dejme tomu, že chceme grupovat podle sloupečku <i>místnost</i>.
+Z databází známe kromě UNION a JOIN také operaci GROUP BY. V Pandas ji provedeme tak, že pomocí metody <i>groupby</i> vyrobíme z DataFrame speciální objekt `DataFrameGroupBy`. Dejme tomu, že chceme grupovat podle sloupečku <i>místnost</i>.
 
 ```pycon
 >>> maturita2.groupby('místnost')

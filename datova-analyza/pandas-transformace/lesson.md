@@ -1,4 +1,4 @@
-Ještě než se pustíme do poslední lekce Pandasu, čeká nás představení jednoho velmi důležitého konceptu z jazyka Python, který posune naše programování zcela na novou úroveň. Naučíme se totiž psát vlastní funkce.
+Ještě než se pustíme do poslední lekce Pandas, čeká nás představení jednoho velmi důležitého konceptu z jazyka Python, který posune naše programování zcela na novou úroveň. Naučíme se totiž psát vlastní funkce.
 
 ## Vlastní funkce
 
@@ -29,7 +29,7 @@ Takovou funkci pak můžeme zavolat jako každou jinou se zcela konkrétními vs
 9.0
 ```
 
-Pojďme si blíže vysvětlit, jak jsme funkci vlastně vyrobili. Funkce se v Pythonu vytváří použitím kličového slova `def`. Za ním následuje název funkce, který si můžeme zvolit dle libosti. Za názvem funkce v závorkách uvedeme takzvané _vstupní parametry_. Parametry jsou speciální proměnné, do kterých nám sám Python uloží vstupy funkce ve chvíli, kdy ji zavoláme. Za dvojtečkou následuje blok kódu, který říká, co daná funkce dělá. Chceme-li z funkce vrátit výsledek, musíme použít klíčové slovo `return`.
+Pojďme si blíže vysvětlit, jak jsme funkci vlastně vyrobili. Funkce se v Pythonu vytváří použitím klíčového slova `def`. Za ním následuje název funkce, který si můžeme zvolit dle libosti. Za názvem funkce v závorkách uvedeme takzvané _vstupní parametry_. Parametry jsou speciální proměnné, do kterých nám sám Python uloží vstupy funkce ve chvíli, kdy ji zavoláme. Za dvojtečkou následuje blok kódu, který říká, co daná funkce dělá. Chceme-li z funkce vrátit výsledek, musíme použít klíčové slovo `return`.
 
 V našem případě má funkce dva vstupní parametry jménem w a h. Ve chvíli, kdy jsme funkci zavolali, do těchto parametrů Python uložil hodnoty 6 a 3. Poté se provedl kód funkce, který spočítal výsledek, a ten se nám po navrácení z funkce uložil do proměnné `area`.
 
@@ -56,7 +56,7 @@ def sumPositive(nums):
 - vetsi-ze-tri-cisel
 ]]]
 
-## Transformace dat v Pandasu
+## Transformace dat v Pandas
 
 Vytváření vlastních funkcí jsme si nevysvětlovali jen tak nazdařbůh. Naše nové schopnosti ihned využijeme při práci s daty. Často se nám totiž stane, že data nejsou v tak úplně dokonalém formátu, jak by se nám hodilo a musíme si je trošku pomasírovat, nebo-li odborně řečeno transformovat.
 
@@ -88,7 +88,7 @@ import pandas
 vaha = pandas.read_csv('vaha.txt', encoding='utf-8', sep='\t')
 ```
 
-Můžeme si všimnout, že ani v prvních sloupečku, kde naštěstí žádné překlepy nemáme, nejsou data úplně v šikovném formátu. Datumy máme jako jméno a číslo dne. To je první věc, kterou se pokusíme napravit.
+Můžeme si všimnout, že ani v prvních sloupečku, kde naštěstí žádné překlepy nemáme, nejsou data úplně v šikovném formátu. Data máme jako jméno a číslo dne. To je první věc, kterou se pokusíme napravit.
 
 Ty nejužitečnější operace pro transformaci dat najdeme na sériích. Vezměme si první sloupeček naší tabulky jako sérii. Pomocí vlastnosti `.str` můžeme pracovat se sérií řetězců úplně stejně, jako pracujeme s jedním řetězcem. Můžeme se tak například zbavit zbytečných názvů dní.
 
@@ -115,7 +115,7 @@ print(cisloDne)
 Name: den, dtype: object
 ```
 
-Pokud chceme smazat otravné tečký na konci tak, rozsahy už nám nepomohou
+Pokud chceme smazat otravné tečky na konci tak, rozsahy už nám nepomohou
 protože na některých místech tečka chybí. Můžeme ale použít metody `replace` a
 tečky nahradit prázdným řetězcem.
 
@@ -199,7 +199,7 @@ print(vaha)
 
 První sloupeček naší tabulky byl ještě relativně snadný. S druhým to bude o dost těžší. Data nejsou moc konzistentní a dostat je do rozumné podoby znamená řešit různé speciální případy pomocí různých podmínek. S takovou situací se v praxi potkáme poměrně často. Data často přicházejí v různých podobách a na nás je umět je převést do takového formátu, se kterým zvládneme pracovat.
 
-Pojďme nedjříve vyzkoumat, jakým nejjednodušším způsobem můžeme sloupeček s váhou transformovat. Po notné chvíli zírání do monitoru možná objevíme následující postup:
+Pojďme nejdříve vyzkoumat, jakým nejjednodušším způsobem můžeme sloupeček s váhou transformovat. Po notné chvíli zírání do monitoru možná objevíme následující postup:
 
 <i>Pokud se nám podaří rozdělit hodnotu podle mezery, můžeme první část převést na číslo. Pokud se to nepovede, můžeme dělit podle písmenka`'k'`.</i>
 
@@ -243,7 +243,7 @@ Nádhera! Naše data jsou nyní mnohem učesanější a můžeme je začít vyho
 
 ## Vlastní agregační funkce
 
-Naše dnešní povídání o Pandasu završíme tím, že si vytvoříme vlastní agregační funkci. Agregace pomocí vestavěných funkcí jako je součet, průměr, rozptyl apod. už jsme viděli. Takto bychom například mohli spočítat průměr váhy za každý týden zvlášť.
+Naše dnešní povídání o Pandas završíme tím, že si vytvoříme vlastní agregační funkci. Agregace pomocí vestavěných funkcí jako je součet, průměr, rozptyl apod. už jsme viděli. Takto bychom například mohli spočítat průměr váhy za každý týden zvlášť.
 
 ```py
 print(vaha.groupby('týden')['váha'].mean())
@@ -266,7 +266,7 @@ def spread(serie):
   return serie.max() - serie.min()
 ```
 
-Nyní stačí tuto funci předat metodě `agg`. Tuto metodu můžeme volat na jednotlivých sériích. Zjistěme například rozpětí všech vah za celých 14 dní.
+Nyní stačí tuto funkci předat metodě `agg`. Tuto metodu můžeme volat na jednotlivých sériích. Zjistěme například rozpětí všech vah za celých 14 dní.
 
 ```py
 print(vaha['váha'].agg(spread))
