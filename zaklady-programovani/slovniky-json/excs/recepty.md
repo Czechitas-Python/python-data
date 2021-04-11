@@ -3,7 +3,7 @@ title: Recepty
 demand: 3
 ---
 
-Prohlédněte na následujicí reprezentaci receptu:
+Pohlédněte na následující reprezentaci receptu:
 
 ```py
 {

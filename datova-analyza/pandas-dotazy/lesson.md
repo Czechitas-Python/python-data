@@ -29,9 +29,9 @@ Python nám umožňuje pracovat s velkými datovými sadami, vizualizovat data p
 
 Pandas je Python modul pro práci s daty. Přidává tedy do Pythonu to, na co před tím analytici používali jazyk R. Umožňuje pracovat s daty v ucelené struktuře podobné relačním databázím. Díky mnoha zabudovaným funkcím umí rychle zpracovat velké množství dat, vyhodnocovat je a čistit, čímž šetří datovému analytikovi mnoho času.
 
-Při práci s Pandasem se tedy nebudeme učit nové programovací techniky v Pythonu, ty už povětšinou známe. Budeme naopak objevovat co všechno Pandas umí a kolik práce nám dokáže ušetřit proti tomu, kdybychom používali na práci s daty čistý Python tak, jako jsme to dělali doposud.
+Při práci s Pandas se tedy nebudeme učit nové programovací techniky v Pythonu, ty už povětšinou známe. Budeme naopak objevovat co všechno Pandas umí a kolik práce nám dokáže ušetřit proti tomu, kdybychom používali na práci s daty čistý Python tak, jako jsme to dělali doposud.
 
-### Začátek práce s Pandasem
+### Začátek práce s Pandas
 
 Pandas je externí balíček, který musíme nejdříve nainstalovat, podobně jako jsme to dělali minulou lekci s balíčkem `requests`. Napíšeme tedy na příkazovou řádku
 
@@ -49,7 +49,7 @@ Pandas je relativně veliký balíček, který obsahuje mnoho modulů, takže in
 
 ## Základní práce s DataFrame
 
-V Pandasu se povětšinou pracuje s datovou strukturou zvanou DataFrame. Je to tabulková datová struktura založená na podobném principu jako například uspořádání dat v Excelu nebo v databázi. Můžeme jej považovat za další datový typ vedle slovníků a seznamů. DataFrame obsahuje data ve sloupcích, kde každý sloupec může mít různý datový typ, tedy například číslo, desetinné číslo, řetězec, pravdivostní hodnota a jiné.
+V Pandas se povětšinou pracuje s datovou strukturou zvanou DataFrame. Je to tabulková datová struktura založená na podobném principu jako například uspořádání dat v Excelu nebo v databázi. Můžeme jej považovat za další datový typ vedle slovníků a seznamů. DataFrame obsahuje data ve sloupcích, kde každý sloupec může mít různý datový typ, tedy například číslo, desetinné číslo, řetězec, pravdivostní hodnota a jiné.
 
 Abychom si práci s DataFrame vyzkoušeli, budeme používat následující cvičnou tabulku českých měst, která provozují tramvajovou dopravu.
 
@@ -89,7 +89,7 @@ plzen     PLK    170 936      3  137.65
 praha     PHA  1 294 513     24  496.00
 ```
 
-Pandas nabízí kromě funkce `read_csv()` také funkci pro čtení formátu JSON `read_json()` nebo dokonce funkci pro čtení přímo Excelovových tabulek `read_excel()`.
+Pandas nabízí kromě funkce `read_csv()` také funkci pro čtení formátu JSON `read_json()` nebo dokonce funkci pro čtení přímo Excelových tabulek `read_excel()`.
 
 ### Základní informace o tabulce
 
@@ -126,7 +126,7 @@ Abychom dokázali s naší tabulkou manipulovat, potřebujeme dobře rozumět to
 
 ![Pandas DataFrame](assets/dataframe.svg){.fig .fig-100}
 
-Do začátku je nejdůležitější si uvědomit, že Pandas pracuje nejen se jmény sloupců, ale také se **jmény řádků**. Jménům řádků se v Pandasu říká _index_. Již při načtení našeho DataFrame z CSV jsme zvolili, že řádky se budou jmenovat podle názvů měst (použili jsme parametr `index_col`). Zvolili jsme tedy sloupec `mesto` jako náš index. Díky tomu máme jednoznačné názvy sloupců i řádků a můžeme tak vytvářet různé dotazy na data z tabulky.
+Do začátku je nejdůležitější si uvědomit, že Pandas pracuje nejen se jmény sloupců, ale také se **jmény řádků**. Jménům řádků se v Pandas říká _index_. Již při načtení našeho DataFrame z CSV jsme zvolili, že řádky se budou jmenovat podle názvů měst (použili jsme parametr `index_col`). Zvolili jsme tedy sloupec `mesto` jako náš index. Díky tomu máme jednoznačné názvy sloupců i řádků a můžeme tak vytvářet různé dotazy na data z tabulky.
 
 ### Výběr podle jmen řádků a sloupců
 
@@ -218,7 +218,7 @@ Vyber všechny řádky pro sloupce od linek dál.
 
 ### Výběr podle pozic řádků a sloupců
 
-Při práci s většími tabulkami se nám může snadno stát, že nechceme vybírat sloupce nebo řádky podle jejich jmen, nýbrž podle jejich pozic. K tomu slouží metoda `iloc[]`. Tato metoda se používá velmi podobně jako metoda `loc[]` s tím rozdílem, že pro výběr použivá právě pozice, nikoliv jména. Pandas čísluje pozice řádků a sloupců uvnitř DataFramu stejně, jak jsme zvyklí, tedy vždy od nuly. Můžeme proto rovnou vyzkoušet několik dotazů.
+Při práci s většími tabulkami se nám může snadno stát, že nechceme vybírat sloupce nebo řádky podle jejich jmen, nýbrž podle jejich pozic. K tomu slouží metoda `iloc[]`. Tato metoda se používá velmi podobně jako metoda `loc[]` s tím rozdílem, že pro výběr používá právě pozice, nikoliv jména. Pandas čísluje pozice řádků a sloupců uvnitř DataFramu stejně, jak jsme zvyklí, tedy vždy od nuly. Můžeme proto rovnou vyzkoušet několik dotazů.
 
 Řádek na pozici 3 jako série.
 
@@ -262,7 +262,7 @@ litvinov      5   40.70
 most          5   86.94
 ```
 
-Metoda `iloc[]` je tedy velmi podobá metodě `loc[]`. Je zde však jeden významný rozdíl. Pokud používáme uvnitř `iloc[]` rozsahy (například `2:5`), horní hranice je **vždy vyjma** , tedy řádek 5 nebude do výberu zahrnut. Pokud však použjeme rozsah v metodě `loc[]`, bude horní mez **vždy včetně**. Takže rozsah `'liberec':'most'` bude obsahovat i řádek se jménem most.
+Metoda `iloc[]` je tedy velmi podobá metodě `loc[]`. Je zde však jeden významný rozdíl. Pokud používáme uvnitř `iloc[]` rozsahy (například `2:5`), horní hranice je **vždy vyjma** , tedy řádek 5 nebude do výběru zahrnut. Pokud však použijeme rozsah v metodě `loc[]`, bude horní mez **vždy včetně**. Takže rozsah `'liberec':'most'` bude obsahovat i řádek se jménem most.
 
 ## Ukládání dat
 
@@ -311,7 +311,7 @@ Načtená tabulka poté bude vypadat následovně
 | **6** | plzen    | PLK  | 170 936   | 3     | 137.65 |
 | **7** | praha    | PHA  | 1 294 513 | 24    | 496.00 |
 
-Všimněte si nového prvního sloupečku, který obsahuje index vytvořený Pandasem. Vzhledem k tomu, že index je nyní číselný, může být trochu matoucí rozdíl mezi použitím metod `loc[]` a `iloc[]`. Metoda `loc[]` vždycky vždycky vždycky používá pro výběr dat **jména** řádků (tedy index). V předchozích příkladech byla jména řádků názvy měst, nyní jsou jména řádků obyčejná čísla. Index je v tedy v tomto případě stejný, jako pozice řádků. Dejme tomu, že chceme získat všechna města od začátku tabulky po město Most. V předchozím příkladu, kde indexem byly názvy měst, bychom psali
+Všimněte si nového prvního sloupečku, který obsahuje index vytvořený Pandas. Vzhledem k tomu, že index je nyní číselný, může být trochu matoucí rozdíl mezi použitím metod `loc[]` a `iloc[]`. Metoda `loc[]` vždycky vždycky vždycky používá pro výběr dat **jména** řádků (tedy index). V předchozích příkladech byla jména řádků názvy měst, nyní jsou jména řádků obyčejná čísla. Index je v tedy v tomto případě stejný, jako pozice řádků. Dejme tomu, že chceme získat všechna města od začátku tabulky po město Most. V předchozím příkladu, kde indexem byly názvy měst, bychom psali
 
 ```pycon
 >>> mesta.loc[:'most']
@@ -323,7 +323,7 @@ Nyní, když máme index číselný píšeme
 >>> mesta.loc[:3]
 ```
 
-V tomto případě tedy volání `loc[]` vypadá stejně jako `iloc[]`. Rodíl je však v tom, že rozsahy v indexu vždy počítají horní mez **včetně** , kdežto rozsahy v pozicích počítají horní mez **vyjma**. Kdybychom tedy chtěli stejná data pomocí metody `iloc[]`, psali bychom
+V tomto případě tedy volání `loc[]` vypadá stejně jako `iloc[]`. Rozdíl je však v tom, že rozsahy v indexu vždy počítají horní mez **včetně** , kdežto rozsahy v pozicích počítají horní mez **vyjma**. Kdybychom tedy chtěli stejná data pomocí metody `iloc[]`, psali bychom
 
 ```pycon
 >>> mesta.iloc[:4]
@@ -434,7 +434,7 @@ Všimněte si, že výsledkem každého dotazu je opět DataFrame, který jsme s
 
 ### Logické operátory v podmínkách
 
-Před chvílí jsme viděli použití operátoru `&`, který v dotazech slouží jako logická spojka AND. Můžeme však také použít operátor `|`, který představuje logické OR. Chtějme například počty linek všech měst z Jihomomoravského nebo Olomouckéko kraje
+Před chvílí jsme viděli použití operátoru `&`, který v dotazech slouží jako logická spojka AND. Můžeme však také použít operátor `|`, který představuje logické OR. Chtějme například počty linek všech měst z Jihomoravského nebo Olomouckého kraje
 
 ```pycon
 >>> mesta[(mesta['kraj'] == 'JHM') | (mesta['kraj'] == 'OLK')][['linky']]
@@ -456,7 +456,7 @@ most          5
 olomouc       7
 ```
 
-Poslední operátor, který můžeme v podmínkách dotazů použít vypadá takto `~` a představuje negaci. Můžeme tak vypsat linky všech měst, které se nenacházeji v jednom ze zadaných krajů:
+Poslední operátor, který můžeme v podmínkách dotazů použít vypadá takto `~` a představuje negaci. Můžeme tak vypsat linky všech měst, které se nenacházejí v jednom ze zadaných krajů:
 
 ```pycon
 >>> mesta[~mesta['kraj'].isin(['JHM', 'ULK', 'OLK'])][['linky']]
@@ -472,7 +472,7 @@ Kombinací výše uvedených operátorů můžeme snadno vytvořit velmi komplik
 
 ## Převod mezi DataFrame a seznamy
 
-Python DataFrame je obsáhlý a komplikovaný objekt. Pokud s ním chceme pracovat, musíme znát spoustu triků a metod, které nám Pandas poskytuje. Občas se nám tak může hodit převést DataFrame na prachobyčejný Pythonovský seznam seznamů, což je teritorium, ve kterém jsme si po mnoha lekcích Pythonu zatím mnohem jistější než v Pandasu. K takovému převodu nám poslouží jednoduchý příkaz.
+Python DataFrame je obsáhlý a komplikovaný objekt. Pokud s ním chceme pracovat, musíme znát spoustu triků a metod, které nám Pandas poskytuje. Občas se nám tak může hodit převést DataFrame na prachobyčejný Pythonovský seznam seznamů, což je teritorium, ve kterém jsme si po mnoha lekcích Pythonu zatím mnohem jistější než v Pandas. K takovému převodu nám poslouží jednoduchý příkaz.
 
 ```pycon
 >>> data = mesta.values.tolist()
@@ -480,7 +480,7 @@ Python DataFrame je obsáhlý a komplikovaný objekt. Pokud s ním chceme pracov
 [['JHM', '379 527', 22, 230.22], ['LBK', '103 979', 6, 106.09], ['ULK', '24 143', 5, 40.7], ['ULK', '66 644', 5, 86.94], ['OLK', '100 494', 7, 103.36], ['MSK', '290 450', 15, 214.23], ['PLK', '170 936', 3, 137.65], ['PHA', '1 294 513', 24, 496.0]]
 ```
 
-Ve výsledných seznamech nám ovšem chybí názvy měst. Potíž je v tom, že index se v Pandasu nebere jako součást dat. Pokud chceme index vrátit do původního stavu a mít ho jako automaticky generovaná čísla řádků, můžeme použít metodu `reset_index()`. S její pomocí pak už dokážeme dostat z DataFramu čistá data takto
+Ve výsledných seznamech nám ovšem chybí názvy měst. Potíž je v tom, že index se v Pandas nebere jako součást dat. Pokud chceme index vrátit do původního stavu a mít ho jako automaticky generovaná čísla řádků, můžeme použít metodu `reset_index()`. S její pomocí pak už dokážeme dostat z DataFramu čistá data takto
 
 ```pycon
 >>> data = mesta.reset_index().values.tolist()
@@ -499,7 +499,7 @@ Můžeme však postupovat i obráceně a vyrobit DataFrame ze seznamu seznamů. 
 
 ## Čtení na doma
 
-Na konci této lekce už nejspíš máte základní intuici o tom, co to Pandas je a k čemu asi tak slouží. Abychom mohli pokročit dále, je potřeba si některé detaily fungování Pandasu objasnit více do hloubky, čímž předejdeme pozdějšímu zmatení.
+Na konci této lekce už nejspíš máte základní intuici o tom, co to Pandas je a k čemu asi tak slouží. Abychom mohli pokročit dále, je potřeba si některé detaily fungování Pandas objasnit více do hloubky, čímž předejdeme pozdějšímu zmatení.
 
 ### Série
 
@@ -644,7 +644,7 @@ Name: linky, dtype: int64
 
 ### Porovnávání sérií
 
-Série můžeme také provnávat. Zkusme například takovýto výraz
+Série můžeme také porovnávat. Zkusme například takovýto výraz
 
 ```pycon
 >>> mesta['linky'] > 10
@@ -662,7 +662,7 @@ Name: linky, dtype: bool
 
 Všimněte si, že výsledkem porovnání série s číslem je nová série, která obsahuje pravdivostní hodnoty. Ty jsou `True` právě tam, kde je porovnání splněno.
 
-Pravdivostní série jsou velmi zajimavá zvířátka. Můžeme je kombinovat pomocí operátorů `&` (a zároveň), `|` (nebo), `~` (negace). Můžeme tedy napsat něco podobného, co jsme již v této lekci viděli.
+Pravdivostní série jsou velmi zajímavá zvířátka. Můžeme je kombinovat pomocí operátorů `&` (a zároveň), `|` (nebo), `~` (negace). Můžeme tedy napsat něco podobného, co jsme již v této lekci viděli.
 
 ```pycon
 >>> (mesta['linky'] > 10) & (mesta['linky'] < 20)

@@ -2,7 +2,7 @@ V této kapitole si představíme úplné základy programování v Pythonu. Je�
 
 Abychom si mohli s Pythonem povídat, musíme spustit takzvanou _Python konzoli_. To je prostředí, ve kterém můžeme s Pythonem komunikovat a posílat mu příkazy.
 
-Pokud pracujete pod Windows, Python konzoli spustíte tak, že do termínálu napíšete příkaz
+Pokud pracujete pod Windows, Python konzoli spustíte tak, že do terminálu napíšete příkaz
 
 ```shell
 $ py
@@ -103,7 +103,7 @@ v proměnné <var>vyplata</var> bude nadále uložena hodnota 2800. Pokud chceme
 
 ## Funkce
 
-S čísly jsme zatím byli schopní pracovat pouze pomocí aritmetických operátorů. To nám ale brzy nebude stačit a budeme potřebovat složitejší operace, kterým říkáme <term cs="funkce" en="function">.
+S čísly jsme zatím byli schopní pracovat pouze pomocí aritmetických operátorů. To nám ale brzy nebude stačit a budeme potřebovat složitější operace, kterým říkáme <term cs="funkce" en="function">.
 
 Funkce je nějaký komplikovanější výpočet zabalený do jakési krabičky. Této krabičce dáme nějaké jméno, abychom jej mohli používat na různých místech v našem programu.
 
@@ -116,7 +116,7 @@ Dobrým příkladem je funkce `round()`, která pro nás dělá zaokrouhlování
 
 Tomuto zápisu se říká <term cs="volání funkce" en="function call">. Když funkci voláme, předáváme jí takzvaný <term cs="argument" en="argument">, v našem případě číslo 3.4. Když funkci zavoláme s nějakým argumentem, funkce takzvaně <term cs="vrátí" en="return"> výsledek.
 
-Funkci si můžeme představit například jako topinkovač. Topinkovač pro nás dělá nějakou užitečnou činnost, kterou chceme často opakovat (opéká topinky). Má svoje jméno (topinkovač). Do topinkovače dáme cheba (argument) a spustíme je (zavoláme). Topinkovač chvíli pracuje a pak nám vrátí výsledek - topinky. Důležité je, že nemusíme řešit jak to topinkovač vlastné dělá, že dokáže opéct chleba. Důležité pro nás je, že to umí a že jej můžeme kdykoliv použít.
+Funkci si můžeme představit například jako topinkovač. Topinkovač pro nás dělá nějakou užitečnou činnost, kterou chceme často opakovat (opéká topinky). Má svoje jméno (topinkovač). Do topinkovače dáme chleba (argument) a spustíme je (zavoláme). Topinkovač chvíli pracuje a pak nám vrátí výsledek - topinky. Důležité je, že nemusíme řešit jak to topinkovač vlastně dělá, že dokáže opéct chleba. Důležité pro nás je, že to umí a že jej můžeme kdykoliv použít.
 
 ![Toaster](assets/toaster.jpg){.fig .fig-50}
 
@@ -124,7 +124,7 @@ Funkci si můžeme představit například jako topinkovač. Topinkovač pro ná
 
 Zatím jsme byli schopní do jedné proměnné uložit pouze jednu hodnotu. Pro práci s daty ale budeme potřebovat pracovat s větším množstvím hodnot než pouze s jednou. K tomu nám poslouží takzvané <term cs="seznamy" en="lists">.
 
-Představme si, že si chci zaznamenat počet vanilkových věnečků snězených za posledních 7 dní. V Pythonu si můžu pro tento účel vytvořit seznam, který si uložím do vhodně pojmenované proměnné.
+Představme si, že si chci zaznamenat počet vanilkových věnečků snědených za posledních 7 dní. V Pythonu si můžu pro tento účel vytvořit seznam, který si uložím do vhodně pojmenované proměnné.
 
 ```pycon
 >>> venecky = [1, 2, 4, 1, 6, 0, 1]
@@ -211,7 +211,7 @@ Během přednášky jsme neprobrali úplně všechny aritmetické operátory, kt
 - Celočíselné dělení: **`//`**
 - Zbytek po dělení: **`%`**
 
-Mocnění nás zachrání od zdlouhavého opakovného násobení, tedy místo abychom psali
+Mocnění nás zachrání od zdlouhavého opakovaného násobení, tedy místo abychom psali
 
 ```pycon
 >>> 2*2*2*2*2
