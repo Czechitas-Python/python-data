@@ -150,14 +150,14 @@ html.find('ol[type="a"] li')
 
 ## Scraping přes internet
 
-Zatím jsme scrapovali pouze stránku, kterou jsme měli uloženou na disku. Pomocí modulu `requests-html` můžeme však také snadno otevřít stránku přímo na internetu. Na adrese <http://scrape.kodim.cz/sample/index> najdete naši malou ukázkovou stránku z úvodu. Na adrese <http://scrape.kodim.cz/dhmo/index> najdete také finální verzi stránky šířící poplach ohledně DHMO.
+Zatím jsme scrapovali pouze stránku, kterou jsme měli uloženou na disku. Pomocí modulu `requests-html` můžeme však také snadno otevřít stránku přímo na internetu. Na adrese <https://apps.kodim.cz/python-data/scrape> najdete naši malou ukázkovou stránku z úvodu. Na adrese <https://apps.kodim.cz/python-data/dhmo> najdete také finální verzi stránky šířící poplach ohledně DHMO.
 
 Načteme v Pythonu první z odkazů a stejně jako prve vypíšeme texty všech odstavců.
 
 ```py
 from requests_html import HTMLSession
 session = HTMLSession()
-stranka = session.get('http://scrape.kodim.cz/sample/index')
+stranka = session.get('https://apps.kodim.cz/python-data/sample')
 for odstavec in stranka.html.find('p'):
   print(odstavec.text)
 ```
