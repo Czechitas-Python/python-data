@@ -157,7 +157,7 @@ Načteme v Pythonu první z odkazů a stejně jako prve vypíšeme texty všech 
 ```py
 from requests_html import HTMLSession
 session = HTMLSession()
-stranka = session.get('https://apps.kodim.cz/python-data/sample')
+stranka = session.get('https://apps.kodim.cz/python-data/scrape')
 for odstavec in stranka.html.find('p'):
   print(odstavec.text)
 ```
