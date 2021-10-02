@@ -1,6 +1,6 @@
 ---
 title: Dny v měsíci
-demand: 2
+demand: 4
 ---
 
 Napište program, který bude mít přímo v kódu zapsaný počet dní v jednotlivých měsících takto:
