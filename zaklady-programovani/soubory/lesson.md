@@ -73,7 +73,7 @@ Upravíme tedy zápis do souboru v našem předchozím programu takto:
 ```
 
 [[[ excs Cvičení: Zápis do souborů
-- rezepsana-vyplata
+- rozepsana-vyplata
 - hody-kostkou
 ]]]
 
