@@ -73,9 +73,12 @@ Upravíme tedy zápis do souboru v našem předchozím programu takto:
 ```
 
 [[[ excs Cvičení: Zápis do souborů
-- dny-v-mesici
-- rezepsana-vyplata
+- rozepsana-vyplata
 - hody-kostkou
+]]]
+
+[[[ excs Bonus
+- dny-v-mesici
 ]]]
 
 ## Povinné čtení na doma

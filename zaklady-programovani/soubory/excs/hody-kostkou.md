@@ -1,6 +1,6 @@
 ---
 title: Hody kostkou
-demand: 2
+demand: 3
 ---
 
 Napište program, který vytvoří seznam deseti náhodných hodů dvanáctistěnnou kostkou.

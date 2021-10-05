@@ -1,6 +1,6 @@
 ---
 title: Počet slov
-demand: 2
+demand: 3
 ---
 
 Stáhněte si odevzdanou [slohovou práci](assets/praha.txt). Zadání bylo sepsat text o nejméně 150ti slovech pojednávající o našem hlavním městě. Napište program, který spočítá počet slov v tomto textu, abychom věděli, zda bylo zadání formálně splněno. Nechte se vést následujícím návodem.
