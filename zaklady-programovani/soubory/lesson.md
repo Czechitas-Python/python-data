@@ -6,18 +6,23 @@ V praxi často máme data uložena v nějakém souboru na disku v nějakém text
 
 Pro naše první experimenty si stáhněte soubor [mereni.txt](assets/mereni.txt). Ten obsahuje naměřené teploty během týdne, které jsme už několikrát v našich programech používali.
 
-Pokud chceme otevřít tento soubor v nějakém našem programu, nejjednodušší je zkopírovat jej do téže složky, ve které máme program uložený. Potom v programu použijeme funkci `open()`, která slouží k otevírání souborů. Náš kód pak může vypadat například takto:
+Pokud chceme otevřít tento soubor v nějakém našem programu, nejjednodušší je zkopírovat jej do téže složky, ve které máme program uložený. Potom v programu použijeme funkci `open()`, která slouží k otevírání souborů. Nejčastěji se soubor otevírá v kombinaci se klíčovým slovem `with`. Tím automaticky zajistíme uzavření souboru a nebudeme ho blokovat. Současně si otevřený soubor musíme pojmenovat. Jméno vložíme za další klíčové slovo `as`. Náš soubor `mereni.text` tedy dostal "přezdívku" `vstup`.
+
+Všimi si, že prostřední řádek je odsazený o dvě mezery vpravo. To není náhoda, tento řádek se totiž nachází v **bloku**. Pomocí bloku říkáme, v jaké části programu chceme pracovat s naším souborem a kdy již ho Python může uzavřít. Mezi řádkem 2 a 3 tedy v tichosti dojde k uzavření souboru. Nám to ale vůbec nevadí, protože obsah souboru máme překopírovaný do seznamu `radky` a ten nám nikam nezmizí.
+
+Na konci úvodního řádku bloku vkládáme dvojtečku. Dvojtečka na konci řádku pak pro nás bude sloužit jako připomenutí, abychom alespoň jeden následující řádek odsadili. Ve stresu z toho ale být nemusíme, protože editor kódu to většinou udělá za nás.
+
+Náš kód pak může vypadat například takto:
 
 ```py
-vstup = open('mereni.txt', encoding='utf-8')
-radky = [radek for radek in vstup]
-vstup.close()
+with open('mereni.txt', encoding='utf-8') as vstup:
+  radky = vstup.readlines()
 print(radky)
 ```
 
-Jakmile soubor otevřeme voláním funkce `open()`, proměnná vstup bude obsahovat jednotlivé řádky našeho souboru seřazené jeden za druhým. Není to přímo Python seznam řádků, ale i tak můžeme použít chroustání seznamů a projít soubor řádek po řádku a uložit si tyto řádky do skutečného seznamu. Vzpomeňte si na hodnotu `range`, která také není technicky seznamem, ale můžeme ji chroustat jako by jím byla.
+Jakmile soubor otevřeme voláním funkce `open()`, proměnná vstup bude obsahovat jednotlivé řádky našeho souboru seřazené jeden za druhým. Celý obsah souboru uložíme do seznamu `radky` pomocí metody `readlines()`. Ta uloží každý řádek souboru jako jeden prvek seznamu.
 
-Jakmile jsme se souborem hotovi, musíme ho vždy zavřít voláním metody `close()`. Výstup z našeho programu pak bude vypadat takto:
+Výstup z našeho programu pak bude vypadat takto:
 
 ```py
 ['po\t17.3\n', 'út\t16.8\n', 'st\t15.1\n', 'čt\t13.2\n', 'pá\t14.0\n', 'so\t13.9\n', 'ne\t15.8\n']
@@ -25,14 +30,44 @@ Jakmile jsme se souborem hotovi, musíme ho vždy zavřít voláním metody `clo
 
 Výstupem je skutečně seznam řetězců, které ale obsahují znaky zpětných lomítek. Tato zpětná lomítka slouží k vyjádření speciálních znaků, které by jinak nešly do řetězce vložit. Anglicko/česky se jim říká _escape sekvence_ a my si představíme základní dvě. Nový řádek se píše jako `'\n'`, tabulátor jako `'\t'`. Existuje jich ještě mnoho dalších, ale tyto nám zatím postačí.
 
-Vidíme tedy, že každý náš řádek končí znakem nového řádku a hodnoty na něm jsou odděleny tabulátorem. Pokud bychom chtěli načtené řádky rozdělit na jednotlivé hodnoty, bude náš program vypadat například takto:
+Vidíme tedy, že každý náš řádek končí znakem nového řádku a hodnoty na něm jsou odděleny tabulátorem. To není úplně ideální, protože v každém řetězci máme vložené dvě informace - den a změřenou hodnotu. Abychom například mohli spočítat průměrnou hodnotu měření, musíme tyto hodnoty rozdělit do samostatných prvků seznamu.
+
+Zkusme si nejprve zpracovat první měření. Uložíme si první prvek seznamu `radky` do proměnné `prvni_mereni`. Nyní máme den měření i hodnotu v řetězci `prvni_mereni` a víme, že jsou odděleny tabulátorem. Řekneme tedy Pythonu, aby řetězec rozdělil na seznam dvou hodnot a napovíme mu, že tyto dvě hodnoty jsou odděleny tabulátorem. K rozdělení slouží metoda `split()`. Poté hodnotu měření převedeme na desetínné číslo pomocí funkce `float()`.
 
 ```py
-vstup = open('mereni.txt', encoding='utf-8')
-radky = [radek.split('\t') for radek in vstup]
-vstup.close()
-radky = [[radek[0], float(radek[1])] for radek in radky]
-print(radky)
+mereni = radky[0]
+mereni_seznam = mereni.split("\t")
+hodnota = float(mereni_seznam[1])
+print(hodnota)
+```
+
+Tím máme vyřešené první měření a s trochou kopírování a přepisování bychom dokázali stejně zpracovat měření za celý týden. Co ale dělat v případě, že bychom měli hodnoty za celý rok nebo desetiletí? Šlo by napsat instrukci pro zpracování řádku pouze jednou a říct Pythonu, aby stejnou posloupnost příkazů provedl pro každý řádek? Samozřejmě šlo a slouží k tomu cykly
+
+## Cyklus FOR
+
+Cyklus je opakování nějaké činnosti. Nejčastěji chceme opakovat nějakou činnost pro každý prvek nějaké sekvence.
+
+Vezměme tedy náš kód na zpracování prvního měření a vložme ho do cyklu. Tím získáme číselnou hodnotu všech měření, a to s přidáním jediného řádku do našeho programu. 
+
+Řádek začíná klíčovým slovem `for`. Následně musíme vytvořit proměnnou, do které budou postupně vkládány jednotlivé prvky seznamu. Pro proměnnou použijeme už "zavedený" název `mereni` a její název vložíme hned za klíčové slovo `for`. Následně použijeme další klíčové slovo `in` a za něj vložíme seznam `radky`, protože z tohoto seznamu budeme postupně "vytahovat" jednotlivé prvky.
+
+```py
+for mereni in radky:
+  mereni_seznam = mereni.split("\t")
+  hodnota = float(mereni_seznam[1])
+  print(hodnota)
+```
+
+Samotné vypsání hodnot nám většinou příliš nepomůže. Můžeme ale zjistit průměrnou hodnotu měření. K tomu musíme hodnoty všech měření sečíst a následně vydělit součet počtem měření.
+
+```py
+soucet = 0
+for mereni in radky:
+  mereni_seznam = mereni.split("\t")
+  hodnota = float(mereni_seznam[1])
+  soucet = soucet + hodnota
+prumer = soucet / len(radky)
+print(prumer)
 ```
 
 [[[ excs Cvičení: Čtení ze souborů
@@ -45,18 +80,19 @@ print(radky)
 
 Když už umíme data ze souboru číst, pojďme se také naučit jak data do souboru zapsat. Konec konců, naše programy budou potřebovat nejen data zpracovávat ale také data produkovat.
 
-Zápis do souboru se provádí pomocí metody `write()`. Ta jako svůj parametr bere řetězec a zapíše jej do toho otevřeného souboru, na kterém ji zavoláme. Abychom ale mohli tuto metodu zavolat, musíme náš soubor otevřít takzvaně pro zápis. K tomu nám poslouží druhý parametr funkce `open()`. Pojďme si to vyzkoušet na příkladu.
+Zápis do seznamu souboru se provádí pomocí metody `writelines()`. Ta jako svůj parametr bere seznam a zapíše jej do toho otevřeného souboru, na kterém ji zavoláme. Abychom ale mohli tuto metodu zavolat, musíme náš soubor otevřít takzvaně **pro zápis**. K tomu nám poslouží druhý parametr funkce `open()`. Pojďme si to vyzkoušet na příkladu.
 
 Dejme tomu, že máme seznam uživatelů, které chceme zapsat do souboru `uzivatele.txt`.
 
 ```py
 jmena = ['Roman', 'Jana', 'Radek', 'Petra', 'Vlasta']
-soubor = open('uzivatele.txt', 'w', encoding='utf-8')
-[soubor.write(jmeno) for jmeno in jmena]
-soubor.close()
+with open('uzivatele.txt', 'w', encoding='utf-8') as vystup:
+  vystup.writelines(jmena)
 ```
 
-Všimněte si druhého parametru `'w'` při volání funkce `open()`. Díky němu se nám soubor otevře pro zápis. Pokud soubor na disku ještě neexistuje, funkce `open()` jej před otevřením vytvoří. Pokud soubor již existuje, funkce `open()` vymaže před otevřením jeho obsah. Vždy tedy pomocí metody `write()` zapisujeme do prázdného souboru.
+Všimněte si druhého parametru `'w'` při volání funkce `open()`. Díky němu se nám soubor otevře pro zápis. Pokud soubor na disku ještě neexistuje, funkce `open()` jej před otevřením vytvoří. Pokud soubor již existuje, funkce `open()` **vymaže** před otevřením jeho obsah. Vždy tedy pomocí metody `write()` zapisujeme do prázdného souboru.
+
+Pokud chceme stávající obsah souboru ponechat a dopsat nové hodnoty na jeho konec, můžeme použít parametr `'a'` (append).
 
 Pokud však otevřete soubor, který vytvořil náš předchozí program, uvidíte následující výsledek
 
@@ -64,13 +100,18 @@ Pokud však otevřete soubor, který vytvořil náš předchozí program, uvidí
 RomanJanaRadekPetraVlasta
 ```
 
-Je to proto, že metoda `write()` na rozdíl od funkce `print()` nedělá
-automatické odřádkování. Konce řádků tedy do souboru musíme zapsat my.
+Je to proto, že metoda `writelines()` nedělá automatické odřádkování. Důvodem je, že ne vždy chceme vložit každý prvek seznamu na nový řádek souboru. Konce řádků tedy do souboru musíme zapsat my. Jedna z možností, jak to udělat, je zapisovat jména postupně a ke každému řetězci se jménem přidat nám již známý symbol `\n` pro ukončení řádku.
+
 Upravíme tedy zápis do souboru v našem předchozím programu takto:
 
 ```py
-[soubor.write(jmeno + '\n') for jmeno in jmena]
+jmena = ['Roman', 'Jana', 'Radek', 'Petra', 'Vlasta']
+with open('uzivatele.txt', 'w', encoding='utf-8') as vystup:
+  for jmeno in jmena:
+    vystup.write(jmeno + '\n')
 ```
+
+V tomto případě máme již dva do sebe vnořené bloky. Důležité je, že každý blok znamená posunutí začátku řádku doprava oproti nadřazenému bloku, pokud tedy používáme odsazení o 2 znaky, vnitřní blok bude odsazený o 4.
 
 [[[ excs Cvičení: Zápis do souborů
 - rozepsana-vyplata
