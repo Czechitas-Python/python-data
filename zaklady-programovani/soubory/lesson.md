@@ -122,6 +122,49 @@ V tomto případě máme již dva do sebe vnořené bloky. Důležité je, že k
 - dny-v-mesici
 ]]]
 
+## Další možnosti cyklů
+
+Pojďme se podívat na další možnosti, jak s cykly pracovat.
+
+Uvažujme, že máme seznam uživatelských jmen v nějaké organizaci a chceme pro ně vytvořit e-mailové adresy. E-amilová adresy vždy obsahují zavináč a doménu dané firmy, např. "@czechitas.cz". Vytvořme tedy cyklus, který z uživatelských jmen vytvoří e-mailový adresy.
+
+```py
+jmena = ['petr', 'pavel', 'jitka', 'jana']
+for jmeno in jmena:
+  mail = jmeno + '@czechitas.cz'
+  print(mail)
+```
+
+Často chceme vytvořit nový seznam na základě existujícího seznamu. Například níže máme seznam `mereni_kg` s hmotnostmi jednotlivých náprav nákladního vozidla v kilogramech a my bychom rádi pro větší přehlednost získali seznam v tunách. Vytvoříme si tedy prázdný seznam `mereni_kg` a pomocí cyklu projdeme seznam `mereni_kg` a každou jeho hodnotu vydělíme tisícem a vložíme jej na konec seznamu `mereni_tuny`.
+
+```py
+mereni_kg = [12521, 11947, 9750, 8946, 10473]
+mereni_tuny = []
+for hodnota in mereni_kg:
+  mereni_tuny.append(hodnota / 1000)
+print(mereni_tuny)
+```
+
+Tento způsob je perfektně funkční, jeho slabinou je nižší rychlost. Na našem seznamu rozdíl nepoznáme, ale kdybychom potřebovali zpracovat milion hodnot, může se určitá neefektivita tohoto řešení projevit.
+
+Pro jednoduché transformace ("chroustání") jednoho seznamu na jiný se často používá technika označovaná jako list comprehension. Ta je velmi blízká cyklu, liší se však zápisem. Celý zápis začíná a končí hranatými závorkami. Uvnitř máme opět klíčová slova `for` a `in`, vytváříme "dočasnou" proměnnou `hodnota` a zapisujeme, že naším "vstupním" seznamem je `mereni_kg`. Úpravu, kterou chceme vložit do nového seznamu, zapisujeme **před** slovo `for`. V našem případě tedy na začátek zápisu zapíšeme `hodnota / 1000`.
+
+```py
+mereni_kg = [12521, 11947, 9750, 8946, 10473]
+mereni_tuny = [hodnota / 1000 for hodnota in mereni_kg]
+print(mereni_tuny)
+```
+
+Výsledek obou zápisů je stejný. List comprehention se tedy hodí především v případě, že chceme "přechroustat" jeden seznam do druhého pomocí nějaké jednoduché úpravy.
+
+Podobně jako početní operace můžeme hodnoty zaokrouhlit, např. pomocí metody `round()` můžeme vytvořit seznam hodnot v celých tunách.
+
+```py
+mereni_tuny = [round(hodnota) for hodnota in mereni_tuny]
+print(mereni_tuny)
+```
+
+
 ## Povinné čtení na doma
 
 Na lekci jsme si ukazovali, jak číst a zapisovat data z/do textových souborů. Co ale jiné formáty, jako například Excel?
