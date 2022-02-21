@@ -86,9 +86,8 @@ Ve Visual Studiu ve složce s naší ukázkovou stránkou si vytvořte program `
 
 ```py
 from requests_html import HTML
-soubor = open('sample.html', encoding="utf-8")
-obsah = soubor.read()
-soubor.close()
+with open('sample.html', encoding='utf-8') as soubor:
+  obsah = soubor.read()
 html = HTML(html=obsah)
 ```
 
