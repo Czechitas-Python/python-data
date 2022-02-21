@@ -52,7 +52,7 @@ Dejme tomu, že máme seznam uživatelů, které chceme zapsat do souboru `uziva
 
 ```py
 jmena = ['Roman', 'Jana', 'Radek', 'Petra', 'Vlasta']
-with open('uzivatele.txt', 'w', encoding='utf-8') as vystup:
+with open('uzivatele.txt', mode='w', encoding='utf-8') as vystup:
   vystup.writelines(jmena)
 ```
 
@@ -70,7 +70,7 @@ Upravíme tedy zápis do souboru v našem předchozím programu takto:
 
 ```py
 jmena = [jmeno + '\n' for jmeno in jmena]
-with open('uzivatele.txt', 'w', encoding='utf-8') as vystup:
+with open('uzivatele.txt', mode='w', encoding='utf-8') as vystup:
   vystup.writelines(jmena)
 ```
 

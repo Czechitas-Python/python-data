@@ -134,9 +134,8 @@ V Pythonu je velice jednoduché převést JSON na obyčejný Python slovník. St
 
 ```py
 import json
-soubor = open('absolventi.json', encoding='utf-8')
-text = soubor.read()
-soubor.close()
+with open('absolventi.json', encoding='utf-8') as soubor:
+  text = soubor.read()
 absolventi = json.loads(text)
 print(absolventi)
 ```
@@ -147,9 +146,8 @@ Pokud bychom se nechtěli sami obtěžovat se čtením souboru, můžeme použí
 
 ```py
 import json
-soubor = open('absolventi.json', encoding='utf-8')
-absolventi = json.load(soubor)
-soubor.close()
+with open('absolventi.json', encoding='utf-8') as soubor:
+  absolventi = json.load(soubor)
 print(absolventi)
 ```
 
@@ -162,8 +160,8 @@ Zápis JSON dat do souboru je podobně jednoduché jako čtení. Stačí si osvo
 ```py
 import json
 hodiny = {'po': 8, 'ut': 7, 'st': 6, 'ct': 7, 'pa': 8}
-soubor = open('hodiny.json', 'w', encoding='utf-8')
-json.dump(hodiny, soubor)
+with open('hodiny.json', 'w', encoding='utf-8') as soubor:
+  json.dump(hodiny, soubor)
 soubor.close()
 ```
 
