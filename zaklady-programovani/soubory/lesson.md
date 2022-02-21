@@ -6,18 +6,20 @@ V praxi často máme data uložena v nějakém souboru na disku v nějakém text
 
 Pro naše první experimenty si stáhněte soubor [mereni.txt](assets/mereni.txt). Ten obsahuje naměřené teploty během týdne, které jsme už několikrát v našich programech používali.
 
-Pokud chceme otevřít tento soubor v nějakém našem programu, nejjednodušší je zkopírovat jej do téže složky, ve které máme program uložený. Potom v programu použijeme funkci `open()`, která slouží k otevírání souborů. Náš kód pak může vypadat například takto:
+Pokud chceme otevřít tento soubor v nějakém našem programu, nejjednodušší je zkopírovat jej do téže složky, ve které máme program uložený. Potom v programu použijeme funkci `open()`, která slouží k otevírání souborů. Nejčastěji se soubor otevírá v kombinaci se klíčovým slovem `with`. Tím automaticky zajistíme uzavření souboru a nebudeme ho blokovat. Současně si otevřený soubor musíme pojmenovat. Jméno vložíme za další klíčové slovo `as`. Náš soubor `mereni.text` tedy dostal "přezdívku" `vstup`.
 
+Všimi si, že prostřední řádek je odsazený o dvě mezery vpravo. To není náhoda, tento řádek se totiž nachází v **bloku**. Pomocí bloku říkáme, v jaké části programu chceme pracovat s naším souborem a kdy již ho Python může uzavřít. Mezi řádkem 2 a 3 tedy v tichosti dojde k uzavření souboru. Nám to ale vůbec nevadí, protože obsah souboru máme překopírovaný do seznamu `radky` a ten nám nikam nezmizí.
+
+Na konci úvodního řádku bloku vkládáme dvojtečku. Dvojtečka na konci řádku pak pro nás bude sloužit jako připomenutí, abychom alespoň jeden následující řádek odsadili. Ve stresu z toho ale být nemusíme, protože editor kódu to většinou udělá za nás. Celý obsah souboru uložíme do seznamu `radky` pomocí metody `readlines()`. Ta uloží každý řádek souboru jako jeden prvek seznamu.
+
+Náš kód pak může vypadat například takto:
 ```py
-vstup = open('mereni.txt', encoding='utf-8')
-radky = [radek for radek in vstup]
-vstup.close()
+with open('mereni.txt', encoding='utf-8') as vstup:
+  radky = vstup.readlines()
 print(radky)
 ```
 
-Jakmile soubor otevřeme voláním funkce `open()`, proměnná vstup bude obsahovat jednotlivé řádky našeho souboru seřazené jeden za druhým. Není to přímo Python seznam řádků, ale i tak můžeme použít chroustání seznamů a projít soubor řádek po řádku a uložit si tyto řádky do skutečného seznamu. Vzpomeňte si na hodnotu `range`, která také není technicky seznamem, ale můžeme ji chroustat jako by jím byla.
-
-Jakmile jsme se souborem hotovi, musíme ho vždy zavřít voláním metody `close()`. Výstup z našeho programu pak bude vypadat takto:
+Výstup z našeho programu pak bude vypadat takto:
 
 ```py
 ['po\t17.3\n', 'út\t16.8\n', 'st\t15.1\n', 'čt\t13.2\n', 'pá\t14.0\n', 'so\t13.9\n', 'ne\t15.8\n']
@@ -28,9 +30,8 @@ Výstupem je skutečně seznam řetězců, které ale obsahují znaky zpětných
 Vidíme tedy, že každý náš řádek končí znakem nového řádku a hodnoty na něm jsou odděleny tabulátorem. Pokud bychom chtěli načtené řádky rozdělit na jednotlivé hodnoty, bude náš program vypadat například takto:
 
 ```py
-vstup = open('mereni.txt', encoding='utf-8')
-radky = [radek.split('\t') for radek in vstup]
-vstup.close()
+with open('mereni.txt', encoding='utf-8') as vstup:
+  radky = vstup.readlines()
 radky = [[radek[0], float(radek[1])] for radek in radky]
 print(radky)
 ```
@@ -51,12 +52,11 @@ Dejme tomu, že máme seznam uživatelů, které chceme zapsat do souboru `uziva
 
 ```py
 jmena = ['Roman', 'Jana', 'Radek', 'Petra', 'Vlasta']
-soubor = open('uzivatele.txt', 'w', encoding='utf-8')
-[soubor.write(jmeno) for jmeno in jmena]
-soubor.close()
+with open('uzivatele.txt', 'w', encoding='utf-8') as vystup:
+  vystup.writelines(jmena)
 ```
 
-Všimněte si druhého parametru `'w'` při volání funkce `open()`. Díky němu se nám soubor otevře pro zápis. Pokud soubor na disku ještě neexistuje, funkce `open()` jej před otevřením vytvoří. Pokud soubor již existuje, funkce `open()` vymaže před otevřením jeho obsah. Vždy tedy pomocí metody `write()` zapisujeme do prázdného souboru.
+Všimněte si druhého parametru `'w'` při volání funkce `open()`. Díky němu se nám soubor otevře pro zápis. Pokud soubor na disku ještě neexistuje, funkce `open()` jej před otevřením vytvoří. Pokud soubor již existuje, funkce `open()` vymaže před otevřením jeho obsah. Vždy tedy pomocí metody `write()` zapisujeme do prázdného souboru. Pokud bychom chtěli přidat nový obsah na konec souboru, místo `'w'` použijeme `'a'`.
 
 Pokud však otevřete soubor, který vytvořil náš předchozí program, uvidíte následující výsledek
 
@@ -64,12 +64,14 @@ Pokud však otevřete soubor, který vytvořil náš předchozí program, uvidí
 RomanJanaRadekPetraVlasta
 ```
 
-Je to proto, že metoda `write()` na rozdíl od funkce `print()` nedělá
-automatické odřádkování. Konce řádků tedy do souboru musíme zapsat my.
+Je to proto, že metoda `writelines()` na rozdíl od funkce `print()` nedělá
+automatické odřádkování. Dopíšeme tedy konce řádků k jednotlivým jménům v seznamu.
 Upravíme tedy zápis do souboru v našem předchozím programu takto:
 
 ```py
-[soubor.write(jmeno + '\n') for jmeno in jmena]
+jmena = [jmeno + '\n' for jmeno in jmena]
+with open('uzivatele.txt', 'w', encoding='utf-8') as vystup:
+  vystup.writelines(jmena)
 ```
 
 [[[ excs Cvičení: Zápis do souborů
