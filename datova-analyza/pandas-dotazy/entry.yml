@@ -1,0 +1,4 @@
+title: "Pandas: základní dotazy"
+lead: Představíme si Python modul pro práci s daty jménem Pandas a ukážeme si jak se v něm provedou základní dotazy nad tabulkami.
+sections:
+  - pandas-dotazy

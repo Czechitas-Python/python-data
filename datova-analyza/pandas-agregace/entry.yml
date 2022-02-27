@@ -1,0 +1,4 @@
+title: "Pandas: agregace"
+lead: Ukážeme si jak v Pandas spojovat více tabulek dohromady, třídit tabulky a pracovat s hodnotami ve sloupcích.
+sections:
+  - pandas-agregace

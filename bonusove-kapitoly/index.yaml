@@ -1,9 +1,0 @@
-title: Bonusové kapitoly
-link: bonusove-kapitoly
-lessons:
-  - title: Web scraping
-    link: webscraping
-    brief: Naučíte se jak ve vašich Python programech vytáhnout data z webových stránek.
-  - title: Vizualizace dat
-    link: vizualizace
-    brief: Naučíme se pracovat s novým modulem pro Python, který umí zobrazovat různé druhy grafů.

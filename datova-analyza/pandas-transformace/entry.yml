@@ -1,0 +1,4 @@
+title: "Pandas: transformace"
+lead: Naučíme se, jak v Pythonu psát vlastní funkce a ukážeme si, jak pomocí nich transformovat data uvnitř tabulek.
+sections:
+  - pandas-transformace

@@ -1,0 +1,11 @@
+title: Základy programování
+lead: Základy Pythonu pro datové analytiky
+lessons:
+ - uvod
+ - hodnoty-promenne-funkce
+ - text-chroustani
+ - prvni-programy
+ - soubory
+ - podminky-for
+ - slovniky-json
+ - opakovani

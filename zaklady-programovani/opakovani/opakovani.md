@@ -2,7 +2,7 @@ Následující příklad v sobě zahrnuje většinu věcí, kterou jsme se do te
 
 ### Prváci
 
-Na Fakultu hybridních přírodních umění nastupují nově přijatí studenti. Tabulku těchto studentů s jejich rodnými čísly najdete v souboru [studenti.txt](assets/studenti.txt). Tabulka je evidentně vykopírovaná z Excelu, neboť hodnoty jsou zde odděleny tabulátory. Na každém řádku je jméno a příjmení studenta a jeho rodné číslo. Vytvořte Python program a proveďte v něm následující úkony.
+Na Fakultu hybridních přírodních umění nastupují nově přijatí studenti. Tabulku těchto studentů s jejich rodnými čísly najdete v souboru [studenti.txt]{src=assets/studenti.txt}. Tabulka je evidentně vykopírovaná z Excelu, neboť hodnoty jsou zde odděleny tabulátory. Na každém řádku je jméno a příjmení studenta a jeho rodné číslo. Vytvořte Python program a proveďte v něm následující úkony.
 
 1. Načtěte data ze souboru do vašeho programu jako tabulku v podobě seznamu seznamů. Každý vnořený seznam bude představovat jeden řádek tabulky.
 1. Přidejte do tabulky sloupec, který bude udávat věk studenta. Věk studenta zjistíte podle roku narození, což jsou první dvě cifry rodného čísla.

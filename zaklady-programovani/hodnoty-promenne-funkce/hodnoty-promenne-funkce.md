@@ -118,7 +118,7 @@ Tomuto zápisu se říká <term cs="volání funkce" en="function call">. Když 
 
 Funkci si můžeme představit například jako topinkovač. Topinkovač pro nás dělá nějakou užitečnou činnost, kterou chceme často opakovat (opéká topinky). Má svoje jméno (topinkovač). Do topinkovače dáme chleba (argument) a spustíme je (zavoláme). Topinkovač chvíli pracuje a pak nám vrátí výsledek - topinky. Důležité je, že nemusíme řešit jak to topinkovač vlastně dělá, že dokáže opéct chleba. Důležité pro nás je, že to umí a že jej můžeme kdykoliv použít.
 
-![Toaster](assets/toaster.jpg){.fig .fig-50}
+::fig[Toaster]{src=assets/toaster.jpg size=50}
 
 ## Seznamy
 

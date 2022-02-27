@@ -2,7 +2,7 @@ V předchozí lekci jsme si ukázali, jak se v Pandas vytvoří DataFrame a jak 
 
 ## Maturita
 
-Abychom měli nějaký praktický příklad k procvičování, použijeme fiktivní data z výsledků maturitních zkoušek během jednoho týdne na nějakém menším gymnáziu. Maturita se odehrává ve třech místnostech: U202, U203 a U302. Máme tedy tři tabulky dat, z každé místnosti jednu. Níže si můžete prohlédnout příklad tabulky z místnosti U202. Všechny tabulky jsou ke stažení zde: [u202.csv](assets/u202.csv), [u203.csv](assets/u203.csv), [u302.csv](assets/u302.csv).
+Abychom měli nějaký praktický příklad k procvičování, použijeme fiktivní data z výsledků maturitních zkoušek během jednoho týdne na nějakém menším gymnáziu. Maturita se odehrává ve třech místnostech: U202, U203 a U302. Máme tedy tři tabulky dat, z každé místnosti jednu. Níže si můžete prohlédnout příklad tabulky z místnosti U202. Všechny tabulky jsou ke stažení zde: [u202.csv]{src=assets/u202.csv}, [u203.csv]{src=assets/u203.csv}, [u302.csv]{src=assets/u302.csv}.
 
 | jméno             | předmět          | známka | den |
 | ----------------- | ---------------- | ------ | --- |
@@ -115,7 +115,7 @@ Takto už nám vznikla pěkná vyčištěná tabulka. Uložme si ji do CSV, ať 
 >>> maturita.to_csv('maturita.csv', index=False)
 ```
 
-Výslednou tabulku si můžete stáhnout jako soubor [maturita.csv](assets/maturita.csv).
+Výslednou tabulku si můžete stáhnout jako soubor [maturita.csv]{src=assets/maturita.csv}.
 
 ## Joinování dat
 
@@ -129,7 +129,7 @@ Už jsme si ukázali, jak v Pandas spojovat tabulky za sebe, což v SQL odpovíd
 | čt  | 23.5.2019 | Petr Ortinský    |
 | pá  | 24.5.2019 | Alena Pniáčková  |
 
-Data si můžete stáhnout jako soubor [predsedajici.csv](assets/predsedajici.csv). Načtěme si jej jako DataFrame.
+Data si můžete stáhnout jako soubor [predsedajici.csv]{src=assets/predsedajici.csv}. Načtěme si jej jako DataFrame.
 
 ```pycon
 >>> preds = pandas.read_csv('predsedajici.csv', encoding='utf-8')
@@ -176,7 +176,7 @@ Nyní už tabulka vypadá hezky. Proveďme tedy totéž pro celý náš maturitn
 >>> maturita2.to_csv('maturita2.csv', index=False)
 ```
 
-Výslednou tabulku si opět můžete stáhnout jako soubor [maturita2.csv](assets/maturita2.csv).
+Výslednou tabulku si opět můžete stáhnout jako soubor [maturita2.csv]{src=assets/maturita2.csv}.
 
 ## Grupování
 

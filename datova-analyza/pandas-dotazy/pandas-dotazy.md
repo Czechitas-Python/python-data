@@ -66,7 +66,7 @@ Abychom si práci s DataFrame vyzkoušeli, budeme používat následující cvi�
 
 ### Načítání dat
 
-Tabulku výše si můžete stáhnout ve [formátu CSV](assets/mesta.csv). Abychom si ji mohli prohlédnout jako DataFrame, otevřeme si nejprve Python konzoli, importujeme modul `pandas` a načteme CSV soubor pomocí funkce `read_csv().`
+Tabulku výše si můžete stáhnout ve [formátu CSV]{src=assets/mesta.csv}. Abychom si ji mohli prohlédnout jako DataFrame, otevřeme si nejprve Python konzoli, importujeme modul `pandas` a načteme CSV soubor pomocí funkce `read_csv().`
 
 ```pycon
 >>> import pandas
@@ -124,7 +124,7 @@ Index(['kraj', 'obyvatel', 'linky', 'vymera'], dtype='object')
 
 Abychom dokázali s naší tabulkou manipulovat, potřebujeme dobře rozumět tomu, jak vlastně Pandas DataFrame funguje. Pomůže nám k tomu následující obrázek, který ukazuje, jak náš DataFrame vypadá poté, co jsme jej načetli z CSV.
 
-![Pandas DataFrame](assets/dataframe.svg){.fig .fig-100}
+::fig[Pandas DataFrame]{src=assets/dataframe.svg}
 
 Do začátku je nejdůležitější si uvědomit, že Pandas pracuje nejen se jmény sloupců, ale také se **jmény řádků**. Jménům řádků se v Pandas říká _index_. Již při načtení našeho DataFrame z CSV jsme zvolili, že řádky se budou jmenovat podle názvů měst (použili jsme parametr `index_col`). Zvolili jsme tedy sloupec `mesto` jako náš index. Díky tomu máme jednoznačné názvy sloupců i řádků a můžeme tak vytvářet různé dotazy na data z tabulky.
 
