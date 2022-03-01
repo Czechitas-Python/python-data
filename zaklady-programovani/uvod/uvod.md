@@ -19,9 +19,7 @@ Pokud máte počítač s Windows, následujte tyto kroky:
 1. Ujistěte se, že máte aktualizovaný systém. To zajistíte nejjednodušeji tak, že svůj počítač restartujete. Pokud jste již dlouho neaktualizovali, při restartu se může spustit aktualizace, která může trvat relativně dlouho, v extrémním případě třeba i hodinu. Nenechte se vyděsit, obrňte se trpělivostí a vyčkejte, dokud Windows opět nenaběhnou.
 1. Jděte na stránku [Python Releases for Windows](https://www.python.org/downloads/windows/), kde klikněte na **Latest Python 3 Release** a dole stáhněte **Windows installer (64-bit)**. Stažený soubor spusťte. Rozeběhne se průvodce instalací.
 1. Na úvodní obrazovce je **velmi důležité** zaškrtnout volbu **Add Python 3.x to PATH** (viz obrázek)
-
-::fig[Instalace Pythonu]{src=assets/python-setup.png}
-
+    ::fig[Instalace Pythonu]{src=assets/python-setup.png}
 1. Klikněte na **Install Now** , odsouhlaste případné otázky ohledně změn na vašem počítači a vyčkejte dokončení instalace. Jakmile instalace skončí, zavřete okno tlačítkem **Close**.
 1. Z [tohoto odkazu](https://aka.ms/win32-x64-user-stable) si stáhněte Visual Studio Code.
 1. Stažený soubor spusťte. Rozeběhne se průvodce instalací, ve kterém stačí klikat na **Next** tak dlouho, dokud se nespustí instalace. Ve druhém kroku je pouze potřeba souhlasit s licencí.
