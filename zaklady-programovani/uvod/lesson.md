@@ -17,7 +17,7 @@ Abychom mohli začít programovat, je potřeba na počítač nainstalovat dva pr
 Pokud máte počítač s Windows, následujte tyto kroky:
 
 1. Ujistěte se, že máte aktualizovaný systém. To zajistíte nejjednodušeji tak, že svůj počítač restartujete. Pokud jste již dlouho neaktualizovali, při restartu se může spustit aktualizace, která může trvat relativně dlouho, v extrémním případě třeba i hodinu. Nenechte se vyděsit, obrňte se trpělivostí a vyčkejte, dokud Windows opět nenaběhnou.
-1. Jděte na stránku [Python Releases for Windows](https://www.python.org/downloads/windows/), kde klikněte na **Latest Python 3 Release** a stáhněte **Windows x86-64 executable installer**. Stažený soubor spusťte. Rozeběhne se průvodce instalací.
+1. Jděte na stránku [Python Releases for Windows](https://www.python.org/downloads/windows/), kde klikněte na **Latest Python 3 Release** a dole stáhněte **Windows installer (64-bit)**. Stažený soubor spusťte. Rozeběhne se průvodce instalací.
 1. Na úvodní obrazovce je **velmi důležité** zaškrtnout volbu **Add Python 3.x to PATH** (viz obrázek)
    ![Instalace Pythonu](assets/python-setup.png){.fig .fig-100}
 1. Klikněte na **Install Now** , odsouhlaste případné otázky ohledně změn na vašem počítači a vyčkejte dokončení instalace. Jakmile instalace skončí, zavřete okno tlačítkem **Close**.
@@ -35,7 +35,9 @@ Pokud máte počítač se systémem Mac OS, následujte tyto kroky.
 
 ### Linux
 
-Pokud používáte některou z populárních distribucí Linuxu jako Ubuntu, Linux Mint apod., je velká naděje, že už máte python nainstalovaný. Napište do příkazové řádky příkaz
+Pokud používáte některou z populárních distribucí Linuxu jako Ubuntu, Linux Mint apod., je velká naděje, že už máte python nainstalovaný. Napište do příkazové řádky příkaz `python3`.
+
+**POZOR!** Symbol dolaru na začátku příkazu se do terminálu nepíše. Slouží pouze k tomu, abychom odlišili, že příkaz se píše do terminálu a ne někam jinam.
 
 ```shell
 $ python3
@@ -57,44 +59,20 @@ Nejprve ověřme, že instalace nástrojů proběhla v pořádku. Ať už jste n
 
 ![VS Code Terminal](assets/vscode-term.png){.fig .fig-100}
 
-Pokud jste na Windows, napište do okna, které se objeví toto:
+**POZOR!** Symbol dolaru na začátku příkazu se do terminálu nepíše. Slouží pouze k tomu, abychom odlišili, že příkaz se píše do terminálu a ne někam jinam.
+
+Pokud jste na Windows, napište do okna terminálu příkaz `py`:
 
 ```shell
 $ py
 ```
 
-a stiskněte Enter. Pokud jste na Macu nebo Linuxu, je třeba napsat
+a stiskněte Enter. Stejně by měl fungovat i příkaz `python`.
+
+Pokud jste na Macu nebo Linuxu, je třeba napsat
 
 ```shell
 $ python3
 ```
-**POZOR!** Symbol dolaru na začátku příkazu se do terminálu nepíše. Slouží pouze k tomu, abychom odlišili, že příkaz se píše do terminálu a ne někam jinam.
 
 Pokud je vše v pořádku, měly by se po pár krypticky vypadajících výpisech ukázat tři zobáčky `>>>` a kurzor. To znamená, že Python je připraven na vaše první příkazy.
-
-## Nastavení VS Code
-
-Aby se nám ve VS Code dobře programovalo, uložíme si některá užitečná nastavení. Spusťte VS Code a z horního menu vyberte <i>View</i> → <i>Command Palette...</i>. Do textového políčka zkopírujte tento text.
-
-```
-Open Settings (JSON)
-```
-
-a stiskněte Enter. Otevře se okno s editorem. Do jeho pravé části vložte následující text.
-
-```json
-{
-  "editor.tabSize": 2,
-  "editor.detectIndentation": false,
-  "editor.renderWhitespace": "boundary",
-  "editor.insertSpaces": true,
-  "editor.wordWrap": "on",
-  "files.eol": "\n",
-  "editor.minimap.enabled": false,
-  "editor.fontSize": 16,
-  "files.autoSave": "afterDelay",
-  "files.autoSaveDelay": 1000
-}
-```
-
-a uložte stiskem Ctrl+S nebo z menu vyberte <i>File</i> → <i>Save</i>. Hurá, máte hotovo a jste připravení na kurz.
