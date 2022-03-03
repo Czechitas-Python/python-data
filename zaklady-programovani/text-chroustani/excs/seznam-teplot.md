@@ -22,5 +22,5 @@ teploty = [
 1. Vytvořte seznam průměrných teplot pro každý den.
 1. Vytvořte seznam ranních teplot.
 1. Vytvořte seznam nočních teplot.
-1. Vytvořte seznam dvouprvkových seznamů obsahujících pouze denní a noční teplotu.
+1. Vytvořte seznam dvouprvkových seznamů obsahujících pouze polední a noční teplotu.
 1. Spočítejte celkovou průměrnou teplotu za celý týden.
