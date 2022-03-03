@@ -1,6 +1,6 @@
 ---
 title: Králičí farma
-demand: 3
+demand: 5
 ---
 
 Králičí farma si objednala sestavení modelu množení králičí populace, aby dokázala odhadnout své zisky. Model funguje takto.

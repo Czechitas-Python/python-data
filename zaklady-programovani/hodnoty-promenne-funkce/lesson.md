@@ -97,9 +97,6 @@ v proměnné <var>vyplata</var> bude nadále uložena hodnota 2800. Pokud chceme
 - vyplata
 ]]]
 
-[[[ excs Bonusy
-- kralici-farma
-]]]
 
 ## Funkce
 
