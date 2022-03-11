@@ -8,7 +8,7 @@ Pro naše první experimenty si stáhněte soubor [mereni.txt]{src=assets/mereni
 
 Pokud chceme otevřít tento soubor v nějakém našem programu, nejjednodušší je zkopírovat jej do téže složky, ve které máme program uložený. Potom v programu použijeme funkci `open()`, která slouží k otevírání souborů. Nejčastěji se soubor otevírá v kombinaci se klíčovým slovem `with`. Tím automaticky zajistíme uzavření souboru a nebudeme ho blokovat. Současně si otevřený soubor musíme pojmenovat. Jméno vložíme za další klíčové slovo `as`. Náš soubor `mereni.text` tedy dostal "přezdívku" `vstup`.
 
-Všimi si, že prostřední řádek je odsazený o dvě mezery vpravo. To není náhoda, tento řádek se totiž nachází v **bloku**. Pomocí bloku říkáme, v jaké části programu chceme pracovat s naším souborem a kdy již ho Python může uzavřít. Mezi řádkem 2 a 3 tedy v tichosti dojde k uzavření souboru. Nám to ale vůbec nevadí, protože obsah souboru máme překopírovaný do seznamu `radky` a ten nám nikam nezmizí.
+Všimni si, že prostřední řádek je odsazený o jedno odsazení vpravo. To není náhoda, tento řádek se totiž nachází v **bloku**. Pomocí bloku říkáme, v jaké části programu chceme pracovat s naším souborem a kdy ho již Python může uzavřít. Mezi řádkem 2 a 3 tedy v tichosti dojde k uzavření souboru. Nám to ale vůbec nevadí, protože obsah souboru máme překopírovaný do seznamu `radky` a ten nám nikam nezmizí.
 
 Na konci úvodního řádku bloku vkládáme dvojtečku. Dvojtečka na konci řádku pak pro nás bude sloužit jako připomenutí, abychom alespoň jeden následující řádek odsadili. Ve stresu z toho ale být nemusíme, protože editor kódu to většinou udělá za nás. Celý obsah souboru uložíme do seznamu `radky` pomocí metody `readlines()`. Ta uloží každý řádek souboru jako jeden prvek seznamu.
 
@@ -32,6 +32,8 @@ Vidíme tedy, že každý náš řádek končí znakem nového řádku a hodnoty
 ```py
 with open('mereni.txt', encoding='utf-8') as vstup:
   radky = vstup.readlines()
+
+radky = [radek.split('\t') for radek in radky]
 radky = [[radek[0], float(radek[1])] for radek in radky]
 print(radky)
 ```
@@ -46,7 +48,7 @@ print(radky)
 
 Když už umíme data ze souboru číst, pojďme se také naučit jak data do souboru zapsat. Konec konců, naše programy budou potřebovat nejen data zpracovávat ale také data produkovat.
 
-Zápis do souboru se provádí pomocí metody `write()`. Ta jako svůj parametr bere řetězec a zapíše jej do toho otevřeného souboru, na kterém ji zavoláme. Abychom ale mohli tuto metodu zavolat, musíme náš soubor otevřít takzvaně pro zápis. K tomu nám poslouží druhý parametr funkce `open()`. Pojďme si to vyzkoušet na příkladu.
+Zápis do souboru se provádí pomocí metody `write()`. Ta jako svůj parametr bere řetězec a zapíše jej do toho otevřeného souboru, na kterém ji zavoláme. Abychom ale mohli tuto metodu zavolat, musíme náš soubor otevřít takzvaně pro zápis. K tomu nám poslouží druhý parametr funkce `open()`. Druhý způsob je pomocí metody `writelines()`, která zapíše do souboru celý seznam řetězců. Pojďme si to vyzkoušet na příkladu.
 
 Dejme tomu, že máme seznam uživatelů, které chceme zapsat do souboru `uzivatele.txt`.
 
@@ -56,7 +58,7 @@ with open('uzivatele.txt', mode='w', encoding='utf-8') as vystup:
   vystup.writelines(jmena)
 ```
 
-Všimněte si druhého parametru `'w'` při volání funkce `open()`. Díky němu se nám soubor otevře pro zápis. Pokud soubor na disku ještě neexistuje, funkce `open()` jej před otevřením vytvoří. Pokud soubor již existuje, funkce `open()` vymaže před otevřením jeho obsah. Vždy tedy pomocí metody `write()` zapisujeme do prázdného souboru. Pokud bychom chtěli přidat nový obsah na konec souboru, místo `'w'` použijeme `'a'`.
+Změna je u druhého parametru `mode='w'` při volání funkce `open()`. Díky němu se nám soubor otevře pro zápis. Pokud soubor na disku ještě neexistuje, funkce `open()` jej před otevřením vytvoří. Pokud soubor již existuje, funkce `open()` vymaže před otevřením jeho obsah. Vždy tedy pomocí metody `write()` zapisujeme do prázdného souboru. Pokud bychom chtěli přidat nový obsah na konec souboru, místo `'w'` použijeme `'a'`.
 
 Pokud však otevřete soubor, který vytvořil náš předchozí program, uvidíte následující výsledek
 
