@@ -160,9 +160,8 @@ Zápis JSON dat do souboru je podobně jednoduché jako čtení. Stačí si osvo
 ```py
 import json
 hodiny = {'po': 8, 'ut': 7, 'st': 6, 'ct': 7, 'pa': 8}
-with open('hodiny.json', 'w', encoding='utf-8') as soubor:
+with open('hodiny.json', mode='w', encoding='utf-8') as soubor:
   json.dump(hodiny, soubor)
-soubor.close()
 ```
 
 Pokud bychom z nějakého důvodu chtěli pouze vytvořit řetězec obsahující JSON ale nezapisovat jej do souboru, můžeme použít funkci `json.dumps`.
