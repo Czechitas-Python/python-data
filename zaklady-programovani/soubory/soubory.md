@@ -38,11 +38,10 @@ radky = [[radek[0], float(radek[1])] for radek in radky]
 print(radky)
 ```
 
-[[[ excs Cvičení: Čtení ze souborů
-- vyplata-presneji
-- pocet-slov
-- pujcovna
-]]]
+## Cvičení: Čtení ze souborů
+::exc[excs>vyplata-presneji]
+::exc[excs>pocet-slov]
+::exc[excs>pujcovna]
 
 ## Zápis do souboru
 
@@ -76,14 +75,12 @@ with open('uzivatele.txt', mode='w', encoding='utf-8') as vystup:
   vystup.writelines(jmena)
 ```
 
-[[[ excs Cvičení: Zápis do souborů
-- rozepsana-vyplata
-- hody-kostkou
-]]]
+## Cvičení: Zápis do souborů
+::exc[excs>rozepsana-vyplata]
+::exc[excs>hody-kostkou]
 
-[[[ excs Bonus
-- dny-v-mesici
-]]]
+## Bonus
+::exc[excs>dny-v-mesici]
 
 ## Povinné čtení na doma
 
@@ -127,12 +124,10 @@ Teď už bychom si naivně mohli myslet, že je ve všem pořádek, ale to by by
 
 Občas programátorům nezbude, než mlátit hlavou do stolu a křičet PROČ? Ale tak je to občas i v životě. Takže nezapomeňte naučit svoje děti, aby vždy ukládaly textové soubory jako UTF-8. Svět pak bude zase o kousek lepším místem.
 
-[[[ excs Doporučené úložky na doma
-- pasazeri
-- preznamkovani
-]]]
+## Doporučené úložky na doma
+::exc[excs>pasazeri]
+::exc[excs>preznamkovani]
 
-[[[ excs Volitelné úložky na doma
-- karty-2
-- karty-3
-]]]
+## Volitelné úložky na doma
+::exc[excs>karty-2]
+::exc[excs>karty-3]

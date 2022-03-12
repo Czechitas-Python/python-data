@@ -70,11 +70,10 @@ print(
 )
 ```
 
-[[[ excs Cvičení: Programy
-- jmeno-a-mesto
-- vyplata-jako-program
-- teploty-jako-program
-]]]
+## Cvičení: Programy
+::exc[excs>jmeno-a-mesto]
+::exc[excs>vyplata-jako-program]
+::exc[excs>teploty-jako-program]
 
 ## Moduly
 
@@ -161,16 +160,14 @@ Součet zadaných čísel: 169
 
 Všimněte si, že na druhém řádku našeho programu používáme `sys.argv[1:]`. Je to proto, abychom se zbavili názvu programu, který vždy zabírá první prvek seznamu parametrů. Naše čísla se tedy nacházejí až od prvního indexu nahoru.
 
-[[[ excs Cvičení: Moduly, parametry řádky
-- cas-v-minutach
-- zaokrouhlovani
-- domena-a-url
-- prumer-versus-median
-]]]
+## Cvičení: Moduly, parametry řádky
+::exc[excs>cas-v-minutach]
+::exc[excs>zaokrouhlovani]
+::exc[excs>domena-a-url]
+::exc[excs>prumer-versus-median]
 
-[[[ excs Bonusy
-- klasicke-zaokrouhlovani
-]]]
+## Bonusy
+::exc[excs>klasicke-zaokrouhlovani]
 
 ## Povinné čtení na doma
 
@@ -276,15 +273,13 @@ Pokud bychom mermomocí chtěli opravdu všechny hodnoty z rozsahu jako seznam, 
 [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
 
-[[[ excs Doporučené úložky na doma
-- minuty
-- fahrnheit-vs-celsius
-- uprava-retezce
-- hazeni-kostkou
-- karty-1
-]]]
+## Doporučené úložky na doma
+::exc[excs>minuty]
+::exc[excs>fahrnheit-vs-celsius]
+::exc[excs>uprava-retezce]
+::exc[excs>hazeni-kostkou]
+::exc[excs>karty-1]
 
-[[[ excs Volitelné úložky na doma
-- hada-na-velblouda
-- velblouda-na-hada
-]]]
+## Volitelné úložky na doma
+::exc[excs>hada-na-velblouda]
+::exc[excs>velblouda-na-hada]

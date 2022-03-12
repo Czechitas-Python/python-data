@@ -47,15 +47,13 @@ else:
   print('Výsledek je dostatečně spolehlivý.')
 ```
 
-[[[ excs Cvičení: Podmínky
-- deleni
-- kontrola-souboru
-]]]
+## Cvičení: Podmínky
+::exc[excs>deleni]
+::exc[excs>kontrola-souboru]
 
-[[[ excs Bonusy
-- maximum-ze-dvou-cisel
-- maximum-ze-tri-cisel
-]]]
+## Bonusy
+::exc[excs>maximum-ze-dvou-cisel]
+::exc[excs>maximum-ze-tri-cisel]
 
 ## Cyklus FOR
 
@@ -111,10 +109,9 @@ for cislo in cisla:
 
 Ne, že bychom zrovna takovýto kus kódu nutně potřebovali, když můžeme použít funkci `sum()`. Tento příklad ale ukazuje, že s cykly můžeme dělat spoustu zajímavých věcí.
 
-[[[ excs Cvičení: Cyklus FOR
-- hratky-s-cykly
-- poznavacky
-]]]
+## Cvičení: Cyklus FOR
+::exc[excs>hratky-s-cykly]
+::exc[excs>poznavacky]
 
 ## Povinné čtení na doma
 
@@ -183,19 +180,17 @@ else:
 
 Zde je dobré vědět, jakým způsobem Python takovou podmínku vyhodnocuje. Nejdřív se podívá, jestli je splněna první větev. Pokud ano, vykoná příslušný blok kódu a **zbytek větví přeskočí**. Pokud první větev není splněna, zkouší, jestli je splněna druhá. Pokud ano, vykoná příslušný blok a opět zbytek přeskočí. Takto pokračuje dokud nevyčerpá všechny větve nebo nenarazí na `else`. Důležité je tedy zapamatovat si, že pokud výraz v nějaké větvi uspěje, zbytek větví se přeskočí a Python se na ně ani nepodívá.
 
-[[[ excs Doporučené úložky na doma
-- heslo
-- prevod-na-usd
-- banka
-- hadanky
-- vzestupny-seznam
-]]]
+## Doporučené úložky na doma
+::exc[excs>heslo]
+::exc[excs>prevod-na-usd]
+::exc[excs>banka]
+::exc[excs>hadanky]
+::exc[excs>vzestupny-seznam]
 
-[[[ excs Volitelné úložky na doma
-- pisemky
-- maximum
-- druhe-maximum
-- k-te-maximum
-- ruleta
-- prestupny-rok
-]]]
+## Volitelné úložky na doma
+::exc[excs>pisemky]
+::exc[excs>maximum]
+::exc[excs>druhe-maximum]
+::exc[excs>k-te-maximum]
+::exc[excs>ruleta]
+::exc[excs>prestupny-rok]
