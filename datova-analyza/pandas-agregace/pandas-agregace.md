@@ -224,6 +224,5 @@ Všimněte si, že takto obdržíme sérii, nikoliv DataFrame. Pozornější z v
 >>> maturita2.groupby('předmět')[['známka']].mean()
 ```
 
-[[[ excs Cvičení
-- studenti
-]]]
+## Cvičení
+::exc[excs>studenti]

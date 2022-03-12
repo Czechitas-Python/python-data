@@ -152,11 +152,10 @@ Nyní chceme zobrazit krabicový graf porovnávající výšky obou pohlaví. K 
 
 ::fig[Krabicový graf muži vs ženy]{src=assets/vysky-muzi-zeny-box.png}
 
-[[[ excs Cvičení
-- hazeni-kostkami
-- call-centrum
-- hura-na-hory
-]]]
+## Cvičení
+::exc[excs>hazeni-kostkami]
+::exc[excs>call-centrum]
+::exc[excs>hura-na-hory]
 
 ## Jupyter Notebook
 

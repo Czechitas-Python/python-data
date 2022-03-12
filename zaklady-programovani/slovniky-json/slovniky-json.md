@@ -103,14 +103,12 @@ Všimněte si, jak slovník představující jeden kurz, obsahuje pod klíčem `
 kurz['konani'][1]['koucove']
 ```
 
-[[[ excs Cvičení: Slovníky
-- kurz
-- knihovna
-]]]
+## Cvičení: Slovníky
+::exc[excs>kurz]
+::exc[excs>knihovna]
 
-[[[ excs Bonusy
-- recepty
-]]]
+## Bonusy
+::exc[excs>recepty]
 
 ## Formát JSON
 
@@ -213,10 +211,9 @@ data = json.loads(response.text)
 print(data)
 ```
 
-[[[ excs Cvičení: API a JSON
-- seznam-lidi
-- svatky
-]]]
+## Cvičení: API a JSON
+::exc[excs>seznam-lidi]
+::exc[excs>svatky]
 
 ## Povinné čtení na doma
 

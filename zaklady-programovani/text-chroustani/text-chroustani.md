@@ -193,15 +193,13 @@ nebo
 'dokumenty/dapraha/python/priklady'
 ```
 
-[[[ excs Cvičení: Řetězce, metody
-- prevod-pismen
-- cisla-jako-text
-- cisla-v-textu
-]]]
+## Cvičení: Řetězce, metody
+::exc[excs>prevod-pismen]
+::exc[excs>cisla-jako-text]
+::exc[excs>cisla-v-textu]
 
-[[[ excs Bonusy
-- chytrejsi-cisla-jako-text
-]]]
+## Bonusy
+::exc[excs>chytrejsi-cisla-jako-text]
 
 ## Chroustání seznamů
 
@@ -269,12 +267,11 @@ udělat takto:
 [1, 3, 4, 1, 1, 1]
 ```
 
-[[[ excs Cvičení: Chroustání seznamů
-- seznamy-cisel
-- seznamy-retezcu
-- seznam-teplot
-- cteni-kodu
-]]]
+## Cvičení: Chroustání seznamů
+::exc[excs>seznamy-cisel]
+::exc[excs>seznamy-retezcu]
+::exc[excs>seznam-teplot]
+::exc[excs>cteni-kodu]
 
 ## Povinné čtení na doma
 
@@ -371,13 +368,11 @@ Výsledek `True`, pokud proměnná jmeno obsahuje hodnotu `'Martin'`.
 
 Výsledek `True`, pokud je délka seznamu různá od 4.
 
-[[[ excs Doporučené úložky na doma
-- overovani-veku
-- promitani
-- pocty-obyvatel
-- volby
-]]]
+## Doporučené úložky na doma
+::exc[excs>overovani-veku]
+::exc[excs>promitani]
+::exc[excs>pocty-obyvatel]
+::exc[excs>volby]
 
-[[[ excs Volitelné úložky na doma
-- elegantni-volby
-]]]
+## Volitelné úložky na doma
+::exc[excs>elegantni-volby]
