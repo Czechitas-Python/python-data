@@ -4,7 +4,7 @@ Pythonu mohli pracovat nejen s čísly, ale i s texty.
 
 ## Řetězce
 
-Pokud chceme v Pythonu zadat nějak kousek textu, použijeme takzvaný <term cs="řetězec" en="string">.
+Pokud chceme v Pythonu zadat nějak kousek textu, použijeme takzvaný :term{cs="řetězec" en="string"}.
 Řetězce se v Pythonu uzavírají do jednoduchých nebo dvojitých uvozovek.
 Například:
 
@@ -215,7 +215,7 @@ pisemky = [0, 2, 0, 1, 1, 3]
 
 Z takového zápisu nás bolí hlava, takže chceme známky převést do běžného
 formátu, tedy ke každé z nich přičíst jedničku. To provedeme pomocí takzvaného
-<term cs="chroustání seznamů" en="list comprehension">
+:term{cs="chroustání seznamů" en="list comprehension"}
 
 ```pycon
 >>> [znamka+1 for znamka in pisemky]
@@ -287,7 +287,7 @@ typ hodnoty...
 
 ### Pravdivostní hodnoty
 
-Datový typ <term cs="pravdivostní hodnota" en="bool"> slouží k tomu, abychom
+Datový typ :term{cs="pravdivostní hodnota" en="bool"} slouží k tomu, abychom
 mohli v našem programu vyjádřit, zda je něco pravda či nepravda. Proto nám
 pro tento typ stačí pouze dvě hodnoty: `True` (pravda) a `False` (nepravda).
 Pravdivostní hodnoty jsou opět hodnoty jako každé jiné. Můžeme je tady

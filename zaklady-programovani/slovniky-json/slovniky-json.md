@@ -6,7 +6,7 @@ Jelikož už známe seznamy, mohli bychom zkusit reprezentovat absolventa třeba
 absolvent = ['Petr', 'Roman', 2017, 0.95, True]
 ```
 
-Hned ale vidíme, že z takového seznamu není úplně zřejmé, co která hodnota znamená. Musíme si pamatovat, že na indexu 0 je křestní jméno, na indexu 3 docházka apod. Mnohem pohodlnější by bylo, kdybychom mohli jednotlivé hodnoty místo indexování přímo pojmenovat. A přesně k tomuto účelu máme v Pythonu datový typ <term cs="slovník" en="dictionary">.
+Hned ale vidíme, že z takového seznamu není úplně zřejmé, co která hodnota znamená. Musíme si pamatovat, že na indexu 0 je křestní jméno, na indexu 3 docházka apod. Mnohem pohodlnější by bylo, kdybychom mohli jednotlivé hodnoty místo indexování přímo pojmenovat. A přesně k tomuto účelu máme v Pythonu datový typ :term{cs="slovník" en="dictionary"}.
 
 ## Slovníky
 
@@ -179,9 +179,9 @@ Malá potíž je ovšem v tom, že Python sám o sobě neobsahuje modul pro stah
 
 ## Externí moduly a balíčky
 
-Python sám o sobě obsahuje mnoho užitečných modulů pro řešení různých typů úloh. Už jsme viděli modul `random` pro práci s náhodnými čísly, modul `statistics` pro základní statistické funkce nebo modul `sys` pro práci s operačním systémem. Všem modulům, které jsou součástí základní instalace Pythonu, se dohromady říká <term cs="standardní knihovna" en="standard library">. Přehled všech modulů, které standardní knihovna obsahuje můžete najít [v Python dokumentaci](https://docs.python.org/3/library/).
+Python sám o sobě obsahuje mnoho užitečných modulů pro řešení různých typů úloh. Už jsme viděli modul `random` pro práci s náhodnými čísly, modul `statistics` pro základní statistické funkce nebo modul `sys` pro práci s operačním systémem. Všem modulům, které jsou součástí základní instalace Pythonu, se dohromady říká :term{cs="standardní knihovna" en="standard library"}. Přehled všech modulů, které standardní knihovna obsahuje můžete najít [v Python dokumentaci](https://docs.python.org/3/library/).
 
-Čas od času ale v Pythonu potřebujeme vykonat nějakou činnost, pro kterou není ve standardní knihovně dostupný žádný modul, například stáhnou data z internetu. V takovém případě budeme muset z internetu stáhnout a nainstalovat takzvaný <term cs="balíček" en="package">.
+Čas od času ale v Pythonu potřebujeme vykonat nějakou činnost, pro kterou není ve standardní knihovně dostupný žádný modul, například stáhnou data z internetu. V takovém případě budeme muset z internetu stáhnout a nainstalovat takzvaný :term{cs="balíček" en="package"}.
 
 Balíčky obsahují moduly, které po instalaci balíčku můžeme importovat v našem programu.
 

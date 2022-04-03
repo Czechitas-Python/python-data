@@ -230,7 +230,7 @@ Za posledních pár lekcí už jsme se naučili používat pěknou řádku typů
 - pravdivostní hodnoty
 - seznamy
 
-Nyní nám přibude jedna navíc, která se jmenuje <term cs="rozsah" en="range">. Rozsahy slouží k tomu, abychom v Pythonu uměli říct, že chceme všechna čísla z nějakého rozmezí hodnot. Pokud bychom například chtěli všechna čísla mezi 1 a 10, mohli bychom vyrobit seznam
+Nyní nám přibude jedna navíc, která se jmenuje :term{cs="rozsah" en="range"}. Rozsahy slouží k tomu, abychom v Pythonu uměli říct, že chceme všechna čísla z nějakého rozmezí hodnot. Pokud bychom například chtěli všechna čísla mezi 1 a 10, mohli bychom vyrobit seznam
 
 ```py
 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
