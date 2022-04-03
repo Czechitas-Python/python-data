@@ -19,5 +19,5 @@ Před tím, než se podíváte na následující kroky, sami si rozmyslete postu
 toto provést. Až když si nejste jistí, pokračujte podle následujících kroků.
 
 1. Uložte si hodnotu na třetí pozici v seznam do nějaké proměnné.
-1. Převeďte tuto hodnotu na číslo a přičtěte k němu 4. Výsledek uložte do proměnné <var>vysledek</var>.
-1. Převeďte hodnotu v proměnné <var>vysledek</var> zpět na řetězec a uložte ji na třetí pozici v seznamu hodnoty.
+1. Převeďte tuto hodnotu na číslo a přičtěte k němu 4. Výsledek uložte do proměnné `vysledek`.
+1. Převeďte hodnotu v proměnné `vysledek` zpět na řetězec a uložte ji na třetí pozici v seznamu hodnoty.

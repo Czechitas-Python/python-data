@@ -66,11 +66,11 @@ Můžeme například v rámci dietního programu spočítat, kolik vanilkových 
 
 Už od úplných začátků s programováním je dobré učit se dobrým návykům, které budou později prospěšné nejen vám, ale hlavně lidem ve vašem okolí. Jedním z takových návyků je správné pojmenovávání proměnných.
 
-1. Název proměnné by neměl začínat velkým písmenem, např. ~~<var>Pocet</var>~~. Takové názvy jsou rezervované pro speciální typy proměnných, ke kterým se v tomto kurzu dostaneme až téměř na konci.
-1. Název proměnné by neměl obsahovat diakritiku, např. ~~<var>počet</var>~~. Programovací jazyky vznikaly v anglickém prostředí, kde se diakritika nepoužívá, takže si s ní většina jazyků neporadí.
-1. Víceslovné proměnné nesmí obsahovat mezeru, např. ~~<var>pocet hodin</var>~~. To by si Python myslel, že to jsou dvě proměnné za sebou a nevěděl by co s tím. Pokud chcete proměnnou s více slovy, použijte takzvanou :term{cs="velbloudí notaci" en="camel case"} <var>pocetHodin</var> nebo :term{cs="hadí notaci" en="snake case"} <var>pocet_hodin</var>.
-1. Vždy proměnnou pojmenujte tak, aby její název jasně napovídal, co se uvnitř ní nachází. Například proměnná <var>pocet_hodin</var> jasně říká, že v ní bude uložen asi nějaký počet hodin. Můžeme podlehnout touze název proměnné zkrátit například na <var>pcthdn</var>, aby se nám lépe psala. Až ovšem někdo další bude takový program číst, bude mlátit hlavou do stolu, cože proboha znamená zkratka <var>pcthdn</var>.
-1. Naposledy je dobré si uvědomit, že programy i programátoři se téměř vždy pohybují v mezinárodním prostředí. Takže je vždycky lepší pojmenovávat proměnné anglicky. V tomto kurzu ještě tohle pravidlo trošku rozvolníme, ale i tak si můžete začít zvykat na proměnné s názvem <var>number_of_hours</var>.
+1. Název proměnné by neměl začínat velkým písmenem, např. ~~`Pocet`~~. Takové názvy jsou rezervované pro speciální typy proměnných, ke kterým se v tomto kurzu dostaneme až téměř na konci.
+1. Název proměnné by neměl obsahovat diakritiku, např. ~~`počet`~~. Programovací jazyky vznikaly v anglickém prostředí, kde se diakritika nepoužívá, takže si s ní většina jazyků neporadí.
+1. Víceslovné proměnné nesmí obsahovat mezeru, např. ~~`pocet hodin`~~. To by si Python myslel, že to jsou dvě proměnné za sebou a nevěděl by co s tím. Pokud chcete proměnnou s více slovy, použijte takzvanou :term{cs="velbloudí notaci" en="camel case"} `pocetHodin` nebo :term{cs="hadí notaci" en="snake case"} `pocet_hodin`.
+1. Vždy proměnnou pojmenujte tak, aby její název jasně napovídal, co se uvnitř ní nachází. Například proměnná `pocet_hodin` jasně říká, že v ní bude uložen asi nějaký počet hodin. Můžeme podlehnout touze název proměnné zkrátit například na `pcthdn`, aby se nám lépe psala. Až ovšem někdo další bude takový program číst, bude mlátit hlavou do stolu, cože proboha znamená zkratka `pcthdn`.
+1. Naposledy je dobré si uvědomit, že programy i programátoři se téměř vždy pohybují v mezinárodním prostředí. Takže je vždycky lepší pojmenovávat proměnné anglicky. V tomto kurzu ještě tohle pravidlo trošku rozvolníme, ale i tak si můžete začít zvykat na proměnné s názvem `number_of_hours`.
 
 ### Nástrahy
 
@@ -81,13 +81,13 @@ Dejte pozor na to, že Python není Excel. Do proměnné se jako do šuplíku uk
 >>> vyplata = 8 * sazba
 ```
 
-bude v proměnné <var>vyplata</var> uložena hodnota 2800. Jestliže potom změníme hodnotu v proměnné <var>sazba</var> na něco jiného, například
+bude v proměnné `vyplata` uložena hodnota 2800. Jestliže potom změníme hodnotu v proměnné `sazba` na něco jiného, například
 
 ```pycon
 >>> sazba = 420
 ```
 
-v proměnné <var>vyplata</var> bude nadále uložena hodnota 2800. Pokud chceme výsledek výpočtu aktualizovat, musíme jej spustit znova.
+v proměnné `vyplata` bude nadále uložena hodnota 2800. Pokud chceme výsledek výpočtu aktualizovat, musíme jej spustit znova.
 
 ```pycon
 >>> vyplata = 8 * sazba

@@ -19,7 +19,7 @@ Následující tabulka obsahuje průměrné roční teploty v České republice 
 | 2009 | 8.4        |
 | 2010 | 7.2        |
 
-Vytvořte reprezentaci této tabulky pomocí seznamu seznamů. Zde existují dvě možnosti. Nejprve vytvořte seznam, který obsahuje řádky tabulky jako dvouprvkové seznamy a uložte jej do proměnné <var>radky</var>. Poté vytvořte seznam, který obsahuje sloupce tabulky, tedy dva seznamy po deseti prvcích. Uložte jej do proměnné <var>sloupce</var>.
+Vytvořte reprezentaci této tabulky pomocí seznamu seznamů. Zde existují dvě možnosti. Nejprve vytvořte seznam, který obsahuje řádky tabulky jako dvouprvkové seznamy a uložte jej do proměnné `radky`. Poté vytvořte seznam, který obsahuje sloupce tabulky, tedy dva seznamy po deseti prvcích. Uložte jej do proměnné `sloupce`.
 
 Pro obě tyto reprezentace vyřešte následující úkoly
 
@@ -29,4 +29,4 @@ Pro obě tyto reprezentace vyřešte následující úkoly
 1. Vytvořte tabulku bez prvních dvou řádků.
 1. Vytvořte tabulku pouze z prvních dvou řádků.
 1. Vytvořte tabulku obsahující jen řádky 5, 6, 7, 8.
-1. Použitím proměnné <i>sloupce</i> vypište seznam teplot seřazený vzestupně podle velikosti. Šlo by to i pomocí proměnné <var>radky</var>, ale to ještě neumíme.
+1. Použitím proměnné `sloupce` vypište seznam teplot seřazený vzestupně podle velikosti. Šlo by to i pomocí proměnné `radky`, ale to ještě neumíme.
