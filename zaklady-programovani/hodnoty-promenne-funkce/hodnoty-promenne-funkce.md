@@ -16,11 +16,11 @@ $ python3
 
 ## Hodnoty
 
-<term cs="Hodnoty" en="Values"> představují všechny možné druhy dat, se kterými můžou naše programy pracovat. Hodnoty se dle způsobu použití dělí do různých kategorií zvaných <term cs="datové typy" en="data types">. Datových typů existuje velké množství. V tuto chvíli si představíme ty nejzákladnější - celá čísla a desetinná čísla.
+:term{cs="Hodnoty" en="Values"> představují všechny možné druhy dat, se kterými můžou naše programy pracovat. Hodnoty se dle způsobu použití dělí do různých kategorií zvaných <term cs="datové typy" en="data types"}. Datových typů existuje velké množství. V tuto chvíli si představíme ty nejzákladnější - celá čísla a desetinná čísla.
 
 ### Celá čísla
 
-Nejjednodušší datový typ jsou <term cs="celá čísla" en="integers">. Pod tento typ patří hodnoty jako 12, 1321500, -5, 0 a podobně. Pokud do Python konzole napíšete hodnotu, Python vám ji vypíše zpátky, což znamená, že vám rozumí 🙂.
+Nejjednodušší datový typ jsou :term{cs="celá čísla" en="integers"}. Pod tento typ patří hodnoty jako 12, 1321500, -5, 0 a podobně. Pokud do Python konzole napíšete hodnotu, Python vám ji vypíše zpátky, což znamená, že vám rozumí 🙂.
 
 ```pycon
 >>> 127
@@ -29,7 +29,7 @@ Nejjednodušší datový typ jsou <term cs="celá čísla" en="integers">. Pod t
 
 ### Desetinná čísla
 
-S celými čísly bychom si dlouho nevystačili. Dalším datovým typem tedy budou <term cs="desetinná čísla" en="floating point numbers">, např. 13.4, 6.0, -0.0001, 0.0 apod. Pozor, že programátoři vždycky píší desetinná čísla s tečkou, nikoliv s čárkou.
+S celými čísly bychom si dlouho nevystačili. Dalším datovým typem tedy budou :term{cs="desetinná čísla" en="floating point numbers"}, např. 13.4, 6.0, -0.0001, 0.0 apod. Pozor, že programátoři vždycky píší desetinná čísla s tečkou, nikoliv s čárkou.
 
 ## Aritmetické operátory
 
@@ -40,7 +40,7 @@ Nyní už máme prostředky k tomu, abychom mohli pomocí Pythonu něco spočít
 - násobení: **`*`**
 - dělení: **`/`**
 
-Díky těmto operátorům můžeme Python použít jako kalkulačku a psát <term cs="aritmetické výrazy" en="arithmetic expressions"> jako ve škole.
+Díky těmto operátorům můžeme Python použít jako kalkulačku a psát :term{cs="aritmetické výrazy" en="arithmetic expressions"} jako ve škole.
 
 ```pycon
 >>> 12 * 13 + 10
@@ -53,7 +53,7 @@ Všimněte si, že můžeme používat kulaté závorky, pokud potřebujeme změ
 
 ## Proměnné
 
-Při komplikovanějších výpočtech se nám často stane, že si potřebujeme nějaký mezivýpočet uložit pro pozdější použití. K tomu nám slouží takzvané <term cs="proměnné" en="variables">. Proměnná je jakási pojmenovaná krabička nebo šuplík, do kterého si můžeme uložit nějakou hodnotu, abychom ji neztratili a mohli ji používat v dalších výpočtech.
+Při komplikovanějších výpočtech se nám často stane, že si potřebujeme nějaký mezivýpočet uložit pro pozdější použití. K tomu nám slouží takzvané :term{cs="proměnné" en="variables"}. Proměnná je jakási pojmenovaná krabička nebo šuplík, do kterého si můžeme uložit nějakou hodnotu, abychom ji neztratili a mohli ji používat v dalších výpočtech.
 
 Můžeme například v rámci dietního programu spočítat, kolik vanilkových věnečků denně jsme spořádali za posledních 5 dní.
 
@@ -68,7 +68,7 @@ Už od úplných začátků s programováním je dobré učit se dobrým návyk�
 
 1. Název proměnné by neměl začínat velkým písmenem, např. ~~<var>Pocet</var>~~. Takové názvy jsou rezervované pro speciální typy proměnných, ke kterým se v tomto kurzu dostaneme až téměř na konci.
 1. Název proměnné by neměl obsahovat diakritiku, např. ~~<var>počet</var>~~. Programovací jazyky vznikaly v anglickém prostředí, kde se diakritika nepoužívá, takže si s ní většina jazyků neporadí.
-1. Víceslovné proměnné nesmí obsahovat mezeru, např. ~~<var>pocet hodin</var>~~. To by si Python myslel, že to jsou dvě proměnné za sebou a nevěděl by co s tím. Pokud chcete proměnnou s více slovy, použijte takzvanou <term cs="velbloudí notaci" en="camel case"> <var>pocetHodin</var> nebo <term cs="hadí notaci" en="snake case"> <var>pocet_hodin</var>.
+1. Víceslovné proměnné nesmí obsahovat mezeru, např. ~~<var>pocet hodin</var>~~. To by si Python myslel, že to jsou dvě proměnné za sebou a nevěděl by co s tím. Pokud chcete proměnnou s více slovy, použijte takzvanou :term{cs="velbloudí notaci" en="camel case"> <var>pocetHodin</var> nebo <term cs="hadí notaci" en="snake case"> <var>pocet_hodin</var}.
 1. Vždy proměnnou pojmenujte tak, aby její název jasně napovídal, co se uvnitř ní nachází. Například proměnná <var>pocet_hodin</var> jasně říká, že v ní bude uložen asi nějaký počet hodin. Můžeme podlehnout touze název proměnné zkrátit například na <var>pcthdn</var>, aby se nám lépe psala. Až ovšem někdo další bude takový program číst, bude mlátit hlavou do stolu, cože proboha znamená zkratka <var>pcthdn</var>.
 1. Naposledy je dobré si uvědomit, že programy i programátoři se téměř vždy pohybují v mezinárodním prostředí. Takže je vždycky lepší pojmenovávat proměnné anglicky. V tomto kurzu ještě tohle pravidlo trošku rozvolníme, ale i tak si můžete začít zvykat na proměnné s názvem <var>number_of_hours</var>.
 
@@ -99,7 +99,7 @@ v proměnné <var>vyplata</var> bude nadále uložena hodnota 2800. Pokud chceme
 
 ## Funkce
 
-S čísly jsme zatím byli schopní pracovat pouze pomocí aritmetických operátorů. To nám ale brzy nebude stačit a budeme potřebovat složitější operace, kterým říkáme <term cs="funkce" en="function">.
+S čísly jsme zatím byli schopní pracovat pouze pomocí aritmetických operátorů. To nám ale brzy nebude stačit a budeme potřebovat složitější operace, kterým říkáme :term{cs="funkce" en="function"}.
 
 Funkce je nějaký komplikovanější výpočet zabalený do jakési krabičky. Této krabičce dáme nějaké jméno, abychom jej mohli používat na různých místech v našem programu.
 
@@ -110,7 +110,7 @@ Dobrým příkladem je funkce `round()`, která pro nás dělá zaokrouhlování
 3
 ```
 
-Tomuto zápisu se říká <term cs="volání funkce" en="function call">. Když funkci voláme, předáváme jí takzvaný <term cs="argument" en="argument">, v našem případě číslo 3.4. Když funkci zavoláme s nějakým argumentem, funkce takzvaně <term cs="vrátí" en="return"> výsledek.
+Tomuto zápisu se říká :term{cs="volání funkce" en="function call">. Když funkci voláme, předáváme jí takzvaný <term cs="argument" en="argument">, v našem případě číslo 3.4. Když funkci zavoláme s nějakým argumentem, funkce takzvaně <term cs="vrátí" en="return"} výsledek.
 
 Funkci si můžeme představit například jako topinkovač. Topinkovač pro nás dělá nějakou užitečnou činnost, kterou chceme často opakovat (opéká topinky). Má svoje jméno (topinkovač). Do topinkovače dáme chleba (argument) a spustíme je (zavoláme). Topinkovač chvíli pracuje a pak nám vrátí výsledek - topinky. Důležité je, že nemusíme řešit jak to topinkovač vlastně dělá, že dokáže opéct chleba. Důležité pro nás je, že to umí a že jej můžeme kdykoliv použít.
 
@@ -118,7 +118,7 @@ Funkci si můžeme představit například jako topinkovač. Topinkovač pro ná
 
 ## Seznamy
 
-Zatím jsme byli schopní do jedné proměnné uložit pouze jednu hodnotu. Pro práci s daty ale budeme potřebovat pracovat s větším množstvím hodnot než pouze s jednou. K tomu nám poslouží takzvané <term cs="seznamy" en="lists">.
+Zatím jsme byli schopní do jedné proměnné uložit pouze jednu hodnotu. Pro práci s daty ale budeme potřebovat pracovat s větším množstvím hodnot než pouze s jednou. K tomu nám poslouží takzvané :term{cs="seznamy" en="lists"}.
 
 Představme si, že si chci zaznamenat počet vanilkových věnečků snědených za posledních 7 dní. V Pythonu si můžu pro tento účel vytvořit seznam, který si uložím do vhodně pojmenované proměnné.
 
@@ -234,7 +234,7 @@ Dalším užitečným operátorem je celočíselné dělení. Dejme tomu, že js
 4
 ```
 
-Všimněte si, že nám po čtyřech týdnech zbude ještě pár dní. Pokud chceme přesně vědět, kolik dní nám bylo po dělení sedmi, použijeme operátor <term cs="zbytek" en="division reminder">.
+Všimněte si, že nám po čtyřech týdnech zbude ještě pár dní. Pokud chceme přesně vědět, kolik dní nám bylo po dělení sedmi, použijeme operátor :term{cs="zbytek" en="division reminder"}.
 
 ```pycon
 >>> 33 % 7

@@ -104,7 +104,7 @@ Pomocí histogramu zobrazíme četnosti jednotlivých hodnot.
 
 ::fig[Histogram výšek]{src=assets/vysky-muzi.png}
 
-Histogram si pro přehlednost můžeme rozdělit do <term cs="přihrádek" en="bins"> po pěti centimetrech
+Histogram si pro přehlednost můžeme rozdělit do :term{cs="přihrádek" en="bins"} po pěti centimetrech
 
 ```pycon
 >>> muzi.hist(bins=[
