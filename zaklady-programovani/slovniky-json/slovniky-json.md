@@ -194,7 +194,7 @@ pip3 install requests
 Pozor, že ve Windows tento příkaz vypadá takto.
 
 ```shell
-$ py -m pip install requests
+pip install requests
 ```
 
 Může se stát, že výše uvedený příkaz nebude fungovat protože nemáte nainstalovaný správce balíčků `pip`\- V takovém případě bude potřeba znova spustit instalaci Pythonu a během ní zaškrtnout, že chcete nainstalovat také `pip`.
