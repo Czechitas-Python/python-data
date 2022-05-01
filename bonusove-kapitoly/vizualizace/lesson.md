@@ -13,7 +13,7 @@ $ pip3 install matplotlib
 Popř. pod Windows
 
 ```shell
-$ py -m pip install matplotlib
+pip install matplotlib
 ```
 
 Nyní můžeme otevřít Python konzoli a náš zbrusu nový modul naimportovat.
@@ -169,7 +169,7 @@ $ pip3 install jupyter
 Pod Windows jako obvykle stačí
 
 ```shell
-$ py -m pip install jupyter
+pip install jupyter
 ```
 
 Nyní si někde na disku vytvoříme složku, ve které budeme skladovat naše Jupyter notebooky. V terminálu se přesuneme do této složky a napíšeme
