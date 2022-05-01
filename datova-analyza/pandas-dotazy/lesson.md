@@ -42,7 +42,7 @@ $ pip3 install pandas
 Jako vždy, pokud jsme na Windows, píšeme
 
 ```shell
-$ py -m pip install pandas
+pip install pandas
 ```
 
 Pandas je relativně veliký balíček, který obsahuje mnoho modulů, takže instalace bude nějakou chvíli trvat.
