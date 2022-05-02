@@ -8,7 +8,7 @@ Napište program, který dostane na příkazovém řádku název proměnné ve v
 Příklad:
 
 ```shell
-$ python3 velbloud-had.py velbloudHoniHada
+python3 velbloud-had.py velbloudHoniHada
 velbloud_honi_hada
 ```
 

@@ -190,7 +190,7 @@ Balíčky obsahují moduly, které po instalaci balíčku můžeme importovat v 
 Ke stahování dat z internetu potřebujete balíček jménem `requests`. Nainstalujeme jej příkazem
 
 ```shell
-$ pip3 install requests
+pip3 install requests
 ```
 
 Pozor, že ve Windows tento příkaz vypadá takto.
