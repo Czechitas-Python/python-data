@@ -38,13 +38,13 @@ index = rozdily.index(min_rozdil)
 Pokud chceme takovýto program spustit, musíme nejdříve náš terminál nasměrovat na složku, ve které máme uložen náš soubor `teploty.py`. Poté napíšeme do terminálu, **pozor, nikoliv do Python konzole** , následující příkaz.
 
 ```shell
-$ python3 teploty.py
+python3 teploty.py
 ```
 
 Pozor, že na systému Windows příkaz vypadá takto:
 
 ```shell
-$ py teploty.py
+py teploty.py
 ```
 
 Náš program se sice spustí, ale nevypíše žádný výsledek. To je proto, že když spouštíme programy, Python žádné výsledky sám od sebe nevypisuje. Musíme to provést sami pomocí funkce `print()`. Na konec našeho programu tedy přidáme řádek
@@ -121,7 +121,7 @@ Všechny programy, které jsme zatím společně vytvořili, obsahovaly všechna
 Představme si například program, kterému bychom chtěli předat počet minut a on by nám vypsal v hezkém formátu kolik to dohromady dělá hodin a zbylých minut. Pojmenujme náš program například `cas.py`. Pokud chceme zjistit, jaký čas představuje 325 minut, zavoláme náš program takto:
 
 ```pycon
-$ python3 cas.py 325
+python3 cas.py 325
 ```
 
 Číslo 325 v tomto příkazu je právě to, čemu říkáme _parametr_. Teď už jen zbývá se k tomuto číslu nějak dostat zevnitř našeho programu.
@@ -155,7 +155,7 @@ print('Součet zadaných čísel: ' + str(sum(cisla)))
 Program poté můžeme volat třeba takto:
 
 ```shell
-$ python3 soucet.py 57 41 37 22 12
+python3 soucet.py 57 41 37 22 12
 Součet zadaných čísel: 169
 ```
 

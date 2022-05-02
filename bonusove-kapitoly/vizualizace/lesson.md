@@ -7,7 +7,7 @@ Modul `matplotlib` nabízí ohromné množství možností pro vizualizaci dat. 
 Pokud chceme v Pythonu používat modul `matplotlib`, je potřeba jej již tradičním způsobem nainstalovat
 
 ```shell
-$ pip3 install matplotlib
+pip3 install matplotlib
 ```
 
 Popř. pod Windows
@@ -163,7 +163,7 @@ Nyní chceme zobrazit krabicový graf porovnávající výšky obou pohlaví. K 
 Na úplný závěr našeho kurzu se naučíme pracovat s Jupyter notebookem. Je to webové prostředí, ve kterém můžete vytvářet hezky učesané reporty z vašich datových analýz. Jupyter musíme nejprve nainstalovat.
 
 ```shell
-$ pip3 install jupyter
+pip3 install jupyter
 ```
 
 Pod Windows jako obvykle stačí
