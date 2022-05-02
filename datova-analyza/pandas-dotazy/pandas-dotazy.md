@@ -36,7 +36,7 @@ Při práci s Pandas se tedy nebudeme učit nové programovací techniky v Pytho
 Pandas je externí balíček, který musíme nejdříve nainstalovat, podobně jako jsme to dělali minulou lekci s balíčkem `requests`. Napíšeme tedy na příkazovou řádku
 
 ```shell
-$ pip3 install pandas
+pip3 install pandas
 ```
 
 Jako vždy, pokud jsme na Windows, píšeme

@@ -12,7 +12,7 @@ Na Fakultu hybridních přírodních umění nastupují nově přijatí studenti
 **Příklad:** Student se jménem Květoslav Štístko bude mít email `stistkve@hybrid.edu`. Všimněte si, že pro tuto konstrukci potřebujeme jméno zbavit diakritiky. To lze v Pythonu provést pomocí modulu `unidecode`. Tento modul není ve výchozí instalaci Pythonu k dispozici, musíme si jej proto doinstalovat:
 
 ```
-$ pip3 install unidecode
+pip3 install unidecode
 ```
 
 Popřípadě na Windows:

@@ -37,10 +37,9 @@ Pokud máte počítač se systémem Mac OS, následujte tyto kroky.
 
 Pokud používáte některou z populárních distribucí Linuxu jako Ubuntu, Linux Mint apod., je velká naděje, že už máte python nainstalovaný. Napište do příkazové řádky příkaz `python3`.
 
-**POZOR!** Symbol dolaru na začátku příkazu se do terminálu nepíše. Slouží pouze k tomu, abychom odlišili, že příkaz se píše do terminálu a ne někam jinam.
 
 ```shell
-$ python3
+python3
 ```
 
 A sledujte, zda se objeví zpráva podobná této
@@ -59,12 +58,11 @@ Nejprve ověřme, že instalace nástrojů proběhla v pořádku. Ať už jste n
 
 ::fig[VS Code Terminal]{src=assets/vscode-term.png}
 
-**POZOR!** Symbol dolaru na začátku příkazu se do terminálu nepíše. Slouží pouze k tomu, abychom odlišili, že příkaz se píše do terminálu a ne někam jinam.
 
 Pokud jste na Windows, napište do okna terminálu příkaz `py`:
 
 ```shell
-$ py
+py
 ```
 
 a stiskněte Enter. Stejně by měl fungovat i příkaz `python`.
@@ -72,7 +70,7 @@ a stiskněte Enter. Stejně by měl fungovat i příkaz `python`.
 Pokud jste na Macu nebo Linuxu, je třeba napsat
 
 ```shell
-$ python3
+python3
 ```
 
 Pokud je vše v pořádku, měly by se po pár krypticky vypadajících výpisech ukázat tři zobáčky `>>>` a kurzor. To znamená, že Python je připraven na vaše první příkazy.
