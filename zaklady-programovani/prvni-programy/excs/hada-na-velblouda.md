@@ -8,6 +8,6 @@ Napište program, který dostane na příkazovém řádku název proměnné v ha
 Příklad:
 
 ```shell
-$ python3 had-velbloud.py had_honi_velblouda
+python3 had-velbloud.py had_honi_velblouda
 hadHoniVelblouda
 ```

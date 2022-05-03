@@ -8,7 +8,7 @@ demand: 3
 Příklad použití:
 
 ```shell
-$ python3 prumer-median.py 2 1 8 3 4 11 7 1512
+python3 prumer-median.py 2 1 8 3 4 11 7 1512
 Průměr: 193.5
 Medián: 5.5
 ```

@@ -8,7 +8,7 @@ textu výše. Když mu na příkazové řádce předáme dva parametry ‒ poče
 počet minut ‒ například takto
 
 ```shell
-$ python3 minuty.py 2 54
+python3 minuty.py 2 54
 ```
 
 program nám vrátí délku tohoto času minutách. V tomto případě tedy číslo 174.
