@@ -66,7 +66,7 @@ Abychom si práci s DataFrame vyzkoušeli, budeme používat následující cvi�
 
 ### Načítání dat
 
-Tabulku výše si můžete stáhnout ve [formátu CSV]{src=assets/mesta.csv}. Abychom si ji mohli prohlédnout jako DataFrame, otevřeme si nejprve Python konzoli, importujeme modul `pandas` a načteme CSV soubor pomocí funkce `read_csv().`
+Tabulku výše si můžete stáhnout ve [formátu CSV](assets/mesta.csv). Abychom si ji mohli prohlédnout jako DataFrame, otevřeme si nejprve Python konzoli, importujeme modul `pandas` a načteme CSV soubor pomocí funkce `read_csv().`
 
 ```pycon
 >>> import pandas

@@ -128,7 +128,7 @@ JSON formát původně pochází z jazyka, který se jmenuje JavaScript. Ten se 
 
 ### Čtení JSON dat
 
-V Pythonu je velice jednoduché převést JSON na obyčejný Python slovník. Stačí nám k tomu modul jménem `json`. Vyzkoušíme si to na našem seznamu absolventů. Nejdřív si tato data stáhneme jako soubor [absolventi.json]{src=assets/absolventi.json}. Ten pak můžeme v Pythonu otevřít a převést na JSON následujícím programem.
+V Pythonu je velice jednoduché převést JSON na obyčejný Python slovník. Stačí nám k tomu modul jménem `json`. Vyzkoušíme si to na našem seznamu absolventů. Nejdřív si tato data stáhneme jako soubor [absolventi.json](assets/absolventi.json). Ten pak můžeme v Pythonu otevřít a převést na JSON následujícím programem.
 
 ```py
 import json

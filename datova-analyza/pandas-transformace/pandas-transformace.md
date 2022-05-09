@@ -77,7 +77,7 @@ Uvažme jakéhosi Kristiána, jenž se snaží o zhubnutí do svého obleku, kte
 | st 15. | 74,1 kg | 3 km  | 2     |
 | čt 16  | 73,8 kg | 3km   | 2     |
 
-Tabulku si můžete stáhnout jako soubor [vaha.txt]{src=assets/vaha.txt}. Bohužel Kristián není ten úplně nejvíc nejdůslednější člověk na planetě, takže hodnoty v druhém a třetím sloupečku nejsou vždy úplně konzistentní, hemží se to zde překlepy i občasnou chybějící hodnotou. Váha je řetězec, který nejen obsahuje i jednotky, ale navíc jsou desetinná čísla zapsána pomocí čárky. Navíc jsou hodnoty v tomto souboru jsou odděleny tabulátory, což svědčí o tom, že je Kristián asi vykopíroval přímo z Excelu nebo Google docs.
+Tabulku si můžete stáhnout jako soubor [vaha.txt](assets/vaha.txt). Bohužel Kristián není ten úplně nejvíc nejdůslednější člověk na planetě, takže hodnoty v druhém a třetím sloupečku nejsou vždy úplně konzistentní, hemží se to zde překlepy i občasnou chybějící hodnotou. Váha je řetězec, který nejen obsahuje i jednotky, ale navíc jsou desetinná čísla zapsána pomocí čárky. Navíc jsou hodnoty v tomto souboru jsou odděleny tabulátory, což svědčí o tom, že je Kristián asi vykopíroval přímo z Excelu nebo Google docs.
 
 V dnešní lekci už nebudeme pracovat v příkazové řádce, ale napíšeme si regulérní program. Nejprve načteme naše data do DataFrame. Pozor na to, že oddělovače jsou tabulátory.
 

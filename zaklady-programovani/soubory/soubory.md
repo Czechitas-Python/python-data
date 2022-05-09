@@ -4,7 +4,7 @@ V minulé lekci jsme se bavili o tom, jak dostat do našeho programu data pomoc�
 
 V praxi často máme data uložena v nějakém souboru na disku v nějakém textovém formátu. Ukážeme si, jak takový soubor v Pythonu otevřít a data z něj přečíst.
 
-Pro naše první experimenty si stáhněte soubor [mereni.txt]{src=assets/mereni.txt}. Ten obsahuje naměřené teploty během týdne, které jsme už několikrát v našich programech používali.
+Pro naše první experimenty si stáhněte soubor [mereni.txt](assets/mereni.txt). Ten obsahuje naměřené teploty během týdne, které jsme už několikrát v našich programech používali.
 
 Pokud chceme otevřít tento soubor v nějakém našem programu, nejjednodušší je zkopírovat jej do téže složky, ve které máme program uložený. Potom v programu použijeme funkci `open()`, která slouží k otevírání souborů. Nejčastěji se soubor otevírá v kombinaci se klíčovým slovem `with`. Tím automaticky zajistíme uzavření souboru a nebudeme ho blokovat. Současně si otevřený soubor musíme pojmenovat. Jméno vložíme za další klíčové slovo `as`. Náš soubor `mereni.text` tedy dostal "přezdívku" `vstup`.
 
