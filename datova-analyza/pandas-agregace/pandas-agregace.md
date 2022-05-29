@@ -165,14 +165,14 @@ Takto nám ale ve výsledku vznikne ohromné množství nedefinovaných hodnot. 
 Potíž je v tom, že se teď oba sloupečky <i>jmeno</i> automaticky přejmenovaly, aby neměly v tabulce stejný název. Zde můžeme použít metodu `rename`, abychom sloupečky přejmenovali na něco smysluplného.
 
 ```pycon
-test = test.rename(columns={'jmeno_x': 'jmeno', 'jmeno_y': 'předs'})
+test = test.rename(columns={'jmeno_x': 'jmeno', 'jmeno_y': 'preds'})
 ```
 
 Nyní už tabulka vypadá hezky. Proveďme tedy totéž pro celý náš maturitní dataset a opět si jej uložme do souboru, ať jej máme vždy po ruce.
 
 ```pycon
 >>> maturita2 = pandas.merge(maturita, preds, on=['den'])
->>> maturita2 = maturita2.rename(columns={'jmeno_x': 'jmeno', 'jmeno_y': 'předs'})
+>>> maturita2 = maturita2.rename(columns={'jmeno_x': 'jmeno', 'jmeno_y': 'preds'})
 >>> maturita2.to_csv('maturita2.csv', index=False)
 ```
 
@@ -191,7 +191,7 @@ Na tomto speciálním objektu pak můžeme používat různé agregační funkce
 
 ```pycon
 >>> maturita2.groupby('mistnost').count()
-          jmeno  predmet  znamka  den  datum  předs
+          jmeno  predmet  znamka  den  datum  preds
 mistnost
 u202         13       13      13   13     13     13
 u203         13       13      13   13     13     13
