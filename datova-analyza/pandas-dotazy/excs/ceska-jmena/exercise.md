@@ -8,7 +8,7 @@ Stáhněte si soubor [jmena100.csv](assets/jmena100.csv), který obsahuje tabulk
 Datový soubor obsahuje následující sloupečky
 
 - **jmeno** \- křestní jméno
-- **četnost** \- počet obyvatel ČR mající toto jméno
+- **cetnost** \- počet obyvatel ČR mající toto jméno
 - **věk** \- průměrný věk nositelů jména
 - **pohlaví** \- zda je jméno mužské či ženské
 - **svátek** \- datum, kdy má dané jméno svátek
