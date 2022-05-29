@@ -60,7 +60,7 @@ Vytváření vlastních funkcí jsme si nevysvětlovali jen tak nazdařbůh. Na�
 
 Uvažme jakéhosi Kristiána, jenž se snaží o zhubnutí do svého obleku, který má ještě z tanečních na střední škole. Náš Kristián se rozhodl po 14 dní zdravěji jíst a chodit pravidelně běhat. Své úsilí si poctivě zaznamenával do následující tabulky.
 
-| den    | vaha    | běh   | týden |
+| den    | vaha    | beh   | tyden |
 | ------ | ------- | ----- | ----- |
 | pá 3.  | 75,6 kg | 3 km  | 1     |
 | so 4.  | 75,3 kh | pauza | 1     |
@@ -176,7 +176,7 @@ print(vaha)
 ```
 
 ```pycon
-    den     vaha    běh  týden  číslo dne
+    den     vaha    beh  tyden  číslo dne
 0   pá   75,6 kg   3 km      1          3
 1   so   75,3 kh  pauza      1          4
 2   ne    75,9kg  pauza      1          5
@@ -220,7 +220,7 @@ print(vaha)
 ```
 
 ```pycon
-    den  vaha    běh  týden  číslo dne
+    den  vaha    beh  tyden  číslo dne
 0   pá   75.6   3 km      1          3
 1   so   75.3  pauza      1          4
 2   ne   75.9  pauza      1          5
@@ -244,12 +244,12 @@ Nádhera! Naše data jsou nyní mnohem učesanější a můžeme je začít vyho
 Naše dnešní povídání o Pandas završíme tím, že si vytvoříme vlastní agregační funkci. Agregace pomocí vestavěných funkcí jako je součet, průměr, rozptyl apod. už jsme viděli. Takto bychom například mohli spočítat průměr váhy za každý týden zvlášť.
 
 ```py
-print(vaha.groupby('týden')['vaha'].mean())
+print(vaha.groupby('tyden')['vaha'].mean())
 ```
 
 ```pycon
 Name: den, dtype: object
-týden
+tyden
 1    75.457143
 2    74.414286
 Name: vaha, dtype: float64
@@ -277,11 +277,11 @@ print(vaha['vaha'].agg(spread))
 Mnohem mocnější jsou však agregace při grupování. Naše funkce `spread` se tak zavolá na každou skupinu, která grupováním vznikne. Můžeme tedy rovnou spočítat rozpětí váhy v jednotlivých týdnech.
 
 ```py
-print(vaha.groupby('týden')['vaha'].agg(spread))
+print(vaha.groupby('tyden')['vaha'].agg(spread))
 ```
 
 ```pycon
-týden
+tyden
 1    1.2
 2    1.4
 Name: vaha, dtype: float64
