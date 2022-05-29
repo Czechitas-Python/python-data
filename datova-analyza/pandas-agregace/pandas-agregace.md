@@ -4,7 +4,7 @@ V předchozí lekci jsme si ukázali, jak se v Pandas vytvoří DataFrame a jak 
 
 Abychom měli nějaký praktický příklad k procvičování, použijeme fiktivní data z výsledků maturitních zkoušek během jednoho týdne na nějakém menším gymnáziu. Maturita se odehrává ve třech místnostech: U202, U203 a U302. Máme tedy tři tabulky dat, z každé místnosti jednu. Níže si můžete prohlédnout příklad tabulky z místnosti U202. Všechny tabulky jsou ke stažení zde: [u202.csv](assets/u202.csv), [u203.csv](assets/u203.csv), [u302.csv](assets/u302.csv).
 
-| jméno             | předmět          | známka | den |
+| jmeno             | předmět          | známka | den |
 | ----------------- | ---------------- | ------ | --- |
 | Jana Zbořilová    | Chemie           |        | pá  |
 | Lukáš Jurčík      | Dějepis          | 3      | pá  |
@@ -67,7 +67,7 @@ Tyto metody můžeme využít například k tomu, abychom získali všechna data
 
 ```pycon
 >>> u202[u202['známka'].isnull()]
-            jméno  předmět  známka den
+            jmeno  předmět  známka den
 0  Jana Zbořilová   Chemie     NaN  pá
 9    Petr Valenta  Dějepis     NaN  pá
 ```
@@ -121,7 +121,7 @@ Výslednou tabulku si můžete stáhnout jako soubor [maturita.csv](assets/matur
 
 Už jsme si ukázali, jak v Pandas spojovat tabulky za sebe, což v SQL odpovídá příkazu UNION. Pandas však umí DataFrame také mergovat, což odpovídá SQL příkazu JOIN. Abychom si tento postup mohli předvést, nečteme si tabulku, která uvádí, kdo v který den předsedal maturitní zkoušecí komisi.
 
-| den | datum     | jméno            |
+| den | datum     | jmeno            |
 | --- | --------- | ---------------- |
 | po  | 20.5.2019 | Marie Zuzaňáková |
 | út  | 21.5.2019 | Marie Zuzaňáková |
@@ -141,7 +141,7 @@ Join tabulek se v Pandas dělá pomocí funkce `merge`. Nejprve ji otestujme pou
 >>> test = pandas.merge(u202, preds)
 ```
 
-Takto na poprvé se však s úspěchem nesetkáme, neboť výsledkem příkazu bude prázdný DataFrame. Důvod je ten, že metoda `merge` dělá ve výchozím nastavení INNER JOIN podle všech sloupečků, které mají stejná jména. Naše dvě tabulky se tedy spojí podle sloupečků <i>jméno</i> a <i>den</i>. Tyto dva sloupečky ale nemají pro žádný řádek v obou tabulkách stejnou hodnotu, takže nám ve výsledku žádný řádek nezbude.
+Takto na poprvé se však s úspěchem nesetkáme, neboť výsledkem příkazu bude prázdný DataFrame. Důvod je ten, že metoda `merge` dělá ve výchozím nastavení INNER JOIN podle všech sloupečků, které mají stejná jména. Naše dvě tabulky se tedy spojí podle sloupečků <i>jmeno</i> a <i>den</i>. Tyto dva sloupečky ale nemají pro žádný řádek v obou tabulkách stejnou hodnotu, takže nám ve výsledku žádný řádek nezbude.
 
 Můžeme být neoblomná a zaexperimentovat s OUTER JOIN
 
@@ -154,7 +154,7 @@ Takto nám ale ve výsledku vznikne ohromné množství nedefinovaných hodnot. 
 ```pycon
 >>> test = pandas.merge(u202, preds, on=['den'])
 >>> test.head()
-         jméno_x           předmět  známka den mistnost      datum           jméno_y
+         jmeno_x           předmět  známka den mistnost      datum           jmeno_y
 0   Lukáš Jurčík           Dějepis     3.0  pá     u202  24.5.2019   Alena Pniáčková
 1   Lukáš Jurčík  Společenské vědy     2.0  pá     u202  24.5.2019   Alena Pniáčková
 2  Pavel Kysilka          Biologie     1.0  pá     u202  24.5.2019   Alena Pniáčková
@@ -162,17 +162,17 @@ Takto nám ale ve výsledku vznikne ohromné množství nedefinovaných hodnot. 
 4    Pavel Horák            Chemie     5.0  út     u202  21.5.2019  Marie Zuzaňáková
 ```
 
-Potíž je v tom, že se teď oba sloupečky <i>jméno</i> automaticky přejmenovaly, aby neměly v tabulce stejný název. Zde můžeme použít metodu `rename`, abychom sloupečky přejmenovali na něco smysluplného.
+Potíž je v tom, že se teď oba sloupečky <i>jmeno</i> automaticky přejmenovaly, aby neměly v tabulce stejný název. Zde můžeme použít metodu `rename`, abychom sloupečky přejmenovali na něco smysluplného.
 
 ```pycon
-test = test.rename(columns={'jméno_x': 'jméno', 'jméno_y': 'předs'})
+test = test.rename(columns={'jmeno_x': 'jmeno', 'jmeno_y': 'předs'})
 ```
 
 Nyní už tabulka vypadá hezky. Proveďme tedy totéž pro celý náš maturitní dataset a opět si jej uložme do souboru, ať jej máme vždy po ruce.
 
 ```pycon
 >>> maturita2 = pandas.merge(maturita, preds, on=['den'])
->>> maturita2 = maturita2.rename(columns={'jméno_x': 'jméno', 'jméno_y': 'předs'})
+>>> maturita2 = maturita2.rename(columns={'jmeno_x': 'jmeno', 'jmeno_y': 'předs'})
 >>> maturita2.to_csv('maturita2.csv', index=False)
 ```
 
@@ -191,7 +191,7 @@ Na tomto speciálním objektu pak můžeme používat různé agregační funkce
 
 ```pycon
 >>> maturita2.groupby('místnost').count()
-          jméno  předmět  známka  den  datum  předs
+          jmeno  předmět  známka  den  datum  předs
 místnost
 u202         13       13      13   13     13     13
 u203         13       13      13   13     13     13

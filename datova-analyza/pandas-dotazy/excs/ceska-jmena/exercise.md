@@ -3,11 +3,11 @@ title: Česká jména
 demand: 2
 ---
 
-Stáhněte si soubor [jmena100.csv](assets/jmena100.csv), který obsahuje tabulku 100 nejpoužívanějších českých křestních jmen seřazených od nejpoužívanějšího k nejméně používanému. Otevřete Python konzoli a pomocí Pandas načtěte tuto tabulku jako DataFrame. Jako index zvolte sloupec s názvem 'jméno'.
+Stáhněte si soubor [jmena100.csv](assets/jmena100.csv), který obsahuje tabulku 100 nejpoužívanějších českých křestních jmen seřazených od nejpoužívanějšího k nejméně používanému. Otevřete Python konzoli a pomocí Pandas načtěte tuto tabulku jako DataFrame. Jako index zvolte sloupec s názvem 'jmeno'.
 
 Datový soubor obsahuje následující sloupečky
 
-- **jméno** \- křestní jméno
+- **jmeno** \- křestní jméno
 - **četnost** \- počet obyvatel ČR mající toto jméno
 - **věk** \- průměrný věk nositelů jména
 - **pohlaví** \- zda je jméno mužské či ženské
