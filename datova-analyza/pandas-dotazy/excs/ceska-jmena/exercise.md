@@ -12,7 +12,7 @@ Datový soubor obsahuje následující sloupečky
 - **vek** \- průměrný věk nositelů jména
 - **pohlavi** \- zda je jméno mužské či ženské
 - **svatek** \- datum, kdy má dané jméno svátek
-- **původ** \- původ jména
+- **puvod** \- původ jména
 
 Vyřešte následující úkoly.
 
