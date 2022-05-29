@@ -1,5 +1,5 @@
 ---
-title: Průměrní teploty
+title: Průměrné teploty
 demand: 2
 ---
 
