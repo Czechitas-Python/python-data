@@ -10,7 +10,7 @@ Datový soubor obsahuje následující sloupečky
 - **jmeno** \- křestní jméno
 - **cetnost** \- počet obyvatel ČR mající toto jméno
 - **vek** \- průměrný věk nositelů jména
-- **pohlaví** \- zda je jméno mužské či ženské
+- **pohlavi** \- zda je jméno mužské či ženské
 - **svatek** \- datum, kdy má dané jméno svátek
 - **původ** \- původ jména
 
