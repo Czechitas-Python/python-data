@@ -103,9 +103,9 @@ Pozor ale na to, že v takto vzniklém DataFrame se nám rozbije index, protože
 To už je lepší. Stále nám však zůstává jeden problém. Po spojení tabulek do jedné už nevíme, kdo maturoval v jaké místnosti. Tuto informaci si proto doplníme do původních tří tabulek jako nový sloupeček. Až poté tabulky spojíme do jedné.
 
 ```pycon
->>> u202['místnost'] = 'u202'
->>> u203['místnost'] = 'u203'
->>> u302['místnost'] = 'u302'
+>>> u202['mistnost'] = 'u202'
+>>> u203['mistnost'] = 'u203'
+>>> u302['mistnost'] = 'u302'
 >>> maturita = pandas.concat([u202, u203, u302], ignore_index=True)
 ```
 
@@ -180,19 +180,19 @@ Výslednou tabulku si opět můžete stáhnout jako soubor [maturita2.csv](asset
 
 ## Grupování
 
-Z databází známe kromě UNION a JOIN také operaci GROUP BY. V Pandas ji provedeme tak, že pomocí metody <i>groupby</i> vyrobíme z DataFrame speciální objekt `DataFrameGroupBy`. Dejme tomu, že chceme grupovat podle sloupečku <i>místnost</i>.
+Z databází známe kromě UNION a JOIN také operaci GROUP BY. V Pandas ji provedeme tak, že pomocí metody <i>groupby</i> vyrobíme z DataFrame speciální objekt `DataFrameGroupBy`. Dejme tomu, že chceme grupovat podle sloupečku <i>mistnost</i>.
 
 ```pycon
->>> maturita2.groupby('místnost')
+>>> maturita2.groupby('mistnost')
 <pandas.core.groupby.generic.DataFrameGroupBy object at 0x7f96153a1cf8>
 ```
 
 Na tomto speciálním objektu pak můžeme používat různé agregační funkce. Nejjednodušší je funkce `count`
 
 ```pycon
->>> maturita2.groupby('místnost').count()
+>>> maturita2.groupby('mistnost').count()
           jmeno  predmet  znamka  den  datum  předs
-místnost
+mistnost
 u202         13       13      13   13     13     13
 u203         13       13      13   13     13     13
 u302         12       12      12   12     12     12
