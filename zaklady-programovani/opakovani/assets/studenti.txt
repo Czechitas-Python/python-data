@@ -1,4 +1,4 @@
-jmeno příjmení  rodné číslo
+jmeno prijmeni  rodné číslo
 Květoslava	Příbrská	895203/6093
 Jindřich	Linhart	940720/2024
 Josef	Hurta	880705/7017
