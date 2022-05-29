@@ -4,7 +4,7 @@ V předchozí lekci jsme si ukázali, jak se v Pandas vytvoří DataFrame a jak 
 
 Abychom měli nějaký praktický příklad k procvičování, použijeme fiktivní data z výsledků maturitních zkoušek během jednoho týdne na nějakém menším gymnáziu. Maturita se odehrává ve třech místnostech: U202, U203 a U302. Máme tedy tři tabulky dat, z každé místnosti jednu. Níže si můžete prohlédnout příklad tabulky z místnosti U202. Všechny tabulky jsou ke stažení zde: [u202.csv](assets/u202.csv), [u203.csv](assets/u203.csv), [u302.csv](assets/u302.csv).
 
-| jmeno             | předmět          | známka | den |
+| jmeno             | predmet          | známka | den |
 | ----------------- | ---------------- | ------ | --- |
 | Jana Zbořilová    | Chemie           |        | pá  |
 | Lukáš Jurčík      | Dějepis          | 3      | pá  |
@@ -67,7 +67,7 @@ Tyto metody můžeme využít například k tomu, abychom získali všechna data
 
 ```pycon
 >>> u202[u202['známka'].isnull()]
-            jmeno  předmět  známka den
+            jmeno  predmet  známka den
 0  Jana Zbořilová   Chemie     NaN  pá
 9    Petr Valenta  Dějepis     NaN  pá
 ```
@@ -154,7 +154,7 @@ Takto nám ale ve výsledku vznikne ohromné množství nedefinovaných hodnot. 
 ```pycon
 >>> test = pandas.merge(u202, preds, on=['den'])
 >>> test.head()
-         jmeno_x           předmět  známka den mistnost      datum           jmeno_y
+         jmeno_x           predmet  známka den mistnost      datum           jmeno_y
 0   Lukáš Jurčík           Dějepis     3.0  pá     u202  24.5.2019   Alena Pniáčková
 1   Lukáš Jurčík  Společenské vědy     2.0  pá     u202  24.5.2019   Alena Pniáčková
 2  Pavel Kysilka          Biologie     1.0  pá     u202  24.5.2019   Alena Pniáčková
@@ -191,7 +191,7 @@ Na tomto speciálním objektu pak můžeme používat různé agregační funkce
 
 ```pycon
 >>> maturita2.groupby('místnost').count()
-          jmeno  předmět  známka  den  datum  předs
+          jmeno  predmet  známka  den  datum  předs
 místnost
 u202         13       13      13   13     13     13
 u203         13       13      13   13     13     13
@@ -215,13 +215,13 @@ Další užitečné agregační funkce jsou například
 Nemusíme samozřejmě grupovat přes všechny sloupečky. Vybereme si pouze ty, které nás zajímají. Zkusme například spočítat průměrnou známku z jednotlivých předmětů.
 
 ```pycon
->>> maturita2.groupby('předmět')['známka'].mean()
+>>> maturita2.groupby('predmet')['známka'].mean()
 ```
 
 Všimněte si, že takto obdržíme sérii, nikoliv DataFrame. Pozornější z vás možná tuší, že abychom získali DataFrame, musíme psát
 
 ```pycon
->>> maturita2.groupby('předmět')[['známka']].mean()
+>>> maturita2.groupby('predmet')[['známka']].mean()
 ```
 
 ## Cvičení
