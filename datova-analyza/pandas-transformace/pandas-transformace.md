@@ -60,7 +60,7 @@ Vytváření vlastních funkcí jsme si nevysvětlovali jen tak nazdařbůh. Na�
 
 Uvažme jakéhosi Kristiána, jenž se snaží o zhubnutí do svého obleku, který má ještě z tanečních na střední škole. Náš Kristián se rozhodl po 14 dní zdravěji jíst a chodit pravidelně běhat. Své úsilí si poctivě zaznamenával do následující tabulky.
 
-| den    | váha    | běh   | týden |
+| den    | vaha    | beh   | tyden |
 | ------ | ------- | ----- | ----- |
 | pá 3.  | 75,6 kg | 3 km  | 1     |
 | so 4.  | 75,3 kh | pauza | 1     |
@@ -176,7 +176,7 @@ print(vaha)
 ```
 
 ```pycon
-    den     váha    běh  týden  číslo dne
+    den     vaha    beh  tyden  číslo dne
 0   pá   75,6 kg   3 km      1          3
 1   so   75,3 kh  pauza      1          4
 2   ne    75,9kg  pauza      1          5
@@ -215,12 +215,12 @@ def kilogramy(vstup):
 Nyní jsme připravení tuto funkci vypustit na naše data. K tomu použijeme metodu na sériích s názvem `apply`. Tato metoda očekává jako vstup nějakou funkci. Tuto funkci pak spustí na každou jednotlivou položku série a ze získaných výsledků vyrobí novou sérii. Pokud vám tento postup připomíná chroustání seznamů, trefili jste do černého. Pojďme si tento postup vyzkoušet s naší novou funkcí.
 
 ```pycon
-vaha['váha'] = vaha['váha'].apply(kilogramy)
+vaha['vaha'] = vaha['vaha'].apply(kilogramy)
 print(vaha)
 ```
 
 ```pycon
-    den  váha    běh  týden  číslo dne
+    den  vaha    beh  tyden  číslo dne
 0   pá   75.6   3 km      1          3
 1   so   75.3  pauza      1          4
 2   ne   75.9  pauza      1          5
@@ -244,15 +244,15 @@ Nádhera! Naše data jsou nyní mnohem učesanější a můžeme je začít vyho
 Naše dnešní povídání o Pandas završíme tím, že si vytvoříme vlastní agregační funkci. Agregace pomocí vestavěných funkcí jako je součet, průměr, rozptyl apod. už jsme viděli. Takto bychom například mohli spočítat průměr váhy za každý týden zvlášť.
 
 ```py
-print(vaha.groupby('týden')['váha'].mean())
+print(vaha.groupby('tyden')['vaha'].mean())
 ```
 
 ```pycon
 Name: den, dtype: object
-týden
+tyden
 1    75.457143
 2    74.414286
-Name: váha, dtype: float64
+Name: vaha, dtype: float64
 ```
 
 V reálném světě tam venku se nám však snadno může stát, že budeme potřebovat agregovat data nějakým složitějším způsobem nebo prostě způsobem, který v sobě Pandas nemá přímo zabudovaný. Uvažme například situaci, kdy chceme spočítat takzvané rozpětí váhy za každý týden. Rozpětí je rozdíl mezi minimální a maximální hodnotou. Takovouto agregační funkci Pandas přímo nenabízí. Musíme si ji napsat sami.
@@ -267,7 +267,7 @@ def spread(serie):
 Nyní stačí tuto funkci předat metodě `agg`. Tuto metodu můžeme volat na jednotlivých sériích. Zjistěme například rozpětí všech vah za celých 14 dní.
 
 ```py
-print(vaha['váha'].agg(spread))
+print(vaha['vaha'].agg(spread))
 ```
 
 ```pycon
@@ -277,12 +277,12 @@ print(vaha['váha'].agg(spread))
 Mnohem mocnější jsou však agregace při grupování. Naše funkce `spread` se tak zavolá na každou skupinu, která grupováním vznikne. Můžeme tedy rovnou spočítat rozpětí váhy v jednotlivých týdnech.
 
 ```py
-print(vaha.groupby('týden')['váha'].agg(spread))
+print(vaha.groupby('tyden')['vaha'].agg(spread))
 ```
 
 ```pycon
-týden
+tyden
 1    1.2
 2    1.4
-Name: váha, dtype: float64
+Name: vaha, dtype: float64
 ```

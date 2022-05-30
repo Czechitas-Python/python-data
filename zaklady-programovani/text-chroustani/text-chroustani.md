@@ -243,8 +243,7 @@ Pokud se pak rozhodneme, že bychom chtěli jen celé kilometry bez desetinných
 ## Seznamy seznamů
 
 Ještě zajímavější situace nastane, budeme-li chtít zchroustat seznam seznamů.
-Minulý týden jsme vyráběli seznam známek ze čtyř písemek pro šest účastníků
-kurzu. Mohl by vypadat například takto:
+Zkusme se podívat na seznam známek ze čtyř písemek od šesti účastníků kurzu. Mohl by vypadat například takto:
 
 ```py
 pisemky = [

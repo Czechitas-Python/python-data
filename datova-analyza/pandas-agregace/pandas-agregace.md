@@ -4,7 +4,7 @@ V předchozí lekci jsme si ukázali, jak se v Pandas vytvoří DataFrame a jak 
 
 Abychom měli nějaký praktický příklad k procvičování, použijeme fiktivní data z výsledků maturitních zkoušek během jednoho týdne na nějakém menším gymnáziu. Maturita se odehrává ve třech místnostech: U202, U203 a U302. Máme tedy tři tabulky dat, z každé místnosti jednu. Níže si můžete prohlédnout příklad tabulky z místnosti U202. Všechny tabulky jsou ke stažení zde: [u202.csv](assets/u202.csv), [u203.csv](assets/u203.csv), [u302.csv](assets/u302.csv).
 
-| jméno             | předmět          | známka | den |
+| jmeno             | predmet          | znamka | den |
 | ----------------- | ---------------- | ------ | --- |
 | Jana Zbořilová    | Chemie           |        | pá  |
 | Lukáš Jurčík      | Dějepis          | 3      | pá  |
@@ -44,7 +44,7 @@ Pokud Pandas narazí na prázdnou buňku, vloží místo ní do tabulky speciál
 Série obsahují metodu `isnull`, která vrátí pravdivostní sérii s hodnotou `True` všude tam, kde v původní sérii chybí hodnota. Metoda `notnull` pracuje přesně opačně. Vrátí pravdivostní sérii s hodnotami `True` všude tam, kde v původní sérii hodnota nechybí.
 
 ```pycon
->>> u202['známka'].isnull()
+>>> u202['znamka'].isnull()
 0      True
 1     False
 2     False
@@ -60,14 +60,14 @@ Série obsahují metodu `isnull`, která vrátí pravdivostní sérii s hodnotou
 12    False
 13    False
 14    False
-Name: známka, dtype: bool
+Name: znamka, dtype: bool
 ```
 
-Tyto metody můžeme využít například k tomu, abychom získali všechna data, kde chybí hodnota ve sloupečku <i>známka</i>.
+Tyto metody můžeme využít například k tomu, abychom získali všechna data, kde chybí hodnota ve sloupečku <i>znamka</i>.
 
 ```pycon
->>> u202[u202['známka'].isnull()]
-            jméno  předmět  známka den
+>>> u202[u202['znamka'].isnull()]
+            jmeno  predmet  znamka den
 0  Jana Zbořilová   Chemie     NaN  pá
 9    Petr Valenta  Dějepis     NaN  pá
 ```
@@ -103,9 +103,9 @@ Pozor ale na to, že v takto vzniklém DataFrame se nám rozbije index, protože
 To už je lepší. Stále nám však zůstává jeden problém. Po spojení tabulek do jedné už nevíme, kdo maturoval v jaké místnosti. Tuto informaci si proto doplníme do původních tří tabulek jako nový sloupeček. Až poté tabulky spojíme do jedné.
 
 ```pycon
->>> u202['místnost'] = 'u202'
->>> u203['místnost'] = 'u203'
->>> u302['místnost'] = 'u302'
+>>> u202['mistnost'] = 'u202'
+>>> u203['mistnost'] = 'u203'
+>>> u302['mistnost'] = 'u302'
 >>> maturita = pandas.concat([u202, u203, u302], ignore_index=True)
 ```
 
@@ -121,7 +121,7 @@ Výslednou tabulku si můžete stáhnout jako soubor [maturita.csv](assets/matur
 
 Už jsme si ukázali, jak v Pandas spojovat tabulky za sebe, což v SQL odpovídá příkazu UNION. Pandas však umí DataFrame také mergovat, což odpovídá SQL příkazu JOIN. Abychom si tento postup mohli předvést, nečteme si tabulku, která uvádí, kdo v který den předsedal maturitní zkoušecí komisi.
 
-| den | datum     | jméno            |
+| den | datum     | jmeno            |
 | --- | --------- | ---------------- |
 | po  | 20.5.2019 | Marie Zuzaňáková |
 | út  | 21.5.2019 | Marie Zuzaňáková |
@@ -141,7 +141,7 @@ Join tabulek se v Pandas dělá pomocí funkce `merge`. Nejprve ji otestujme pou
 >>> test = pandas.merge(u202, preds)
 ```
 
-Takto na poprvé se však s úspěchem nesetkáme, neboť výsledkem příkazu bude prázdný DataFrame. Důvod je ten, že metoda `merge` dělá ve výchozím nastavení INNER JOIN podle všech sloupečků, které mají stejná jména. Naše dvě tabulky se tedy spojí podle sloupečků <i>jméno</i> a <i>den</i>. Tyto dva sloupečky ale nemají pro žádný řádek v obou tabulkách stejnou hodnotu, takže nám ve výsledku žádný řádek nezbude.
+Takto na poprvé se však s úspěchem nesetkáme, neboť výsledkem příkazu bude prázdný DataFrame. Důvod je ten, že metoda `merge` dělá ve výchozím nastavení INNER JOIN podle všech sloupečků, které mají stejná jména. Naše dvě tabulky se tedy spojí podle sloupečků <i>jmeno</i> a <i>den</i>. Tyto dva sloupečky ale nemají pro žádný řádek v obou tabulkách stejnou hodnotu, takže nám ve výsledku žádný řádek nezbude.
 
 Můžeme být neoblomná a zaexperimentovat s OUTER JOIN
 
@@ -154,7 +154,7 @@ Takto nám ale ve výsledku vznikne ohromné množství nedefinovaných hodnot. 
 ```pycon
 >>> test = pandas.merge(u202, preds, on=['den'])
 >>> test.head()
-         jméno_x           předmět  známka den mistnost      datum           jméno_y
+         jmeno_x           predmet  znamka den mistnost      datum           jmeno_y
 0   Lukáš Jurčík           Dějepis     3.0  pá     u202  24.5.2019   Alena Pniáčková
 1   Lukáš Jurčík  Společenské vědy     2.0  pá     u202  24.5.2019   Alena Pniáčková
 2  Pavel Kysilka          Biologie     1.0  pá     u202  24.5.2019   Alena Pniáčková
@@ -162,17 +162,17 @@ Takto nám ale ve výsledku vznikne ohromné množství nedefinovaných hodnot. 
 4    Pavel Horák            Chemie     5.0  út     u202  21.5.2019  Marie Zuzaňáková
 ```
 
-Potíž je v tom, že se teď oba sloupečky <i>jméno</i> automaticky přejmenovaly, aby neměly v tabulce stejný název. Zde můžeme použít metodu `rename`, abychom sloupečky přejmenovali na něco smysluplného.
+Potíž je v tom, že se teď oba sloupečky <i>jmeno</i> automaticky přejmenovaly, aby neměly v tabulce stejný název. Zde můžeme použít metodu `rename`, abychom sloupečky přejmenovali na něco smysluplného.
 
 ```pycon
-test = test.rename(columns={'jméno_x': 'jméno', 'jméno_y': 'předs'})
+test = test.rename(columns={'jmeno_x': 'jmeno', 'jmeno_y': 'preds'})
 ```
 
 Nyní už tabulka vypadá hezky. Proveďme tedy totéž pro celý náš maturitní dataset a opět si jej uložme do souboru, ať jej máme vždy po ruce.
 
 ```pycon
 >>> maturita2 = pandas.merge(maturita, preds, on=['den'])
->>> maturita2 = maturita2.rename(columns={'jméno_x': 'jméno', 'jméno_y': 'předs'})
+>>> maturita2 = maturita2.rename(columns={'jmeno_x': 'jmeno', 'jmeno_y': 'preds'})
 >>> maturita2.to_csv('maturita2.csv', index=False)
 ```
 
@@ -180,19 +180,19 @@ Výslednou tabulku si opět můžete stáhnout jako soubor [maturita2.csv](asset
 
 ## Grupování
 
-Z databází známe kromě UNION a JOIN také operaci GROUP BY. V Pandas ji provedeme tak, že pomocí metody <i>groupby</i> vyrobíme z DataFrame speciální objekt `DataFrameGroupBy`. Dejme tomu, že chceme grupovat podle sloupečku <i>místnost</i>.
+Z databází známe kromě UNION a JOIN také operaci GROUP BY. V Pandas ji provedeme tak, že pomocí metody <i>groupby</i> vyrobíme z DataFrame speciální objekt `DataFrameGroupBy`. Dejme tomu, že chceme grupovat podle sloupečku <i>mistnost</i>.
 
 ```pycon
->>> maturita2.groupby('místnost')
+>>> maturita2.groupby('mistnost')
 <pandas.core.groupby.generic.DataFrameGroupBy object at 0x7f96153a1cf8>
 ```
 
 Na tomto speciálním objektu pak můžeme používat různé agregační funkce. Nejjednodušší je funkce `count`
 
 ```pycon
->>> maturita2.groupby('místnost').count()
-          jméno  předmět  známka  den  datum  předs
-místnost
+>>> maturita2.groupby('mistnost').count()
+          jmeno  predmet  znamka  den  datum  preds
+mistnost
 u202         13       13      13   13     13     13
 u203         13       13      13   13     13     13
 u302         12       12      12   12     12     12
@@ -215,13 +215,13 @@ Další užitečné agregační funkce jsou například
 Nemusíme samozřejmě grupovat přes všechny sloupečky. Vybereme si pouze ty, které nás zajímají. Zkusme například spočítat průměrnou známku z jednotlivých předmětů.
 
 ```pycon
->>> maturita2.groupby('předmět')['známka'].mean()
+>>> maturita2.groupby('predmet')['znamka'].mean()
 ```
 
 Všimněte si, že takto obdržíme sérii, nikoliv DataFrame. Pozornější z vás možná tuší, že abychom získali DataFrame, musíme psát
 
 ```pycon
->>> maturita2.groupby('předmět')[['známka']].mean()
+>>> maturita2.groupby('predmet')[['znamka']].mean()
 ```
 
 ## Cvičení

@@ -1,4 +1,4 @@
-den	váha	běh	týden
+den	vaha	beh	tyden
 pá 3.	75,6 kg	3 km	1
 so 4.	75,3 kh	pauza	1
 ne 5.	75,9kg	pauza	1
