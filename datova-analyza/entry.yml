@@ -1,6 +1,5 @@
 title: Datová analýza
 lead: Základy práce s daty v knihovně Pandas
-draft: true
 lessons:
   - pandas-dotazy
   - pandas-agregace

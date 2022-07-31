@@ -1,7 +1,7 @@
-title: Datová analýza v Pythonu
-lead: Kurz datové analýzy v Pythonu v rámci Digitální akademie Data.
+title: Úvod do Pythonu pro datové analytiky
+lead: Kurz základů programování v Pythonu v rámci Digitální akademie Data.
 image: python-data.svg
 chapters:
   - zaklady-programovani
-  - datova-analyza
-  - bonusove-kapitoly
+#  - datova-analyza
+#  - bonusove-kapitoly
