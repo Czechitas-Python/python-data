@@ -38,13 +38,13 @@ index = rozdily.index(min_rozdil)
 Pokud chceme takovýto program spustit, musíme nejdříve náš terminál nasměrovat na složku, ve které máme uložen náš soubor `teploty.py`. Poté napíšeme do terminálu, **pozor, nikoliv do Python konzole** , následující příkaz.
 
 ```shell
-python3 teploty.py
+python teploty.py
 ```
 
-Pozor, že na systému Windows příkaz vypadá takto:
+V případě MacOS nezapomeneme upřesnit Python verze 3
 
 ```shell
-py teploty.py
+python3 teploty.py
 ```
 
 Náš program se sice spustí, ale nevypíše žádný výsledek. To je proto, že když spouštíme programy, Python žádné výsledky sám od sebe nevypisuje. Musíme to provést sami pomocí funkce `print()`. Na konec našeho programu tedy přidáme řádek
