@@ -111,9 +111,19 @@ Mnozí z vás už si stěžovali, že Python neobsahuje funkci, která počítá
 3.5
 ```
 
-Poslední avšak velmi důležitý modul, jenž si v tuto chvíli představíme, je modul `sys`. Ten obsahuje funkce, které umožňují Pythonu komunikovat s operačním systémem, ve kterém je spuštěný. Nás z tohoto modulu bude zajímat především proměnná (ano, moduly mohou obsahovat kromě funkcí také proměnné) s názvem `argv` Ta nám umožní přistupovat k takzvaným _parametrům příkazové řádky_.
+**Pozor!** Nikdy nepojmenovávejte svůj skript stejně jako modul, který používáte. Pokud byste pojmenovali svůj skript `math.py`, uvnitř napsali `import math` a používali nějakou funkci z tohoto modulu, Python ji bohužel nenajde. V tu chvíli totiž místo "pravého" modulu `math` naimportoval skript `math.py` ve vašem pracovním adresáři a v něm jistě volanou funkci nemáte definovanou.
+
+Pokud se vám to náhodou stalo a Python vám vypsal něco jako:
+
+```
+AttributeError: partially initialized module 'math' has no attribute 'ceil' (most likely due to a circular import)
+```
+
+Víte už čím to je. Přejmenujte váš skript na jiný název a pokud se vám v pracovním adresáři vytvořil adresář `__pycache__`, tak jej také smažte.
 
 ## Parametry příkazové řádky
+
+Poslední avšak velmi důležitý modul, jenž si v tuto chvíli představíme, je modul `sys`. Ten obsahuje funkce, které umožňují Pythonu komunikovat s operačním systémem, ve kterém je spuštěný. Nás z tohoto modulu bude zajímat především proměnná (ano, moduly mohou obsahovat kromě funkcí také proměnné) s názvem `argv` Ta nám umožní přistupovat k takzvaným _parametrům příkazové řádky_.
 
 Všechny programy, které jsme zatím společně vytvořili, obsahovaly všechna nezbytná data jaksi natvrdo přímo uvnitř kódu programu. Možná vás napadne, že například program, který má naměřené teploty z minulého týdne zadrátované přímo uvnitř kódu, nám je jen pramálo k užitku. Nemůžeme mu předat nově naměřené teploty jinak, než upravit jeho zdrojový kód. Do skutečně užitečného programu musíme být schopni dostat data jaksi z venku. K tomu máme vícero možností ‒ například nahrát data ze souboru na disku, což se naučíme v příští lekci, můžeme je stáhnout z internetu (také se časem naučíme), ale také je můžeme programu předat přímo na příkazové řádce, když jej spouštíme.
 
