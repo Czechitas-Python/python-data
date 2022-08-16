@@ -5,7 +5,7 @@ Abychom si mohli s Pythonem povídat, musíme spustit takzvanou _Python konzoli_
 Pokud pracujete pod Windows, Python konzoli spustíte tak, že do terminálu napíšete příkaz
 
 ```shell
-py
+python
 ```
 
 Pokud pracujete na Macu nebo Linuxu, správný příkaz je
