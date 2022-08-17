@@ -1,4 +1,6 @@
 title: Slovníky, JSON
 lead: Díky slovníkům dokážeme v našem programu zpracovávat složitěji strukturovaná data a díky formátu JSON je můžeme snadno ukládat nebo například stahovat z internetu.
 sections:
-  - slovniky-json
+  - slovniky
+  - format-json
+  - cteni-na-doma

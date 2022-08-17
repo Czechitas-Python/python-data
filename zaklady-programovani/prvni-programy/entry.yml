@@ -2,3 +2,5 @@ title: První programy
 lead: Místo psaní příkazů do konzole se naučíme psát opravdové programy. Taky si ukážeme, jak číst data z příkazové řádky.
 sections:
   - prvni-programy
+  - moduly
+  - cteni-na-doma
