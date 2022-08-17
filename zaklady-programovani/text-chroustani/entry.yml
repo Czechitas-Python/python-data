@@ -1,4 +1,6 @@
 title: Práce s textem, chroustání seznamů
 lead: Přidáme nový datový typ, který nám umožní pracovat s textem a naučíme se zpracovávat seznamy.
 sections:
-  - text-chroustani
+  - retezce
+  - chroustani-seznamu
+  - cteni-na-doma

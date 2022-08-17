@@ -1,6 +1,6 @@
 Následující příklad v sobě zahrnuje většinu věcí, kterou jsme se do teď v kurzu naučili. Můžete jej vyzkoušet a zjistit, jak na tom jste se svými programátorskými schopnostmi a co jste si z kurzu zapamatovali.
 
-### Prváci
+## Prváci
 
 Na Fakultu hybridních přírodních umění nastupují nově přijatí studenti. Tabulku těchto studentů s jejich rodnými čísly najdete v souboru [studenti.txt](assets/studenti.txt). Tabulka je evidentně vykopírovaná z Excelu, neboť hodnoty jsou zde odděleny tabulátory. Na každém řádku je jméno a příjmení studenta a jeho rodné číslo. Vytvořte Python program a proveďte v něm následující úkony.
 
