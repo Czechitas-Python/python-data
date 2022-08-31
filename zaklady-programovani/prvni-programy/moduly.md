@@ -34,6 +34,8 @@ Mnozí z vás už si stěžovali, že Python neobsahuje funkci, která počítá
 3.5
 ```
 
+### Pozor na názvy skriptů!
+
 **Pozor!** Nikdy nepojmenovávejte svůj skript stejně jako modul, který používáte. Pokud byste pojmenovali svůj skript `math.py`, uvnitř napsali `import math` a používali nějakou funkci z tohoto modulu, Python ji bohužel nenajde. V tu chvíli totiž místo "pravého" modulu `math` naimportoval skript `math.py` ve vašem pracovním adresáři a v něm jistě volanou funkci nemáte definovanou.
 
 Pokud se vám to náhodou stalo a Python vám vypsal něco jako:
@@ -42,7 +44,43 @@ Pokud se vám to náhodou stalo a Python vám vypsal něco jako:
 AttributeError: partially initialized module 'math' has no attribute 'ceil' (most likely due to a circular import)
 ```
 
-Víte už čím to je. Přejmenujte váš skript na jiný název a pokud se vám v pracovním adresáři vytvořil adresář `__pycache__`, tak jej také smažte.
+Víte už, čím to je. Přejmenujte váš skript na jiný název a pokud se vám v pracovním adresáři vytvořil adresář `__pycache__`, tak jej také smažte.
+
+
+### Co vše najdu v modulu
+
+Po naimportování modulu musím vědět jakou funkci z daného modulu chci zavolat. Seznam všech funkcí daného modulu najdeme v [dokumentaci](https://docs.python.org/3/library/math.html) nebo si můžeme nechat od Pythonu poradit.
+
+**Pozor!** Aby vám následující tip fungoval na Windows, je třeba doinstalovat balíček `pyreadline`. To uděláme tak, že v příkazové řádce operačního systému (ne v Pythonu) spustíme příkaz
+
+```
+pip install pyreadline
+```
+
+Po úspěšné instalaci si pak spustíme znovu Python konzoli příkazem `python`, naimportujeme si nějaký modul (např. `math`), napíšeme `math.` a stiskneme dvakrát tabulátor
+
+```
+>>> import math
+>>> math.<Tab><Tab>
+math.acos(       math.erf(        math.isfinite(   math.pi
+math.acosh(      math.erfc(       math.isinf(      math.pow(
+math.asin(       math.exp(        math.isnan(      math.prod(
+math.asinh(      math.expm1(      math.isqrt(      math.radians(
+math.atan(       math.fabs(       math.lcm(        math.remainder(
+math.atan2(      math.factorial(  math.ldexp(      math.sin(
+math.atanh(      math.floor(      math.lgamma(     math.sinh(
+math.ceil(       math.fmod(       math.log(        math.sqrt(
+math.comb(       math.frexp(      math.log10(      math.tan(
+math.copysign(   math.fsum(       math.log1p(      math.tanh(
+math.cos(        math.gamma(      math.log2(       math.tau
+math.cosh(       math.gcd(        math.modf(       math.trunc(
+math.degrees(    math.hypot(      math.nan         math.ulp(
+math.dist(       math.inf         math.nextafter(
+math.e           math.isclose(    math.perm(
+>>> math.
+```
+
+Tabulátor je velmi užitečná klávesa, protože umí doplňovat názvy i našich proměnných a funkcí.
 
 ## Parametry příkazové řádky
 
