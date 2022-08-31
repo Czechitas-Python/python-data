@@ -11,7 +11,7 @@ Moduly jsou v podstatě balíčky funkcí zaměřených na nějaké konkrétní 
 
 Prvním velmi užitečným balíčkem funkcí je modul `math`. Importujeme jej příkazem
 
-```py
+```pycon
 import math
 ```
 
@@ -53,15 +53,15 @@ Po naimportování modulu musím vědět jakou funkci z daného modulu chci zavo
 
 **Pozor!** Aby vám následující tip fungoval na Windows, je třeba doinstalovat balíček `pyreadline`. To uděláme tak, že v příkazové řádce operačního systému (ne v Pythonu) spustíme příkaz
 
-```
+```shell
 pip install pyreadline
 ```
 
-Po úspěšné instalaci si pak spustíme znovu Python konzoli příkazem `python`, naimportujeme si nějaký modul (např. `math`), napíšeme `math.` a stiskneme dvakrát tabulátor
+Po úspěšné instalaci si pak spustíme znovu Python konzoli příkazem `python`, naimportujeme si nějaký modul (např. `math`), napíšeme `math.` a stiskneme tabulátor
 
-```
+```pycon
 >>> import math
->>> math.<Tab><Tab>
+>>> math.<Tab>
 math.acos(       math.erf(        math.isfinite(   math.pi
 math.acosh(      math.erfc(       math.isinf(      math.pow(
 math.asin(       math.exp(        math.isnan(      math.prod(
