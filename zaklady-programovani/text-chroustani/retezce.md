@@ -197,7 +197,7 @@ nebo
 
 **Pozor!** Aby vám následující tip fungoval na Windows, je třeba doinstalovat balíček `pyreadline`. To uděláme tak, že v příkazové řádce operačního systému (ne v Pythonu) spustíme příkaz
 
-```
+```shell
 pip install pyreadline
 ```
 
