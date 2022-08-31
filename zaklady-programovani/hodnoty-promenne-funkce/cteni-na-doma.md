@@ -47,7 +47,6 @@ Všimněte si, že nám po čtyřech týdnech zbude ještě pár dní. Pokud chc
 ```
 
 ## Doporučené úložky na doma
-::exc[excs>uroky]
 ::exc[excs>delka-filmu]
 ::exc[excs>prumerne-teploty]
 ::exc[excs>prumer]

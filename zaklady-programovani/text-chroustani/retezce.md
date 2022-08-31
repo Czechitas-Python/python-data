@@ -193,6 +193,34 @@ nebo
 'dokumenty/dapraha/python/priklady'
 ```
 
+### Jaké jsou všechny metody řetězců?
+
+**Pozor!** Aby vám následující tip fungoval na Windows, je třeba doinstalovat balíček `pyreadline`. To uděláme tak, že v příkazové řádce operačního systému (ne v Pythonu) spustíme příkaz
+
+```
+pip install pyreadline
+```
+
+Potom stačí za nějakou naší proměnnou typu `str` napsat tečku a zmáčknout tabulátor.
+
+```pycon
+>>> s = ''
+>>> s.<Tab>
+s.capitalize()    s.isalpha()       s.ljust(          s.rsplit(
+s.casefold()      s.isascii()       s.lower()         s.rstrip(
+s.center(         s.isdecimal()     s.lstrip(         s.split(
+s.count(          s.isdigit()       s.maketrans(      s.splitlines(
+s.encode(         s.isidentifier()  s.partition(      s.startswith(
+s.endswith(       s.islower()       s.removeprefix(   s.strip(
+s.expandtabs(     s.isnumeric()     s.removesuffix(   s.swapcase()
+s.find(           s.isprintable()   s.replace(        s.title()
+s.format(         s.isspace()       s.rfind(          s.translate(
+s.format_map(     s.istitle()       s.rindex(         s.upper()
+s.index(          s.isupper()       s.rjust(          s.zfill(
+s.isalnum()       s.join(           s.rpartition(
+>>> s.
+```
+
 ## Cvičení: Řetězce, metody
 ::exc[excs>prevod-pismen]
 ::exc[excs>cisla-jako-text]
