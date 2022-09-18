@@ -53,4 +53,3 @@ Zodpovězte následující otázky
 
    **Nápověda:** postupuje tak, že použijete na každý řádek tabulky zvlášť chroustání seznamů. Tabulku můžete sestavit tak, že tento postup ručně zopakujete 13 krát, jednou pro každý kraj. Pokud toužíte po elegantnějším řešení, vyčkejte na nepovinné úložky.
 
-1. Vytvořte seznam pravdivostních hodnot, který bude říkat, ve kterých krajích překročila volební účast 50 %. Pro jednoduchost uvažujte, že data o počtech obyvatel z předchozího cvičení jsou počty oprávněných voličů.
