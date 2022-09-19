@@ -41,4 +41,6 @@ print(radky)
 ## Cvičení: Čtení ze souborů
 ::exc[excs>vyplata-presneji]
 ::exc[excs>pocet-slov]
+
+## Bonus
 ::exc[excs>pujcovna]
