@@ -47,41 +47,6 @@ AttributeError: partially initialized module 'math' has no attribute 'ceil' (mos
 Víte už, čím to je. Přejmenujte váš skript na jiný název a pokud se vám v pracovním adresáři vytvořil adresář `__pycache__`, tak jej také smažte.
 
 
-### Co vše najdu v modulu
-
-Po naimportování modulu musím vědět jakou funkci z daného modulu chci zavolat. Seznam všech funkcí daného modulu najdeme v [dokumentaci](https://docs.python.org/3/library/math.html) nebo si můžeme nechat od Pythonu poradit.
-
-**Pozor!** Aby vám následující tip fungoval na Windows, je třeba doinstalovat balíček `pyreadline`. To uděláme tak, že v příkazové řádce operačního systému (ne v Pythonu) spustíme příkaz
-
-```shell
-pip install pyreadline
-```
-
-Po úspěšné instalaci si pak spustíme znovu Python konzoli příkazem `python`, naimportujeme si nějaký modul (např. `math`), napíšeme `math.` a stiskneme tabulátor
-
-```pycon
->>> import math
->>> math.<Tab>
-math.acos(       math.erf(        math.isfinite(   math.pi
-math.acosh(      math.erfc(       math.isinf(      math.pow(
-math.asin(       math.exp(        math.isnan(      math.prod(
-math.asinh(      math.expm1(      math.isqrt(      math.radians(
-math.atan(       math.fabs(       math.lcm(        math.remainder(
-math.atan2(      math.factorial(  math.ldexp(      math.sin(
-math.atanh(      math.floor(      math.lgamma(     math.sinh(
-math.ceil(       math.fmod(       math.log(        math.sqrt(
-math.comb(       math.frexp(      math.log10(      math.tan(
-math.copysign(   math.fsum(       math.log1p(      math.tanh(
-math.cos(        math.gamma(      math.log2(       math.tau
-math.cosh(       math.gcd(        math.modf(       math.trunc(
-math.degrees(    math.hypot(      math.nan         math.ulp(
-math.dist(       math.inf         math.nextafter(
-math.e           math.isclose(    math.perm(
->>> math.
-```
-
-Tabulátor je velmi užitečná klávesa, protože umí doplňovat názvy i našich proměnných a funkcí.
-
 ## Parametry příkazové řádky
 
 Poslední avšak velmi důležitý modul, jenž si v tuto chvíli představíme, je modul `sys`. Ten obsahuje funkce, které umožňují Pythonu komunikovat s operačním systémem, ve kterém je spuštěný. Nás z tohoto modulu bude zajímat především proměnná (ano, moduly mohou obsahovat kromě funkcí také proměnné) s názvem `argv` Ta nám umožní přistupovat k takzvaným _parametrům příkazové řádky_.
