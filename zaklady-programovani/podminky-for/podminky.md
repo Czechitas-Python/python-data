@@ -10,7 +10,7 @@ Představte si, že chceme napsat program, který určí, zda je hrací kostka f
 import statistics
 
 with open('hody.txt') as vstup:
-  hody = vstup.readlines())
+  hody = vstup.readlines()
 hody = [int(hod) for hod in hody]
 
 if len(hody) < 1000:
