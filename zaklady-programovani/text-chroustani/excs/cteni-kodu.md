@@ -18,9 +18,7 @@ konzole a ověřte, zda jste měli pravdu.
 >>> seznam = ['12.03.2014', '10.01.2015', '06.06.1986']
 >>> [int(datum[3:5]) for datum in seznam]
 >>> [int(datum[:2])-1 for datum in seznam]
->>> [
-  [int(datum[:2]), int(datum[3:5]), int(datum[6:])] for datum in seznam
-]
+>>> [[int(datum[:2]), int(datum[3:5]), int(datum[6:])] for datum in seznam]
 >>> [datum.split('.') for datum in seznam]
 >>> ['/'.join(datum.split('.')) for datum in seznam]
 ```

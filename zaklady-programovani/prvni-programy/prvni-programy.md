@@ -6,13 +6,13 @@ Mějme následující zadání. Spočítejte průměrnou denní teplotu naměře
 
 ```py
 mereni = [
-  ['po', 17.3],
-  ['út', 16.8],
-  ['st', 15.1],
-  ['čt', 13.2],
-  ['pá', 14.0],
-  ['so', 13.9],
-  ['ne', 15.8]
+    ['po', 17.3],
+    ['út', 16.8],
+    ['st', 15.1],
+    ['čt', 13.2],
+    ['pá', 14.0],
+    ['so', 13.9],
+    ['ne', 15.8]
 ]
 ```
 
@@ -20,13 +20,13 @@ Abychom se dostali k výsledku, budeme s touto tabulkou potřebovat provést ně
 
 ```py
 mereni = [
-  ['po', 17.3],
-  ['út', 16.8],
-  ['st', 15.1],
-  ['čt', 13.2],
-  ['pá', 14.0],
-  ['so', 13.9],
-  ['ne', 15.8]
+    ['po', 17.3],
+    ['út', 16.8],
+    ['st', 15.1],
+    ['čt', 13.2],
+    ['pá', 14.0],
+    ['so', 13.9],
+    ['ne', 15.8]
 ]
 teploty = [radek[1] for radek in mereni]
 prumer = sum(teploty)/len(teploty)
@@ -64,10 +64,7 @@ print(mereni[index][0])
 Ještě hezčí bude, pokud uživateli sdělíme výsledek nějak přívětivě, například takto:
 
 ```py
-print(
-  'Den s teplotou nejblíž průměru je ' +
-  str(mereni[index][0])
-)
+print('Den s teplotou nejblíž průměru je ' + str(mereni[index][0]))
 ```
 
 ## Cvičení: Programy

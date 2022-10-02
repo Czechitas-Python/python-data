@@ -9,16 +9,16 @@ Popište vlídným, ale přesným slovem, co dělají následující cykly:
 
 ```py
 for x in cisla:
-  if x % 2 == 0:
-    print(x)
+    if x % 2 == 0:
+        print(x)
 ```
 
 2.
 
 ```py
 for jmeno in jmena:
-  if jmeno[0] == 'p':
-    print('pako')
-  else:
-    print(jmeno)
+    if jmeno[0] == 'p':
+        print('pako')
+    else:
+        print(jmeno)
 ```

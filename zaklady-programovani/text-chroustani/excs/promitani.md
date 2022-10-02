@@ -9,9 +9,9 @@ takto:
 
 ```py
 nazvy = [
-  'Někdo to rád horké, extended edition',
-  'Adéla ještě nevečeřela',
-  'Kulový blesk'
+    'Někdo to rád horké, extended edition',
+    'Adéla ještě nevečeřela',
+    'Kulový blesk'
 ]
 delky = [136, 105, 82]
 ```

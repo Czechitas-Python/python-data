@@ -8,10 +8,10 @@ Touto lekcí končí úvodní části kurzu o programování v Pythonu. Před t�
 
 ```py
 utraty = [
-  ['Pavel', 'mléko', 54],
-  ['Jana', 'prací prášek', 312],
-  ['Robert', 'mouka', 32],
-  ['Zuzana', 'vajíčka', 47],
+    ['Pavel', 'mléko', 54],
+    ['Jana', 'prací prášek', 312],
+    ['Robert', 'mouka', 32],
+    ['Zuzana', 'vajíčka', 47],
 ]
 ```
 
@@ -25,7 +25,7 @@ S našimi současnými znalostmi bychom mohli napsat takovýto program
 
 ```py
 for utrata in utraty:
-  print(utrata[0] + ' utratila/a ' + str(utrata[2]) + ' kč za ' + utrata[1] + '.')
+    print(utrata[0] + ' utratila/a ' + str(utrata[2]) + ' kč za ' + utrata[1] + '.')
 ```
 
 Takovýto zápis pomocí sčítání řetězců je dost nepohodlný. Pokud by navíc tabulka obsahovala o pár sloupečků více, snadno se nám výraz ve funkci `print()` vymkne z rukou.
@@ -50,5 +50,5 @@ Takovýto zápis je mnohem čitelnější a přehlednější. Všimněte si, že
 
 ```py
 for utrata in utraty:
-  print(f'{utrata[0]} utratila/a {utrata[2]} kč za {utrata[1]}.')
+    print(f'{utrata[0]} utratila/a {utrata[2]} kč za {utrata[1]}.')
 ```

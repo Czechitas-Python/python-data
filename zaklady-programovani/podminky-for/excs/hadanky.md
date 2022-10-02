@@ -9,12 +9,12 @@ Projděte si následující program a zkuste předpovědět co nejpřesněji, ja
 
 ```py
 cisla = [3, 5, 8, 0, 4, 2, 0, 7, 6, 2, 0, 5]
-sum = 0
+suma = 0
 for cislo in cisla:
-  sum = sum + cislo
-  if cislo == 0:
-    print(sum)
-    sum = 0
+    suma = suma + cislo
+    if cislo == 0:
+        print(suma)
+        suma = 0
 ```
 
 2.
@@ -23,7 +23,7 @@ for cislo in cisla:
 cisla = [3, 5, 8, 0, 4, 2, 0, 7, 6, 2, 0, 5]
 index = 0
 for cislo in cisla:
-  if index % 2 == 0:
-    print(cislo)
-  index +=  1
+    if index % 2 == 0:
+        print(cislo)
+    index +=  1
 ```

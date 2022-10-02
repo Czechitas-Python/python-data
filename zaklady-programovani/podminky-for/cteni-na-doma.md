@@ -34,33 +34,33 @@ V této lekci jsme si zatím představili pouze podmínky s jednou nebo dvěma v
 
 ```py
 if bodu > 90:
-  print('Dobrá práce')
+    print('Dobrá práce')
 ```
 
 Pokud chci něco provést v případě, že podmínka nebyla splněna, použiju podmínku s dvěma větvemi.
 
 ```py
 if bodu > 90:
-  print('Dobrá práce')
+    print('Dobrá práce')
 else:
-  print('Špatná práce')
+    print('Špatná práce')
 ```
 
 Co kdybych ale například chtěl rozdělit známky podle počtů bodů? Tedy za více než 90 by bylo A, za 80 až 90 B a tak dále. V takovém případě bych mohl použít podmínku s více větvemi.
 
 ```py
 if bodu >= 90:
-  print('A')
+    print('A')
 elif bodu >= 80:
-  print('B')
+    print('B')
 elif bodu >= 70:
-  print('C')
+    print('C')
 elif bodu >= 60:
-  print('D')
+    print('D')
 elif bodu >= 50:
-  print('E')
+    print('E')
 else:
-  print('F')
+    print('F')
 ```
 
 Zde je dobré vědět, jakým způsobem Python takovou podmínku vyhodnocuje. Nejdřív se podívá, jestli je splněna první větev. Pokud ano, vykoná příslušný blok kódu a **zbytek větví přeskočí**. Pokud první větev není splněna, zkouší, jestli je splněna druhá. Pokud ano, vykoná příslušný blok a opět zbytek přeskočí. Takto pokračuje dokud nevyčerpá všechny větve nebo nenarazí na `else`. Důležité je tedy zapamatovat si, že pokud výraz v nějaké větvi uspěje, zbytek větví se přeskočí a Python se na ně ani nepodívá.

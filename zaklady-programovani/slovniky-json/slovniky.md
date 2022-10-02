@@ -14,11 +14,11 @@ Slovník umožňuje pojmenovat hodnoty v nějaké datové struktuře tak, abycho
 
 ```py
 absolvent = {
-  'jmeno': 'Petr',
-  'prijmeni': 'Roman',
-  'rok': 2017,
-  'dochazka': 0.95,
-  'vyznamenani': True
+    'jmeno': 'Petr',
+    'prijmeni': 'Roman',
+    'rok': 2017,
+    'dochazka': 0.95,
+    'vyznamenani': True
 }
 ```
 
@@ -35,10 +35,10 @@ První důležitá věc ohledně slovníků je, že slovníky jsou opět hodnoty
 
 ```py
 absolventi = [
-  {'jmeno': 'Petr', 'prijmeni': 'Roman', 'rok': 2017, 'dochazka': 0.95, 'vyznamenani': True},
-  {'jmeno': 'Jana', 'prijmeni': 'Kočanská', 'rok': 2015, 'dochazka': 0.92, 'vyznamenani': True},
-  {'jmeno': 'Eva', 'prijmeni': 'Horká', 'rok': 2014, 'dochazka': 0.85, 'vyznamenani': False},
-  {'jmeno': 'Ivo', 'prijmeni': 'Roubeník', 'rok': 2017, 'dochazka': 0.75, 'vyznamenani': False}
+    {'jmeno': 'Petr', 'prijmeni': 'Roman', 'rok': 2017, 'dochazka': 0.95, 'vyznamenani': True},
+    {'jmeno': 'Jana', 'prijmeni': 'Kočanská', 'rok': 2015, 'dochazka': 0.92, 'vyznamenani': True},
+    {'jmeno': 'Eva', 'prijmeni': 'Horká', 'rok': 2014, 'dochazka': 0.85, 'vyznamenani': False},
+    {'jmeno': 'Ivo', 'prijmeni': 'Roubeník', 'rok': 2017, 'dochazka': 0.75, 'vyznamenani': False}
 ]
 ```
 
@@ -63,37 +63,37 @@ Stejně jako u proměnných a seznamů můžeme do slovníku uložit jakoukoliv 
 
 ```py
 kurz = {
-  'nazev': 'Úvod do programování',
-  'lektor': 'Martin Podloucký',
-  'konani': [
-    {
-      'misto': 'T-Mobile',
-      'koucove': [
-        'Dan Vrátil',
-        'Filip Kopecký',
-        'Martina Nemčoková'
-      ],
-      'ucastnic': 30
-    },
-    {
-      'misto': 'MSD IT',
-      'koucove': [
-        'Dan Vrátil',
-        'Zuzana Tučková',
-        'Martina Nemčoková'
-      ],
-      'ucastnic': 25
-    },
-    {
-      'misto': 'Škoda DigiLab',
-      'koucove': [
-        'Dan Vrátil',
-        'Filip Kopecký',
-        'Kateřina Kalášková'
-      ],
-      'ucastnic': 41
-    }
-  ]
+    'nazev': 'Úvod do programování',
+    'lektor': 'Martin Podloucký',
+    'konani': [
+        {
+            'misto': 'T-Mobile',
+            'koucove': [
+                'Dan Vrátil',
+                'Filip Kopecký',
+                'Martina Nemčoková'
+            ],
+            'ucastnic': 30
+        },
+        {
+            'misto': 'MSD IT',
+            'koucove': [
+                'Dan Vrátil',
+                'Zuzana Tučková',
+                'Martina Nemčoková'
+            ],
+            'ucastnic': 25
+        },
+        {
+            'misto': 'Škoda DigiLab',
+            'koucove': [
+                'Dan Vrátil',
+                'Filip Kopecký',
+                'Kateřina Kalášková'
+            ],
+            'ucastnic': 41
+        }
+    ]
 }
 ```
 

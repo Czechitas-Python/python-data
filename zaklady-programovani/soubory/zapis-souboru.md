@@ -9,7 +9,7 @@ Dejme tomu, že máme seznam uživatelů, které chceme zapsat do souboru `uziva
 ```py
 jmena = ['Roman', 'Jana', 'Radek', 'Petra', 'Vlasta']
 with open('uzivatele.txt', mode='w', encoding='utf-8') as vystup:
-  vystup.writelines(jmena)
+    vystup.writelines(jmena)
 ```
 
 Změna je u druhého parametru `mode='w'` při volání funkce `open()`. Díky němu se nám soubor otevře pro zápis. Pokud soubor na disku ještě neexistuje, funkce `open()` jej před otevřením vytvoří. Pokud soubor již existuje, funkce `open()` vymaže před otevřením jeho obsah. Vždy tedy pomocí metody `write()` zapisujeme do prázdného souboru. Pokud bychom chtěli přidat nový obsah na konec souboru, místo `'w'` použijeme `'a'`.
@@ -27,7 +27,7 @@ Upravíme tedy zápis do souboru v našem předchozím programu takto:
 ```py
 jmena = [jmeno + '\n' for jmeno in jmena]
 with open('uzivatele.txt', mode='w', encoding='utf-8') as vystup:
-  vystup.writelines(jmena)
+    vystup.writelines(jmena)
 ```
 
 ## Cvičení: Zápis do souborů
