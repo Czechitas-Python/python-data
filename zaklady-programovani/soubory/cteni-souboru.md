@@ -15,7 +15,7 @@ Na konci úvodního řádku bloku vkládáme dvojtečku. Dvojtečka na konci ř�
 Náš kód pak může vypadat například takto:
 ```py
 with open('mereni.txt', encoding='utf-8') as vstup:
-  radky = vstup.readlines()
+    radky = vstup.readlines()
 print(radky)
 ```
 
@@ -31,7 +31,7 @@ Vidíme tedy, že každý náš řádek končí znakem nového řádku a hodnoty
 
 ```py
 with open('mereni.txt', encoding='utf-8') as vstup:
-  radky = vstup.readlines()
+    radky = vstup.readlines()
 
 radky = [radek.split('\t') for radek in radky]
 radky = [[radek[0], float(radek[1])] for radek in radky]

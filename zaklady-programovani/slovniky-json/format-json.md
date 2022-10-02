@@ -6,11 +6,11 @@ JSON formát původně pochází z jazyka, který se jmenuje JavaScript. Ten se 
 
 ```json
 {
-  "jmeno": "Petr",
-  "prijmeni": "Roman",
-  "rok": 2017,
-  "dochazka": 0.95,
-  "vyznamenani": true
+    "jmeno": "Petr",
+    "prijmeni": "Roman",
+    "rok": 2017,
+    "dochazka": 0.95,
+    "vyznamenani": true
 }
 ```
 
@@ -21,7 +21,7 @@ V Pythonu je velice jednoduché převést JSON na obyčejný Python slovník. St
 ```py
 import json
 with open('absolventi.json', encoding='utf-8') as soubor:
-  text = soubor.read()
+    text = soubor.read()
 absolventi = json.loads(text)
 print(absolventi)
 ```
@@ -33,7 +33,7 @@ Pokud bychom se nechtěli sami obtěžovat se čtením souboru, můžeme použí
 ```py
 import json
 with open('absolventi.json', encoding='utf-8') as soubor:
-  absolventi = json.load(soubor)
+    absolventi = json.load(soubor)
 print(absolventi)
 ```
 
@@ -47,7 +47,7 @@ Zápis JSON dat do souboru je podobně jednoduché jako čtení. Stačí si osvo
 import json
 hodiny = {'po': 8, 'ut': 7, 'st': 6, 'ct': 7, 'pa': 8}
 with open('hodiny.json', mode='w', encoding='utf-8') as soubor:
-  json.dump(hodiny, soubor)
+    json.dump(hodiny, soubor)
 ```
 
 Pokud bychom z nějakého důvodu chtěli pouze vytvořit řetězec obsahující JSON ale nezapisovat jej do souboru, můžeme použít funkci `json.dumps`.

@@ -16,7 +16,7 @@ Co kdybychom ale chtěli projít nějaký seznam prvek po prvku, ale nechtěli b
 ```py
 jmena = ['petr', 'pavel', 'jitka', 'jana']
 for jmeno in jmena:
-  print(len(jmeno))
+    print(len(jmeno))
 ```
 
 Všimněte si, že cyklus FOR je v základu dost podobný chroustání seznamů. I tady říkáme, že se má něco provést pro každý prvek seznamu. Jen teď máme podstatně větší volnost v tom, co s jednotlivými prvky provedeme. Podobně jako v případě podmínek můžeme cyklu FOR předat celý blok příkazů najednou:
@@ -24,8 +24,8 @@ Všimněte si, že cyklus FOR je v základu dost podobný chroustání seznamů.
 ```py
 jmena = ['petr', 'pavel', 'jitka', 'jana']
 for jmeno in jmena:
-  mail = jmeno + '@gmail.com'
-  print(mail)
+    mail = jmeno + '@gmail.com'
+    print(mail)
 ```
 
 Dokonce se můžeme opravdu odvázat a vložit do bloku v cyklu FOR i podmínku.
@@ -33,11 +33,11 @@ Dokonce se můžeme opravdu odvázat a vložit do bloku v cyklu FOR i podmínku.
 ```py
 jmena = ['petr', 'pavel', 'jitka', '', 'jana']
 for jmeno in jmena:
-  if len(jmeno) < 1:
-    mail = 'neplatný email'
-  else:
-    mail = jmeno + '@gmail.cz'
-  print(mail)
+    if len(jmeno) < 1:
+        mail = 'neplatný email'
+    else:
+        mail = jmeno + '@gmail.cz'
+    print(mail)
 ```
 
 Tímto jsme vlastně vysvětlili to hlavní a zásadní, co o cyklu FOR zatím potřebujeme vědět. Možná se to na první pohled nezdá, ale přidáním cyklu do našeho programátorského arzenálu jsme otevřeli pandořinu skříňku plnou možností, co v našich programech můžeme dělat. Také jsme ovšem otevřeli bránu do samotných pekel, neboť už si díky cyklům můžeme troufnout na mnohem komplikovanější problémy. Na ty bude často potřeba pořádně roztočit mozkové závity.
@@ -47,7 +47,7 @@ Ukažme si například, jak se pomocí cyklu spočítá součet všech čísel v
 ```py
 soucet = 0
 for cislo in cisla:
-  soucet = soucet + cislo
+    soucet = soucet + cislo
 ```
 
 Ne, že bychom zrovna takovýto kus kódu nutně potřebovali, když můžeme použít funkci `sum()`. Tento příklad ale ukazuje, že s cykly můžeme dělat spoustu zajímavých věcí.

@@ -10,11 +10,11 @@ Představte si, že chceme napsat program, který určí, zda je hrací kostka f
 import statistics
 
 with open('hody.txt') as vstup:
-  hody = vstup.readlines()
+    hody = vstup.readlines()
 hody = [int(hod) for hod in hody]
 
 if len(hody) < 1000:
-  print('Nespolehlivý výsledek kvůli nedostatku dat.')
+    print('Nespolehlivý výsledek kvůli nedostatku dat.')
 
 print(statistics.mean(hody))
 ```
@@ -23,8 +23,8 @@ Pokud bychom při nedostatku dat vůbec nechtěli vypisovat výsledek, můžeme 
 
 ```py
 if len(hody) < 1000:
-  print('Nespolehlivý výsledek kvůli nedostatku dat.')
-  exit()
+    print('Nespolehlivý výsledek kvůli nedostatku dat.')
+    exit()
 ```
 
 ## Bloky
@@ -41,10 +41,10 @@ Podmínky mohou být mnohem zajímavější a komplexnější, než jak jsme vid
 
 ```py
 if len(hody) < 1000:
-  print('Nespolehlivý výsledek kvůli nedostatku dat.')
-  exit()
+    print('Nespolehlivý výsledek kvůli nedostatku dat.')
+    exit()
 else:
-  print('Výsledek je dostatečně spolehlivý.')
+    print('Výsledek je dostatečně spolehlivý.')
 ```
 
 ## Cvičení: Podmínky
