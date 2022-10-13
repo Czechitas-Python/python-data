@@ -89,12 +89,12 @@ Může se stát, že výše uvedený příkaz nebude fungovat protože nemáte n
 
 ## Stahování dat z API
 
-Jeden ze cvičných zdrojů dat najdeme na adrese `http://api.kodim.cz/python-data/people`. Naším jediným cílem je data získat jako text. Pak už jej převedeme na Python slovníky právě s využitím výše zmiňované funkce `loads`.
+Jeden ze cvičných zdrojů dat najdeme na adrese `https://api.kodim.cz/python-data/people`. Naším jediným cílem je data získat jako text. Pak už jej převedeme na Python slovníky právě s využitím výše zmiňované funkce `loads`.
 
 ```py
 import requests
 import json
-response = requests.get('http://api.kodim.cz/python-data/people')
+response = requests.get('https://api.kodim.cz/python-data/people')
 data = json.loads(response.text)
 print(data)
 ```
